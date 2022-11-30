@@ -1,0 +1,6 @@
+.header {
+    height: calc(100vh - 50px - 12rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
