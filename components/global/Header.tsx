@@ -34,7 +34,7 @@ export default class Header extends Component {
         <h1 className="m-0">
           Hello,
           <br/> 
-          I&apos;m Hernán. 
+          I&apos;m <em>Hernán</em>. 
           {/* <span className={styles['dynamic-stack']}>{ this.state.actualText }</span> <span className="op-6">Developer</span> */}
         </h1>
 
