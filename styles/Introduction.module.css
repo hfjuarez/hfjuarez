@@ -1,0 +1,5 @@
+.introduction {
+    height: calc(100vh - 6rem);
+    display: grid;
+    align-content: center;
+}

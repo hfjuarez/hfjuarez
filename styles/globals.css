@@ -5,10 +5,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #ffffff;
+  transition: 1s;
 }
 
 h1, h2, h3, h4 ,h5 , h6 {
-  color: rgb(0, 0, 0, 0.75);
+  color: #313132;
 }
 
 h1 {
@@ -48,7 +49,15 @@ h5 {
 }
 
 .m-0 {
-  margin: 0px;
+  margin: 0;
+}
+
+.m-1 {
+  margin: .25rem;
+}
+
+.m-2 {
+  margin: .5rem;
 }
 
 a {
@@ -60,6 +69,19 @@ a {
   box-sizing: border-box;
 }
 
+.red {
+  color: #FF5955;
+}
+
+.container {
+  width: 100%;
+  max-width: 64rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -69,6 +91,6 @@ a {
     background-color: #262627;
   }
   h1, h2, h3, h4 ,h5 , h6 {
-    color: rgba(255, 255, 255, 0.75);
+    color: #ffffff;
   }
 }

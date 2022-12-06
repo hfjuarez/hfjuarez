@@ -1,9 +1,15 @@
-import Header from '../components/Header/index'
+import Header from '../components/global/Header'
+import Introduction from '../components/landing/Introduction'
+import StackIntroduction from '../components/landing/StackIntroduction'
 
 export default function Home() {
   return (
     <>
-      <Header/>
+      <div className="container">
+        <Header/>
+        <Introduction/>
+        <StackIntroduction/>
+      </div>
     </>
   )
 }

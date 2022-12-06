@@ -1,6 +1,6 @@
 import React, { Component, ReactNode } from 'react'
 import Head from 'next/head'
-import Navbar from '../Navbar/index';
+import Navbar from '../global/Navbar';
 import styles from '../../styles/Layout.module.css'
 
 type Props = {
@@ -22,9 +22,7 @@ export default class Layout extends Component<Props, State> {
         </Head>
         <Navbar/>
         <main className={styles.main}>
-          <div className={styles['main-content']}>
-            {this.props.children}
-          </div>
+          {this.props.children}
         </main>
       </>
     )
