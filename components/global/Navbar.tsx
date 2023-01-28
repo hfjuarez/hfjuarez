@@ -24,7 +24,7 @@ export default class index extends Component<{}, State> {
     return (
       <div className={styles.navbar}>
         <div className={styles["navbar-content"]}>
-          <p style={showElement(this.state.showTitle)}>Herni</p>
+          <h6 className="op-8" style={showElement(this.state.showTitle)}>Hernán.</h6>
         </div>
       </div>
     );

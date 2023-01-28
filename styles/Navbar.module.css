@@ -21,6 +21,6 @@
 @media (prefers-color-scheme: dark) {
   .navbar {
     background-color: #262627e6;
-    border-bottom-color: black;
+    border-bottom-color: white;
   }
 }
