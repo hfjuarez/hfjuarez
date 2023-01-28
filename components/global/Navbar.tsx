@@ -1,16 +1,32 @@
-import React, { Component } from 'react'
-import styles from '../../styles/Navbar.module.css'
+import React, { Component, useState } from "react";
+import styles from "../../styles/Navbar.module.css";
+import { showElement } from "../../utils/conditionalRendering";
 
-type Props = {}
+type State = {
+  showTitle: boolean;
+};
 
-type State = {}
-
-export default class index extends Component<Props, State> {
-  state = {}
-
+export default class index extends Component<{}, State> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      showTitle: false,
+    };
+    this.handleShowTitle = this.handleShowTitle.bind(this);
+  }
+  handleShowTitle() {
+    this.setState({ showTitle: window.pageYOffset > screen.availHeight * 0.8 });
+  }
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleShowTitle);
+  }
   render() {
     return (
-      <div className={styles.navbar}></div>
-    )
+      <div className={styles.navbar}>
+        <div className={styles["navbar-content"]}>
+          <p style={showElement(this.state.showTitle)}>Herni</p>
+        </div>
+      </div>
+    );
   }
 }
