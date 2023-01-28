@@ -1,5 +1,7 @@
 .introduction {
-    height: calc(100vh - 6rem);
-    display: grid;
-    align-content: center;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  padding-inline: 1.5rem;
 }
+

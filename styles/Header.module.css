@@ -1,27 +1,16 @@
 .header {
-    height: calc(100vh - 50px - 12rem);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: calc(100vh - 7.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-inline: 1.5rem;
 }
 
-.subtitle {
-    opacity: 0.8;
-}
-
-.dynamic-stack {
-    margin: 0px;
-    border-radius: .5rem;
-    border: 1px solid #000;
-    padding-inline: .75rem;
-    background-color: #FF5955;
-    color: #fff;
-    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
-}
-
-@media (prefers-color-scheme: dark) {
-    .dynamic-stack {
-        /* color: #262627; */
-        /* text-shadow: none; */
-    }
+.profile-img picture img {
+  position: absolute;
+  bottom: 0;
+  right: 3rem;
+  width: 34rem;
+  height: auto;
 }
