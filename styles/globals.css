@@ -105,6 +105,9 @@ a {
   h6 {
     color: #ffffff;
   }
+  .divider {
+    border-top-color: #000;
+  }
 }
 
 
