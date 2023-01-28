@@ -14,9 +14,15 @@
   z-index: 99;
 }
 .navbar-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
   width: 100%;
   padding-inline: 1.5rem;
   max-width: 68rem;
+}
+.navbar-options{
+  justify-self: end;
 }
 @media (prefers-color-scheme: dark) {
   .navbar {

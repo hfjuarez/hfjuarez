@@ -1,6 +1,6 @@
 import Header from '../components/global/Header'
 import Introduction from '../components/landing/Introduction'
-import StackIntroduction from '../components/landing/StackIntroduction'
+import Stack from '../components/landing/Stack'
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <div className="container">
         <Header/>
         <Introduction/>
-        <StackIntroduction/>
+        <Stack/>
       </div>
     </>
   )
