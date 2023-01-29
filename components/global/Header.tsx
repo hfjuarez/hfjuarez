@@ -10,13 +10,13 @@ export default class Header extends Component {
           <h1 className="m-0">I&apos;m Hernán.</h1>
           <h3 className="m-0 op-8">Full Stack developer</h3>
         </div>
-        <div className={styles['profile-img']}>
+        <div className={styles["profile-img"]}>
           <picture>
             <source
-              srcSet="/images/white-profile.png"
+              srcSet="https://hfjuarez.imgix.net/white-profile.png"
               media="(prefers-color-scheme: dark)"
             />
-            <img src="/images/dark-profile.png" alt="me" />
+            <img src="https://hfjuarez.imgix.net/dark-profile.png" alt="me" />
           </picture>
         </div>
       </header>
