@@ -1,14 +1,10 @@
 # .github/workflows/build-and-deploy.yml
-
 name: Node.js CI
-
 on:
   push:
     branches: [ main ]
-
 jobs:
   build:
-		
     runs-on: ubuntu-latest
 
     steps:
