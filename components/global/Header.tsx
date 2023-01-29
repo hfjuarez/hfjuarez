@@ -13,10 +13,10 @@ export default class Header extends Component {
         <div className={styles['profile-img']}>
           <picture>
             <source
-              srcSet="./white-profile.PNG"
+              srcSet="/images/white-profile.PNG"
               media="(prefers-color-scheme: dark)"
             />
-            <img src="./dark-profile.PNG" alt="me" />
+            <img src="/images/dark-profile.PNG" alt="me" />
           </picture>
         </div>
       </header>
