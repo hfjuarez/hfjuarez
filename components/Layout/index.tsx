@@ -1,6 +1,7 @@
 import React, { Component, ReactNode } from 'react'
 import Head from 'next/head'
 import Navbar from '../global/Navbar';
+import Footer from '../global/Footer';
 import styles from '../../styles/Layout.module.css'
 
 type Props = {
@@ -24,6 +25,7 @@ export default class Layout extends Component<Props, State> {
         <main className={styles.main}>
           {this.props.children}
         </main>
+        <Footer/>
       </>
     )
   }

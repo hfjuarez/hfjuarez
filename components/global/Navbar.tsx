@@ -17,6 +17,9 @@ export default class index extends Component<{}, State> {
   handleShowTitle() {
     this.setState({ showTitle: window.pageYOffset > screen.availHeight * 0.8 });
   }
+  contact() {
+    window.location.href = "mailto:herfj4@gmail.com";
+  }
   componentDidMount() {
     window.addEventListener("scroll", this.handleShowTitle);
   }
@@ -30,7 +33,7 @@ export default class index extends Component<{}, State> {
             </h6>
           </div>
           <div className={styles["navbar-options"]}>
-            <button>Contact</button>
+            <button onClick={this.contact}>Contact</button>
           </div>
         </div>
       </div>

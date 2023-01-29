@@ -6,6 +6,7 @@ body {
   font-family: "Bodoni Moda";
   background-color: #ffffff;
   transition: 1s;
+  color: #313132;
 }
 .moda {
   font-family: "Bodoni Moda";
@@ -82,6 +83,9 @@ h6 {
 .mt-4 {
   margin-top: 3rem;
 }
+.mt-5 {
+  margin-top: 5rem;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -115,6 +119,7 @@ button {
   font-family: "Poppins";
   font-weight: 300;
   font-size: 1rem;
+  color: #313132;
   transition: 0.1s ease-in-out;
 }
 button:hover {
@@ -131,6 +136,7 @@ button:focus-visible {
   }
   body {
     background-color: #262627;
+    color: white;
   }
   h1,
   h2,
@@ -146,7 +152,8 @@ button:focus-visible {
   .divider {
     border-top-color: white;
   }
-  button{
+  button {
+    color: white;
     border-color: white;
   }
   button:hover {
