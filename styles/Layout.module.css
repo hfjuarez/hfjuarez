@@ -6,8 +6,8 @@
   min-height: calc(100vh - 50px);
   width: 100%;
   padding-block: 3rem;
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;

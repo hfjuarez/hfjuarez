@@ -20,11 +20,14 @@
 .stack-content .be {
   height: fit-content;
 }
-.stack-content:nth-child(2) {
-  flex-wrap: wrap;
+.stack-full {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: flex-start;
+  width: 100%;
   gap: 0 4rem;
 }
-.stack-content:nth-child(2) h6 {
+.stack-full h6 {
   font-family: "Poppins";
   font-weight: 200;
 }
