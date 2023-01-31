@@ -10,18 +10,18 @@ export default class Stack extends Component {
         <div className={`${styles["stack-content"]}`}>
           <div className={styles["fe"]}>
             <h4 className="m-0">Vue</h4>
-            <h4 className="m-0 op-8">React</h4>
-            <h4 className="m-0 op-8">React Native</h4>
+            <h4 className="m-0">React</h4>
+            <h4 className="m-0">React Native</h4>
           </div>
           <div className={styles["be"]}>
             <h4 className="m-0">NodeJS</h4>
-            <h4 className="m-0 op-8">Ruby on Rails</h4>
-            <h4 className="m-0 op-8">Java</h4>
+            <h4 className="m-0">Ruby on Rails</h4>
+            <h4 className="m-0">Java</h4>
           </div>
           <div className="ss">
             <h4 className="m-0">AWS</h4>
-            <h4 className="m-0 op-8">SQL</h4>
-            <h4 className="m-0 op-8">MongoDB</h4>
+            <h4 className="m-0">SQL</h4>
+            <h4 className="m-0">MongoDB</h4>
           </div>
         </div>
         <div className={`${styles["stack-full"]} op-5 mt-5`}>

@@ -7,20 +7,20 @@ let basePath = "/";
 
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, "");
-
   assetPrefix = `/${repo}/`;
   basePath = `/${repo}`;
+} 
+const nextConfigGithub = {
+  assetPrefix:  assetPrefix,
+  basePath:  basePath,
 }
-
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: assetPrefix,
-  basePath: basePath,
   images: {
     loader: "imgix",
-    path: 'https://hfjuarez.imgix.net',
+    path: "https://hfjuarez.imgix.net",
   },
 };
 
-module.exports = nextConfig;
+module.exports = isGithubActions ? {...nextConfig, ...nextConfigGithub} : nextConfig;

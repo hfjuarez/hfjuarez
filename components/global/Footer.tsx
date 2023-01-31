@@ -10,7 +10,7 @@ export default class index extends Component<{}, {}> {
       <footer className={styles.footer}>
         <div className={styles.content}>
           <p>
-            Made with <span style={{ color: "#ff5555" }}>&hearts;</span> in
+            Made with <span style={{ color: "var(--red)" }}>&hearts;</span> in
             Uruguay &#127482;&#127486;
           </p>
           <ul className={styles.links}>

@@ -3,7 +3,7 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--black);
   font-family: "Poppins";
   font-weight: 100;
   padding-block: 0.5rem;
@@ -43,7 +43,7 @@
   bottom: 0px;
   width: 0px;
   height: 1px;
-  background: #313132;
+  background: var(--light-dark);
   border-radius: 0.5px;
   transition: all 0.4s;
 }
@@ -54,7 +54,7 @@
 }
 
 .links li a {
-  color: #313132;
+  color: var(--light-dark);
 }
 
 .links li a:hover {
