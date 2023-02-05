@@ -3,7 +3,7 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid var(--black);
+  border-top: 1px solid var(--primary);
   font-family: "Poppins";
   font-weight: 200;
   padding-block: 0.5rem;
@@ -43,7 +43,7 @@
   bottom: 0px;
   width: 0px;
   height: 1px;
-  background: var(--light-dark);
+  background: var(--tertiary);
   border-radius: 0.5px;
   transition: all 0.4s;
 }
@@ -53,23 +53,3 @@
   left: 0;
 }
 
-.links li a {
-  color: var(--light-dark);
-}
-
-.links li a:hover {
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .footer {
-    border-top-color: white;
-  }
-
-  .links li:after {
-    background: white;
-  }
-  .links li a {
-    color: white;
-  }
-}

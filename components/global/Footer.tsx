@@ -9,7 +9,7 @@ export default class index extends Component<{}, {}> {
     return (
       <footer className={styles.footer}>
         <div className={styles.content}>
-          <p>
+          <p className="txt-200">
             Made with <span style={{ color: "var(--red)" }}>&hearts;</span> in
             Uruguay &#127482;&#127486;
           </p>

@@ -4,7 +4,12 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding-inline: 1.5rem;
+  padding-inline: 3rem;
+  border-width: .0625rem .0625rem 0 .0625rem;
+  border-style: solid;
+  border-color: var(--primary);
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
 }
 .profile-img picture img {
   position: absolute;

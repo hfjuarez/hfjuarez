@@ -1,7 +1,10 @@
 .introduction {
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: grid;
   align-content: center;
-  padding-inline: 1.5rem;
+  padding-inline: 3rem;
+  border-width: 0 .0625rem;
+  border-style: solid;
+  border-color: var(--primary);
 }
 

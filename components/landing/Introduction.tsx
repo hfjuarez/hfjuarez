@@ -6,13 +6,13 @@ export default class Introduction extends Component {
 
   render() {
     return (
-        <div className={`${styles['introduction']} divider`}>
+        <section className={`${styles['introduction']} divider`}>
             <h2>
                 Ambitious developer
                 <br/>
                 for <em>ambitious</em> companies.
             </h2>
-        </div>
+        </section>
     )
   }
 }

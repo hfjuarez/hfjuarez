@@ -3,9 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 70px);
   gap: 1rem;
-  padding-inline: 4.5rem;
+  padding-inline: 3rem;
+  border-width: 0 .0625rem;
+  border-style: solid;
+  border-color: var(--primary);
 }
 
 .stack-content {
@@ -13,6 +16,7 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  padding-inline: 1.5rem;
 }
 .stack-content .fe {
   height: fit-content;
