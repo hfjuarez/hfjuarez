@@ -2,6 +2,7 @@
 html,
 body {
   --theme-bg: #fff;
+  --theme-body-bg: #f4f4f4;
   --theme-bg-90: #ffffffe6;
   --primary: #000;
   --secondary: #262627;
@@ -12,7 +13,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Bodoni Moda";
-  background-color: var(--theme-bg);
+  background-color: var(--theme-body-bg);
   transition: 0.5s ease-in-out;
   color: var(--tertiary);
 }
@@ -158,6 +159,9 @@ a:hover {
 .txt-bg {
   font-size: 1.5rem;
 }
+.txt-center {
+  text-align: center;
+}
 
 .txt-100 {
   font-weight: 100;
@@ -246,16 +250,17 @@ a:hover {
   flex-direction: column;
   width: 100%;
   flex: 1;
-  /* border: 0.0625rem solid var(--primary); */
   border-radius: 0.25rem;
-  max-width: 68rem;
+  max-width: 72rem;
+  background-color: var(--theme-bg);
 }
 hr,
 .divider {
+  border: 0 solid transparent;
   border-top: 1px solid var(--primary) !important;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -266,7 +271,7 @@ hr,
     --secondary: #fff;
     --tertiary: #fff;
   }
-}
+} */
 
 @media only screen and (max-device-width: 64rem) {
   .container {

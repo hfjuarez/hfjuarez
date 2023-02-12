@@ -1,5 +1,5 @@
 .header {
-  height: calc(100vh - 7.5rem);
+  height: 48rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

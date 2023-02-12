@@ -12,10 +12,10 @@ export default class Header extends Component {
         </div>
         <div className={styles["profile-img"]}>
           <picture>
-            <source
+            {/* <source
               srcSet="https://hfjuarez.imgix.net/white-profile.png"
               media="(prefers-color-scheme: dark)"
-            />
+            /> */}
             <img src="https://hfjuarez.imgix.net/dark-profile.png" alt="me" />
           </picture>
         </div>

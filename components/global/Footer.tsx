@@ -9,9 +9,9 @@ export default class index extends Component<{}, {}> {
     return (
       <footer className={styles.footer}>
         <div className={styles.content}>
-          <p className="txt-200">
-            Made with <span style={{ color: "var(--red)" }}>&hearts;</span> in
-            Uruguay &#127482;&#127486;
+          <p className="poppins txt-300 txt-center m-0">
+            Made by
+            <span className="moda txt-md txt-600">&nbsp;Hernán</span>
           </p>
           <ul className={styles.links}>
             <li>
@@ -27,6 +27,7 @@ export default class index extends Component<{}, {}> {
               <a href="mailto:herfj4@gmail.com">Contact</a>
             </li>
           </ul>
+        
         </div>
       </footer>
     );
