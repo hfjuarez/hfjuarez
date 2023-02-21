@@ -5,12 +5,11 @@
   justify-content: center;
   position: relative;
   padding-inline: 3rem;
-  border-width: .0625rem .0625rem 0 .0625rem;
+  border-width: 0.0625rem 0.0625rem 0 0.0625rem;
   border-style: solid;
   border-color: var(--primary);
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
-
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 .profile-img picture img {
   position: absolute;
@@ -19,12 +18,15 @@
   width: 34rem;
   height: auto;
 }
-@media only screen and (max-device-width: 64rem) {
+@media only screen and (max-width: 72rem) {
   .profile-img picture img {
     right: 0rem;
   }
+  .header {
+    border-color: transparent;
+  }
 }
-@media only screen and (max-device-width: 40rem) {
+@media only screen and (max-width: 40rem) {
   .header {
     justify-content: flex-start;
   }
@@ -40,8 +42,8 @@
     font-size: 2rem;
     line-height: 2.5rem;
   }
-  }
-@media only screen and (max-device-width: 34rem) {
+}
+@media only screen and (max-width: 34rem) {
   .profile-img picture img {
     width: 100%;
   }

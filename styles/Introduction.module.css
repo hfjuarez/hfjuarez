@@ -1,9 +1,9 @@
 .introduction {
-    height: 48rem;
+  height: 48rem;
   display: grid;
   align-content: center;
   padding-inline: 3rem;
-  border-width: 0 .0625rem;
+  border-width: 0 0.0625rem;
   border-style: solid;
   border-color: var(--primary);
 }
