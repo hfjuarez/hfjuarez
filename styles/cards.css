@@ -1,0 +1,24 @@
+.card,
+.card-container {
+  position: relative;
+  background-color: var(--theme-bg);
+  border-radius: 1.5rem;
+  border: 0.0625rem solid var(--tertiary);
+  box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
+  -webkit-box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
+  -moz-box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
+}
+
+.card-container {
+  height: 48rem;
+  padding-inline: 3rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  transition-duration: 150ms;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 0.25rem 1rem 0.25rem rgba(0, 0, 0, 0.25);
+}

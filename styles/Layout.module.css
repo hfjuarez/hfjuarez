@@ -1,11 +1,6 @@
-.container {
-  padding: 0 2rem;
-}
-
 .main {
   min-height: calc(100vh - 50px);
   width: 100%;
-  padding-block: 3rem 1rem;
   display: flex;
   flex: 1;
   flex-direction: column;

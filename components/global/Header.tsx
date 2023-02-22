@@ -5,7 +5,7 @@ export default class Header extends Component {
   render() {
     return (
       <header className={styles.header}>
-        <div className="title">
+        <div className={styles.title}>
           <h2>Hello!</h2>
           <h1>I&apos;m Hernán.</h1>
           <h3 className="op-8">Full Stack developer</h3>

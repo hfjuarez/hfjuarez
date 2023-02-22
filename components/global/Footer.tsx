@@ -17,7 +17,7 @@ export default class index extends Component<{}, {}> {
           <ul className={styles.links}>
             <li>
               <a
-                className="moda op-5"
+                className="moda op-8"
                 href="https://www.linkedin.com/in/hfjuarez/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -26,7 +26,7 @@ export default class index extends Component<{}, {}> {
               </a>
             </li>
             <li>
-              <a className="moda op-5" href="mailto:herfj4@gmail.com">
+              <a className="moda op-8" href="mailto:herfj4@gmail.com">
                 Contact
               </a>
             </li>

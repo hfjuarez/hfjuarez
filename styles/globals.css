@@ -76,7 +76,7 @@ button,
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border: 0.0625rem solid var(--primary);
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
   padding: 0.7rem 1.4rem;
   font-family: "Poppins";
   font-weight: 300;
@@ -245,15 +245,15 @@ a:hover {
 .red {
   color: var(--red);
 }
-.container {
+.page-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   flex: 1;
-  border-radius: 0.5rem;
-  max-width: 72rem;
-  background-color: var(--theme-bg);
+  border-radius: 1rem;
+  max-width: 80rem;
 }
+
 hr,
 .divider {
   border: 0 solid transparent;
@@ -273,7 +273,7 @@ hr,
   }
 } */
 
-@media only screen and (max-width: 72rem) {
+@media only screen and (max-width: 80rem) {
   body {
     background-color: var(--theme-bg);
   }
