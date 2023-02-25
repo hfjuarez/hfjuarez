@@ -55,6 +55,7 @@
   .profile-img {
     margin-top: 2rem;
     width: 80%;
+    min-height: 80%;
   }
   .profile-img img {
     width: 100%;
