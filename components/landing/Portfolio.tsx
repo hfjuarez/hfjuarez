@@ -10,7 +10,7 @@ export default class Portfolio extends Component {
         >
           <>
             <h4>The Sandbox</h4>
-            <hr />
+            <hr className="mt-2" />
             <p className="txt-md txt-300">
               The Sandbox is a user-generated, virtual-gaming world where
               players can build, own and monetize their gaming experience.
@@ -24,14 +24,10 @@ export default class Portfolio extends Component {
             </p>
           </>
         </div>
-        <div
-          className={`card-container ${styles["card-work"]} ${styles["cualit"]}`}
-        >
+        <div className={`card-container ${styles["card-work"]}`}>
           <>
-            <h4>
-              Cualit
-              <hr />
-            </h4>
+            <h4>Cualit</h4>
+            <hr className="mt-2" />
             <p className="txt-md txt-300">
               Analysis and design, development, and maintenance of websites,
               servers, and mobile applications for several clients.
