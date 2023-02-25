@@ -8,25 +8,24 @@ export default function Stack() {
       <h6 className="mb-2">Technologies </h6>
       <div className={`${styles["stack-content"]}`}>
         <Card className={styles["fe"]}>
-          <>
-            <h4>Vue</h4>
-            <h4>React</h4>
-            <h4>React Native</h4>
-          </>
+          <ul className={styles["stack-list"]}>
+            <li>Vue</li>
+            <li>React</li>
+            <li>React Native</li>
+          </ul>
         </Card>
         <Card className={styles["be"]}>
-          <>
-            <h4>NodeJS</h4>
-            <h4>Ruby on Rails</h4>
-            <h4>Java</h4>
-          </>
+          <ul className={styles["stack-list"]}>
+            <li>NodeJs</li>
+            <li>Ruby on Rails</li>
+            <li>Java</li>
+          </ul>
         </Card>
-        <Card className={styles["be"]}>
-          <>
-            <h4>AWS</h4>
-            <h4>SQL</h4>
-            <h4>MongoDB</h4>
-          </>
+        <Card className={styles["ss"]}>
+          <ul className={styles["stack-list"]}>
+            <li>SQL</li>
+            <li>MongoDB</li>
+          </ul>
         </Card>
       </div>
     </section>

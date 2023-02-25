@@ -42,10 +42,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: bottom;
-  border-width: 0;
   background-color: var(--primary);
-  background-image: linear-gradient(to bottom, #000000e1 40%, transparent),
-    url("https://hfjuarez.imgix.net/sandbox-banner.jpg");
 }
 .sandbox hr {
   border-color: white !important;

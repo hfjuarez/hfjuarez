@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Poppins:wght@100;200;300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Poppins:wght@100;200;300;500&display=swap");
 html,
 body {
   --theme-bg: #fff;
@@ -12,7 +12,7 @@ body {
   --red: #e13d5e;
   padding: 0;
   margin: 0;
-  font-family: "Bodoni Moda";
+  font-family: "Poppins";
   background-color: var(--theme-body-bg);
   transition: 0.5s ease-in-out;
   color: var(--tertiary);
@@ -29,6 +29,7 @@ h4,
 h5,
 h6 {
   color: var(--tertiary);
+  font-family: "Bodoni Moda";
   margin: 0px;
 }
 
@@ -53,6 +54,7 @@ h3 {
 
 h4 {
   font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 h5 {
@@ -134,17 +136,6 @@ a:hover {
     ExtraLight 200
     Light 300
     Medium 500
-  */
-}
-.lato {
-  font-family: "Lato";
-  /*
-    Thin 100
-    Thin 100 Italic
-    Light 300
-    Light 300 Italic
-    Regular 400
-    Regular 400 Italic 
   */
 }
 
