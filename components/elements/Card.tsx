@@ -10,15 +10,15 @@ export default function Card({ children, className }: Props) {
       <>
         {children}
         <div className="card-hover">
-          <div class="tl"></div>
-          <div class="tm"></div>
-          <div class="tr"></div>
-          <div class="ml"></div>
-          <div class="mm"></div>
-          <div class="mr"></div>
-          <div class="bl"></div>
-          <div class="bm"></div>
-          <div class="br"></div>
+          <div className="tl"></div>
+          <div className="tm"></div>
+          <div className="tr"></div>
+          <div className="ml"></div>
+          <div className="mm"></div>
+          <div className="mr"></div>
+          <div className="bl"></div>
+          <div className="bm"></div>
+          <div className="br"></div>
         </div>
       </>
     </div>
