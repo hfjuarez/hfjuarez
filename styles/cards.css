@@ -16,9 +16,98 @@
 }
 
 .card {
-  transition-duration: 150ms;
+  transition-duration: 500ms;
   cursor: pointer;
 }
 .card:hover {
-  box-shadow: 0 0.25rem 1rem 0.25rem rgba(0, 0, 0, 0.25);
+  box-shadow:  0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: 0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+
+.card-hover {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  border-radius: 1.5rem;
+
+  transition-duration: 500ms;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.tl {
+  border-top-left-radius: 10px;
+}
+.tr {
+  border-top-right-radius: 10px;
+}
+.bl {
+  border-bottom-left-radius: 10px;
+}
+.br {
+  border-bottom-right-radius: 10px;
+}
+
+.card:has(.tl:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(10deg)
+    rotateZ(-1deg) rotateX(-7deg);
+    box-shadow: -.5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+    -webkit-box-shadow: -.5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+    -moz-box-shadow: -.5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+.card:has(.tm:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateX(-7deg);
+  box-shadow:  0 -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: 0 -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0 -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+.card:has(.tr:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(-10deg)
+    rotateZ(1deg) rotateX(-7deg);
+    box-shadow: .5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+    -webkit-box-shadow: .5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+    -moz-box-shadow: .5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+
+.card:has(.ml:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(10deg);
+  box-shadow:   -.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow:  -.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow:  -.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+.card:has(.mm:hover) {
+  transform: scale3d(1.05, 1.05, 1.05);
+}
+.card:has(.mr:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(-10deg);
+  box-shadow:   .5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow:  .5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow:  .5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+
+.card:has(.bl:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(10deg)
+    rotateZ(1deg) rotateX(7deg);
+    box-shadow: -.5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+    -webkit-box-shadow: -.5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+    -moz-box-shadow: -.5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+.card:has(.bm:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateX(7deg);
+  box-shadow:  0 .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: 0 .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0 .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+}
+.card:has(.br:hover) {
+  transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(-10deg)
+    rotateZ(-1deg) rotateX(7deg);
+    box-shadow: .5rem .5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: .5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: .5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
 }

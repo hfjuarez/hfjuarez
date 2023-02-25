@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import Card from "../elements/Card";
 import styles from "../../styles/Portfolio.module.css";
 
 export default class Portfolio extends Component {
   render() {
     return (
       <section className={`${styles.portfolio}`}>
-        <Card
+        <div
           className={`card-container ${styles["card-work"]} ${styles["sandbox"]}`}
         >
           <>
@@ -24,8 +23,8 @@ export default class Portfolio extends Component {
               part of the metaverse and generate more value!
             </p>
           </>
-        </Card>
-        <Card
+        </div>
+        <div
           className={`card-container ${styles["card-work"]} ${styles["cualit"]}`}
         >
           <>
@@ -38,7 +37,7 @@ export default class Portfolio extends Component {
               servers, and mobile applications for several clients.
             </p>
           </>
-        </Card>
+        </div>
       </section>
     );
   }
