@@ -25,6 +25,7 @@
 .profile-img img {
   width: 34rem;
   height: auto;
+  min-height: 80%;
 }
 @media only screen and (max-width: 90rem) {
   .profile-img img {
@@ -55,7 +56,6 @@
   .profile-img {
     margin-top: 2rem;
     width: 80%;
-    min-height: 80%;
   }
   .profile-img img {
     width: 100%;
