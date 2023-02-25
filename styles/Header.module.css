@@ -21,16 +21,13 @@
   -webkit-box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
   -moz-box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
 }
-.profile-img picture {
-  display: flex;
-  align-items: flex-end;
-}
-.profile-img picture img {
+
+.profile-img img {
   width: 34rem;
   height: auto;
 }
 @media only screen and (max-width: 90rem) {
-  .profile-img picture img {
+  .profile-img img {
     right: 0rem;
   }
   .header {
