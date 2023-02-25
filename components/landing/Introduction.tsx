@@ -7,7 +7,7 @@ export default class Introduction extends Component {
   render() {
     return (
       <section className={`${styles["introduction"]} card-container`}>
-        <h1>
+        <h1 className="txt-300">
           Ambitious developer
           <br />
           for <em>ambitious</em> companies.

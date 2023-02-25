@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 24rem;
+  height: 100%;
   margin-block: 6rem;
 }
 .stack h6 {
@@ -14,21 +14,17 @@
 
 .stack-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   width: 100%;
-  max-width: 80rem;
   padding-block: 1rem;
 }
-.stack-content .fe,
-.stack-content .be,
-.stack-content .ss {
+.stack-content .stack-item {
   flex: 1 1 0px;
   height: fit-content;
-  height: 28rem;
+  height: 22rem;
   width: 100%;
   padding: 2rem;
-  background-color: var(--theme-bg);
 }
 .stack-content h4 {
   z-index: 99;
@@ -41,9 +37,14 @@
 }
 
 .stack-list li {
-  font-family: "Bodoni Moda";
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 2.5rem;
   margin-bottom: .25rem;
+}
 
+@media only screen and (max-width: 60rem) {
+  .stack-content {
+    grid-template-columns: 1fr;
+  }
 }

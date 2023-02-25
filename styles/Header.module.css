@@ -34,9 +34,11 @@
     border-color: transparent;
   }
 }
-@media only screen and (max-width: 40rem) {
+@media only screen and (max-width: 60rem) {
   .header {
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .header h2 {
     font-size: 2.5rem;
@@ -50,9 +52,16 @@
     font-size: 2rem;
     line-height: 2.5rem;
   }
+  .profile-img {
+    margin-top: 2rem;
+    width: 80%;
+  }
+  .profile-img img {
+    width: 100%;
+  }
 }
-@media only screen and (max-width: 34rem) {
-  .profile-img picture img {
+@media only screen and (max-width: 40rem) {
+  .profile-img img {
     width: 100%;
   }
 }

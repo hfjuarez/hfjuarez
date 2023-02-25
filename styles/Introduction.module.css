@@ -2,3 +2,10 @@
   display: grid;
   align-content: center;
 }
+
+@media only screen and (max-width: 60rem) {
+  .introduction h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
