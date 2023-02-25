@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Image from 'next/image'
 import styles from "../../styles/Header.module.css";
 
 export default class Header extends Component {
@@ -12,7 +11,7 @@ export default class Header extends Component {
           <h3 className="op-8">Full Stack developer</h3>
         </div>
         <div className={styles["profile-img"]}>
-            <Image src="https://hfjuarez.imgix.net/dark-profile.webp" alt="me" width={600} height={649}/>
+            <img src="https://hfjuarez.imgix.net/dark-profile.webp" alt="me" />
         </div>
       </header>
     );

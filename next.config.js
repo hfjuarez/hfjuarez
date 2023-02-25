@@ -17,16 +17,9 @@ const nextConfigGithub = {
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-
   images: {
-    loader: "akamai",
-    path: '',
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'hfjuarez.imgix.net',
-      },
-    ],
+    loader: "imgix",
+    path: "https://hfjuarez.imgix.net",
   },
 };
 
