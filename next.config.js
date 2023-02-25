@@ -20,11 +20,7 @@ const nextConfig = {
   images: {
     loader: "imgix",
     path: "https://hfjuarez.imgix.net",
-  },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  }
 };
 
 module.exports = isGithubActions ? {...nextConfig, ...nextConfigGithub} : nextConfig;
