@@ -19,6 +19,7 @@ const nextConfig = {
   swcMinify: true,
 
   images: {
+    loader: "akamai",
     remotePatterns: [
       {
         protocol: 'https',
