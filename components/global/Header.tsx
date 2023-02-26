@@ -10,9 +10,7 @@ export default class Header extends Component {
           <h1>I&apos;m Hernán.</h1>
           <h3 className="txt-300 op-8">Full Stack developer</h3>
         </div>
-        <div className={styles["profile-img"]}>
-            <img src="https://hfjuarez.imgix.net/dark-profile.png" alt="me" />
-        </div>
+        <img src="https://hfjuarez.imgix.net/dark-profile.png" alt="me" />
       </header>
     );
   }
