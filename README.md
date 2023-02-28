@@ -1,6 +1,8 @@
-As a Full-Stack Developer, I've been working on the analysis and design, development, and maintenance of websites, servers, and mobile applications for several local and international clients.
+With a strong background as a Full-Stack Developer, I have developed solutions for various industries, including financial, healthcare, and real estate. 
 
-I work with Node and Vue, I worked with React, Ruby on Rails, Java, and always ready to learn new things!
+My expertise lies in utilizing NodeJS and Vue, and I have also gained proficiency in other popular frameworks such as Ruby on Rails, React, React Native and Java. 
+
+As a result, I am ready to handle diverse project requirements and work collaboratively with cross-functional teams to achieve successful outcomes.
 
 
 ## About my experience
