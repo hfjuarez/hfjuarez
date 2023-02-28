@@ -7,7 +7,6 @@ As a result, I am ready to handle diverse project requirements and work collabor
 
 ## About my experience
 
-Since I started, I have worked with agile methodologies, mainly SCRUM. My first job was at Cualit, a software factory, which allowed me to learn and work on different kinds of projects and areas. I learned from day one to deal with clients and I had weekly meetings with them.
+From the beginning of my career, I have worked with agile methodologies, particularly SCRUM. My experience started at Cualit, a software factory where I had the opportunity to work on diverse projects and areas, gaining invaluable knowledge in different technologies and tools. At Cualit, I quickly learned the importance of effective communication with clients, having regular weekly meetings with them to ensure we were achieving their expectations.
 
-
-Now, I work at The Sandbox, where I have learned to follow the best practices, write clean code and always keep performance in mind.
+Currently, I am part of The Sandbox team, where I continue to follow industry best practices, with a strong focus on writing clean, efficient code that prioritizes performance. Through my time at The Sandbox, I have gained further experience in collaborating with cross-functional teams and adopting a growth mindset to improve my skills and knowledge.
