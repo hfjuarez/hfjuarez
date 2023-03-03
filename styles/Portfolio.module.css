@@ -18,7 +18,7 @@
 }
 .card-work h4 {
   text-align: center;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
 }
 .card-work-intro {
   display: flex;
