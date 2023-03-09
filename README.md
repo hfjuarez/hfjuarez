@@ -1,7 +1,7 @@
 # About 
 With a strong background as a Full-Stack Developer, I have developed solutions for various industries, including financial, healthcare, and real estate. 
 
-My expertise lies in developing with NodeJS and Vue, and I have also gained proficiency in other popular frameworks such as Ruby on Rails, React, React Native and Java.
+My background lies in developing with NodeJS and Vue, and I've also gained proficiency in other popular frameworks like Ruby on Rails, React and React Native. 
 
 As a result, I am ready to handle diverse project requirements and work collaboratively with cross-functional teams to achieve successful outcomes.
 
