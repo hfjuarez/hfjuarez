@@ -1,31 +1,49 @@
 .stack {
   display: flex;
+  position: relative;
+  align-items: flex-start;
+  gap: 2rem;
   width: 100%;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   height: 100%;
   margin-block: 6rem;
 }
-.stack h6 {
-  font-size: 1.75rem;
-  align-self: flex-start;
+
+.stack-title {
+  width: 40%;
+  top: 7rem;
+  margin-block: 9rem;
+  display: flex;
+  position: sticky;
+  flex-direction: column;
 }
 
 .stack-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
+  width: 60%;
   padding-block: 1rem;
 }
 .stack-content .stack-item {
   flex: 1 1 0px;
-  height: fit-content;
-  height: 22rem;
   width: 100%;
+  min-height: 24rem;
   padding: 2rem;
+  background-color: var(--primary);
+  transition: 0.1s ease-in-out;
 }
+
+.stack-content .stack-item:nth-child(1) {
+  background-color: var(--primary);
+}
+.stack-content .stack-item:nth-child(2) {
+  background-color: var(--secondary);
+}
+.stack-content .stack-item:nth-child(3) {
+  background-color: var(--theme-bg);
+}
+
 .stack-content h4 {
   z-index: 99;
 }
@@ -39,6 +57,7 @@
 .stack-list li {
   font-size: 2rem;
   font-weight: 300;
+  color: var(--theme-bg);
   line-height: 2.5rem;
   margin-bottom: .25rem;
 }

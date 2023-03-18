@@ -7,7 +7,7 @@ import Portfolio from "../components/landing/Portfolio";
 export default function Home() {
   return (
     <>
-      <div className="page-container">
+      <div className="container">
         <Header />
         <Introduction />
         <Stack />

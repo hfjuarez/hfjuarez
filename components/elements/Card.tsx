@@ -6,7 +6,7 @@ interface Props {
 }
 export default function Card({ children, className }: Props) {
   return (
-    <div className={`card ${className}`}>
+    <div className={`card has-hover ${className}`}>
       <>
         {children}
         <div className="card-hover">

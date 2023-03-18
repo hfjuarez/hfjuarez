@@ -2,8 +2,8 @@
 .card-container {
   position: relative;
   background-color: var(--theme-bg);
-  border-radius: 1.5rem;
-  border: 0.0625rem solid var(--tertiary);
+  border-radius: 1.375rem;
+  border: 0.125rem solid var(--primary);
   box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
   -webkit-box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
   -moz-box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
@@ -19,7 +19,8 @@
   transition-duration: 500ms;
   cursor: pointer;
 }
-.card:hover {
+
+.card.has-hover:hover {
   box-shadow:  0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
   -webkit-box-shadow: 0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
   -moz-box-shadow: 0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
