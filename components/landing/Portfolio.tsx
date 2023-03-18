@@ -27,7 +27,7 @@ export default class Portfolio extends Component {
                   stroke="white"
                   strokeWidth="2"
                 />
-                <circle cx="12" cy="6" r="5" stroke="white" stroke-width="2" />
+                <circle cx="12" cy="6" r="5" stroke="white" strokeWidth="2" />
               </svg>
               <p className=" txt-center m-0">Actual</p>
             </div>
@@ -65,7 +65,7 @@ export default class Portfolio extends Component {
                   stroke="black"
                   strokeWidth="2"
                 />
-                <circle cx="12" cy="6" r="5" stroke="black" stroke-width="2" />
+                <circle cx="12" cy="6" r="5" stroke="black" strokeWidth="2" />
               </svg>
               <p className="txt-center m-0">Past job</p>
             </div>
