@@ -52,7 +52,7 @@ export default class Introduction extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="/images/github-mark.svg" alt="Github logo" />
+                <img src="https://hfjuarez.imgix.net/github-mark.svg" alt="Github logo" />
                 <p>@hfjuarez</p>
               </a>
             </li>
