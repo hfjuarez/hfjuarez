@@ -7,7 +7,7 @@ body {
   --theme-bg-90: #ffffffe6;
   --primary: #0d0c0a;
   --secondary: #4F5666;
-  --tertiary: #6e756b;
+  --tertiary: #a7aab2;
   --skyblue: #94cbe9;
   --blue: #57a0e4;
   --orange: #f4ab6c;
@@ -312,5 +312,32 @@ hr,
   }
   .container {
     width: 90vw;
+  }
+}
+
+.plus-icon {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    border-radius: 0.125rem;
+    background-color: var(--theme-bg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &::before {
+    height: 0.7rem;
+    width: 0.125rem;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    width: 0.7rem;
+    height: 0.125rem;
+    transform: translate(-50%, -50%);
   }
 }

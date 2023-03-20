@@ -1,10 +1,9 @@
 import React, { Component } from "react";
+import Link from "next/link";
 import styles from "../../styles/Introduction.module.scss";
 
 export default class Introduction extends Component {
-  state = {
-
-  };
+  state = {};
   calculateAge() {
     var diff_ms = Date.now() - new Date(2000, 6, 4).getTime();
     var age_dt = new Date(diff_ms);
@@ -32,7 +31,10 @@ export default class Introduction extends Component {
             have also gained proficiency in other popular frameworks like Ruby
             on Rails, React, and React Native.
           </p>
-          <button>More about me</button>
+          <Link href="/me">
+            <div className="plus-icon"/>
+            About me
+          </Link>
         </div>
         <div className={styles["section-2"]}>
           <h6>Biggest challenge you&apos;ve faced?</h6>
@@ -41,8 +43,10 @@ export default class Introduction extends Component {
             millions users.
           </p>
           <p>Giving a profit of 750,000 USD in less than 1 month.</p>
-          <button className="btn-sm">More about my experience</button>
-
+          <Link href="/experience"> 
+            <div className="plus-icon"/>
+            My experience
+          </Link>
         </div>
         <div className={styles.footer}>
           <ul>
@@ -52,7 +56,10 @@ export default class Introduction extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="https://hfjuarez.imgix.net/github-mark.svg" alt="Github logo" />
+                <img
+                  src="https://hfjuarez.imgix.net/github-mark.svg"
+                  alt="Github logo"
+                />
                 <p>@hfjuarez</p>
               </a>
             </li>
