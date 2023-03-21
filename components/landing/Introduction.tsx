@@ -3,16 +3,12 @@ import Link from "next/link";
 import styles from "../../styles/Introduction.module.scss";
 
 export default class Introduction extends Component {
-  state = {};
-  calculateAge() {
-    var diff_ms = Date.now() - new Date(2000, 6, 4).getTime();
-    var age_dt = new Date(diff_ms);
-    return Math.abs(age_dt.getUTCFullYear() - 1970);
-  }
   render() {
     return (
-      <section className={`card-container ${styles["introduction"]}`}>
-        <div className={styles.header}></div>
+      <section id="intro" className={`card-container ${styles["introduction"]}`}>
+        <div className={styles.header}>
+          <h5>Hernán. </h5>
+        </div>
         <div className={styles.main}>
           <h1 className="txt-300">
             Ambitious,
@@ -32,7 +28,6 @@ export default class Introduction extends Component {
             on Rails, React, and React Native.
           </p>
           <Link href="/me">
-            <div className="plus-icon"/>
             About me
           </Link>
         </div>
@@ -40,11 +35,8 @@ export default class Introduction extends Component {
           <h6>Biggest challenge you&apos;ve faced?</h6>
           <p>
             Create the new LANDSale system to improve our community of 3
-            millions users.
-          </p>
-          <p>Giving a profit of 750,000 USD in less than 1 month.</p>
+            millions users. Giving a profit of 750,000 USD in less than 1 month.</p>
           <Link href="/experience"> 
-            <div className="plus-icon"/>
             My experience
           </Link>
         </div>
