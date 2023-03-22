@@ -19,6 +19,8 @@ export default class Layout extends Component<Props, State> {
         <Head>
           <title>Hernán Fabrica</title>
           <meta name="description" content="Hello world" />
+          <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)"/>
+          <meta name="theme-color" content="#0d0c0a" media="(prefers-color-scheme: dark)"/>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
