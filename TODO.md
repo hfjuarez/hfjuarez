@@ -4,3 +4,5 @@
   - [ ] Implement new style
 - [ ] Fix footer
 - [ ] Add legal data to footer
+- [ ] Fix GH button in dark mode
+- [ ] Fix intro buttons in mobile
