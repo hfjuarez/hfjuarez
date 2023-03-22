@@ -1,8 +1,0 @@
-- [ ] Image optimizations (reduce size and convert to webp)
-- [ ] Better style files structure (move to scss and use mixins)
-- [ ] Stack Section: 
-  - [ ] Implement new style
-- [ ] Fix footer
-- [ ] Add legal data to footer
-- [ ] Fix GH button in dark mode
-- [ ] Fix intro buttons in mobile
