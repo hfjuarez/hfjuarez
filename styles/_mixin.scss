@@ -1,0 +1,58 @@
+@mixin box-shadow($x: 0.25rem, $y: 0.25rem) {
+  box-shadow: $x $y 0px 0px var(--primary);
+  // @media (prefers-color-scheme: dark) {
+  //   box-shadow: $x $y 0px 0px var(--primary);
+  // }
+}
+
+@mixin font(
+  $size: 1rem,
+  $height: 1rem,
+  $weight: regular,
+  $color: var(--primary),
+  $align: left
+) {
+  /* 
+    Weight options are regular, semi, bold and extra 
+    Defaults when calling this mixin are: 
+      - font-size: 1rem
+      - line-height: 1rem
+      - font-family: $font-regular
+      - color: var(--primary),
+      - text-align: left
+
+    Be careful with this, otherwise it can override styles
+  */
+
+  @if ($size == "_") {
+    font-size: 1rem;
+  } @else {
+    font-size: $size;
+  }
+
+  @if ($height == "_") {
+    line-height: normal;
+  } @else {
+    line-height: $height;
+  }
+
+  @if ($weight == "regular") {
+    font-family: $font-regular;
+  } @else if ($weight == "bold") {
+    font-family: $font-bold;
+  } @else {
+    font-family: $font-regular;
+  }
+
+  @if ($color == "_") {
+    color: var(--primary);
+  } @else {
+    color: $color;
+  }
+
+  @if ($align == "_") {
+    text-align: left;
+  } @else {
+    text-align: $align;
+  }
+}

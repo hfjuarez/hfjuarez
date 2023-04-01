@@ -1,0 +1,20 @@
+@font-face {
+  font-family: $font-regular;
+  src: 
+    url("/fonts/archivo/Archivo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: 100%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-bold;
+  src: 
+    url("/fonts/archivo/Archivo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: 100%;
+  font-display: swap;
+}
+
