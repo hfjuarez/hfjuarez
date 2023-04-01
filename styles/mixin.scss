@@ -1,6 +1,6 @@
-@mixin box-shadow {
-  box-shadow: 0.25rem 0.25rem 0px 0px var(--primary);
-  @media (prefers-color-scheme: dark) {
-    box-shadow: 0.25rem 0.25rem 0px 0px var(--secondary);
-  }
+@mixin box-shadow($x: 0.25rem, $y: 0.25rem) {
+  box-shadow: $x $y 0px 0px var(--primary);
+  // @media (prefers-color-scheme: dark) {
+  //   box-shadow: $x $y 0px 0px var(--primary);
+  // }
 }

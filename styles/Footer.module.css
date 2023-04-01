@@ -35,6 +35,7 @@
 
 .links li a {
   text-decoration: none;
+  color: var(--tertiary);
 }
 
 .links li:after {
