@@ -14,7 +14,7 @@ export default class Header extends Component {
               <span className="txt-secondary">&nbsp;developer</span>
             </h3>
           </div>
-          <img src="https://hfjuarez.imgix.net/dark-profile.png" alt="me" />
+          <img src="https://github.com/hfjuarez/hfjuarez/blob/main/public/images/dark-profile.png?raw=true" alt="me" />
         </header>
       </div>
     );
