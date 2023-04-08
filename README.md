@@ -1,16 +1,11 @@
 # About 
-With a strong background as a Full-Stack Developer, I have developed solutions for various industries, including financial, healthcare, and real estate. 
+I am a results-driven Full Stack Developer with a track record of success in delivering innovative solutions for diverse industries. With expertise in front-end and back-end technologies, I have a proven ability to develop robust and scalable web applications and mobile apps. My experience spans projects in gaming, healthcare, real estate, and many others industries.
 
-My background lies in developing with NodeJS and Vue, and I've also gained proficiency in other popular frameworks like Ruby on Rails, React and React Native. 
+Throughout my career, my technical skills, combined with my keen eye for detail and passion for creating user-centric websites and applications, have resulted in successful outcomes, including a profit of $750,000 USD within a month for a LANDs sale system in The Sandbox Game.
 
-As a result, I am ready to handle diverse project requirements and work collaboratively with cross-functional teams to achieve successful outcomes.
+I thrive in dynamic environments, collaborating with cross-functional teams. My ability to adapt to different industries, technologies, and project requirements has earned me recognition as a key contributor to the success of my previous jobs and clients.
 
----
-
-From the beginning of my career, I have worked with agile methodologies, particularly SCRUM. My experience started at Cualit, a software factory where I had the opportunity to work on diverse projects and areas, gaining invaluable knowledge in different technologies and tools. At Cualit, I quickly learned the importance of effective communication with clients, having regular weekly meetings with them to ensure we were achieving their expectations.
-
-Currently, I am part of The Sandbox team, where I continue to follow industry best practices, with a strong focus on writing clean, efficient code that prioritizes performance. Through my time at The Sandbox, I have gained further experience in collaborating with cross-functional teams and adopting a growth mindset to improve my skills and knowledge.
-
+If you're looking for a skilled Full Stack Developer with a proven track record of delivering innovative solutions and driving results.
 # Github Stats:
 
 <table>
