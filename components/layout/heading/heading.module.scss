@@ -1,0 +1,40 @@
+.basic {
+  @include font(5rem, 5.5rem, bold);
+  margin: 0px;
+  color: $primary;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @extend .basic;
+}
+
+.h2 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+
+.h3 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+.h4 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.h5 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.h6 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}

@@ -1,7 +1,7 @@
 @mixin box-shadow($x: 0.25rem, $y: 0.25rem) {
-  box-shadow: $x $y 0px 0px var(--primary);
+  box-shadow: $x $y 0px 0px $primary;
   // @media (prefers-color-scheme: dark) {
-  //   box-shadow: $x $y 0px 0px var(--primary);
+  //   box-shadow: $x $y 0px 0px $primary;
   // }
 }
 
@@ -9,7 +9,7 @@
   $size: 1rem,
   $height: 1rem,
   $weight: regular,
-  $color: var(--primary),
+  $color: $primary,
   $align: left
 ) {
   /* 
@@ -18,11 +18,12 @@
       - font-size: 1rem
       - line-height: 1rem
       - font-family: $font-regular
-      - color: var(--primary),
+      - color: $primary,
       - text-align: left
 
     Be careful with this, otherwise it can override styles
   */
+  font-family: "Oswald", serif;
 
   @if ($size == "_") {
     font-size: 1rem;
@@ -37,15 +38,15 @@
   }
 
   @if ($weight == "regular") {
-    font-family: $font-regular;
+    font-weight: 400;
   } @else if ($weight == "bold") {
-    font-family: $font-bold;
+    font-weight: 700;
   } @else {
-    font-family: $font-regular;
+    font-weight: 400;
   }
 
   @if ($color == "_") {
-    color: var(--primary);
+    color: $primary;
   } @else {
     color: $color;
   }

@@ -1,8 +1,6 @@
 .card,
 .card-container {
   position: relative;
-  background-color: var(--theme-bg);
-  border-radius: 0.5rem;
   border: 0.1875rem solid var(--primary);
   box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
   -webkit-box-shadow: -0 0.125rem 0.5rem 0 rgba(49, 49, 50, 0.1);
@@ -20,7 +18,7 @@
 }
 
 .card.has-hover:hover {
-  box-shadow:  0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: 0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
   -webkit-box-shadow: 0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
   -moz-box-shadow: 0 0 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
@@ -31,7 +29,7 @@
   width: 100%;
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   border-radius: 1.5rem;
   cursor: pointer;
 
@@ -58,57 +56,57 @@
 .card:has(.tl:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(10deg)
     rotateZ(-1deg) rotateX(-7deg);
-    box-shadow: -.5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-    -webkit-box-shadow: -.5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-    -moz-box-shadow: -.5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: -0.5rem -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: -0.5rem -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: -0.5rem -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
 .card:has(.tm:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateX(-7deg);
-  box-shadow:  0 -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -webkit-box-shadow: 0 -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -moz-box-shadow: 0 -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: 0 -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: 0 -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0 -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
 .card:has(.tr:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(-10deg)
     rotateZ(1deg) rotateX(-7deg);
-    box-shadow: .5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-    -webkit-box-shadow: .5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-    -moz-box-shadow: .5rem -.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: 0.5rem -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: 0.5rem -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0.5rem -0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
 
 .card:has(.ml:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(10deg);
-  box-shadow:   -.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -webkit-box-shadow:  -.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -moz-box-shadow:  -.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: -0.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: -0.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: -0.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
 .card:has(.mm:hover) {
   transform: scale3d(1.05, 1.05, 1.05);
 }
 .card:has(.mr:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(-10deg);
-  box-shadow:   .5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -webkit-box-shadow:  .5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -moz-box-shadow:  .5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: 0.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: 0.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0.5rem 0 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
 
 .card:has(.bl:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(10deg)
     rotateZ(1deg) rotateX(7deg);
-    box-shadow: -.5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-    -webkit-box-shadow: -.5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-    -moz-box-shadow: -.5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: -0.5rem 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: -0.5rem 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: -0.5rem 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
 .card:has(.bm:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateX(7deg);
-  box-shadow:  0 .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -webkit-box-shadow: 0 .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -moz-box-shadow: 0 .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: 0 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -webkit-box-shadow: 0 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
 }
 .card:has(.br:hover) {
   transform: scale3d(1.05, 1.05, 1.05) perspective(1300px) rotateY(-10deg)
     rotateZ(-1deg) rotateX(7deg);
-    box-shadow: .5rem .5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: .5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
-  -moz-box-shadow: .5rem .5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  box-shadow: 0.5rem 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0.5rem 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
+  -moz-box-shadow: 0.5rem 0.5rem 1.25rem 0 rgba(49, 49, 50, 0.3);
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/global/Header";
+import Header from "../components/landing/header/Header";
 import Introduction from "../components/landing/Introduction";
 import Stack from "../components/landing/Stack";
 import Portfolio from "../components/landing/Portfolio";
