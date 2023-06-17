@@ -26,7 +26,7 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
-    prependData: `@import "styles/index.scss";`,
+    prependData: `@import "@/styles//index.scss";`,
   },
 };
 

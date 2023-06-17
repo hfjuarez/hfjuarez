@@ -1,5 +1,5 @@
 .basic {
-  @include font(5rem, 5.5rem, bold);
+  @include font(5.5rem, 5.5rem, bold);
   margin: 0px;
   color: $primary;
 }
@@ -14,23 +14,23 @@
 }
 
 .h2 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   line-height: 4.5rem;
 }
 
 .h3 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 3.5rem;
 }
 
 .h4 {
   font-size: 2.5rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
 .h5 {
   font-size: 2rem;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 
 .h6 {
