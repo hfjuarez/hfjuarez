@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
-import styles from "../../styles/Introduction.module.scss";
+import styles from "@/styles/Introduction.module.scss";
 
 export default class Introduction extends Component {
   render() {

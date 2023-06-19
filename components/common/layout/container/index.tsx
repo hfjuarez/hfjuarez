@@ -1,17 +1,17 @@
-import React, { ReactNode, CSSProperties } from 'react';
+import React, { ReactNode } from 'react';
 import containerStyle from "./container.module.scss";
 import classNames from 'classnames';
 
 type ContainerProps = {
+  as: 'section' | 'article' | 'div';
   type?: 'basic';
-  css?: CSSProperties;
   className?: string;
   children: ReactNode;
 };
 
-const Container = ({ type = 'basic', css, className, children }: ContainerProps) => {
+const Container = ({ as: Component, type = 'basic', className, children, ...props }: ContainerProps) => {
   const combinedClassNames = classNames(containerStyle[type], className);
-  return <div style={css} className={combinedClassNames}>{children}</div>;
+  return <Component className={combinedClassNames} {...props}>{children}</Component>;
 };
 
 export default Container;

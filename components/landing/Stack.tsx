@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Stack.module.scss";
+import styles from "@/styles/Stack.module.scss";
 
 export default function Stack() {
   return (

@@ -1,8 +1,8 @@
 import React, { Component, ReactNode } from "react";
 import Head from "next/head";
-import Navbar from "../global/Navbar";
-import Footer from "../global/Footer";
-import styles from "../../styles/Layout.module.css";
+import Navbar from "@/components/common/navbar";
+import Footer from "@/components/common/footer";
+import styles from "./layout.module.scss";
 
 type Props = {
   children: ReactNode;
@@ -20,7 +20,7 @@ export default class Layout extends Component<Props, State> {
           <title>Hernán Fabrica</title>
           <meta name="description" content="Hello world" />
           <meta
-            name="theme-color"
+            name="theme-colorScheme"
             content="#fff"
             media="(prefers-color-scheme: light)"
           />
@@ -31,7 +31,8 @@ export default class Layout extends Component<Props, State> {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className={styles.main}>{this.props.children}</main>
+        <Navbar/>
+        <div className={styles.main}>{this.props.children}</div>
         <Footer />
       </>
     );

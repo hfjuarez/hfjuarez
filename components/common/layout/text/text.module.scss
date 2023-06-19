@@ -1,0 +1,10 @@
+.p {
+  @include font;
+  margin: 0;
+}
+.primary {
+  color: $primary;
+}
+.secondary {
+  color: $secondary;
+}
