@@ -42,6 +42,8 @@
     font-weight: 400;
   } @else if ($weight == "light") {
     font-weight: 300;
+  } @else if ($weight == "semi") {
+    font-weight: 500;
   } @else if ($weight == "bold") {
     font-weight: 600;
   } @else {

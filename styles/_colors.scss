@@ -1,3 +1,4 @@
-$primary: #323232;
-$secondary: #A0A4AD;
-$bg-light: #fff;
+$primary: #202022;
+$secondary: lighten($primary, 45%);
+$tertiary: lighten($secondary, 25%);
+$light: #fff;

@@ -6,7 +6,7 @@
   padding: .5rem 1rem;
   border-radius: 99rem;
   width: fit-content;
-  max-width: 9rem;
+  max-width: 10rem;
   transition: background .2s ease-in-out, color .2s ease-in-out, opacity .2s ease-in-out;
   transition-duration: 0.2s, 0.2s, 0.2s;
   transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
@@ -14,14 +14,15 @@
   transition-property: background, color, opacity;
   overflow: hidden;
   white-space: nowrap;
-  @include font(1rem, 1rem, regular, $primary, center);
-
+  -webkit-backdrop-filter: blur(.5rem);
+  backdrop-filter: blur(.5rem);
+  @include font(0.9rem, 0.9rem, regular, $primary, center);
+  &.btn-marquee {
+    width: 10rem;
+    height: 2rem;
+  }
 }
 
-.btn-marquee {
-  width: 9rem;
-  height: 2rem;
-}
 
 .txt-marquee {
   display: flex;
@@ -74,7 +75,7 @@
 
 .primary {
   &:hover {
-    color: $bg-light;
+    color: $light;
     background: $primary;
     border-color: $primary;
   }
@@ -84,7 +85,7 @@
   border-color: $secondary;
   color: $secondary;
   &:hover {
-    color: $bg-light;
+    color: $light;
     background: $primary;
     border-color: $primary;
   }

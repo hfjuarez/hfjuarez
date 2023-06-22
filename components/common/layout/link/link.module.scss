@@ -1,0 +1,17 @@
+.link-basic {
+  text-decoration: none;
+  @include font(1rem, 1rem, semi, $primary, center)
+}
+
+.primary {
+  @extend .link-basic;
+}
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.35rem;
+  letter-spacing: 0;
+  @extend .link-basic;
+}

@@ -1,30 +1,51 @@
-import React, { Component } from "react";
-import Link from "next/link";
-// Components 
+import React, { useState, useEffect } from "react";
+// import Link from "next/link";
+import classNames from "classnames";
+// Components
+import Link from "@/components/common/layout/link";
 import Button from "@/components/common/button";
 import Heading from "@/components/common/layout/heading";
 // Styles
-import styles from "./navbar.module.scss";
+import navbarStyles from "./navbar.module.scss";
 // Utils
 import { UIColors } from "utils/ui";
 
-export default class index extends Component<{}> {
-  contact() {
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const navbarClasses = classNames(navbarStyles.navbar, isScrolled && navbarStyles["navbar-border"])
+  const showCenteredTextClasses = classNames(navbarStyles["centered-content"], isScrolled && navbarStyles["show-text"])
+  const contact = () => {
     window.location.href = "mailto:herfj4@gmail.com";
-  }
-  render() {
-    return (
-      <nav className={styles.navbar}>
-        <div className={styles["navbar-content"]}>
-          <Button colorScheme={UIColors.PRIMARY} onClick={this.contact}>LET&apos;S TALK</Button>
-          <div className="navbar-title">
-            <Link href="/">
-              <Heading as="h6" colorScheme={UIColors.SECONDARY}>Hernán.</Heading>
-            </Link>
-          </div>
-          <Button colorScheme={UIColors.PRIMARY} marquee={true} onClick={this.contact}>WHAT I HAVE BEEN UP TO</Button>
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop > 80);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <nav className={navbarClasses}>
+      <div className={navbarStyles["navbar-content"]}>
+        <Button colorScheme={UIColors.PRIMARY} onClick={contact}>
+          LET&apos;S TALK
+        </Button>
+        <div className={showCenteredTextClasses}>
+          <Link href="/works" type="navbar">
+            Hernán
+          </Link>
         </div>
-      </nav>
-    );
-  }
-}
+        <Button colorScheme={UIColors.PRIMARY} marquee={true} onClick={contact}>
+          WHAT I HAVE BEEN UP TO
+        </Button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

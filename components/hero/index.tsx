@@ -13,10 +13,6 @@ import colorsStyles from "@/styles/colors.module.scss";
 import heroStyles from "./hero.module.scss";
 
 const Header = () => {
-  const combinedClassNames = classNames(
-    colorsStyles.secondary,
-    opacityStyles["op-8"]
-  );
   return (
     <Container as="div" className={heroStyles["reduce-height"]}>
       <header className={heroStyles.header} aria-label="Hey! I'm Hernán">
@@ -25,7 +21,7 @@ const Header = () => {
           <Heading as="h1">I&apos;m Hernán.</Heading>
           <Heading as="h2">
             <span>Full Stack</span>
-            <span className={combinedClassNames}>&nbsp;developer</span>
+            <span className={colorsStyles.secondary}>&nbsp;developer</span>
           </Heading>
           <div className={heroStyles.pills}>
             <Pill colorScheme={UIColors.SECONDARY}>VueJS</Pill>

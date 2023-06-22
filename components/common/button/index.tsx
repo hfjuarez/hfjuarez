@@ -40,8 +40,8 @@ const Button = ({
       {marquee ? (
         <div className={buttonStyle["txt-marquee"]}>
           <div>
-            <span>{children}&nbsp;&nbsp;</span>
-            <span>{children}&nbsp;&nbsp;</span>
+            <span>{children}&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+            <span>{children}&nbsp;&nbsp;-&nbsp;&nbsp;</span>
           </div>
         </div>
       ) : (

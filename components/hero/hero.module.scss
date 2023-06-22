@@ -1,10 +1,10 @@
 .reduce-height {
-  min-height: calc(100dvh - $navbar-height) !important;
+  min-height: calc(100dvh - #{$navbar-height * 2}) !important;
 }
 .header {
   display: grid;
   gap: 1.5rem;
-  grid-auto-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr minmax(0, 28rem);
   grid-auto-flow: column;
   align-items: center;
   justify-content: space-between;
@@ -12,8 +12,6 @@
   width: calc(100% - 4rem);
   padding: 2rem; 
   border-radius: 1rem;
-  border: .0625rem solid $secondary;
-  background: lighten($secondary, 30%);
   .introduction {
     @include flex(column);
     gap: 0.5rem;
@@ -24,8 +22,8 @@
       font-weight: 400;
     }
     .hey {
-      font-size: 3.5rem;
-      line-height: 3.5rem;
+      @include font(6.75rem, 6.75rem, light, $primary);
+      margin: 0;
     }
     .pills {
       @include flex;
@@ -36,8 +34,9 @@
   .profile-image {
     justify-self: flex-end;
     min-height: 28rem;
+    max-width: 28rem;
     width: 100%;
-    background-color: lighten($secondary, 25%);
+    background-color: lighten($tertiary, 32%);
     border-radius: 0.5rem;
     border: .0625rem solid $secondary;
     @include flex(row, center, center);
@@ -52,7 +51,6 @@
 
 @media only screen and (max-width: 90rem) {
   .header {
-    // border-color: transparent;
     img {
       max-width: 26rem;
     }
