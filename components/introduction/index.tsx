@@ -63,7 +63,7 @@ export default class Introduction extends Component {
                 </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://www.linkedin.com/in/hfjuarez/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -73,7 +73,7 @@ export default class Introduction extends Component {
                     alt="Github logo"
                   />
                   <Text>Linkedin</Text>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
