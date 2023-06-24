@@ -17,6 +17,7 @@
   -webkit-backdrop-filter: blur(.5rem);
   backdrop-filter: blur(.5rem);
   @include font(0.9rem, 0.9rem, regular, $primary, center);
+
   &.btn-marquee {
     width: 10rem;
     height: 2rem;
@@ -74,19 +75,21 @@
 }
 
 .primary {
+  transition: 0.1s ease-in-out;
+
   &:hover {
-    color: $light;
-    background: $primary;
-    border-color: $primary;
+    @include box-shadow(0.1875rem, 0.25rem);
+    background-color: $white;
   }
 }
 
 .secondary {
   border-color: $secondary;
   color: $secondary;
+
   &:hover {
     color: $light;
-    background: $primary;
     border-color: $primary;
+    background-color: $primary;
   }
 }

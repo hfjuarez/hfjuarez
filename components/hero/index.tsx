@@ -8,7 +8,6 @@ import Pill from "@/components/common/pill";
 // Utils
 import { UIColors } from 'utils/ui';
 // Styles
-import opacityStyles from "@/styles/opacity.module.scss";
 import colorsStyles from "@/styles/colors.module.scss";
 import heroStyles from "./hero.module.scss";
 

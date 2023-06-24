@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import styles from "@/styles/Footer.module.css";
+import styles from "./footer.module.css";
 export default class index extends Component<{}, {}> {
   constructor(props: {}) {
     super(props);

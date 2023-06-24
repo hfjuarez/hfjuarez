@@ -1,4 +1,6 @@
 $primary: #202022;
 $secondary: lighten($primary, 45%);
 $tertiary: lighten($secondary, 25%);
-$light: #fff;
+// $quaternary: lighten($tertiary, 25%);
+$light: lighten($tertiary, 14%);
+$white: #fff

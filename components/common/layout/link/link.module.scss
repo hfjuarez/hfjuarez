@@ -1,10 +1,17 @@
+@import "@/components/common/button/button.module.scss";
+
 .link-basic {
   text-decoration: none;
-  @include font(1rem, 1rem, semi, $primary, center)
+  @include font(1rem, 1rem, regular, $primary, center)
 }
 
-.primary {
+.primary,
+.secondary {
   @extend .link-basic;
+}
+
+.secondary {
+  color: $secondary;
 }
 
 .navbar {

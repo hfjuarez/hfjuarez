@@ -1,19 +1,19 @@
-import React, { Component, ReactNode } from "react";
+import React, { useEffect, Component, ReactNode } from "react";
 import Head from "next/head";
 import Navbar from "@/components/common/navbar";
 import Footer from "@/components/common/layout/footer";
+// Styles
+import documentStyle from "@/styles/document.module.scss"
 import styles from "./layout.module.scss";
 
-type Props = {
+type LayoutProps = {
   children: ReactNode;
 };
 
-type State = {};
-
-export default class Layout extends Component<Props, State> {
-  state = {};
-
-  render() {
+export default function Layout({children, ...porps} : LayoutProps) {
+  useEffect(() => {
+    document.body.className = documentStyle.body;
+  });
     return (
       <>
         <Head>
@@ -32,9 +32,8 @@ export default class Layout extends Component<Props, State> {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar/>
-        <div className={styles.main}>{this.props.children}</div>
+        <div className={styles.main}>{children}</div>
         <Footer />
       </>
     );
-  }
 }

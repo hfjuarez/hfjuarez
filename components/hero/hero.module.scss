@@ -1,6 +1,7 @@
 .reduce-height {
   min-height: calc(100dvh - #{$navbar-height * 2}) !important;
 }
+
 .header {
   display: grid;
   gap: 1.5rem;
@@ -10,36 +11,42 @@
   justify-content: space-between;
   height: 100%;
   width: calc(100% - 4rem);
-  padding: 2rem; 
+  padding: 2rem;
   border-radius: 1rem;
+
   .introduction {
     @include flex(column);
     gap: 0.5rem;
     padding-left: 1rem;
+
     h2 {
       font-size: 3.5rem;
       line-height: 3.5rem;
       font-weight: 400;
     }
+
     .hey {
       @include font(6.75rem, 6.75rem, light, $primary);
       margin: 0;
     }
+
     .pills {
       @include flex;
       gap: 0.5rem;
       margin-top: .5rem;
     }
   }
+
   .profile-image {
     justify-self: flex-end;
     min-height: 28rem;
     max-width: 28rem;
     width: 100%;
-    background-color: lighten($tertiary, 32%);
-    border-radius: 0.5rem;
-    border: .0625rem solid $secondary;
+    background-color: $white;
+    border-radius: 0.75rem;
+    border: .0625rem solid rgba($tertiary, .4);
     @include flex(row, center, center);
+
     img {
       padding: 1rem 1rem 0;
       position: relative;
@@ -56,15 +63,18 @@
     }
   }
 }
+
 @media only screen and (max-width: 70rem) {
   .header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     h1 {
       font-size: 3.5rem;
       line-height: 4rem;
     }
+
     h2 {
       font-size: 2.5rem;
       line-height: 2.5rem;
@@ -74,6 +84,7 @@
       font-size: 2rem;
       line-height: 2.5rem;
     }
+
     img {
       right: 0rem;
       margin-top: 2rem;

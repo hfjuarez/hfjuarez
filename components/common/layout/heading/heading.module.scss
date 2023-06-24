@@ -13,10 +13,14 @@
   @extend .heading-basic;
 }
 
-.h1, .h2, .h3 {
+.h1,
+.h2,
+.h3 {
   letter-spacing: -.25rem;
 }
-.h4, .h5 {
+
+.h4,
+.h5 {
   letter-spacing: -.125rem;
 }
 
@@ -42,7 +46,7 @@
 
 .h6 {
   font-weight: 500;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   letter-spacing: -.0625rem;
 }
