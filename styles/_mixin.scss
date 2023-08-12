@@ -1,18 +1,21 @@
-@mixin box-shadow($x: 0.25rem, $y: 0.25rem) {
-  box-shadow: $x $y 0px 0px $primary;
-  // @media (prefers-color-scheme: dark) {
-  //   box-shadow: $x $y 0px 0px $primary;
-  // }
+@mixin box-shadow(
+	$offset-x: 0,
+	$offset-y: 0.0625rem,
+	$blur-radius: 0.125rem,
+	$spread-radius: 0.0625rem,
+	$color: $tertiary
+) {
+	box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
 }
 
 @mixin font(
-  $size: 1rem,
-  $height: 1rem,
-  $weight: regular,
-  $color: $primary,
-  $align: left
+	$size: 1.1rem,
+	$height: 1.5rem,
+	$weight: regular,
+	$color: $primary,
+	$align: left
 ) {
-  /* 
+	/* 
     Weight options are regular, semi, bold and extra 
     Defaults when calling this mixin are: 
       - font-size: 1rem
@@ -23,61 +26,60 @@
 
     Be careful with this, otherwise it can override styles
   */
-  // font-family: "Oswald", serif;
-  font-family: "Inter", serif;
+	font-family: 'Inter', serif;
 
-  @if ($size == "_") {
-    font-size: 1rem;
-  } @else {
-    font-size: $size;
-  }
+	@if ($size == '_') {
+		font-size: 1rem;
+	} @else {
+		font-size: $size;
+	}
 
-  @if ($height == "_") {
-    line-height: normal;
-  } @else {
-    line-height: $height;
-  }
+	@if ($height == '_') {
+		line-height: normal;
+	} @else {
+		line-height: $height;
+	}
 
-  @if ($weight == "regular") {
-    font-weight: 400;
-  } @else if ($weight == "light") {
-    font-weight: 300;
-  } @else if ($weight == "semi") {
-    font-weight: 500;
-  } @else if ($weight == "bold") {
-    font-weight: 600;
-  } @else {
-    font-weight: 400;
-  }
+	@if ($weight == 'regular') {
+		font-weight: 400;
+	} @else if ($weight == 'light') {
+		font-weight: 300;
+	} @else if ($weight == 'semi') {
+		font-weight: 500;
+	} @else if ($weight == 'bold') {
+		font-weight: 600;
+	} @else {
+		font-weight: 400;
+	}
 
-  @if ($color == "_") {
-    color: $primary;
-  } @else {
-    color: $color;
-  }
+	@if ($color == '_') {
+		color: $primary;
+	} @else {
+		color: $color;
+	}
 
-  @if ($align == "_") {
-    text-align: left;
-  } @else {
-    text-align: $align;
-  }
+	@if ($align == '_') {
+		text-align: left;
+	} @else {
+		text-align: $align;
+	}
 }
 
 @mixin flex($direction: row, $justify: flex-start, $alignItems: stretch) {
-  display: flex;
-  @if ($direction == "") {
-    flex-direction: row;
-  } @else {
-    flex-direction: $direction;
-  }
-  @if ($justify == "") {
-    justify-content: flex-start;
-  } @else {
-    justify-content: $justify;
-  }
-  @if ($alignItems == "") {
-    align-items: stretch;
-  } @else {
-    align-items: $alignItems;
-  }
+	display: flex;
+	@if ($direction == '') {
+		flex-direction: row;
+	} @else {
+		flex-direction: $direction;
+	}
+	@if ($justify == '') {
+		justify-content: flex-start;
+	} @else {
+		justify-content: $justify;
+	}
+	@if ($alignItems == '') {
+		align-items: stretch;
+	} @else {
+		align-items: $alignItems;
+	}
 }

@@ -1,11 +1,11 @@
 .secondary {
-  color: $secondary;
+	color: darken($tertiary, 45%);
 }
 
 .bg-secondary {
-  background-color: $secondary;
+	background-color: $secondary;
 }
 
 .light {
-  color: $light;
+	color: $light;
 }

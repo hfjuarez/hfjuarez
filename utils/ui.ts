@@ -1,5 +1,6 @@
 export enum UIColors {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  LIGHT = "light"
+	PRIMARY = 'primary',
+	SECONDARY = 'secondary',
+	TERTIARY = 'tertiary',
+	LIGHT = 'light',
 }

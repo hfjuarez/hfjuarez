@@ -1,94 +1,62 @@
 .reduce-height {
-  min-height: calc(100dvh - #{$navbar-height * 2}) !important;
+	min-height: calc((100dvh - #{$navbar-height * 2})) !important;
 }
 
 .header {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: 1fr minmax(0, 28rem);
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: calc(100% - 4rem);
-  padding: 2rem;
-  border-radius: 1rem;
-
-  .introduction {
-    @include flex(column);
-    gap: 0.5rem;
-    padding-left: 1rem;
-
-    h2 {
-      font-size: 3.5rem;
-      line-height: 3.5rem;
-      font-weight: 400;
-    }
-
-    .hey {
-      @include font(6.75rem, 6.75rem, light, $primary);
-      margin: 0;
-    }
-
-    .pills {
-      @include flex;
-      gap: 0.5rem;
-      margin-top: .5rem;
-    }
-  }
-
-  .profile-image {
-    justify-self: flex-end;
-    min-height: 28rem;
-    max-width: 28rem;
-    width: 100%;
-    background-color: $white;
-    border-radius: 0.75rem;
-    border: .0625rem solid rgba($tertiary, .4);
-    @include flex(row, center, center);
-
-    img {
-      padding: 1rem 1rem 0;
-      position: relative;
-      max-width: 25rem;
-      height: auto;
-    }
-  }
-}
-
-@media only screen and (max-width: 90rem) {
-  .header {
-    img {
-      max-width: 26rem;
-    }
-  }
+	border-radius: 1rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 55% 45%;
+	.introduction {
+		gap: 0.5rem;
+		@include flex(column);
+		h1 {
+			font-size: 5.75rem;
+			line-height: 5.75rem;
+		}
+		h2 {
+			font-size: 2.75rem;
+			line-height: 2.75rem;
+			font-weight: 400;
+		}
+		.hey {
+			@include font(5.75rem, 5.25rem, light, $primary);
+			margin: 0;
+		}
+		.pills {
+			@include flex;
+			gap: 0.5rem;
+			margin-top: 0.5rem;
+		}
+	}
+	.description {
+		border-left: 0.0625rem solid $secondary;
+		margin-block: 1.25rem;
+		@include flex(column, center, flex-start);
+		padding-left: 2rem;
+		gap: 0.8rem;
+	}
 }
 
 @media only screen and (max-width: 70rem) {
-  .header {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	.header {
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 
-    h1 {
-      font-size: 3.5rem;
-      line-height: 4rem;
-    }
+		h1 {
+			font-size: 3.5rem;
+			line-height: 4rem;
+		}
 
-    h2 {
-      font-size: 2.5rem;
-      line-height: 2.5rem;
-    }
+		h2 {
+			font-size: 2.5rem;
+			line-height: 2.5rem;
+		}
 
-    h3 {
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
-
-    img {
-      right: 0rem;
-      margin-top: 2rem;
-      width: 80%;
-    }
-  }
+		h3 {
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+	}
 }

@@ -1,24 +1,25 @@
-@import "@/components/common/button/button.module.scss";
+@import '@/components/common/button/button.module.scss';
 
 .link-basic {
-  text-decoration: none;
-  @include font(1rem, 1rem, regular, $primary, center)
+	text-decoration: none;
+	@include font($align: center);
 }
 
 .primary,
-.secondary {
-  @extend .link-basic;
+.secondary,
+.tertiary {
+	@extend .link-basic;
+	font-size: 1rem;
+	line-height: 1rem;
 }
 
 .secondary {
-  color: $secondary;
+	color: $secondary;
 }
 
-.navbar {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.35rem;
-  line-height: 1.35rem;
-  letter-spacing: 0;
-  @extend .link-basic;
+.text {
+	@extend .link-basic;
+	&:hover {
+		text-decoration: underline;
+	}
 }

@@ -1,95 +1,100 @@
 .button-basic {
-  position: relative;
-  border: .0625rem solid $primary;
-  background: transparent;
-  cursor: pointer;
-  padding: .5rem 1rem;
-  border-radius: 99rem;
-  width: fit-content;
-  max-width: 10rem;
-  transition: background .2s ease-in-out, color .2s ease-in-out, opacity .2s ease-in-out;
-  transition-duration: 0.2s, 0.2s, 0.2s;
-  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
-  transition-delay: 0s, 0s, 0s;
-  transition-property: background, color, opacity;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-backdrop-filter: blur(.5rem);
-  backdrop-filter: blur(.5rem);
-  @include font(0.9rem, 0.9rem, regular, $primary, center);
+	backdrop-filter: blur(0.5rem);
+	background: transparent;
+	border-radius: 99rem;
+	border: 0.0625rem solid $primary;
+	cursor: pointer;
+	overflow: hidden;
+	padding: 0.5rem 1rem;
+	position: relative;
+	transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+		color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+	white-space: nowrap;
+	width: fit-content;
+	-webkit-backdrop-filter: blur(0.5rem);
+	@include font(0.9rem, 0.9rem, semi, $primary, center);
+	&.btn-marquee {
+		max-width: 10rem;
+		height: 2rem;
+		width: 10rem;
+		.txt-marquee {
+			align-items: center;
+			display: flex;
+			height: 100%;
+			justify-content: flex-start;
+			left: 0;
+			position: absolute;
+			top: 0;
+			transition: transform 1s ease;
+			white-space: nowrap;
+			width: 100%;
+			span {
+				margin: 0;
+				transition: transform 2s ease;
+			}
 
-  &.btn-marquee {
-    width: 10rem;
-    height: 2rem;
-  }
-}
+			> div {
+				animation: scrollText 5s infinite linear;
+				display: flex;
+				-webkit-animation: scrollText 5s infinite linear;
+			}
 
+			@-webkit-keyframes scrollText {
+				from {
+					transform: translateX(0%);
+				}
 
-.txt-marquee {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  white-space: nowrap;
-  transition: transform 1s ease;
+				to {
+					transform: translateX(-50%);
+				}
+			}
 
-  span {
-    margin: 0;
-    transition: transform 2s ease;
-  }
+			@keyframes scrollText {
+				from {
+					transform: translateX(0%);
+				}
 
-  >div {
-    display: flex;
-    -webkit-animation: scrollText 5s infinite linear;
-    animation: scrollText 5s infinite linear;
-  }
-
-  @-webkit-keyframes scrollText {
-    from {
-      transform: translateX(0%);
-    }
-
-    to {
-      transform: translateX(-50%);
-    }
-  }
-
-  @keyframes scrollText {
-    from {
-      transform: translateX(0%);
-    }
-
-    to {
-      transform: translateX(-50%);
-    }
-  }
+				to {
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
 }
 
 .primary,
-.secondary {
-  @extend .button-basic;
+.secondary,
+.tertiary {
+	transition: 0.1s ease-in-out;
+	@extend .button-basic;
 }
 
 .primary {
-  transition: 0.1s ease-in-out;
-
-  &:hover {
-    @include box-shadow(0.1875rem, 0.25rem);
-    background-color: $white;
-  }
+	background-color: $primary;
+	color: $light;
+	text-transform: uppercase;
+	&:hover {
+		background-color: #363738;
+		border-color: #363738;
+	}
 }
 
 .secondary {
-  border-color: $secondary;
-  color: $secondary;
+	border-color: $primary;
+	color: $primary;
+	text-transform: uppercase;
+	&:hover {
+		background-color: $primary;
+		border-color: $primary;
+		color: $light;
+	}
+}
 
-  &:hover {
-    color: $light;
-    border-color: $primary;
-    background-color: $primary;
-  }
+.tertiary {
+	border-color: $secondary;
+	color: $primary;
+	&:hover {
+		border-color: $primary;
+		color: $primary;
+	}
 }
