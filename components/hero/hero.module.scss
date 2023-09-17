@@ -1,4 +1,4 @@
-.reduce-height {
+.reduceHeight {
 	min-height: calc((100dvh - #{$navbar-height * 2})) !important;
 }
 
@@ -6,10 +6,10 @@
 	border-radius: 1rem;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 55% 45%;
+	grid-template-columns: 50% 50%;
 	.introduction {
 		gap: 0.5rem;
-		@include flex(column);
+		@include flex(column, center);
 		h1 {
 			font-size: 5.75rem;
 			line-height: 5.75rem;
@@ -23,18 +23,40 @@
 			@include font(5.75rem, 5.25rem, light, $primary);
 			margin: 0;
 		}
-		.pills {
+		.primaryPills,
+		.secondaryPills {
 			@include flex;
 			gap: 0.5rem;
+		}
+		.primaryPills {
 			margin-top: 0.5rem;
 		}
 	}
 	.description {
 		border-left: 0.0625rem solid $secondary;
 		margin-block: 1.25rem;
+		padding-block: 2rem;
 		@include flex(column, center, flex-start);
 		padding-left: 2rem;
 		gap: 0.8rem;
+		p {
+			line-height: 2rem;
+		}
+		.stoke {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px; /* Adjust the stroke thickness as needed */
+				background-color: #000; /* Adjust the stroke color as needed */
+				transform: skew(
+					-15deg
+				); /* Apply a skew transformation to make it look hand-drawn */
+			}
+		}
 	}
 }
 

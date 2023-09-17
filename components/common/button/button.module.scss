@@ -64,7 +64,8 @@
 
 .primary,
 .secondary,
-.tertiary {
+.tertiary,
+.light {
 	transition: 0.1s ease-in-out;
 	@extend .button-basic;
 }
@@ -96,5 +97,16 @@
 	&:hover {
 		border-color: $primary;
 		color: $primary;
+	}
+}
+
+.light {
+	background-color: $light;
+	color: $primary;
+	text-transform: uppercase;
+	border-color: $light;
+	&:hover {
+		background-color: $white;
+		border-color: $light;
 	}
 }

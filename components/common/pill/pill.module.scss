@@ -14,3 +14,8 @@
 	border-color: lighten($primary, 5%);
 	color: lighten($primary, 5%);
 }
+
+.tertiary {
+	border-color: darken($secondary, 15%);
+	color: darken($secondary, 15%);
+}

@@ -1,10 +1,8 @@
-import React, { useRef, useEffect, useState } from 'react';
-import classNames from 'classnames';
+/* eslint-disable sort-keys */
+import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Flip } from 'gsap/dist/Flip';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(Flip, ScrollTrigger);
 
 // Components
 import Container from '@/components/common/layout/container';
@@ -13,65 +11,50 @@ import Text from '@/components/common/layout/text';
 import Link from '@/components/common/layout/link';
 
 // Styles
-import introductionStyles from './introduction.module.scss';
+import introductionStyles from '../components/introduction/introduction.module.scss';
+
 import colorsStyles from '@/styles/colors.module.scss';
 // Utils
 import { UIColors } from 'utils/ui';
 
-const Introduction = () => {
-	const introductionElement = useRef(null);
-	const [removeBottomBorderRadius, setRemoveBottomBorderRadius] =
-		useState(false);
+gsap.registerPlugin(Flip, ScrollTrigger);
 
-	const introductionClasses = classNames(
-		introductionStyles.introduction,
-		removeBottomBorderRadius && introductionStyles.removeBottomBorderRadius,
-	);
+const Example = () => {
+	const groupElement = useRef(null);
 
 	useEffect(() => {
-		const handleScroll = () => {
-			const scrollPositionInVh = (window.scrollY / window.innerHeight) * 100;
-			// Check if the scroll position is greater than or equal to 150vh
-			if (scrollPositionInVh >= 100) {
-				setRemoveBottomBorderRadius(true);
-			} else {
-				setRemoveBottomBorderRadius(false);
-			}
-		};
-		window.addEventListener('scroll', handleScroll);
-
-		const element: any = introductionElement.current;
+		const element = groupElement.current;
 
 		// Temporarily add the final class to capture the final state
 		element.classList.add(introductionStyles.fullViewport);
-		const flipstate = Flip.getState([element]);
+		const flipstate = Flip.getState([element], { props: 'filter, opacity' });
 
 		// Remove the final class to revert to the initial state
 		element.classList.remove(introductionStyles.fullViewport);
 
 		// Create the Flip animation timeline
-		Flip.to(flipstate, {
-			absolute: false,
-			absoluteOnLeave: false,
+		const tl = Flip.to(flipstate, {
 			ease: 'none',
+			absoluteOnLeave: false,
+			absolute: false,
 			scale: true,
+			simple: true,
 			scrollTrigger: {
+				trigger: element,
+				start: 'top center',
 				end: 'center center',
 				scrub: true,
-				start: 'top center',
-				trigger: element,
+				markers: true,
 			},
-			simple: true,
 			stagger: 0,
 		});
-
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
 	}, []);
+
 	return (
 		<Container as="section" key="intro">
-			<div className={introductionClasses} ref={introductionElement}>
+			<div style={{ height: '200vh', width: '100%' }}></div>
+
+			<div className={introductionStyles.introduction} ref={groupElement}>
 				<div className={introductionStyles.main}>
 					<Heading as={'h1'}>
 						Ambitious,
@@ -86,10 +69,10 @@ const Introduction = () => {
 				<div className={introductionStyles['section-1']}>
 					<Heading as={'h6'}>A bit about me</Heading>
 					<Text>
-						I&apos;m a person detail oriented that always want to learn new
-						things and listen to new ideas. As a developer always do everything
-						with all my compromise and passion to create the best possible
-						solution for each challenge.
+						I'm a person detail oriented that always want to learn new things
+						and listen to new ideas. As a developer always do everything with
+						all my compromise and passion to create the best possible solution
+						for each challenge.
 					</Text>
 					<Link href="/me" type={UIColors.TERTIARY}>
 						About Me
@@ -109,8 +92,9 @@ const Introduction = () => {
 					</Link>
 				</div>
 			</div>
+			<div style={{ height: '200vh', width: '100%' }}></div>
 		</Container>
 	);
 };
 
-export default Introduction;
+export default Example;
