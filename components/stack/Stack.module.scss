@@ -1,71 +1,82 @@
-.stack {
+.stackWrapper {
 	display: flex;
-	position: relative;
-	align-items: flex-start;
-	gap: 1.5rem;
-	justify-content: space-between;
-	height: 100%;
-	margin-block: 7rem 6rem;
+	justify-content: center;
 	background-color: $primary;
-
-	@media only screen and (max-width: 60rem) {
-		flex-direction: column;
-	}
-	.stack-title {
-		width: 50%;
-		top: 7rem;
-		margin-block: 9rem;
-		display: flex;
-		position: sticky;
-		flex-direction: column;
-		@media only screen and (max-width: 60rem) {
-			position: relative;
-			top: 0;
-			margin-block: 1rem;
-			width: 100%;
-		}
-	}
-	.stack-content {
-		display: flex;
-		flex-direction: column;
-		gap: 0.1875rem;
-		width: 50%;
-		padding-block: 1rem;
-		@media only screen and (max-width: 60rem) {
-			grid-template-columns: 1fr;
-			width: 100%;
-			gap: 1rem;
-		}
-		h4 {
-			z-index: 99;
-		}
-		.stack-item {
-			flex: 1 1 0px;
-			width: 100%;
-			min-height: 20rem;
-			padding: 2rem;
-			transition: 0.1s ease-in-out;
-			@media only screen and (min-width: 60rem) {
-				&:nth-child(1) {
-					transform: translate(-4rem, -1rem);
-				}
-				&:nth-child(3) {
-					transform: translate(-2rem, 1rem);
-				}
-			}
-		}
+	width: 100%;
+	section {
+		justify-content: flex-start;
+		align-items: flex-start;
 	}
 }
 
-.stack-list {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+.stackTitle {
+	font-size: 8.75rem;
+	line-height: 8.75rem;
+	width: 50%;
+	top: 7rem;
+	margin-block: 9rem 1rem;
+	display: flex;
+	flex-direction: column;
+	color: $white;
+	@media only screen and (max-width: 60rem) {
+		position: relative;
+		top: 0;
+		margin-block: 1rem;
+		width: 100%;
+	}
+}
 
-	li {
-		font-size: 3rem;
-		font-weight: 700;
-		line-height: 3rem;
-		margin-bottom: 0.5rem;
+.pills {
+	@include flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	width: 40%;
+}
+
+.stackContent {
+	display: flex;
+	flex-direction: column;
+	align-self: flex-end;
+	gap: 0.1875rem;
+	width: 50%;
+	padding-block: 1rem;
+	@media only screen and (max-width: 60rem) {
+		grid-template-columns: 1fr;
+		width: 100%;
+		gap: 1rem;
+	}
+	h4 {
+		z-index: 99;
+	}
+	.stackItem {
+		background-color: $white;
+		flex: 1 1 0px;
+		width: 100%;
+		min-height: 20rem;
+		padding: 2rem;
+		border-radius: 2rem;
+		border: 0.0625rem solid $secondary;
+		transition: 0.1s ease-in-out;
+		@media only screen and (min-width: 60rem) {
+			&:nth-child(1) {
+				transform: translate(-4rem, -1rem);
+			}
+			&:nth-child(3) {
+				transform: translate(-2rem, 1rem);
+			}
+		}
+		.stackList {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				@include font;
+				font-size: 3rem;
+				font-weight: 700;
+				line-height: 3rem;
+				margin-bottom: 0.5rem;
+			}
+		}
 	}
 }

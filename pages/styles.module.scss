@@ -1,6 +1,6 @@
 .container {
-	width: 100vw;
-	height: 100vh;
+	width: 100dvw;
+	height: 100dvh;
 	background-color: pink;
 	position: relative;
 	display: flex;
@@ -17,8 +17,8 @@
 	overflow: hidden;
 	color: black;
 	&.reorder {
-		width: 100vw;
-		height: 100vh;
+		width: 100dvw;
+		height: 100dvh;
 	}
 }
 

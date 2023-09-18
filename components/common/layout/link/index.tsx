@@ -10,7 +10,7 @@ import { UIColors } from 'utils/ui';
 
 interface LinkProps extends NextLinkProps {
 	href: string;
-	type?: UIColors.PRIMARY | UIColors.SECONDARY | UIColors.TERTIARY | 'text';
+	type?: UIColors | 'text';
 	activeClassName?: string;
 	colorScheme?: UIColors;
 	className?: string;

@@ -7,6 +7,8 @@ import Footer from '@/components/common/layout/footer';
 // Styles
 import documentStyle from '@/styles/document.module.scss';
 import styles from './layout.module.scss';
+// Data
+import { skillsPills } from 'data/skills';
 
 type LayoutProps = {
 	children: ReactNode;
@@ -42,7 +44,13 @@ export default function Layout({ children }: LayoutProps) {
 		<>
 			<Head>
 				<title>Hernán Fabrica</title>
-				<meta name="description" content="Hello world" />
+				{/* TODO: description */}
+				<meta name="description" content="" />
+				<meta name="author" content="Hernán Fabrica / @hfjuarez" />
+				<meta
+					name="keywords"
+					content={skillsPills.map((skill) => skill.name).join(',')}
+				/>
 				<meta
 					name="theme-colorScheme"
 					content="#fff"
@@ -50,7 +58,7 @@ export default function Layout({ children }: LayoutProps) {
 				/>
 				<meta
 					name="theme-color"
-					content="#0d0c0a"
+					content="#202022"
 					media="(prefers-color-scheme: dark)"
 				/>
 				<link rel="icon" href="/favicon.ico" />

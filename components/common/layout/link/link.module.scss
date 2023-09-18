@@ -7,14 +7,24 @@
 
 .primary,
 .secondary,
-.tertiary {
+.tertiary,
+.light,
+.white {
 	@extend .link-basic;
-	font-size: 1rem;
-	line-height: 1rem;
+	font-size: 0.9rem;
+	line-height: 0.9rem;
 }
 
 .secondary {
 	color: $secondary;
+}
+.white {
+	color: $white;
+	&:hover {
+		background-color: $white;
+		border-color: $secondary;
+		color: $primary;
+	}
 }
 
 .text {
