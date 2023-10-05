@@ -2,6 +2,7 @@ import React, { ReactNode, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 // Styles
 import textStyle from './text.module.scss';
+import colorsStyles from '@/styles/colors.module.scss';
 import { UIColors } from 'utils/ui';
 
 type TextProps = HTMLAttributes<HTMLElement> & {
@@ -20,7 +21,7 @@ const Text = ({
 }: TextProps) => {
 	const textClasses = classNames(
 		textStyle[Component],
-		textStyle[colorScheme],
+		colorsStyles[colorScheme],
 		className,
 	);
 	return (
