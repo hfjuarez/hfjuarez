@@ -95,11 +95,11 @@ const Introduction = () => {
 			<Container as="section" key="introduction--recap">
 				<div ref={headingRef} className={introductionStyles.heading}>
 					<Heading as={'h1'}>
-						Ambitious,
+						Committed,
 						<br />
-						Compromised,
+						Innovative,
 						<br />
-						& Passionate
+						& Results-Driven
 						<br />
 						<span className={colorsStyles[UIColors.SECONDARY]}>developer.</span>
 					</Heading>

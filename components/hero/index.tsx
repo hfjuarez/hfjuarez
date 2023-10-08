@@ -18,24 +18,22 @@ const Header = () => {
 					<Text className={heroStyles.hey}>Hey!</Text>
 					<Heading as="h1">I&apos;m Hernán.</Heading>
 					<Heading as="h2">
-						<span>Full-stack</span>
+						<span>Full Stack</span>
 						<span className={colorsStyles[UIColors.SECONDARY]}>
 							&nbsp;developer
 						</span>
 					</Heading>
-					<div className={heroStyles.primaryPills}>
+					<div className={heroStyles.pills}>
 						<Pill colorScheme={UIColors.PRIMARY}>NodeJS</Pill>
 						<Pill colorScheme={UIColors.PRIMARY}>VueJS</Pill>
 						<Pill colorScheme={UIColors.PRIMARY}>ReactJS</Pill>
-					</div>
-					<div className={heroStyles.secondaryPills}>
 						<Pill colorScheme={UIColors.PRIMARY}>Ruby on Rails</Pill>
 						<Pill colorScheme={UIColors.PRIMARY}>Java</Pill>
 					</div>
 				</div>
 				<div className={heroStyles.description}>
 					<Text>
-						I&apos;m a Full-stack developer with a strong focus on Back-end
+						I&apos;m a Full Stack developer with a strong focus on Back-end
 						development. Over the years, my journey has been filled with amazing
 						adventures, incredible challenges, and continuous learning, allowing
 						me to grow faster than I could have ever expected.
