@@ -1,0 +1,36 @@
+.navbar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	flex: 1;
+	z-index: 99;
+	width: 100%;
+	height: $navbar-height;
+	border-bottom: 0.0625rem solid transparent;
+	-webkit-backdrop-filter: blur(0.5rem);
+	backdrop-filter: blur(0.5rem);
+	transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+	@include flex(row, space-between, center);
+
+	&.navbarBorder {
+		border-color: $secondary;
+		background-color: rgba($white, 0.5);
+	}
+	&.isNavbarColored {
+		border-color: darken($primary, 5%);
+		background-color: rgba($primary, 0.5);
+	}
+
+	.navbarContent {
+		position: relative;
+		height: 100%;
+		padding-inline: 2rem;
+		gap: 2rem;
+		width: 100%;
+		@include flex(row, flex-end, center);
+
+		@media only screen and (max-width: 70rem) {
+			padding-inline: 2rem;
+		}
+	}
+}

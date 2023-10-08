@@ -1,0 +1,10 @@
+.main {
+	min-height: calc(100dvh - $navbar-height);
+	width: 100%;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden;
+}

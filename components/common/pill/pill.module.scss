@@ -1,0 +1,35 @@
+.pill-basic {
+	border-radius: 99rem;
+	padding: 0.35rem 0.7rem;
+	width: fit-content;
+	border: 0.0625rem solid $primary;
+	@include font(1rem, 1rem);
+}
+
+.outline {
+	@extend .pill-basic;
+}
+
+.primary {
+	border-color: lighten($primary, 5%);
+	color: lighten($primary, 5%);
+}
+.secondary {
+	border-color: lighten($secondary, 5%);
+	color: lighten($secondary, 5%);
+}
+
+.tertiary {
+	border-color: darken($secondary, 15%);
+	color: darken($secondary, 15%);
+}
+
+.light {
+	border-color: $light;
+	color: $light;
+}
+
+.white {
+	border-color: $white;
+	color: $white;
+}

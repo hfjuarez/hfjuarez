@@ -1,0 +1,83 @@
+.reduceHeight {
+	min-height: calc((100dvh - #{$navbar-height * 2})) !important;
+}
+
+.header {
+	border-radius: 1rem;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	.introduction {
+		gap: 0.5rem;
+		@include flex(column, center);
+		h1 {
+			font-size: 6.5rem;
+			line-height: 6.5rem;
+		}
+		h2 {
+			font-size: 2.75rem;
+			line-height: 2.75rem;
+			font-weight: 400;
+			display: none;
+		}
+		.hey {
+			@include font(5.75rem, 5.25rem, light, $primary);
+			margin: 0;
+		}
+		.pills {
+			@include flex;
+			gap: 0.5rem;
+			margin-top: 0.5rem;
+		}
+	}
+	.description {
+		border-left: 0.0625rem solid $secondary;
+		margin-block: 1.25rem;
+		padding-block: 2rem;
+		@include flex(column, center, flex-start);
+		padding-left: 2rem;
+		gap: 0.8rem;
+		p {
+			font-size: 1.15rem;
+			line-height: 2rem;
+		}
+		.stoke {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px; /* Adjust the stroke thickness as needed */
+				background-color: #000; /* Adjust the stroke color as needed */
+				transform: skew(
+					-15deg
+				); /* Apply a skew transformation to make it look hand-drawn */
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 70rem) {
+	.header {
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		h1 {
+			font-size: 3.5rem;
+			line-height: 4rem;
+		}
+
+		h2 {
+			font-size: 2.5rem;
+			line-height: 2.5rem;
+		}
+
+		h3 {
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+	}
+}

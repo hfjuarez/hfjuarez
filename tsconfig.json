@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,8 +16,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@styles/*": ["/styles/*"],
-      "@components/*": ["/components/*"],
+      "@/styles/*": ["styles/*"],
+      "@/components/*": ["components/*"],
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

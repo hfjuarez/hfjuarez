@@ -1,5 +1,5 @@
-import "../styles/cards.css";
-import Layout from "../components/layout/index";
+import "@/styles/cards.css";
+import Layout from "layout/index";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {

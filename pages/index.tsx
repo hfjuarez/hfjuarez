@@ -1,16 +1,20 @@
 import React from "react";
-import Header from "../components/landing/header/Header";
-import Introduction from "../components/landing/Introduction";
-import Stack from "../components/landing/Stack";
-import Portfolio from "../components/landing/Portfolio";
+// Components
+import Container from "@/components/common/layout/container";
+import Hero from "@/components/hero";
+import Introduction from "@/components/introduction";
+import Stack from "@/components/stack";
+import Portfolio from "@/components/portfolio";
 
 export default function Home() {
   return (
     <>
-        <Header />
-        <Introduction />
-        <Stack />
-        <Portfolio />
+        <Hero />
+        <Container as="main">
+          <Introduction />
+          <Stack />
+          <Portfolio />
+        </Container>
     </>
   );
 }
