@@ -15,18 +15,7 @@
 	$color: $primary,
 	$align: left
 ) {
-	/* 
-    Weight options are regular, semi, bold and extra 
-    Defaults when calling this mixin are: 
-      - font-size: 1rem
-      - line-height: 1rem
-      - font-family: $font-regular
-      - color: $primary,
-      - text-align: left
-
-    Be careful with this, otherwise it can override styles
-  */
-	font-family: 'Inter', serif;
+	font-family: 'Inter', sans-serif;
 
 	@if ($size == '_') {
 		font-size: 1rem;
