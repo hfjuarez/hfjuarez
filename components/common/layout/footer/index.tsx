@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './footer.module.css';
+import styles from './footer.module.scss';
 export default class index extends Component<object, object> {
 	constructor(props: object) {
 		super(props);
