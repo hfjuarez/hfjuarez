@@ -17,7 +17,7 @@ import { skillsPills } from 'data/skills';
 import { UIColors } from 'utils/ui';
 
 export default function Stack() {
-	const staredContentElement = useRef(null);
+	const staredContentElement = useRef<HTMLInputElement>(null);
 
 	const skillsPillsList = skillsPills.map((skill, index) => (
 		<Pill
@@ -29,29 +29,30 @@ export default function Stack() {
 	));
 
 	useEffect(() => {
-		const element: any = staredContentElement.current;
+		const element = staredContentElement.current;
+		if (element) {
+			// Temporarily add the final class to capture the final state
+			element.classList.add(stackStyles.afterAnimation);
+			const flipstate = Flip.getState([element]);
+			// Remove the final class to revert to the initial state
+			element.classList.remove(stackStyles.afterAnimation);
 
-		// Temporarily add the final class to capture the final state
-		element.classList.add(stackStyles.afterAnimation);
-		const flipstate = Flip.getState([element]);
-		// Remove the final class to revert to the initial state
-		element.classList.remove(stackStyles.afterAnimation);
-
-		// Create the Flip animation timeline
-		Flip.to(flipstate, {
-			absolute: false,
-			absoluteOnLeave: false,
-			ease: 'none',
-			scale: true,
-			scrollTrigger: {
-				end: 'bottom center',
-				scrub: true,
-				start: 'top center',
-				trigger: element,
-			},
-			simple: true,
-			stagger: 0,
-		});
+			// Create the Flip animation timeline
+			Flip.to(flipstate, {
+				absolute: false,
+				absoluteOnLeave: false,
+				ease: 'none',
+				scale: true,
+				scrollTrigger: {
+					end: 'bottom center',
+					scrub: true,
+					start: 'top center',
+					trigger: element,
+				},
+				simple: true,
+				stagger: 0,
+			});
+		}
 	}, []);
 	return (
 		<div className={stackStyles.stackWrapper}>

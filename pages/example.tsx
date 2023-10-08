@@ -20,34 +20,36 @@ import { UIColors } from 'utils/ui';
 gsap.registerPlugin(Flip, ScrollTrigger);
 
 const Example = () => {
-	const groupElement = useRef(null);
+	const groupElement = useRef<HTMLInputElement>(null);
 
 	useEffect(() => {
 		const element = groupElement.current;
+		if (element) {
+			// Temporarily add the final class to capture the final state
+			element.classList.add(introductionStyles.fullViewport);
+			const flipstate = Flip.getState([element], { props: 'filter, opacity' });
 
-		// Temporarily add the final class to capture the final state
-		element.classList.add(introductionStyles.fullViewport);
-		const flipstate = Flip.getState([element], { props: 'filter, opacity' });
+			// Remove the final class to revert to the initial state
+			element.classList.remove(introductionStyles.fullViewport);
 
-		// Remove the final class to revert to the initial state
-		element.classList.remove(introductionStyles.fullViewport);
-
-		// Create the Flip animation timeline
-		const tl = Flip.to(flipstate, {
-			ease: 'none',
-			absoluteOnLeave: false,
-			absolute: false,
-			scale: true,
-			simple: true,
-			scrollTrigger: {
-				trigger: element,
-				start: 'top center',
-				end: 'center center',
-				scrub: true,
-				markers: true,
-			},
-			stagger: 0,
-		});
+			// Create the Flip animation timeline
+			// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+			const tl = Flip.to(flipstate, {
+				ease: 'none',
+				absoluteOnLeave: false,
+				absolute: false,
+				scale: true,
+				simple: true,
+				scrollTrigger: {
+					trigger: element,
+					start: 'top center',
+					end: 'center center',
+					scrub: true,
+					markers: true,
+				},
+				stagger: 0,
+			});
+		}
 	}, []);
 
 	return (
@@ -69,10 +71,10 @@ const Example = () => {
 				<div className={introductionStyles['section-1']}>
 					<Heading as={'h6'}>A bit about me</Heading>
 					<Text>
-						I'm a person detail oriented that always want to learn new things
-						and listen to new ideas. As a developer always do everything with
-						all my compromise and passion to create the best possible solution
-						for each challenge.
+						Im a person detail oriented that always want to learn new things and
+						listen to new ideas. As a developer always do everything with all my
+						compromise and passion to create the best possible solution for each
+						challenge.
 					</Text>
 					<Link href="/me" type={UIColors.TERTIARY}>
 						About Me
