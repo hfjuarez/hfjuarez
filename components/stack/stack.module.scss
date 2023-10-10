@@ -1,7 +1,7 @@
 .stackWrapper {
 	display: flex;
 	justify-content: center;
-	background-color: $primary;
+	background-color: $base-color;
 	border-bottom-left-radius: 4rem;
 	border-bottom-right-radius: 4rem;
 	width: 100%;
@@ -74,7 +74,7 @@
 			min-width: 36.5rem;
 			padding: 2rem;
 			border-radius: 2rem;
-			border: 0.0625rem solid $light;
+			border: 0.0625rem solid $white;
 			transition: 0.1s ease-in-out;
 			.stackList {
 				list-style-type: none;

@@ -23,7 +23,7 @@ const Navbar = () => {
 		isScrolled && navbarStyles.navbarBorder,
 		isNavbarColored && navbarStyles.isNavbarColored,
 	);
-	const colorSchemeClass = isNavbarColored ? UIColors.LIGHT : UIColors.PRIMARY;
+	const colorSchemeClass = isNavbarColored ? UIColors.WHITE : UIColors.PRIMARY;
 	const contact = () => {
 		window.location.href = 'mailto:herfj4@gmail.com';
 	};

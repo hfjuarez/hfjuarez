@@ -2,7 +2,7 @@ import React from 'react';
 // Components
 import Container from '@/components/common/layout/container';
 import Hero from '@/components/hero';
-import Introduction from '@/components/introduction';
+import Introduction from '@/components/about';
 import Stack from '@/components/stack';
 import Work from '@/components/work';
 

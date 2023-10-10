@@ -11,7 +11,7 @@ import Text from '@/components/common/layout/text';
 import Link from '@/components/common/layout/link';
 
 // Styles
-import introductionStyles from '../components/introduction/introduction.module.scss';
+import aboutStyle from '../components/introduction/introduction.module.scss';
 
 import colorsStyles from '@/styles/colors.module.scss';
 // Utils
@@ -26,11 +26,11 @@ const Example = () => {
 		const element = groupElement.current;
 		if (element) {
 			// Temporarily add the final class to capture the final state
-			element.classList.add(introductionStyles.fullViewport);
+			element.classList.add(aboutStyle.fullViewport);
 			const flipstate = Flip.getState([element], { props: 'filter, opacity' });
 
 			// Remove the final class to revert to the initial state
-			element.classList.remove(introductionStyles.fullViewport);
+			element.classList.remove(aboutStyle.fullViewport);
 
 			// Create the Flip animation timeline
 			// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
@@ -56,8 +56,8 @@ const Example = () => {
 		<Container as="section" key="intro">
 			<div style={{ height: '200vh', width: '100%' }}></div>
 
-			<div className={introductionStyles.introduction} ref={groupElement}>
-				<div className={introductionStyles.main}>
+			<div className={aboutStyle.introduction} ref={groupElement}>
+				<div className={aboutStyle.main}>
 					<Heading as={'h1'}>
 						Ambitious,
 						<br />
@@ -68,7 +68,7 @@ const Example = () => {
 						<span className={colorsStyles[UIColors.SECONDARY]}>developer.</span>
 					</Heading>
 				</div>
-				<div className={introductionStyles['section-1']}>
+				<div className={aboutStyle['section-1']}>
 					<Heading as={'h6'}>A bit about me</Heading>
 					<Text>
 						Im a person detail oriented that always want to learn new things and
@@ -76,11 +76,11 @@ const Example = () => {
 						compromise and passion to create the best possible solution for each
 						challenge.
 					</Text>
-					<Link href="/me" type={UIColors.TERTIARY}>
+					<Link href="/me" type={UIColors.SECONDARY}>
 						About Me
 					</Link>
 				</div>
-				<div className={introductionStyles['section-2']}>
+				<div className={aboutStyle['section-2']}>
 					<Heading as={'h6'}>A bit about my experience</Heading>
 					<Text>
 						My experience lies in building scalable, maintainable, and secure
@@ -89,7 +89,7 @@ const Example = () => {
 						significant profit to the company.
 					</Text>
 					<Text>And now I have the total ownership of all that system.</Text>
-					<Link href="/experience" type={UIColors.TERTIARY}>
+					<Link href="/experience" type={UIColors.SECONDARY}>
 						My Experience
 					</Link>
 				</div>

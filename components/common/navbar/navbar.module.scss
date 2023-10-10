@@ -13,12 +13,11 @@
 	@include flex(row, space-between, center);
 
 	&.navbarBorder {
+		background-color: rgba($white, 0.1);
 		border-color: $secondary;
-		background-color: rgba($white, 0.5);
 	}
 	&.isNavbarColored {
-		border-color: darken($primary, 5%);
-		background-color: rgba($primary, 0.5);
+		border-color: rgba($white, 0.15);
 	}
 
 	.navbarContent {

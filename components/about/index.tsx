@@ -13,20 +13,20 @@ import Text from '@/components/common/layout/text';
 import Link from '@/components/common/layout/link';
 
 // Styles
-import introductionStyles from './introduction.module.scss';
+import aboutStyle from './about.module.scss';
 import colorsStyles from '@/styles/colors.module.scss';
 // Utils
 import { UIColors } from 'utils/ui';
 
-const Introduction = () => {
-	const introductionElement = useRef(null);
-	const headingRef = useRef(null);
+const About = () => {
+	const introductionElement = useRef<HTMLInputElement>(null);
+	const headingRef = useRef<HTMLInputElement>(null);
 	const [removeBottomBorderRadius, setRemoveBottomBorderRadius] =
 		useState(false);
 
 	const introductionClasses = classNames(
-		introductionStyles.introduction,
-		removeBottomBorderRadius && introductionStyles.removeBottomBorderRadius,
+		aboutStyle.introduction,
+		removeBottomBorderRadius && aboutStyle.removeBottomBorderRadius,
 	);
 
 	useEffect(() => {
@@ -41,14 +41,14 @@ const Introduction = () => {
 		};
 		window.addEventListener('scroll', handleScroll);
 
-		const element1: any = introductionElement.current;
-		const element2: any = headingRef.current;
-
+		const element1 = introductionElement.current;
+		const element2 = headingRef.current;
+		if (!element1 || !element2) return;
 		// Temporarily add the final class to capture the final state
-		element1.classList.add(introductionStyles.afterAnimation);
+		element1.classList.add(aboutStyle.afterAnimation);
 		const flipstate1 = Flip.getState([element1]);
 		// Remove the final class to revert to the initial state
-		element1.classList.remove(introductionStyles.afterAnimation);
+		element1.classList.remove(aboutStyle.afterAnimation);
 
 		// Create the Flip animation timeline
 		Flip.to(flipstate1, {
@@ -93,7 +93,7 @@ const Introduction = () => {
 	return (
 		<>
 			<Container as="section" key="introduction--recap">
-				<div ref={headingRef} className={introductionStyles.heading}>
+				<div ref={headingRef} className={aboutStyle.heading}>
 					<Heading as={'h1'}>
 						Committed,
 						<br />
@@ -107,9 +107,9 @@ const Introduction = () => {
 				<div className={introductionClasses} ref={introductionElement} />
 			</Container>
 
-			<div className={introductionStyles.aboutMeAndExperienceRecap}>
+			<div className={aboutStyle.aboutMeAndExperienceRecap}>
 				<Container as="section" key="introduction--about--experience">
-					<div className={introductionStyles.aboutMe}>
+					<div className={aboutStyle.aboutMe}>
 						<Heading as={'h6'}>A bit about me</Heading>
 						<Text>
 							I&apos;m a person detail oriented that always want to learn new
@@ -121,7 +121,7 @@ const Introduction = () => {
 							About Me
 						</Link>
 					</div>
-					<div className={introductionStyles.myExperience}>
+					<div className={aboutStyle.myExperience}>
 						<Heading as={'h6'}>A bit about my experience</Heading>
 						<Text>
 							My experience lies in building scalable, maintainable, and secure
@@ -140,4 +140,4 @@ const Introduction = () => {
 	);
 };
 
-export default Introduction;
+export default About;

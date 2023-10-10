@@ -18,17 +18,6 @@
 	border-color: lighten($secondary, 5%);
 	color: lighten($secondary, 5%);
 }
-
-.tertiary {
-	border-color: darken($secondary, 15%);
-	color: darken($secondary, 15%);
-}
-
-.light {
-	border-color: $light;
-	color: $light;
-}
-
 .white {
 	border-color: $white;
 	color: $white;

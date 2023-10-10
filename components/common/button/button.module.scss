@@ -64,8 +64,6 @@
 
 .primary,
 .secondary,
-.tertiary,
-.light,
 .white {
 	transition: 0.1s ease-in-out;
 	@extend .button-basic;
@@ -73,7 +71,7 @@
 
 .primary {
 	background-color: $primary;
-	color: $light;
+	color: $white;
 	text-transform: uppercase;
 	&:hover {
 		background-color: #363738;
@@ -88,27 +86,7 @@
 	&:hover {
 		background-color: $primary;
 		border-color: $primary;
-		color: $light;
-	}
-}
-
-.tertiary {
-	border-color: $secondary;
-	color: $primary;
-	&:hover {
-		border-color: $primary;
-		color: $primary;
-	}
-}
-
-.light {
-	background-color: $light;
-	color: $primary;
-	text-transform: uppercase;
-	border-color: $light;
-	&:hover {
-		background-color: $white;
-		border-color: $light;
+		color: $white;
 	}
 }
 
@@ -119,6 +97,6 @@
 	border-color: $white;
 	&:hover {
 		background-color: $white;
-		border-color: $light;
+		border-color: $white;
 	}
 }

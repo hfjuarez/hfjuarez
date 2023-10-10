@@ -3,7 +3,7 @@
 	$offset-y: 0.0625rem,
 	$blur-radius: 0.125rem,
 	$spread-radius: 0.0625rem,
-	$color: $tertiary
+	$color: $secondary
 ) {
 	box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
 }
