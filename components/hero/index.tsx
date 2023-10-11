@@ -48,7 +48,8 @@ const Header = () => {
 						professionals from across the globe to transform complex challenges
 						into robust and successful solutions that have a significant impact.
 					</Text>
-					<Text className={heroStyles.stoke}>
+
+					<Text className={heroStyles.withLine}>
 						Let&apos;s explore my portfolio together.
 					</Text>
 				</div>
