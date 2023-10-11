@@ -10,15 +10,17 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 	className?: string;
 	type?: 'button' | 'reset' | 'submit';
 	marquee?: boolean;
+	outlined?: boolean;
 	children: ReactNode;
 };
 
 const Button = ({
-	colorScheme = UIColors.PRIMARY,
+	colorScheme = UIColors.BASE,
 	size = 'medium',
 	className,
 	type = 'button',
 	marquee = false,
+	outlined = false,
 	children,
 	...props
 }: ButtonProps) => {
@@ -27,6 +29,7 @@ const Button = ({
 		buttonStyle[colorScheme],
 		buttonStyle[size],
 		marqueeClass,
+		outlined && buttonStyle.outlined,
 		className,
 	);
 

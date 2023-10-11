@@ -1,5 +1,5 @@
 .heading-basic {
-	@include font(5.75rem, 5.75rem, bold);
+	@include font(5.5rem, 5.5rem, bold);
 	margin: 0px;
 	color: $primary;
 }
@@ -20,31 +20,31 @@
 }
 
 .h2 {
-	font-size: 4.75rem;
-	line-height: 5.75rem;
+	font-size: 4.25rem;
+	line-height: 5.25rem;
 }
 
 .h3 {
-	font-size: 3.75rem;
-	line-height: 4.75rem;
+	font-size: 3.25rem;
+	line-height: 4.25rem;
 }
 
 .h4 {
 	letter-spacing: -0.125rem;
-	line-height: 2.75rem;
-	font-size: 2.75rem;
+	line-height: 2.25rem;
+	font-size: 2.25rem;
 }
 
 .h5 {
 	letter-spacing: 0;
-	line-height: 1.75rem;
-	font-size: 1.75rem;
+	line-height: 1.25rem;
+	font-size: 1.25rem;
 	font-weight: 400;
 }
 
 .h6 {
 	letter-spacing: -0.0625rem;
-	line-height: 1.5rem;
-	font-size: 1.5rem;
+	line-height: 1rem;
+	font-size: 1rem;
 	font-weight: 400;
 }

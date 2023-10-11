@@ -76,8 +76,8 @@ const About = () => {
 			},
 		});
 		gsap.to(element2.children[0], {
-			fontSize: '7.75rem',
-			lineHeight: '7.75rem',
+			fontSize: '6.5rem',
+			lineHeight: '6.5rem',
 			scrollTrigger: {
 				end: 'center center',
 				scrub: true,
@@ -92,7 +92,11 @@ const About = () => {
 	}, []);
 	return (
 		<>
-			<Container as="section" key="introduction--recap">
+			<Container
+				as="section"
+				key="introduction--recap"
+				className={aboutStyle.section}
+			>
 				<div ref={headingRef} className={aboutStyle.heading}>
 					<Heading as={'h1'}>
 						Committed,

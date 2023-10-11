@@ -2,7 +2,7 @@
 
 .link-basic {
 	text-decoration: none;
-	@include font($align: center);
+	@include font(0.95rem, 0.95rem, $align: center);
 }
 
 .primary,

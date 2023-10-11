@@ -14,7 +14,7 @@
 
 	&.navbarBorder {
 		background-color: rgba($white, 0.1);
-		border-color: $secondary;
+		border-color: rgba($secondary, 0.15);
 	}
 	&.isNavbarColored {
 		border-color: rgba($white, 0.15);

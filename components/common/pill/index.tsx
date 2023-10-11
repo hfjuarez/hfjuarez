@@ -26,9 +26,9 @@ const Pill = ({
 		className,
 	);
 	return (
-		<div className={pillClasses} {...props}>
+		<p className={pillClasses} {...props}>
 			{children}
-		</div>
+		</p>
 	);
 };
 

@@ -23,7 +23,8 @@ const Navbar = () => {
 		isScrolled && navbarStyles.navbarBorder,
 		isNavbarColored && navbarStyles.isNavbarColored,
 	);
-	const colorSchemeClass = isNavbarColored ? UIColors.WHITE : UIColors.PRIMARY;
+	const linkColorClass = isNavbarColored ? UIColors.WHITE : UIColors.PRIMARY;
+	const buttonColorClass = isNavbarColored ? UIColors.WHITE : UIColors.BASE;
 	const contact = () => {
 		window.location.href = 'mailto:herfj4@gmail.com';
 	};
@@ -49,13 +50,13 @@ const Navbar = () => {
 	return (
 		<nav className={navbarClasses}>
 			<div className={navbarStyles.navbarContent}>
-				<Link colorScheme={colorSchemeClass} href="/about" type="text">
+				<Link colorScheme={linkColorClass} href="/about" type="text">
 					About
 				</Link>
-				<Link colorScheme={colorSchemeClass} href="/works" type="text">
+				<Link colorScheme={linkColorClass} href="/works" type="text">
 					Work
 				</Link>
-				<Button colorScheme={colorSchemeClass} onClick={contact}>
+				<Button colorScheme={buttonColorClass} onClick={contact}>
 					LET&apos;S TALK
 				</Button>
 			</div>

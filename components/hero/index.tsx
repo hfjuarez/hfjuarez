@@ -16,7 +16,11 @@ const Header = () => {
 			<header className={heroStyles.header} aria-label="Hey! I'm Hernán">
 				<div className={heroStyles.introduction}>
 					<Text className={heroStyles.hey}>Hey!</Text>
-					<Heading as="h1">I&apos;m Hernán.</Heading>
+					<Heading as="h1">
+						<span className={colorsStyles[UIColors.BASE]}>
+							I&apos;m Hernán.
+						</span>
+					</Heading>
 					<Heading as="h2">
 						<span>Full Stack</span>
 						<span className={colorsStyles[UIColors.SECONDARY]}>
