@@ -2,7 +2,7 @@
 
 .link-basic {
 	text-decoration: none;
-	@include font(0.95rem, 0.95rem, $align: center);
+	@include font(0.85rem, 0.85rem, semi, $primary, center);
 }
 
 .primary,
@@ -17,10 +17,10 @@
 	color: $secondary;
 }
 .white {
-	color: $white;
+	color: $primary;
 	&:hover {
 		background-color: $white;
-		border-color: $secondary;
+		border-color: $white;
 		color: $primary;
 	}
 }
