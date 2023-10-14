@@ -13,10 +13,11 @@ interface LinkProps extends NextLinkProps {
 	type?: UIColors | 'text';
 	activeClassName?: string;
 	colorScheme?: UIColors;
+	children: ReactNode;
 	className?: string;
+	outlined?: boolean;
 	target?: string;
 	rel?: string;
-	children: ReactNode;
 }
 
 const Link = ({
@@ -25,6 +26,7 @@ const Link = ({
 	colorScheme = UIColors.PRIMARY,
 	className,
 	children,
+	outlined = false,
 	...props
 }: LinkProps) => {
 	const { asPath } = useRouter();
@@ -33,6 +35,7 @@ const Link = ({
 		linkStyle[type],
 		colorsStyles[colorScheme],
 		{ [activeClassName]: isActive },
+		outlined && linkStyle.outlined,
 		className,
 	);
 	return !!props.rel && !!props.target ? (

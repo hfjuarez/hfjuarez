@@ -22,6 +22,8 @@
 		color: $white;
 		width: 100%;
 		align-self: center;
+		width: 100%;
+		border-bottom: 0.0625rem solid rgba($white, 0.8);
 		@media only screen and (max-width: 60rem) {
 			position: relative;
 			top: 0;
@@ -30,7 +32,6 @@
 		}
 	}
 	.pillsWrapper {
-		border-top: 0.0625rem solid $secondary;
 		width: 100%;
 		align-self: flex-start;
 	}

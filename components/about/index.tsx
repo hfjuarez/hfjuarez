@@ -23,12 +23,10 @@ const About = () => {
 	const headingRef = useRef<HTMLInputElement>(null);
 	const [removeBottomBorderRadius, setRemoveBottomBorderRadius] =
 		useState(false);
-
 	const introductionClasses = classNames(
-		aboutStyle.introduction,
+		aboutStyle.background,
 		removeBottomBorderRadius && aboutStyle.removeBottomBorderRadius,
 	);
-
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollPositionInVh = (window.scrollY / window.innerHeight) * 100;
@@ -111,33 +109,23 @@ const About = () => {
 				<div className={introductionClasses} ref={introductionElement} />
 			</Container>
 
-			<div className={aboutStyle.aboutMeAndExperienceRecap}>
-				<Container as="section" key="introduction--about--experience">
-					<div className={aboutStyle.aboutMe}>
-						<Heading as={'h6'}>A bit about me</Heading>
-						<Text>
-							I&apos;m a person detail oriented that always want to learn new
-							things and listen to new ideas. As a developer always do
-							everything with all my compromise and passion to create the best
-							possible solution for each challenge.
-						</Text>
-						<Link href="/me" type={UIColors.WHITE}>
-							About Me
-						</Link>
-					</div>
-					<div className={aboutStyle.myExperience}>
-						<Heading as={'h6'}>A bit about my experience</Heading>
-						<Text>
-							My experience lies in building scalable, maintainable, and secure
-							web applications and their APIs. One of my biggest challenge was
-							create the new LANDSale system to improve our community. Giving
-							significant profit to the company.
-						</Text>
-						<Text>And now I have the total ownership of all that system.</Text>
-						<Link href="/experience" type={UIColors.WHITE}>
-							My Experience
-						</Link>
-					</div>
+			<div className={aboutStyle.aboutMe}>
+				<Container as="section" key="introduction--about">
+					<Heading as={'h2'} colorScheme={UIColors.WHITE}>
+						About me
+					</Heading>
+					<Text>
+						Results-driven Full Stack developer, focused on Back-end
+						development. With a proven track record in spearheading high-impact
+						projects, including the creation of the LAND Sale system at The
+						Sandbox Game and leading a significant private healthcare provider
+						project. Proficient in JavaScript, Node, Java, Vue, React and a
+						range of technologies. Committed to delivering innovative solutions
+						that drive success.
+					</Text>
+					<Link href="/experience" type={UIColors.WHITE} outlined>
+						Check more &gt;&gt;&gt;
+					</Link>
 				</Container>
 			</div>
 		</>
