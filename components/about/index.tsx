@@ -110,7 +110,7 @@ const About = () => {
 			</Container>
 			<div className={aboutStyle.aboutMe} id="about">
 				<Container as="section">
-					<Heading as={'h2'} colorScheme={UIColors.WHITE}>
+					<Heading as={'h1'} colorScheme={UIColors.WHITE}>
 						About me
 					</Heading>
 					<Text>

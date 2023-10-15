@@ -11,7 +11,7 @@ import Text from '@/components/common/layout/text';
 import Container from '@/components/common/layout/container';
 import Pill from '@/components/common/pill';
 
-import stackStyles from './stack.module.scss';
+import skillStyles from './skill.module.scss';
 
 import { skillsPills } from 'data/skills';
 import { UIColors } from 'utils/ui';
@@ -32,10 +32,10 @@ export default function Stack() {
 		const element = staredContentElement.current;
 		if (element) {
 			// Temporarily add the final class to capture the final state
-			element.classList.add(stackStyles.afterAnimation);
+			element.classList.add(skillStyles.afterAnimation);
 			const flipstate = Flip.getState([element]);
 			// Remove the final class to revert to the initial state
-			element.classList.remove(stackStyles.afterAnimation);
+			element.classList.remove(skillStyles.afterAnimation);
 
 			// Create the Flip animation timeline
 			Flip.to(flipstate, {
@@ -55,19 +55,19 @@ export default function Stack() {
 		}
 	}, []);
 	return (
-		<div className={stackStyles.stackWrapper}>
+		<div className={skillStyles.stackWrapper}>
 			<Container as="section">
-				<div className={stackStyles.stackTitleAndPills}>
-					<Heading as="h1" className={stackStyles.stackTitle}>
+				<div className={skillStyles.stackTitleAndPills}>
+					<Heading as="h1" className={skillStyles.stackTitle}>
 						Skills
 					</Heading>
-					<div className={stackStyles.pillsWrapper}>
-						<div className={stackStyles.pills}>{skillsPillsList}</div>
+					<div className={skillStyles.pillsWrapper}>
+						<div className={skillStyles.pills}>{skillsPillsList}</div>
 					</div>
 				</div>
-				<div className={stackStyles.staredWrapper}>
-					<div className={stackStyles.staredContent} ref={staredContentElement}>
-						<div className={`card ${stackStyles.stackItem}`}>
+				{/* <div className={skillStyles.staredWrapper}>
+					<div className={skillStyles.staredContent} ref={staredContentElement}>
+						<div className={`card ${skillStyles.stackItem}`}>
 							<Heading as="h3" colorScheme={UIColors.WHITE}>
 								React Native
 							</Heading>
@@ -78,7 +78,7 @@ export default function Stack() {
 								Developed a mobile application for a luxury real state.
 							</Text>
 						</div>
-						<div className={`card ${stackStyles.stackItem}`}>
+						<div className={`card ${skillStyles.stackItem}`}>
 							<Heading as="h3" colorScheme={UIColors.WHITE}>
 								Next
 							</Heading>
@@ -89,7 +89,7 @@ export default function Stack() {
 								Web App for fine interior decoration company based in Barcelona
 							</Text>
 						</div>
-						<div className={`card ${stackStyles.stackItem}`}>
+						<div className={`card ${skillStyles.stackItem}`}>
 							<Heading as="h3" colorScheme={UIColors.WHITE}>
 								Ruby on Rails
 							</Heading>
@@ -101,7 +101,7 @@ export default function Stack() {
 								Uruguay.
 							</Text>
 						</div>
-						<div className={`card ${stackStyles.stackItem}`}>
+						<div className={`card ${skillStyles.stackItem}`}>
 							<Heading as="h3" colorScheme={UIColors.WHITE}>
 								VueJS / NodeJS / Mongo / Mongoose
 							</Heading>
@@ -113,7 +113,7 @@ export default function Stack() {
 								restaurants that included Table Management System
 							</Text>
 						</div>
-						<div className={`card ${stackStyles.stackItem}`}>
+						<div className={`card ${skillStyles.stackItem}`}>
 							<Heading as="h3" colorScheme={UIColors.WHITE}>
 								VueJS / NodeJS / SQL / Sequelize
 							</Heading>
@@ -124,7 +124,7 @@ export default function Stack() {
 								New LAND Sale system for The Sandbox
 							</Text>
 						</div>
-						<div className={`card ${stackStyles.stackItem}`}>
+						<div className={`card ${skillStyles.stackItem}`}>
 							<Heading as="h3" colorScheme={UIColors.WHITE}>
 								VueJS / NodeJS / SQL / Sequelize
 							</Heading>
@@ -137,7 +137,7 @@ export default function Stack() {
 							</Text>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</Container>
 		</div>
 	);
