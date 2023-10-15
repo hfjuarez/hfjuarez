@@ -8,6 +8,7 @@ import Pill from '@/components/common/pill';
 import { UIColors } from 'utils/ui';
 // Styles
 import colorsStyles from '@/styles/colors.module.scss';
+import textsStyles from '@/styles/texts.module.scss';
 import heroStyles from './hero.module.scss';
 
 const Header = () => {
@@ -45,7 +46,7 @@ const Header = () => {
 						into robust and successful solutions that have a significant impact.
 					</Text>
 
-					<Text className={heroStyles.withLine}>
+					<Text className={textsStyles.underline}>
 						Let&apos;s explore my portfolio together.
 					</Text>
 				</div>

@@ -50,13 +50,17 @@ const Navbar = () => {
 	return (
 		<nav className={navbarClasses}>
 			<div className={navbarStyles.navbarContent}>
-				<Link colorScheme={linkColorClass} href="/about" type="text">
+				<Link colorScheme={linkColorClass} href="#about" type="text">
 					About
 				</Link>
 				<Link colorScheme={linkColorClass} href="/works" type="text">
 					Work
 				</Link>
-				<Button colorScheme={buttonColorClass} onClick={contact}>
+				<Button
+					colorScheme={buttonColorClass}
+					onClick={contact}
+					id="navbar-principal-cta"
+				>
 					LET&apos;S TALK
 				</Button>
 			</div>

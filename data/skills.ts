@@ -24,4 +24,5 @@ export const skillsPills = [
 	{ colorScheme: UIColors.WHITE, name: 'Tests' },
 	{ colorScheme: UIColors.WHITE, name: 'Unit Tests' },
 	{ colorScheme: UIColors.WHITE, name: 'Web App' },
+	{ colorScheme: UIColors.WHITE, name: 'Adaptability' },
 ];
