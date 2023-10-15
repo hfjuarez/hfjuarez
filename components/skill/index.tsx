@@ -7,14 +7,14 @@ gsap.registerPlugin(Flip, ScrollTrigger);
 
 // Components
 import Heading from '@/components/common/layout/heading';
-import Text from '@/components/common/layout/text';
+// import Text from '@/components/common/layout/text';
 import Container from '@/components/common/layout/container';
 import Pill from '@/components/common/pill';
 
 import skillStyles from './skill.module.scss';
 
 import { skillsPills } from 'data/skills';
-import { UIColors } from 'utils/ui';
+// import { UIColors } from 'utils/ui';
 
 export default function Stack() {
 	const staredContentElement = useRef<HTMLInputElement>(null);
