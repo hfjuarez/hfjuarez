@@ -93,7 +93,7 @@ const About = () => {
 			<Container
 				as="section"
 				key="introduction--recap"
-				className={aboutStyle.section}
+				className={aboutStyle.introductionSection}
 			>
 				<div ref={headingRef} className={aboutStyle.heading}>
 					<Heading as={'h1'}>
@@ -108,23 +108,48 @@ const About = () => {
 				</div>
 				<div className={introductionClasses} ref={introductionElement} />
 			</Container>
-
-			<div className={aboutStyle.aboutMe}>
-				<Container as="section" key="introduction--about">
-					<Heading as={'h2'} colorScheme={UIColors.WHITE}>
+			<div className={aboutStyle.aboutMe} id="about">
+				<Container as="section">
+					<Heading as={'h1'} colorScheme={UIColors.WHITE}>
 						About me
 					</Heading>
 					<Text>
-						Results-driven Full Stack developer, focused on Back-end
-						development. With a proven track record in spearheading high-impact
-						projects, including the creation of the LAND Sale system at The
-						Sandbox Game and leading a significant private healthcare provider
-						project. Proficient in JavaScript, Node, Java, Vue, React and a
-						range of technologies. Committed to delivering innovative solutions
-						that drive success.
+						On my journey as a Full Stack developer, my focus has always been on
+						pushing the boundaries of what&apos;s possible. I am driven by a
+						deep passion for Back-end development, and my ambition is clear: I
+						want to continue creating innovative solutions that drive success
+						and make a significant impact on projects. I offer a proven track
+						record in spearheading high-impact endeavors, such as the creation
+						and leadership of the all-new LAND Sale system for The Sandbox Game,
+						and I led a significant private healthcare provider project. With
+						proficiency in a wide array of technologies, including JavaScript,
+						Node, Java, Vue, React, and more, I am ready to take on the
+						challenges of complex technical projects.
+					</Text>
+					<Text>
+						What sets me apart is not just my technical expertise but also my
+						commitment to results and my ability to lead and collaborate
+						effectively. I have demonstrated my capabilities by owning and
+						leading projects, making critical technical decisions, and
+						collaborating with cross-functional teams to deliver successful
+						integrations and new features. My dedication to improving
+						accessibility, performance, and the stability of web applications,
+						along with my experience in developing robust APIs, highlights my
+						well-rounded skill set.
+					</Text>
+					<Text>
+						I am also a strong believer in the power of teamwork. I love working
+						with visionary teams and organizations that share my passion for
+						innovation and are open to teaching and learning from each other.
+					</Text>
+					<Text>
+						If you are looking for a Full Stack developer who is
+						detail-oriented, proactive, a fast learner, and passionate about
+						delivering innovative solutions, I&apos;m always ready to bring my
+						skills and experience to the table and help you achieve your goals.
 					</Text>
 					<Link href="/experience" type={UIColors.WHITE} outlined>
-						Check more &gt;&gt;&gt;
+						Let&apos;s build the future together!
 					</Link>
 				</Container>
 			</div>

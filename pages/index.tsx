@@ -3,7 +3,7 @@ import React from 'react';
 import Container from '@/components/common/layout/container';
 import Hero from '@/components/hero';
 import Introduction from '@/components/about';
-import Stack from '@/components/stack';
+import Skill from '@/components/skill';
 import Work from '@/components/work';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
 			<Hero />
 			<Container as="main">
 				<Introduction />
-				<Stack />
+				<Skill />
 				<Work />
 			</Container>
 		</>

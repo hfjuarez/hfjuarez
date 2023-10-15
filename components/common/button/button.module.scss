@@ -101,7 +101,7 @@
 
 .white {
 	background-color: $white;
-	color: $primary;
+	color: $base-color;
 	border-color: $white;
 	&:hover {
 		background-color: $white;
@@ -114,6 +114,7 @@
 		&:hover {
 			background-color: $white;
 			border-color: $white;
+			color: $base-color;
 		}
 	}
 }
