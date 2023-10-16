@@ -1,0 +1,21 @@
+@import 'mixin';
+
+.backgroundSection {
+	justify-content: flex-start;
+	position: relative;
+}
+
+.background {
+	position: absolute;
+	background-color: $base-color;
+	border-radius: 2rem;
+	height: 100%;
+	padding: 0;
+	padding-block: 5rem;
+	width: calc(100% + 10rem);
+	&.afterAnimation {
+		height: 100%;
+		width: 100dvw;
+		border-radius: 3rem;
+	}
+}

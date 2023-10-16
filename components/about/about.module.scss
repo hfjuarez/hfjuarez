@@ -1,13 +1,12 @@
 @import 'mixin';
 
-.introductionSection {
+.hadingSection {
 	justify-content: flex-start;
 }
 
 .heading {
 	margin: 7rem 0 0 0;
-	max-width: 70rem;
-	position: absolute;
+	max-width: 75rem;
 	width: 100%;
 	z-index: 1;
 	h1 {
@@ -15,25 +14,7 @@
 	}
 }
 
-.background {
-	background-color: $base-color;
-	border-radius: 2rem;
-	height: 42.5rem;
-	padding: 0;
-	padding-block: 5rem;
-	width: 100%;
-	&.afterAnimation {
-		height: 100dvh;
-		width: 100dvw;
-	}
-	&.removeBottomBorderRadius {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-}
-
 .aboutMe {
-	background-color: $base-color;
 	margin: 0;
 	padding-block: 5rem;
 	width: 100%;
