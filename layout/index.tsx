@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
 import Navbar from '@/components/common/navbar';
 import Footer from '@/components/common/layout/footer';
+import Loading from '@/components/common/layout/loading';
 // Styles
 import documentStyle from '@/styles/document.module.scss';
 import styles from './layout.module.scss';
@@ -82,7 +83,9 @@ export default function Layout({ children }: LayoutProps) {
 					<Footer />
 				</>
 			) : (
-				<div></div>
+				<div className={styles.main}>
+					<Loading />
+				</div>
 			)}
 		</>
 	);
