@@ -36,6 +36,8 @@ const initSmoothScrolling = () => {
 };
 
 export default function Layout({ children }: LayoutProps) {
+	const NEXT_PUBLIC_SITE_IS_LIVE =
+		process.env.NEXT_PUBLIC_SITE_IS_LIVE === 'true';
 	useEffect(() => {
 		initSmoothScrolling();
 		document.body.className = documentStyle.body;
@@ -73,9 +75,15 @@ export default function Layout({ children }: LayoutProps) {
 					rel="stylesheet"
 				/>
 			</Head>
-			<Navbar />
-			<div className={styles.main}>{children}</div>
-			<Footer />
+			{NEXT_PUBLIC_SITE_IS_LIVE ? (
+				<>
+					<Navbar />
+					<div className={styles.main}>{children}</div>
+					<Footer />
+				</>
+			) : (
+				<div></div>
+			)}
 		</>
 	);
 }
