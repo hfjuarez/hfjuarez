@@ -13,7 +13,7 @@ import heroStyles from './hero.module.scss';
 
 const Header = () => {
 	return (
-		<Container as="div" className={heroStyles.reduceHeight}>
+		<Container as="div" className={heroStyles.height}>
 			<header className={heroStyles.header} aria-label="Hey! I'm Hernán">
 				<div className={heroStyles.introduction}>
 					<Text className={heroStyles.hey}>Hey!</Text>
