@@ -1,5 +1,5 @@
 .background {
-	background-color: $white;
+	background-color: $primary;
 	height: 100dvh;
 	width: 100dvw;
 	@include flex(column, flex-start, flex-start);
@@ -19,25 +19,26 @@
 		max-height: 40rem;
 		height: 100%;
 		position: absolute;
-		border-radius: 1rem;
+
 		h1 {
 			color: $white;
 		}
 		.hey {
-			@include font(5.5rem, 5rem, light, $white, $stretch: 90%);
+			@include font(5rem, 4.5rem, light, $white, $stretch: 90%);
 		}
 		.subtitle {
+			margin-top: 0.5rem;
 			color: $white;
 			font-weight: 400;
 		}
 	}
 }
 
-.textContainer {
+.bgTextContainer {
 	@include flex();
 	width: 100%;
 	p {
-		@include font(20cqw, 18cqw, bold, $primary, $stretch: 95%);
+		@include font(20cqw, 18cqw, bold, $white, $stretch: 95%);
 	}
 	.left {
 		width: 50%;
