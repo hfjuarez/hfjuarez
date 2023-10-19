@@ -17,11 +17,11 @@ const Loading = () => {
 					</Heading>
 					<Heading as="h1">I&apos;am Hernán.</Heading>
 					<Heading as="h4" className={loadingStyle.subtitle}>
-						Coming soon...
+						Full Stack Developer
 					</Heading>
 				</Container>
 			</div>
-			<div className={loadingStyle.textContainer}>
+			<div className={loadingStyle.bgTextContainer}>
 				<div className={loadingStyle.left}>
 					<div>
 						<Text>Hello</Text>
