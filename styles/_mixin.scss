@@ -13,14 +13,23 @@
 	$height: 1.5rem,
 	$weight: regular,
 	$color: $primary,
-	$align: left
+	$align: left,
+	$stretch: 100%
 ) {
-	font-family: 'Inter', sans-serif;
+	font-family: 'Mona Sans', sans-serif;
+
+	// font-family: 'Inter', sans-serif;
 
 	@if ($size == '_') {
 		font-size: 1rem;
 	} @else {
 		font-size: $size;
+	}
+
+	@if ($stretch == '_') {
+		font-stretch: 100%;
+	} @else {
+		font-stretch: $stretch;
 	}
 
 	@if ($height == '_') {
@@ -32,11 +41,13 @@
 	@if ($weight == 'regular') {
 		font-weight: 400;
 	} @else if ($weight == 'light') {
-		font-weight: 300;
+		font-weight: 200;
 	} @else if ($weight == 'semi') {
-		font-weight: 500;
-	} @else if ($weight == 'bold') {
 		font-weight: 600;
+	} @else if ($weight == 'bold') {
+		font-weight: 700;
+	} @else if ($weight == 'extra') {
+		font-weight: 900;
 	} @else {
 		font-weight: 400;
 	}

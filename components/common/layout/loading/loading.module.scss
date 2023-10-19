@@ -1,16 +1,138 @@
-.loadingContainer {
+.background {
+	background-color: $white;
+	height: 100dvh;
+	width: 100dvw;
+	@include flex(column, flex-start, flex-start);
+}
+
+.wrapper {
+	position: absolute;
+	height: 100dvh;
+	width: 100dvw;
+	z-index: 98;
+	backdrop-filter: blur(0.1rem);
+	-webkit-backdrop-filter: blur(0.1rem);
 	@include flex(column, center, center);
-	width: 100%;
-	height: 100%;
-	@media (max-width: 768px) {
-		align-items: flex-start;
+	.centeredContainer {
+		z-index: 99;
+		background-color: $base-color;
+		max-height: 40rem;
+		height: 100%;
+		position: absolute;
+		border-radius: 1rem;
+		h1 {
+			color: $white;
+		}
+		.hey {
+			@include font(5.5rem, 5rem, light, $white, $stretch: 90%);
+		}
+		.subtitle {
+			color: $white;
+			font-weight: 400;
+		}
 	}
 }
 
-.loadingHey {
-	@include font(5.5rem, 5rem, light, $primary);
-}
+.textContainer {
+	@include flex();
+	width: 100%;
+	p {
+		@include font(20cqw, 18cqw, bold, $primary, $stretch: 95%);
+	}
+	.left {
+		width: 50%;
+		height: 100dvh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: transform 1s ease;
+		white-space: nowrap;
+		overflow-y: hidden;
+		@include flex(column, center, center);
+		p {
+			margin: 0;
+			transition: transform 2s ease;
+		}
 
-.loadingSubtitle {
-	font-weight: 400;
+		> div {
+			animation: scrollTextUp 15s infinite linear;
+			display: flex;
+			flex-direction: column;
+			-webkit-animation: scrollTextUp 15s infinite linear;
+		}
+
+		@-webkit-keyframes scrollTextUp {
+			from {
+				transform: translateY(0%);
+			}
+
+			to {
+				transform: translateY(-25%);
+			}
+		}
+
+		@keyframes scrollTextUp {
+			from {
+				transform: translateY(0%);
+			}
+
+			to {
+				transform: translateY(-25%);
+			}
+		}
+	}
+	.right {
+		width: 50%;
+		height: 100dvh;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transition: transform 1s ease;
+		white-space: nowrap;
+		overflow-y: hidden;
+		@include flex(column, center, center);
+		p {
+			margin: 0;
+			transition: transform 2s ease;
+			text-align: right;
+		}
+
+		> div {
+			animation: scrollTextDown 15s infinite linear;
+			display: flex;
+			flex-direction: column;
+			-webkit-animation: scrollTextDown 15s infinite linear;
+		}
+
+		@-webkit-keyframes scrollTextDown {
+			from {
+				transform: translateY(0%);
+			}
+
+			to {
+				transform: translateY(25%);
+			}
+		}
+		@keyframes scrollTextDown {
+			from {
+				transform: translateY(0%);
+			}
+
+			to {
+				transform: translateY(25%);
+			}
+		}
+	}
+	@media (max-width: 70rem) {
+		.right {
+			display: none;
+		}
+		.left {
+			width: 100%;
+			p {
+				font-size: 40cqw;
+				line-height: 36cqw;
+			}
+		}
+	}
 }

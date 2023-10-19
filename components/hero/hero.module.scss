@@ -22,7 +22,7 @@
 			display: none;
 		}
 		.hey {
-			@include font(5.5rem, 5rem, light, $primary);
+			@include font(5.5rem, 5rem, light, $primary, $stretch: 90%);
 			margin: 0;
 		}
 		.pills {

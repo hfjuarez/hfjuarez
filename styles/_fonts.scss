@@ -1,1 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+@font-face {
+	font-family: 'Mona Sans';
+	src: url('/fonts/mona-sans-1.0.1/MonaSans[slnt,wdth,wght].woff2')
+			format('woff2 supports variations'),
+		url('/fonts/mona-sans-1.0.1/MonaSans[slnt,wdth,wght].woff2')
+			format('woff2-variations');
+	font-weight: 200 900;
+	font-stretch: 75% 125%;
+}
