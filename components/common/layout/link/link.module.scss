@@ -2,7 +2,7 @@
 
 .link-basic {
 	text-decoration: none;
-	@include font(0.85rem, 0.85rem, semi, $primary, center);
+	@include font(0.85rem, 0.85rem, regular, $primary, center);
 }
 
 .primary,

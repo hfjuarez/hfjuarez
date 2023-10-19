@@ -65,16 +65,6 @@ export default function Layout({ children }: LayoutProps) {
 					media="(prefers-color-scheme: dark)"
 				/>
 				<link rel="icon" href="/favicon.ico" />
-				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link
-					rel="preconnect"
-					href="https://fonts.gstatic.com"
-					crossOrigin="true"
-				/>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap"
-					rel="stylesheet"
-				/>
 			</Head>
 			{NEXT_PUBLIC_SITE_IS_LIVE ? (
 				<>
@@ -83,9 +73,7 @@ export default function Layout({ children }: LayoutProps) {
 					<Footer />
 				</>
 			) : (
-				<div className={styles.main}>
-					<Loading />
-				</div>
+				<Loading />
 			)}
 		</>
 	);
