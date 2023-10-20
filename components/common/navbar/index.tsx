@@ -26,7 +26,7 @@ const Navbar = () => {
 	const linkColorClass = isNavbarColored ? UIColors.WHITE : UIColors.PRIMARY;
 	const buttonColorClass = isNavbarColored ? UIColors.WHITE : UIColors.BASE;
 	const contact = () => {
-		window.location.href = 'mailto:herfj4@gmail.com';
+		window.location.href = 'mailto:hello@hernanfabrica.com';
 	};
 
 	useEffect(() => {
