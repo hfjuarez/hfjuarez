@@ -1,5 +1,5 @@
 .background {
-	background-color: $primary;
+	background-color: $white;
 	height: 100dvh;
 	width: 100dvw;
 	@include flex(column, flex-start, flex-start);
@@ -10,35 +10,128 @@
 	height: 100dvh;
 	width: 100dvw;
 	z-index: 98;
-	backdrop-filter: blur(0.1rem);
-	-webkit-backdrop-filter: blur(0.1rem);
 	@include flex(column, center, center);
 	.centeredContainer {
-		z-index: 99;
-		background-color: $base-color;
-		max-height: 40rem;
+		backdrop-filter: blur(3rem);
+		background-color: rgba($base-color, 0.9);
+		border-radius: 0.25rem;
+		max-height: 50rem;
+		max-width: 90rem;
 		height: 100%;
-		position: absolute;
-
-		h1 {
-			color: $white;
+		position: relative;
+		z-index: 99;
+		-webkit-backdrop-filter: blur(3rem);
+		@media only screen and (max-width: 95rem) {
+			width: 95dvw;
 		}
-		.hey {
-			@include font(5rem, 4.5rem, light, $white, $stretch: 90%);
-		}
-		.subtitle {
-			margin-top: 0.5rem;
-			color: $white;
-			font-weight: 400;
+		@media only screen and (max-width: 40rem) {
+			width: 100dvw;
+			height: 100dvh;
+			max-height: unset;
+			border-radius: 0;
 		}
 	}
 }
 
+.header {
+	position: absolute;
+	top: 0;
+	text-transform: uppercase;
+	width: 100%;
+	margin-top: 2rem;
+	@include flex(row, center, flex-start);
+	h5 {
+		color: $white;
+		font-weight: 200;
+		&:first-of-type {
+			margin-left: 2rem;
+			margin-right: auto;
+		}
+		&.centered {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.button {
+		margin-left: auto;
+		text-transform: uppercase;
+		border-radius: 0.25rem;
+		background-color: transparent;
+		backdrop-filter: none;
+		border-color: transparent;
+		margin-top: -0.5rem;
+		margin-right: 1.2rem;
+		@include font(1.1rem, 1.25rem, light, $white, left, 85%);
+		&:hover {
+			border-color: rgba($white, 0.125);
+			background-color: rgba($white, 0.125);
+		}
+	}
+	@media only screen and (max-width: 40rem) {
+		flex-direction: column;
+		h5 {
+			&:first-of-type {
+				margin-left: 2rem;
+				margin-right: 0;
+				margin-bottom: 0.5rem;
+			}
+			&.centered {
+				// position: relative;
+				// left: 2rem;
+				// transform: translateX(0);
+				// margin-bottom: 0.5rem;
+				display: none;
+			}
+		}
+		.button {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+}
+
+.titleWrapper {
+	height: 20rem;
+	padding-inline: 1rem;
+	overflow-y: hidden;
+	border-bottom: 0.0625rem solid $white;
+	@include flex(column, center, center);
+	h1 {
+		@include font(14rem, 12rem, extra, $white);
+		span {
+			@include font(10rem, 9rem, regular, $white);
+		}
+	}
+	@media only screen and (max-width: 70rem) {
+		height: 29cqw;
+		h1 {
+			font-size: 20cqw;
+			line-height: 17cqw;
+			span {
+				font-size: 14cqw;
+				line-height: 10cqw;
+			}
+		}
+	}
+}
+.footer {
+	height: 6rem;
+	@include flex(row, center, center);
+	.pills {
+		@include flex(row, center, center);
+		height: fit-content;
+		flex-wrap: wrap;
+		margin-top: 0.5rem;
+		gap: 0.5rem;
+	}
+}
 .bgTextContainer {
 	@include flex();
 	width: 100%;
 	p {
-		@include font(20cqw, 18cqw, bold, $white, $stretch: 95%);
+		@include font(23cqw, 18.5cqw, bold, $primary, $stretch: 95%);
 	}
 	.left {
 		width: 50%;
@@ -131,8 +224,8 @@
 		.left {
 			width: 100%;
 			p {
-				font-size: 40cqw;
-				line-height: 36cqw;
+				font-size: 50cqw;
+				line-height: 40cqw;
 			}
 		}
 	}
