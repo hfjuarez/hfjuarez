@@ -14,7 +14,7 @@ import loadingStyle from './loading.module.scss';
 
 const Loading = () => {
 	const contact = () => {
-		window.location.href = 'mailto:herfj4@gmail.com';
+		window.location.href = 'mailto:hello@hernanfabrica.com';
 	};
 	return (
 		<div className={loadingStyle.background}>
