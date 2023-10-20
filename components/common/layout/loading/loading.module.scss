@@ -21,6 +21,10 @@
 		position: relative;
 		z-index: 99;
 		-webkit-backdrop-filter: blur(3rem);
+		@media only screen and (max-height: 50rem) {
+			max-height: 45rem;
+			max-width: 80rem;
+		}
 		@media only screen and (max-width: 95rem) {
 			width: 95dvw;
 		}
@@ -40,7 +44,7 @@
 	width: 100%;
 	margin-top: 2rem;
 	@include flex(row, center, flex-start);
-	h5 {
+	h6 {
 		color: $white;
 		font-weight: 200;
 		&:first-of-type {
@@ -62,7 +66,7 @@
 		border-color: transparent;
 		margin-top: -0.5rem;
 		margin-right: 1.2rem;
-		@include font(1.1rem, 1.25rem, light, $white, left, 85%);
+		@include font(1rem, 1rem, light, $white, left, 85%);
 		&:hover {
 			border-color: rgba($white, 0.125);
 			background-color: rgba($white, 0.125);
@@ -70,7 +74,7 @@
 	}
 	@media only screen and (max-width: 40rem) {
 		flex-direction: column;
-		h5 {
+		h6 {
 			&:first-of-type {
 				margin-left: 2rem;
 				margin-right: 0;
@@ -93,25 +97,25 @@
 }
 
 .titleWrapper {
-	height: 20rem;
+	height: 18.75rem;
 	padding-inline: 1rem;
 	overflow-y: hidden;
 	border-bottom: 0.0625rem solid $white;
 	@include flex(column, center, center);
 	h1 {
-		@include font(14rem, 12rem, extra, $white);
+		@include font(12rem, 10rem, extra, $white);
 		span {
-			@include font(10rem, 9rem, regular, $white);
+			@include font(8rem, 7rem, regular, $white);
 		}
 	}
 	@media only screen and (max-width: 70rem) {
-		height: 29cqw;
+		height: 23.75cqw;
 		h1 {
-			font-size: 20cqw;
-			line-height: 17cqw;
+			font-size: 15cqw;
+			line-height: 13cqw;
 			span {
-				font-size: 14cqw;
-				line-height: 10cqw;
+				font-size: 10cqw;
+				line-height: 8cqw;
 			}
 		}
 	}

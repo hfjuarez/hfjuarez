@@ -21,15 +21,14 @@ const Loading = () => {
 			<div className={loadingStyle.wrapper}>
 				<Container as="section" className={loadingStyle.centeredContainer}>
 					<header className={loadingStyle.header}>
-						<Heading as="h5">
+						<Heading as="h6">
 							Looking for
 							<br />
 							your next developer?
 						</Heading>
-						<Heading as="h5" className={loadingStyle.centered}>
+						<Heading as="h6" className={loadingStyle.centered}>
 							Full Stack Developer
 						</Heading>
-						{/* <Heading as="h5">Get in touch!</Heading> */}
 						<Button
 							onClick={contact}
 							id="loading-cta"
