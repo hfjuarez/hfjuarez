@@ -64,9 +64,9 @@
 		background-color: transparent;
 		backdrop-filter: none;
 		border-color: transparent;
-		margin-top: -0.5rem;
+		margin-top: -0.6rem;
 		margin-right: 1.2rem;
-		@include font(1rem, 1rem, light, $white, left, 85%);
+		@include font(1rem, normal, light, $white, left, 85%);
 		&:hover {
 			border-color: rgba($white, 0.125);
 			background-color: rgba($white, 0.125);
@@ -97,7 +97,7 @@
 }
 
 .titleWrapper {
-	height: 18.75rem;
+	height: 18rem;
 	padding-inline: 1rem;
 	overflow-y: hidden;
 	border-bottom: 0.0625rem solid $white;
@@ -120,6 +120,7 @@
 		}
 	}
 }
+
 .footer {
 	height: 6rem;
 	@include flex(row, center, center);
@@ -131,6 +132,7 @@
 		gap: 0.5rem;
 	}
 }
+
 .bgTextContainer {
 	@include flex();
 	width: 100%;
@@ -153,10 +155,10 @@
 		}
 
 		> div {
-			animation: scrollTextUp 15s infinite linear;
+			animation: scrollTextUp 20s infinite linear;
 			display: flex;
 			flex-direction: column;
-			-webkit-animation: scrollTextUp 15s infinite linear;
+			-webkit-animation: scrollTextUp 20s infinite linear;
 		}
 
 		@-webkit-keyframes scrollTextUp {
@@ -196,10 +198,10 @@
 		}
 
 		> div {
-			animation: scrollTextDown 15s infinite linear;
+			animation: scrollTextDown 20s infinite linear;
 			display: flex;
 			flex-direction: column;
-			-webkit-animation: scrollTextDown 15s infinite linear;
+			-webkit-animation: scrollTextDown 20s infinite linear;
 		}
 
 		@-webkit-keyframes scrollTextDown {
