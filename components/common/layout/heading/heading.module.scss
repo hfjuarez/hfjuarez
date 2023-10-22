@@ -1,7 +1,6 @@
 .heading-basic {
 	color: $primary;
 	margin: 0px;
-	letter-spacing: 0.0625rem;
 	@include font(5.5rem, 5.5rem, bold, $stretch: 80%);
 }
 
