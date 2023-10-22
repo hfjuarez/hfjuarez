@@ -1,3 +1,5 @@
+@import '@/components/common/button/button.module.scss';
+
 .background {
 	background-color: $white;
 	height: 100dvh;
@@ -10,6 +12,9 @@
 	height: 100dvh;
 	width: 100dvw;
 	z-index: 98;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	@include flex(column, center, center);
 	.centeredContainer {
 		backdrop-filter: blur(3rem);
@@ -57,20 +62,9 @@
 			transform: translateX(-50%);
 		}
 	}
-	.button {
-		margin-left: auto;
-		text-transform: uppercase;
-		border-radius: 0.25rem;
-		background-color: transparent;
-		backdrop-filter: none;
-		border-color: transparent;
+	.link {
 		margin-top: -0.6rem;
 		margin-right: 1.2rem;
-		@include font(1rem, normal, light, $white, left, 85%);
-		&:hover {
-			border-color: rgba($white, 0.125);
-			background-color: rgba($white, 0.125);
-		}
 	}
 	@media only screen and (max-width: 40rem) {
 		flex-direction: column;
@@ -132,13 +126,36 @@
 
 .footer {
 	height: 6rem;
-	@include flex(row, center, center);
-	.pills {
+	@include flex(column, flex-start, center);
+	.pills,
+	.links {
 		@include flex(row, center, center);
 		height: fit-content;
 		flex-wrap: wrap;
-		margin-top: 0.5rem;
 		gap: 0.5rem;
+	}
+	.pills {
+		margin-top: 2rem;
+	}
+	.links {
+		margin-top: 0.5rem;
+		position: absolute;
+		bottom: 2rem;
+	}
+}
+
+.link {
+	@extend .button-basic;
+	margin-left: auto;
+	text-transform: uppercase;
+	border-radius: 0.25rem;
+	background-color: transparent;
+	backdrop-filter: none;
+	border-color: transparent;
+	@include font(1rem, normal, light, $white, left, 85%);
+	&:hover {
+		border-color: rgba($white, 0.125);
+		background-color: rgba($white, 0.125);
 	}
 }
 
