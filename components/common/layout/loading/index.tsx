@@ -1,10 +1,11 @@
 import React from 'react';
+import Image from 'next/image';
 // Components
 import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
 import Pill from '@/components/common/pill';
-import Button from '@/components/common/button';
+import Link from '@/components/common/layout/link';
 
 // Utils
 import { UIColors } from 'utils/ui';
@@ -13,9 +14,6 @@ import { UIColors } from 'utils/ui';
 import loadingStyle from './loading.module.scss';
 
 const Loading = () => {
-	const contact = () => {
-		window.location.href = 'mailto:hello@hernanfabrica.com';
-	};
 	return (
 		<div className={loadingStyle.background}>
 			<div className={loadingStyle.wrapper}>
@@ -29,13 +27,12 @@ const Loading = () => {
 						<Heading as="h6" className={loadingStyle.centered}>
 							Full Stack Developer
 						</Heading>
-						<Button
-							onClick={contact}
-							id="loading-cta"
-							className={loadingStyle.button}
+						<Link
+							href="mailto:hello@hernanfabrica.com"
+							className={loadingStyle.link}
 						>
 							Get in touch!
-						</Button>
+						</Link>
 					</header>
 					<div className={loadingStyle.titleWrapper}>
 						<Heading as="h1">
@@ -51,6 +48,32 @@ const Loading = () => {
 							<Pill colorScheme={UIColors.WHITE}>ReactJS</Pill>
 							<Pill colorScheme={UIColors.WHITE}>Ruby on Rails</Pill>
 							<Pill colorScheme={UIColors.WHITE}>Java</Pill>
+						</div>
+						<div className={loadingStyle.links}>
+							<Link
+								href="https://github.com/hfjuarez"
+								className={loadingStyle.link}
+							>
+								<Image
+									width={13.6}
+									height={13.6}
+									src="/images/github-mark-white.svg"
+									alt="Github Mark White"
+								/>
+								&nbsp; Github
+							</Link>
+							<Link
+								href="https://www.linkedin.com/in/hfjuarez/"
+								className={loadingStyle.link}
+							>
+								<Image
+									width={13.6}
+									height={13.6}
+									src="/images/linkedin-icon-white.svg"
+									alt="Linkedin Icon White"
+								/>
+								&nbsp; Linkedin
+							</Link>
 						</div>
 					</footer>
 				</Container>
