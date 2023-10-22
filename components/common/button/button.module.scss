@@ -12,7 +12,7 @@
 	white-space: nowrap;
 	width: fit-content;
 	-webkit-backdrop-filter: blur(0.5rem);
-	@include font(0.85rem, 0.85rem, regular, $white, center);
+	@include font(0.85rem, normal, regular, $white, center);
 	@include flex(row, center, center);
 	&.btn-marquee {
 		max-width: 10rem;
