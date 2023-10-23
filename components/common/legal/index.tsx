@@ -45,7 +45,7 @@ const Legal = () => {
 				LinkedIn&apos;s &quot;Brand Guidelines&quot; and does not imply any
 				endorsement, sponsorship, or affiliation with LinkedIn Corporation. For
 				more information about the use of the LinkedIn logo, please refer to
-				LinkedIn&apos;s &quot;Brand Guidelines.&quot;
+				LinkedIn&apos;s &quot;Brand Guidelines.&quot;.
 			</Text>
 			<hr />
 			<Text>
@@ -59,7 +59,7 @@ const Legal = () => {
 				GitHub&apos;s &quot;GitHub Logos and Usage&quot; and does not imply any
 				endorsement, sponsorship, or affiliation with GitHub, Inc. For more
 				information about the use of the GitHub logo, please refer to
-				GitHub&apos;s &quot;GitHub Logos and Usage.&quot;
+				GitHub&apos;s &quot;GitHub Logos and Usage.&quot;.
 			</Text>
 		</div>
 	);
