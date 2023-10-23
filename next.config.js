@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-import { join } from 'path';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path');
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
@@ -20,12 +21,12 @@ const nextConfigGithub = {
 const nextConfig = {
 	reactStrictMode: true,
 	sassOptions: {
-		includePaths: [join(__dirname, 'styles')],
+		includePaths: [path.join(__dirname, 'styles')],
 		prependData: `@import "@/styles/index.scss";`,
 	},
 	swcMinify: true,
 };
 
-export default isGithubActions
+module.exports = isGithubActions
 	? { ...nextConfig, ...nextConfigGithub }
 	: nextConfig;
