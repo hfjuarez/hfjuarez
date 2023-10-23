@@ -68,8 +68,8 @@ const Loading = () => {
 							>
 								<Image
 									height={13.6}
-									width={16}
-									src="/images/linkedin-icon-white.png"
+									width={13.6}
+									src="/images/linkedin-icon-white.svg"
 									alt="Linkedin Icon White"
 								/>
 								&nbsp;Linkedin®
