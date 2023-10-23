@@ -60,7 +60,7 @@ const Loading = () => {
 									src="/images/github-mark-white.svg"
 									alt="Github Mark White"
 								/>
-								&nbsp;Github
+								&nbsp;Github®
 							</Link>
 							<Link
 								href="https://www.linkedin.com/in/hfjuarez/"
