@@ -2,7 +2,7 @@
 
 .link-basic {
 	text-decoration: none;
-	@include font(0.85rem, 0.85rem, regular, $primary, center);
+	@include font(0.85rem, normal, regular, $primary, center);
 }
 
 .primary,
@@ -10,7 +10,7 @@
 .white {
 	@extend .link-basic;
 	font-size: 0.95rem;
-	line-height: 0.95rem;
+	line-height: normal;
 }
 
 .secondary {

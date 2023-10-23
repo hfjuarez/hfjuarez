@@ -14,11 +14,10 @@
 	$weight: regular,
 	$color: $primary,
 	$align: left,
-	$stretch: 100%
+	$stretch: 100%,
+	$spacing: 0.0625rem
 ) {
 	font-family: 'Mona Sans', sans-serif;
-
-	// font-family: 'Inter', sans-serif;
 
 	@if ($size == '_') {
 		font-size: 1rem;
@@ -30,6 +29,12 @@
 		font-stretch: 100%;
 	} @else {
 		font-stretch: $stretch;
+	}
+
+	@if ($spacing == '_') {
+		letter-spacing: 0.0625rem;
+	} @else {
+		letter-spacing: $spacing;
 	}
 
 	@if ($height == '_') {
