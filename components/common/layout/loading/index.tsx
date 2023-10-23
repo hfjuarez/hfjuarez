@@ -41,7 +41,7 @@ const Loading = () => {
 							Hernán
 						</Heading>
 					</div>
-					<footer className={loadingStyle.footer}>
+					<div className={loadingStyle.footer}>
 						<div className={loadingStyle.pills}>
 							<Pill colorScheme={UIColors.WHITE}>NodeJS</Pill>
 							<Pill colorScheme={UIColors.WHITE}>VueJS</Pill>
@@ -60,22 +60,22 @@ const Loading = () => {
 									src="/images/github-mark-white.svg"
 									alt="Github Mark White"
 								/>
-								&nbsp; Github
+								&nbsp;Github
 							</Link>
 							<Link
 								href="https://www.linkedin.com/in/hfjuarez/"
 								className={loadingStyle.link}
 							>
 								<Image
-									width={13.6}
 									height={13.6}
-									src="/images/linkedin-icon-white.svg"
+									width={16}
+									src="/images/linkedin-icon-white.png"
 									alt="Linkedin Icon White"
 								/>
-								&nbsp; Linkedin
+								&nbsp;Linkedin®
 							</Link>
 						</div>
-					</footer>
+					</div>
 				</Container>
 			</div>
 			<div className={loadingStyle.bgTextContainer}>

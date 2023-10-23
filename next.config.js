@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const path = require('path');
+import { join } from 'path';
 
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
@@ -18,18 +18,14 @@ const nextConfigGithub = {
 };
 
 const nextConfig = {
-	images: {
-		loader: 'imgix',
-		path: 'https://hfjuarez.imgix.net',
-	},
 	reactStrictMode: true,
 	sassOptions: {
-		includePaths: [path.join(__dirname, 'styles')],
+		includePaths: [join(__dirname, 'styles')],
 		prependData: `@import "@/styles/index.scss";`,
 	},
 	swcMinify: true,
 };
 
-module.exports = isGithubActions
+export default isGithubActions
 	? { ...nextConfig, ...nextConfigGithub }
 	: nextConfig;

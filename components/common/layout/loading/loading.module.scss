@@ -11,7 +11,7 @@
 	position: absolute;
 	height: 100dvh;
 	width: 100dvw;
-	z-index: 98;
+	z-index: 1;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -24,11 +24,11 @@
 		max-width: 90rem;
 		height: 100%;
 		position: relative;
-		z-index: 99;
+		z-index: 2;
 		-webkit-backdrop-filter: blur(3rem);
 		@media only screen and (max-height: 50rem) {
-			max-height: 45rem;
-			max-width: 80rem;
+			max-height: 42.5rem;
+			max-width: 77.5rem;
 		}
 		@media only screen and (max-width: 95rem) {
 			width: 95dvw;
@@ -88,14 +88,20 @@
 
 .titleWrapper {
 	height: 18rem;
-	padding-inline: 1rem;
+	padding-inline: 0.5rem;
 	overflow-y: hidden;
-	border-bottom: 0.0625rem solid $white;
 	@include flex(column, center, center);
 	h1 {
-		@include font(12rem, 10rem, extra, $white);
+		@include font(
+			12rem,
+			10rem,
+			extra,
+			$white,
+			$stretch: 100%,
+			$spacing: -0.0625rem
+		);
 		span {
-			@include font(8rem, 7rem, regular, $white);
+			@include font(8rem, 7rem, regular, $white, $stretch: 95%);
 		}
 	}
 	@media only screen and (max-width: 70rem) {
