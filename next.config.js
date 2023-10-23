@@ -19,6 +19,7 @@ const nextConfigGithub = {
 };
 
 const nextConfig = {
+	images: {},
 	reactStrictMode: true,
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],
