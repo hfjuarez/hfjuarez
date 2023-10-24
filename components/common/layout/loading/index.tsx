@@ -36,7 +36,7 @@ const Loading = () => {
 					</header>
 					<div className={loadingStyle.titleWrapper}>
 						<Heading as="h1">
-							<span>I&apos;am</span>
+							<span>I&apos;m</span>
 							<br />
 							Hernán
 						</Heading>

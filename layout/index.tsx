@@ -67,7 +67,7 @@ export default function Layout({ children }: LayoutProps) {
 				<link rel="icon" href="/favicon.ico" />
 				<link
 					rel="preload"
-					href="/fonts/mona-sans-1.0.1/MonaSans[slnt,wdth,wght].woff2"
+					href="/fonts/mona-sans-1.0.1/Mona-Sans.woff2"
 					as="font"
 					type="font/woff2"
 				></link>

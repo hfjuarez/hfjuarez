@@ -36,7 +36,6 @@ const About = () => {
 		});
 		gsap.to(headingElement.children[0], {
 			fontSize: '6.5rem',
-			lineHeight: '6.5rem',
 			scrollTrigger: {
 				end: 'center center',
 				scrub: true,
