@@ -61,7 +61,7 @@ export default function Layout({ children }: LayoutProps) {
 				/>
 				<meta
 					name="theme-color"
-					content="#202022"
+					content="#fff"
 					media="(prefers-color-scheme: dark)"
 				/>
 				<link rel="icon" href="/favicon.ico" />
