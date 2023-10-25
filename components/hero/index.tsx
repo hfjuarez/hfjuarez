@@ -1,58 +1,104 @@
 import React from 'react';
+import Image from 'next/image';
 // Components
-import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
 import Pill from '@/components/common/pill';
+import Link from '@/components/common/layout/link';
+
 // Utils
 import { UIColors } from 'utils/ui';
-// Styles
-import colorsStyles from '@/styles/colors.module.scss';
-import textsStyles from '@/styles/texts.module.scss';
-import heroStyles from './hero.module.scss';
 
-const Header = () => {
+// Styles
+import styles from './hero.module.scss';
+
+const Hero = () => {
 	return (
-		<Container as="div" className={heroStyles.height}>
-			<header className={heroStyles.header} aria-label="Hey! I'm Hernán">
-				<div className={heroStyles.introduction}>
-					<Text className={heroStyles.hey}>Hey!</Text>
-					<Heading as="h1">I&apos;m Hernán.</Heading>
-					<Heading as="h2">
-						<span>Full Stack</span>
-						<span className={colorsStyles[UIColors.SECONDARY]}>
-							&nbsp;developer
-						</span>
-					</Heading>
-					<div className={heroStyles.pills}>
-						<Pill colorScheme={UIColors.PRIMARY}>NodeJS</Pill>
-						<Pill colorScheme={UIColors.PRIMARY}>VueJS</Pill>
-						<Pill colorScheme={UIColors.PRIMARY}>ReactJS</Pill>
-						<Pill colorScheme={UIColors.PRIMARY}>Ruby on Rails</Pill>
-						<Pill colorScheme={UIColors.PRIMARY}>Java</Pill>
+		<div className={styles.background}>
+			<div className={styles.wrapper}>
+				<header className={styles.centeredContainer}>
+					<div className={styles.top}>
+						<Heading as="h6">
+							Looking for
+							<br />
+							your next developer?
+						</Heading>
+						<Heading as="h6" className={styles.centered}>
+							Full Stack Developer
+						</Heading>
+						<Link href="mailto:hello@hernanfabrica.com" className={styles.link}>
+							Get in touch!
+						</Link>
+					</div>
+					<div className={styles.titleWrapper}>
+						<Heading as="h1">
+							<span>I am</span>
+							<br />
+							Hernán
+						</Heading>
+					</div>
+					<div className={styles.bottom}>
+						<div className={styles.pills}>
+							<Pill colorScheme={UIColors.WHITE}>NodeJS</Pill>
+							<Pill colorScheme={UIColors.WHITE}>VueJS</Pill>
+							<Pill colorScheme={UIColors.WHITE}>ReactJS</Pill>
+							<Pill colorScheme={UIColors.WHITE}>Ruby on Rails</Pill>
+							<Pill colorScheme={UIColors.WHITE}>Java</Pill>
+						</div>
+						<div className={styles.links}>
+							<Link href="https://github.com/hfjuarez" className={styles.link}>
+								<Image
+									width={13.6}
+									height={13.6}
+									src="/images/github-mark-white.svg"
+									alt="Github Mark White"
+								/>
+								&nbsp;Github®
+							</Link>
+							<Link
+								href="https://www.linkedin.com/in/hfjuarez/"
+								className={styles.link}
+							>
+								<Image
+									height={13.6}
+									width={13.6}
+									src="/images/linkedin-icon-white.svg"
+									alt="Linkedin Icon White"
+								/>
+								&nbsp;Linkedin®
+							</Link>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div className={styles.bgTextContainer}>
+				<div className={styles.left}>
+					<div>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
 					</div>
 				</div>
-				<div className={heroStyles.description}>
-					<Text>
-						I&apos;m a Full Stack developer with a strong focus on Back-end
-						development. Over the years, my journey has been filled with amazing
-						adventures, incredible challenges, and continuous learning, allowing
-						me to grow faster than I could have ever expected.
-					</Text>
-					<Text>
-						I&apos;ve had the privilege of contributing to large-scale projects
-						at an international company, collaborating with talented
-						professionals from across the globe to transform complex challenges
-						into robust and successful solutions that have a significant impact.
-					</Text>
-
-					<Text className={textsStyles.underline}>
-						Let&apos;s explore my portfolio together.
-					</Text>
+				<div className={styles.right}>
+					<div>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+						<Text>Hello</Text>
+					</div>
 				</div>
-			</header>
-		</Container>
+			</div>
+		</div>
 	);
 };
 
-export default Header;
+export default Hero;

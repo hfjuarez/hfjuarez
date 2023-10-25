@@ -1,8 +1,8 @@
 .footer {
 	width: 100%;
-	@include flex(column, center, center);
-	background-color: lighten($secondary, 30%);
+	background-color: $tertiary;
 	padding-block: 3rem;
+	@include flex(column, center, center);
 }
 .content {
 	padding-top: 2rem;

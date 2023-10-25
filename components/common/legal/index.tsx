@@ -3,11 +3,11 @@ import React from 'react';
 import Text from '@/components/common/layout/text';
 import Link from '@/components/common/layout/link';
 // Styles
-import legalStyle from './legal.module.scss';
+import styles from './legal.module.scss';
 
 const Legal = () => {
 	return (
-		<div className={legalStyle.wrapper}>
+		<div className={styles.wrapper}>
 			<Text>Font: Mona Sans</Text>
 			<Text>
 				Copyright © 2023, GitHub&nbsp;
@@ -45,7 +45,7 @@ const Legal = () => {
 				LinkedIn&apos;s &quot;Brand Guidelines&quot; and does not imply any
 				endorsement, sponsorship, or affiliation with LinkedIn Corporation. For
 				more information about the use of the LinkedIn logo, please refer to
-				LinkedIn&apos;s &quot;Brand Guidelines.&quot;
+				LinkedIn&apos;s &quot;Brand Guidelines.&quot;.
 			</Text>
 			<hr />
 			<Text>
@@ -59,7 +59,7 @@ const Legal = () => {
 				GitHub&apos;s &quot;GitHub Logos and Usage&quot; and does not imply any
 				endorsement, sponsorship, or affiliation with GitHub, Inc. For more
 				information about the use of the GitHub logo, please refer to
-				GitHub&apos;s &quot;GitHub Logos and Usage.&quot;
+				GitHub&apos;s &quot;GitHub Logos and Usage.&quot;.
 			</Text>
 		</div>
 	);

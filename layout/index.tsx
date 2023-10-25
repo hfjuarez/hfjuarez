@@ -2,9 +2,9 @@ import React, { useEffect, ReactNode } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
-import Navbar from '@/components/common/navbar';
+// import Navbar from '@/components/common/navbar';
 import Footer from '@/components/common/layout/footer';
-import Loading from '@/components/common/layout/loading';
+import Hero from '@/components/hero';
 // Styles
 import documentStyle from '@/styles/document.module.scss';
 import styles from './layout.module.scss';
@@ -48,7 +48,13 @@ export default function Layout({ children }: LayoutProps) {
 			<Head>
 				<title>Hernán Fabrica</title>
 				{/* TODO: description */}
-				<meta name="description" content="" />
+
+				<meta
+					name="description"
+					content="
+					Full Stack Developer
+				"
+				/>
 				<meta name="author" content="Hernán Fabrica / @hfjuarez" />
 				<meta
 					name="keywords"
@@ -61,26 +67,26 @@ export default function Layout({ children }: LayoutProps) {
 				/>
 				<meta
 					name="theme-color"
-					content="#202022"
+					content="#fff"
 					media="(prefers-color-scheme: dark)"
 				/>
 				<link rel="icon" href="/favicon.ico" />
 				<link
 					rel="preload"
-					href="/fonts/mona-sans-1.0.1/MonaSans[slnt,wdth,wght].woff2"
+					href="/fonts/mona-sans-1.0.1/Mona-Sans.woff2"
 					as="font"
 					type="font/woff2"
 				></link>
 			</Head>
 			{NEXT_PUBLIC_SITE_IS_LIVE ? (
 				<>
-					<Navbar />
+					{/* <Navbar /> */}
 					<div className={styles.main}>{children}</div>
 					<Footer />
 				</>
 			) : (
 				<>
-					<Loading />
+					<Hero />
 					<Footer />
 				</>
 			)}
