@@ -1,0 +1,72 @@
+@import 'mixin';
+
+.introduction {
+	height: 75cqh;
+	padding-inline: 2rem;
+	background-color: $tertiary;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	position: relative;
+	p {
+		@include font(20cqh, normal, semi, $secondary, left, 85%, -0.0625rem);
+		&:nth-child(2) {
+			color: $base-color;
+		}
+	}
+	.committed {
+		left: 0;
+		position: absolute;
+		gap: 6rem;
+		@include flex();
+		&.afterAnimation {
+			left: unset;
+			right: 0;
+		}
+		p {
+			width: 100%;
+			text-align: right;
+		}
+	}
+	.innovative {
+		right: 0;
+		margin-top: 25cqh;
+		position: absolute;
+		gap: 6rem;
+		@include flex();
+		&.afterAnimation {
+			right: unset;
+			left: 0;
+		}
+		p {
+			width: 100%;
+			text-align: left;
+			margin-right: auto;
+		}
+	}
+	.resultsDriven {
+		left: 0;
+		position: absolute;
+		margin-top: 50cqh;
+		gap: 6rem;
+		@include flex();
+		&.afterAnimation {
+			left: unset;
+			right: 0;
+		}
+		p {
+			width: 100%;
+			text-wrap: nowrap;
+
+			text-align: right;
+		}
+	}
+}
+
+.height {
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	@include flex(column, center, center);
+}

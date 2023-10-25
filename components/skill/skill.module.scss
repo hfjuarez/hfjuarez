@@ -8,7 +8,7 @@
 	section {
 		justify-content: flex-start;
 		align-items: flex-start;
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
 	}
 }
 .stackTitleAndPills {
@@ -18,7 +18,7 @@
 	.stackTitle {
 		color: $primary;
 		width: 100%;
-		align-self: center;
+		text-align: center;
 		width: 100%;
 		border-bottom: 0.0625rem solid rgba($white, 0.8);
 		@media only screen and (max-width: 60rem) {
@@ -34,7 +34,7 @@
 	}
 
 	.pills {
-		padding: 1.5rem 3rem 1.5rem 0;
+		padding-top: 0.5rem;
 		gap: 0.5rem;
 		height: auto;
 		flex-wrap: wrap;
@@ -78,7 +78,6 @@
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
-
 				li {
 					@include font;
 					font-size: 3rem;
