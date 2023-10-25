@@ -12,11 +12,11 @@
 	}
 }
 .stackTitleAndPills {
-	margin-block: 9rem 4rem;
+	margin-block: 3rem;
 	top: 7rem;
 
 	.stackTitle {
-		color: $white;
+		color: $primary;
 		width: 100%;
 		align-self: center;
 		width: 100%;
@@ -72,7 +72,7 @@
 			min-width: 36.5rem;
 			padding: 2rem;
 			border-radius: 2rem;
-			border: 0.0625rem solid $white;
+			border: 0.0625rem solid $primary;
 			transition: 0.1s ease-in-out;
 			.stackList {
 				list-style-type: none;

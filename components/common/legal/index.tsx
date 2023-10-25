@@ -3,11 +3,11 @@ import React from 'react';
 import Text from '@/components/common/layout/text';
 import Link from '@/components/common/layout/link';
 // Styles
-import legalStyle from './legal.module.scss';
+import styles from './legal.module.scss';
 
 const Legal = () => {
 	return (
-		<div className={legalStyle.wrapper}>
+		<div className={styles.wrapper}>
 			<Text>Font: Mona Sans</Text>
 			<Text>
 				Copyright © 2023, GitHub&nbsp;

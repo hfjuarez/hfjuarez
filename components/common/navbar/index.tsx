@@ -12,19 +12,16 @@ import Button from '@/components/common/button';
 // Styles
 import navbarStyles from './navbar.module.scss';
 // Utils
-import { UIColors } from 'utils/ui';
 
 const Navbar = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [isNavbarColored, setIsNavbarColored] = useState(false);
+	const [navbarColor, setNavbarColor] = useState<string | null>(null);
 
 	const navbarClasses = classNames(
 		navbarStyles.navbar,
-		isScrolled && navbarStyles.navbarBorder,
-		isNavbarColored && navbarStyles.isNavbarColored,
+		navbarColor,
+		isScrolled ? navbarStyles.showNavbar : navbarStyles.hideNavbar,
 	);
-	const linkColorClass = isNavbarColored ? UIColors.WHITE : UIColors.PRIMARY;
-	const buttonColorClass = isNavbarColored ? UIColors.WHITE : UIColors.BASE;
 	const contact = () => {
 		window.location.href = 'mailto:hello@hernanfabrica.com';
 	};
@@ -32,13 +29,12 @@ const Navbar = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollTop = window.scrollY || document.documentElement.scrollTop;
-			setIsScrolled(scrollTop > 80);
+			setIsScrolled(scrollTop > 200);
 			const scrollPositionInVh = (window.scrollY / window.innerHeight) * 100;
-			// Check if the scroll position is greater than or equal to 150vh
-			if (scrollPositionInVh >= 100) {
-				setIsNavbarColored(true);
+			if (scrollPositionInVh >= 1) {
+				setNavbarColor(navbarStyles.secondary);
 			} else {
-				setIsNavbarColored(false);
+				setNavbarColor(null);
 			}
 		};
 		window.addEventListener('scroll', handleScroll);
@@ -46,21 +42,16 @@ const Navbar = () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
-
 	return (
 		<nav className={navbarClasses}>
 			<div className={navbarStyles.navbarContent}>
-				<Link colorScheme={linkColorClass} href="#about" type="text">
+				<Link href="#about" type="text">
 					About
 				</Link>
-				<Link colorScheme={linkColorClass} href="/works" type="text">
+				<Link href="#works" type="text">
 					Work
 				</Link>
-				<Button
-					colorScheme={buttonColorClass}
-					onClick={contact}
-					id="navbar-principal-cta"
-				>
+				<Button onClick={contact} id="navbar-principal-cta">
 					LET&apos;S TALK
 				</Button>
 			</div>

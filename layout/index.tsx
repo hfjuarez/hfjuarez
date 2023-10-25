@@ -2,9 +2,9 @@ import React, { useEffect, ReactNode } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
-import Navbar from '@/components/common/navbar';
+// import Navbar from '@/components/common/navbar';
 import Footer from '@/components/common/layout/footer';
-import Loading from '@/components/common/layout/loading';
+import Hero from '@/components/hero';
 // Styles
 import documentStyle from '@/styles/document.module.scss';
 import styles from './layout.module.scss';
@@ -48,7 +48,13 @@ export default function Layout({ children }: LayoutProps) {
 			<Head>
 				<title>Hernán Fabrica</title>
 				{/* TODO: description */}
-				<meta name="description" content="" />
+
+				<meta
+					name="description"
+					content="
+					Full Stack Developer
+				"
+				/>
 				<meta name="author" content="Hernán Fabrica / @hfjuarez" />
 				<meta
 					name="keywords"
@@ -74,13 +80,13 @@ export default function Layout({ children }: LayoutProps) {
 			</Head>
 			{NEXT_PUBLIC_SITE_IS_LIVE ? (
 				<>
-					<Navbar />
+					{/* <Navbar /> */}
 					<div className={styles.main}>{children}</div>
 					<Footer />
 				</>
 			) : (
 				<>
-					<Loading />
+					<Hero />
 					<Footer />
 				</>
 			)}

@@ -7,61 +7,109 @@ gsap.registerPlugin(Flip, ScrollTrigger);
 
 // Components
 import Container from '@/components/common/layout/container';
-import Heading from '@/components/common/layout/heading';
+// import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
-import Link from '@/components/common/layout/link';
+// import Link from '@/components/common/layout/link';
 
 // Styles
 import aboutStyle from './about.module.scss';
-import colorsStyles from '@/styles/colors.module.scss';
+// import colorsStyles from '@/styles/colors.module.scss';
 // Utils
-import { UIColors } from 'utils/ui';
+// import { UIColors } from 'utils/ui';
 
 const About = () => {
-	const headingRef = useRef<HTMLInputElement>(null);
-	// );
+	const committedTextRef = useRef<HTMLInputElement>(null);
+	const innovativeTextRef = useRef<HTMLInputElement>(null);
+	const resultsDrivenTextRef = useRef<HTMLInputElement>(null);
 	useEffect(() => {
-		const backgroundElement = document.getElementById('background-animation');
-		const headingElement = headingRef.current;
-		if (!backgroundElement || !headingElement) return;
+		const committedElement = committedTextRef.current;
+		const innovativeElement = innovativeTextRef.current;
+		const resultsDrivenElement = resultsDrivenTextRef.current;
+		if (!committedElement || !innovativeElement || !resultsDrivenElement)
+			return;
 
-		gsap.to(headingElement, {
-			marginTop: '12rem',
+		committedElement.classList.add(aboutStyle.afterAnimation);
+		const flipstate1 = Flip.getState([committedElement]);
+		committedElement.classList.remove(aboutStyle.afterAnimation);
+		Flip.to(flipstate1, {
+			absolute: false,
+			absoluteOnLeave: false,
+			ease: 'none',
+			markers: true,
+			scale: true,
 			scrollTrigger: {
-				end: 'center center',
+				end: `+=${innerHeight + 300}`,
 				scrub: true,
-				start: 'top center',
-				trigger: backgroundElement,
+				start: `-=${innerHeight}`,
+				trigger: committedElement,
 			},
+			simple: true,
+			stagger: 0,
 		});
-		gsap.to(headingElement.children[0], {
-			fontSize: '6.5rem',
+
+		innovativeElement.classList.add(aboutStyle.afterAnimation);
+		const flipstate2 = Flip.getState([innovativeElement]);
+		innovativeElement.classList.remove(aboutStyle.afterAnimation);
+		Flip.to(flipstate2, {
+			absolute: false,
+			absoluteOnLeave: false,
+			ease: 'none',
+			markers: true,
+			scale: true,
 			scrollTrigger: {
-				end: 'center center',
+				end: `+=${innerHeight + 300}`,
 				scrub: true,
-				start: 'top center',
-				trigger: backgroundElement,
+				start: `-=${innerHeight}`,
+				trigger: innovativeElement,
 			},
+			simple: true,
+			stagger: 0,
+		});
+
+		resultsDrivenElement.classList.add(aboutStyle.afterAnimation);
+		const flipstate3 = Flip.getState([resultsDrivenElement]);
+		resultsDrivenElement.classList.remove(aboutStyle.afterAnimation);
+		Flip.to(flipstate3, {
+			absolute: false,
+			absoluteOnLeave: false,
+			ease: 'none',
+			markers: true,
+			scale: true,
+			scrollTrigger: {
+				end: `+=${innerHeight * 1.5}`,
+				scrub: true,
+				start: `-=${innerHeight}`,
+				trigger: resultsDrivenElement,
+			},
+			simple: true,
+			stagger: 0,
 		});
 	}, []);
 	return (
 		<>
-			<Container as="section" className={aboutStyle.hadingSection}>
-				<div ref={headingRef} className={aboutStyle.heading}>
-					<Heading as={'h1'}>
-						Committed,
-						<br />
-						Innovative,
-						<br />
-						& Results-Driven
-						<br />
-						<span className={colorsStyles[UIColors.SECONDARY]}>developer.</span>
-					</Heading>
-				</div>
-			</Container>
-			<div className={aboutStyle.aboutMe} id="about">
-				<Container as="section">
-					<Heading as={'h1'} colorScheme={UIColors.WHITE}>
+			<div className={aboutStyle.background} id="about">
+				<Container as="div" className={aboutStyle.centeredWrapper}>
+					<div className={aboutStyle.introduction}>
+						<div className={aboutStyle.committed} ref={committedTextRef}>
+							<Text>Committed</Text>
+							<Text>Committed</Text>
+							<Text>Committed</Text>
+						</div>
+						<div className={aboutStyle.innovative} ref={innovativeTextRef}>
+							<Text>Innovative</Text>
+							<Text>Innovative</Text>
+							<Text>Innovative</Text>
+						</div>
+						<div
+							className={aboutStyle.resultsDriven}
+							ref={resultsDrivenTextRef}
+						>
+							<Text>Results-Driven</Text>
+							<Text>Results-Driven</Text>
+							<Text>Results-Driven</Text>
+						</div>
+					</div>
+					{/* <Heading as={'h1'} colorScheme={UIColors.PRIMARY}>
 						About me
 					</Heading>
 					<Text>
@@ -99,9 +147,9 @@ const About = () => {
 						delivering innovative solutions, I&apos;m always ready to bring my
 						skills and experience to the table and help you achieve your goals.
 					</Text>
-					<Link href="/experience" type={UIColors.WHITE} outlined>
+					<Link href="/experience" type={UIColors.PRIMARY} outlined>
 						Let&apos;s build the future together!
-					</Link>
+					</Link> */}
 				</Container>
 			</div>
 		</>
