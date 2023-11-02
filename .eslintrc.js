@@ -31,7 +31,9 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint', 'react'],
 	rules: {
+		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/sort-type-constituents': 'error',
+		'no-unused-vars': 'off',
 		'sort-keys': [
 			'error',
 			'asc',

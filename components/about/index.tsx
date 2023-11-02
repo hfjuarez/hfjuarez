@@ -1,57 +1,57 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { Flip } from 'gsap/dist/Flip';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(Flip, ScrollTrigger);
 
 // Components
 import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
-import Text from '@/components/common/layout/text';
+// import Text from '@/components/common/layout/text';
 
 // Styles
-import aboutStyle from './about.module.scss';
+import styles from './about.module.scss';
 
 // Utils
-import { UIColors } from 'utils/ui';
 
 const About = () => {
+	const backgroundRef = useRef<HTMLInputElement>(null);
+	useEffect(() => {
+		const bgElement = backgroundRef.current;
+		if (!bgElement) return;
+
+		bgElement.classList.add(styles.afterAnimation);
+		const flipstate1 = Flip.getState([bgElement]);
+		bgElement.classList.remove(styles.afterAnimation);
+		Flip.to(flipstate1, {
+			absolute: false,
+			absoluteOnLeave: false,
+			ease: 'none',
+			markers: true,
+			scale: true,
+			scrollTrigger: {
+				end: 'center center',
+				scrub: true,
+				start: `top center`,
+				trigger: bgElement,
+			},
+			simple: true,
+			stagger: 0,
+		});
+	}, []);
 	return (
-		<Container as="section" className={aboutStyle.centeredWrapper}>
-			<Heading as={'h1'} colorScheme={UIColors.PRIMARY}>
-				About me
-			</Heading>
-			<Text>
-				On my journey as a Full Stack developer, my focus has always been on
-				pushing the boundaries of what&apos;s possible. I am driven by a deep
-				passion for Back-end development, and my ambition is clear: I want to
-				continue creating innovative solutions that drive success and make a
-				significant impact on projects. I offer a proven track record in
-				spearheading high-impact endeavors, such as the creation and leadership
-				of the all-new LAND Sale system for The Sandbox Game, and I led a
-				significant private healthcare provider project. With proficiency in a
-				wide array of technologies, including JavaScript, Node, Java, Vue,
-				React, and more, I am ready to take on the challenges of complex
-				technical projects.
-			</Text>
-			<Text>
-				What sets me apart is not just my technical expertise but also my
-				commitment to results and my ability to lead and collaborate
-				effectively. I have demonstrated my capabilities by owning and leading
-				projects, making critical technical decisions, and collaborating with
-				cross-functional teams to deliver successful integrations and new
-				features. My dedication to improving accessibility, performance, and the
-				stability of web applications, along with my experience in developing
-				robust APIs, highlights my well-rounded skill set.
-			</Text>
-			<Text>
-				I am also a strong believer in the power of teamwork. I love working
-				with visionary teams and organizations that share my passion for
-				innovation and are open to teaching and learning from each other.
-			</Text>
-			<Text>
-				If you are looking for a Full Stack developer who is detail-oriented,
-				proactive, a fast learner, and passionate about delivering innovative
-				solutions, I&apos;m always ready to bring my skills and experience to
-				the table and help you achieve your goals.
-			</Text>
-		</Container>
+		<div className={styles.height}>
+			<Container as="section" className={styles.centeredWrapper}>
+				<Heading as="h2" className={styles.title}>
+					I&apos;m a Full Stack developer proficient in <span>JavaScript</span>,{' '}
+					<span>Node.js</span>, <span>Java</span>, <span>Vue.js</span>, and{' '}
+					<span>React</span>. I&apos;m passionate about delivering
+					<span> innovative</span> solutions that <span>drive success</span> and
+					have a <span>significant impact</span> on projects.
+				</Heading>
+			</Container>
+		</div>
 	);
 };
 

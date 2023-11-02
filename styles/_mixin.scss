@@ -45,8 +45,12 @@
 
 	@if ($weight == 'regular') {
 		font-weight: 400;
-	} @else if ($weight == 'light') {
+	} @else if ($weight == 'extra-light') {
 		font-weight: 200;
+	} @else if ($weight == 'light') {
+		font-weight: 300;
+	} @else if ($weight == 'medium') {
+		font-weight: 500;
 	} @else if ($weight == 'semi') {
 		font-weight: 600;
 	} @else if ($weight == 'bold') {
