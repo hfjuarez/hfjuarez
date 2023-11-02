@@ -1,4 +1,17 @@
 .body {
 	margin: 0;
 	background-color: $white;
+	::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	* {
+		box-sizing: border-box;
+		::-webkit-scrollbar {
+			display: none;
+		}
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
 }

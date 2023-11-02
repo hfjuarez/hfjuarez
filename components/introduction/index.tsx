@@ -33,7 +33,7 @@ const Introduction = () => {
 			markers: true,
 			scale: true,
 			scrollTrigger: {
-				end: `+=${innerHeight + 300}`,
+				end: `+=${innerHeight + 600}`,
 				scrub: true,
 				start: `-=${innerHeight}`,
 				trigger: committedElement,
@@ -52,7 +52,7 @@ const Introduction = () => {
 			markers: true,
 			scale: true,
 			scrollTrigger: {
-				end: `+=${innerHeight + 300}`,
+				end: `+=${innerHeight * 1.75}`,
 				scrub: true,
 				start: `-=${innerHeight}`,
 				trigger: innovativeElement,
@@ -71,7 +71,7 @@ const Introduction = () => {
 			markers: true,
 			scale: true,
 			scrollTrigger: {
-				end: `+=${innerHeight * 1.5}`,
+				end: `+=${innerHeight * 1.75}`,
 				scrub: true,
 				start: `-=${innerHeight}`,
 				trigger: resultsDrivenElement,
@@ -89,8 +89,12 @@ const Introduction = () => {
 							<Text>Committed</Text>
 							<Text>Committed</Text>
 							<Text>Committed</Text>
+							<Text>Committed</Text>
+							<Text>Committed</Text>
 						</div>
 						<div className={styles.innovative} ref={innovativeTextRef}>
+							<Text>Innovative</Text>
+							<Text>Innovative</Text>
 							<Text>Innovative</Text>
 							<Text>Innovative</Text>
 							<Text>Innovative</Text>
@@ -99,6 +103,18 @@ const Introduction = () => {
 							<Text>Results-Driven</Text>
 							<Text>Results-Driven</Text>
 							<Text>Results-Driven</Text>
+							<Text>Results-Driven</Text>
+							<Text>Results-Driven</Text>
+							<Text>Results-Driven</Text>
+						</div>
+						<div className={styles.backgroundText}>
+							<Text className={styles.bgTextCommitted}>Committed</Text>
+						</div>
+						<div className={styles.backgroundText}>
+							<Text className={styles.bgTextInnovative}>Innovative</Text>
+						</div>
+						<div className={styles.backgroundText}>
+							<Text className={styles.bgTextResultsDrive}>Results-Drive</Text>
 						</div>
 					</div>
 				</Container>

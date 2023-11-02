@@ -3,13 +3,12 @@ import Lenis from '@studio-freight/lenis';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
 // import Navbar from '@/components/common/navbar';
-import Footer from '@/components/common/layout/footer';
-import Hero from '@/components/hero';
+
 // Styles
 import documentStyle from '@/styles/document.module.scss';
 import styles from './layout.module.scss';
 // Data
-import { skillsPills } from 'data/skills';
+import skills from 'data/skills';
 
 type LayoutProps = {
 	children: ReactNode;
@@ -37,8 +36,6 @@ const initSmoothScrolling = () => {
 };
 
 export default function Layout({ children }: LayoutProps) {
-	const NEXT_PUBLIC_SITE_IS_LIVE =
-		process.env.NEXT_PUBLIC_SITE_IS_LIVE === 'true';
 	useEffect(() => {
 		initSmoothScrolling();
 		document.body.className = documentStyle.body;
@@ -58,7 +55,7 @@ export default function Layout({ children }: LayoutProps) {
 				<meta name="author" content="Hernán Fabrica / @hfjuarez" />
 				<meta
 					name="keywords"
-					content={skillsPills.map((skill) => skill.name).join(',')}
+					content={skills.map((skill) => skill.name).join(',')}
 				/>
 				<meta
 					name="theme-colorScheme"
@@ -78,18 +75,10 @@ export default function Layout({ children }: LayoutProps) {
 					type="font/woff2"
 				></link>
 			</Head>
-			{NEXT_PUBLIC_SITE_IS_LIVE ? (
-				<>
-					{/* <Navbar /> */}
-					<div className={styles.main}>{children}</div>
-					<Footer />
-				</>
-			) : (
-				<>
-					<Hero />
-					<Footer />
-				</>
-			)}
+			{/* <Navbar /> */}
+			<>
+				<div className={styles.main}>{children}</div>
+			</>
 		</>
 	);
 }

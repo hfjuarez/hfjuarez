@@ -2,44 +2,38 @@
 
 .background {
 	background-color: $white;
-	height: 100vh;
-	width: 100vw;
+	height: 100dvh;
+	width: 100%;
 	@include flex(column, flex-start, flex-start);
 }
 
 .wrapper {
 	position: absolute;
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	z-index: 1;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 	@include flex(column, center, center);
 	.centeredContainer {
-		backdrop-filter: blur(3rem);
-		background-color: rgba($base-color, 0.9);
-		border-radius: 0.5rem;
+		background-color: $base-color;
+		border-radius: 0.25rem;
+		max-width: 100vw;
+		max-height: 100vh;
 		max-height: 37.5rem;
 		max-width: 67.5rem;
 		height: 100%;
 		width: 100%;
 		position: relative;
 		z-index: 2;
-		-webkit-backdrop-filter: blur(3rem);
 		flex: 1;
 		@include flex(column, center, center);
-
 		@media only screen and (max-width: 80rem) {
-			width: 90vw;
-			max-width: 90vw;
+			max-width: 90dvw;
 		}
-
 		@media only screen and (max-width: 40rem) {
-			width: 100vw;
-			height: 100vh;
-			max-height: unset;
-			border-radius: 0;
+			max-height: 90dvh;
 		}
 	}
 }
@@ -150,6 +144,9 @@
 		height: fit-content;
 		flex-wrap: wrap;
 		gap: 0.5rem;
+		@media only screen and (max-width: 40rem) {
+			padding-inline: 2rem;
+		}
 	}
 	.pills {
 		margin-top: 2rem;
@@ -166,7 +163,7 @@
 	margin-left: auto;
 	text-transform: uppercase;
 	border-radius: 0.25rem;
-	@include font(1rem, normal, light, $white, left, 80%);
+	@include font(1rem, normal, extra-light, $white, left, 80%);
 	&:hover {
 		border-color: rgba($white, 0.125);
 		background-color: rgba($white, 0.125);
@@ -181,7 +178,7 @@
 			23cqw,
 			18.5cqw,
 			regular,
-			lighten($secondary, 20%),
+			lighten($secondary, 25%),
 			$stretch: 95%
 		);
 	}
