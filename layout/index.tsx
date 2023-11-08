@@ -59,12 +59,12 @@ export default function Layout({ children }: LayoutProps) {
 				/>
 				<meta
 					name="theme-colorScheme"
-					content="#fff"
+					content="#161617"
 					media="(prefers-color-scheme: light)"
 				/>
 				<meta
 					name="theme-color"
-					content="#fff"
+					content="#161617"
 					media="(prefers-color-scheme: dark)"
 				/>
 				<link rel="icon" href="/favicon.ico" />

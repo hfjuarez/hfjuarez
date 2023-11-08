@@ -10,9 +10,9 @@ import Container from '@/components/common/layout/container';
 import Text from '@/components/common/layout/text';
 
 // Styles
-import styles from './introduction.module.scss';
+import styles from './values.module.scss';
 
-const Introduction = () => {
+const Values = () => {
 	const committedTextRef = useRef<HTMLInputElement>(null);
 	const innovativeTextRef = useRef<HTMLInputElement>(null);
 	const resultsDrivenTextRef = useRef<HTMLInputElement>(null);
@@ -30,7 +30,6 @@ const Introduction = () => {
 			absolute: false,
 			absoluteOnLeave: false,
 			ease: 'none',
-			markers: true,
 			scale: true,
 			scrollTrigger: {
 				end: `+=${innerHeight + 600}`,
@@ -49,7 +48,6 @@ const Introduction = () => {
 			absolute: false,
 			absoluteOnLeave: false,
 			ease: 'none',
-			markers: true,
 			scale: true,
 			scrollTrigger: {
 				end: `+=${innerHeight * 1.75}`,
@@ -68,7 +66,6 @@ const Introduction = () => {
 			absolute: false,
 			absoluteOnLeave: false,
 			ease: 'none',
-			markers: true,
 			scale: true,
 			scrollTrigger: {
 				end: `+=${innerHeight * 1.75}`,
@@ -123,4 +120,4 @@ const Introduction = () => {
 	);
 };
 
-export default Introduction;
+export default Values;

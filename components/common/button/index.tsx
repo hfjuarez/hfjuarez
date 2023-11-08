@@ -2,25 +2,24 @@ import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 import classNames from 'classnames';
 // Styles
 import buttonStyle from './button.module.scss';
-import { UIColors } from 'utils/ui';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-	colorScheme?: UIColors;
+	colorScheme?: 'primary' | 'secondary';
 	size?: 'large' | 'medium' | 'small';
 	className?: string;
 	type?: 'button' | 'reset' | 'submit';
 	marquee?: boolean;
-	outlined?: boolean;
+	fill?: boolean;
 	children: ReactNode;
 };
 
 const Button = ({
-	colorScheme = UIColors.BASE,
+	colorScheme = 'primary',
 	size = 'medium',
 	className,
 	type = 'button',
 	marquee = false,
-	outlined = false,
+	fill = false,
 	children,
 	...props
 }: ButtonProps) => {
@@ -29,7 +28,7 @@ const Button = ({
 		buttonStyle[colorScheme],
 		buttonStyle[size],
 		marqueeClass,
-		outlined && buttonStyle.outlined,
+		fill && buttonStyle.fill,
 		className,
 	);
 

@@ -1,33 +1,3 @@
-@import '@/components/common/button/button.module.scss';
-
 .link-basic {
-	text-decoration: none;
-	@include font(0.85rem, normal, regular, $primary, center);
-}
-
-.primary,
-.secondary,
-.white {
-	@extend .link-basic;
-	font-size: 0.95rem;
-	line-height: normal;
-}
-
-.secondary {
-	color: $secondary;
-}
-.white {
-	color: $primary;
-	&:hover {
-		background-color: $white;
-		border-color: $white;
-		color: $primary;
-	}
-}
-
-.text {
-	@extend .link-basic;
-	&:hover {
-		text-decoration: underline;
-	}
+	padding: 0;
 }

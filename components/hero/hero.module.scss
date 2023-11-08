@@ -1,8 +1,8 @@
 @import '@/components/common/button/button.module.scss';
 
 .background {
-	background-color: $white;
-	height: 100dvh;
+	background-color: $primary;
+	height: 100vh;
 	width: 100%;
 	@include flex(column, flex-start, flex-start);
 }
@@ -12,15 +12,12 @@
 	height: 100vh;
 	width: 100%;
 	z-index: 1;
-	-webkit-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	@include flex(column, center, center);
+
 	.centeredContainer {
 		background-color: $base-color;
-		border-radius: 0.25rem;
-		max-width: 100vw;
-		max-height: 100vh;
+		border-radius: 0.125rem;
 		max-height: 37.5rem;
 		max-width: 67.5rem;
 		height: 100%;
@@ -29,11 +26,13 @@
 		z-index: 2;
 		flex: 1;
 		@include flex(column, center, center);
+
 		@media only screen and (max-width: 80rem) {
-			max-width: 90dvw;
+			max-width: 90vw;
 		}
+
 		@media only screen and (max-width: 40rem) {
-			max-height: 90dvh;
+			max-height: 90vh;
 		}
 	}
 }
@@ -43,37 +42,34 @@
 	top: 0;
 	text-transform: uppercase;
 	width: 100%;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 	@include flex(row, center, flex-start);
+
 	h6 {
 		color: $white;
-		font-weight: 200;
+		font-weight: 300;
+
 		&:first-of-type {
-			margin-left: 2rem;
+			margin-left: 1.5rem;
 			margin-right: auto;
 		}
-		&.centered {
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-		}
 	}
+
 	.link {
-		margin-top: -0.6rem;
 		margin-right: 1.2rem;
 	}
+
 	@media only screen and (max-width: 40rem) {
 		flex-direction: column;
+
 		h6 {
 			&:first-of-type {
-				margin-left: 2rem;
+				margin-left: 1.5rem;
 				margin-right: 0;
 				margin-bottom: 0.5rem;
 			}
-			&.centered {
-				display: none;
-			}
 		}
+
 		.link {
 			position: absolute;
 			top: 0;
@@ -83,54 +79,51 @@
 }
 
 .titleWrapper {
-	height: 15rem;
 	margin-top: -1rem;
 	padding-inline: 0.5rem;
 	overflow-y: hidden;
 	@include flex(column, center, center);
-	h1 {
+
+	.iam {
 		@include font(
-			10rem,
-			8rem,
-			extra,
+			7.5rem,
+			5.5rem,
+			light,
 			$white,
-			center,
-			$stretch: 100%,
-			$spacing: -0.25rem
+			$stretch: 95%,
+			$spacing: -0.125rem
 		);
-		font-weight: 800;
-		span {
-			@include font(
-				7rem,
-				6.5rem,
-				light,
-				$white,
-				$stretch: 95%,
-				$spacing: -0.125rem
-			);
-		}
 	}
+
+	h1 {
+		@include font(9rem, 8rem, extra, $white, center, 100%, 0);
+	}
+
 	@media only screen and (max-width: 70rem) {
-		height: 23.75cqw;
+		height: 23.75vw;
+
 		h1 {
-			font-size: 15cqw;
-			line-height: 13cqw;
+			font-size: 15vw;
+			line-height: 13vw;
+
 			span {
-				font-size: 10cqw;
-				line-height: 8cqw;
+				font-size: 10vw;
+				line-height: 8vw;
 			}
 		}
 	}
 
 	@media only screen and (max-width: 40rem) {
 		padding-inline: 0.5rem;
-		height: 32cqw;
+		height: 32vw;
+
 		h1 {
-			font-size: 20cqw;
-			line-height: 18cqw;
+			font-size: 20vw;
+			line-height: 18vw;
+
 			span {
-				font-size: 14cqw;
-				line-height: 13cqw;
+				font-size: 14vw;
+				line-height: 13vw;
 			}
 		}
 	}
@@ -138,35 +131,49 @@
 
 .bottom {
 	@include flex(column, flex-start, center);
+
+	h2 {
+		margin-top: 1rem;
+		text-transform: uppercase;
+		@include font(1.5rem, normal, regular, $white, center, 95%, 0.125rem);
+	}
+
 	.pills,
 	.links {
 		@include flex(row, center, center);
 		height: fit-content;
 		flex-wrap: wrap;
 		gap: 0.5rem;
+
 		@media only screen and (max-width: 40rem) {
 			padding-inline: 2rem;
 		}
 	}
+
 	.pills {
-		margin-top: 2rem;
+		margin-top: 0.5rem;
+		gap: 0.75rem;
 	}
+
 	.links {
 		margin-top: 0.5rem;
 		position: absolute;
-		bottom: 2rem;
+		bottom: 1.5rem;
 	}
 }
 
 .link {
 	@extend .button-basic;
+	padding: 0.4rem 0.8rem;
+	text-decoration: none;
 	margin-left: auto;
 	text-transform: uppercase;
-	border-radius: 0.25rem;
-	@include font(1rem, normal, extra-light, $white, left, 80%);
+	border-color: rgba($white, 0.5);
+	@include font(0.9rem, normal, light, $white, left, 85%, 0.0625rem);
+
 	&:hover {
-		border-color: rgba($white, 0.125);
-		background-color: rgba($white, 0.125);
+		border-color: $white;
+		background-color: rgba($white, 0.1);
 	}
 }
 
@@ -174,20 +181,19 @@
 	@include flex();
 	width: 100%;
 	p {
-		@include font(
-			23cqw,
-			18.5cqw,
-			regular,
-			lighten($secondary, 25%),
-			$stretch: 95%
-		);
+		@include font(22cqw, 18.5cqw, regular, $stretch: 95%, $spacing: -1rem);
+		font-family: 'Poppins', sans-serif;
+		@supports (-webkit-text-stroke: 0.125rem $secondary) {
+			-webkit-text-stroke: 0.125rem $secondary;
+			-webkit-text-fill-color: transparent;
+		}
 	}
-	.left {
+	.left,
+	.right {
 		width: 50%;
 		height: 100vh;
 		position: absolute;
 		top: 0;
-		left: 0;
 		transition: transform 1s ease;
 		white-space: nowrap;
 		overflow-y: hidden;
@@ -196,11 +202,16 @@
 			margin: 0;
 			transition: transform 2s ease;
 		}
+		> div {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	.left {
+		left: 0;
 
 		> div {
 			animation: scrollTextUp 20s infinite linear;
-			display: flex;
-			flex-direction: column;
 			-webkit-animation: scrollTextUp 20s infinite linear;
 		}
 
@@ -225,25 +236,13 @@
 		}
 	}
 	.right {
-		width: 50%;
-		height: 100vh;
-		position: absolute;
-		top: 0;
 		right: 0;
-		transition: transform 1s ease;
-		white-space: nowrap;
-		overflow-y: hidden;
-		@include flex(column, center, center);
 		p {
-			margin: 0;
-			transition: transform 2s ease;
 			text-align: right;
 		}
 
 		> div {
 			animation: scrollTextDown 20s infinite linear;
-			display: flex;
-			flex-direction: column;
 			-webkit-animation: scrollTextDown 20s infinite linear;
 		}
 

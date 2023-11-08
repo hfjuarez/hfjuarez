@@ -42,21 +42,18 @@ const Hero = () => {
 							<br />
 							your next developer?
 						</Heading>
-						<Heading as="h6" className={styles.centered}>
-							Full Stack Developer
-						</Heading>
 						<Link href="mailto:hello@hernanfabrica.com" className={styles.link}>
 							Get in touch!
 						</Link>
 					</div>
 					<div className={styles.titleWrapper}>
-						<Heading as="h1">
-							<span>I am</span>
-							<br />
-							Hernán
-						</Heading>
+						<Text className={styles.iam}>I am</Text>
+						<Heading as="h1">Hernán</Heading>
 					</div>
 					<div className={styles.bottom}>
+						<Heading as="h2" className={styles.centered}>
+							Full Stack Engineer
+						</Heading>
 						<div className={styles.pills}>
 							<Pill colorScheme={UIColors.WHITE}>NodeJS</Pill>
 							<Pill colorScheme={UIColors.WHITE}>VueJS</Pill>

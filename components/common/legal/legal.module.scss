@@ -13,7 +13,7 @@
 	a {
 		text-decoration: underline;
 		&:hover {
-			color: darken($secondary, 20%) !important;
+			color: lighten($secondary, 20%) !important;
 		}
 	}
 }

@@ -1,6 +1,7 @@
 .basic-container {
 	flex: 1;
 	max-width: 75em;
+	position: relative;
 	width: 100%;
 	@include flex(column, center, center);
 	@media only screen and (min-width: 120rem) {
@@ -19,8 +20,6 @@
 
 .main {
 	background-color: $tertiary;
-	box-shadow: 0 0.5rem 5rem rgba($primary, 0.25);
-	margin-top: 100vh;
 	overflow-x: hidden;
 	z-index: 2;
 	@include flex(column, $alignItems: center);
