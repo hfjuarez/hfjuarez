@@ -1,10 +1,10 @@
-// import React, { useEffect, useRef } from 'react';
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+
 // Components
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
@@ -18,24 +18,15 @@ import { UIColors } from 'utils/ui';
 import styles from './hero.module.scss';
 
 const Hero = () => {
-	const centeredContainerRef = useRef<HTMLInputElement>(null);
-	// useEffect(() => {
-	// 	const centeredContainer = centeredContainerRef.current;
-	// 	gsap.to(centeredContainer, {
-	// 		delay: 0,
-	// 		duration: 0.5,
-	// 		ease: 'power4.inOut',
-	// 		scale: 0.9,
-	// 		scrollTrigger: {
-	// 			start: 'top top',
-	// 			trigger: centeredContainer,
-	// 		},
-	// 	});
-	// }, []);
 	return (
 		<div className={styles.background}>
 			<div className={styles.wrapper}>
-				<header className={styles.centeredContainer} ref={centeredContainerRef}>
+				<header className={styles.centeredContainer}>
+					<div className={styles.topBar}>
+						<div className={styles.macosClose} />
+						<div className={styles.macosMinimize} />
+						<div className={styles.macosMaximize} />
+					</div>
 					<div className={styles.top}>
 						<Heading as="h6">
 							Looking for

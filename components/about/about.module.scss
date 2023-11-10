@@ -15,27 +15,10 @@
 
 	.title {
 		span {
-			// &:first-of-type {
-			// 	color: $base-red;
-			// }
-			// &:nth-of-type(2) {
-			// 	color: $base-yellow;
-			// }
-			// &:nth-of-type(3) {
-			// 	color: $base-green;
-			// }
 			color: $base-yellow;
 		}
 
-		@include font(
-			5cqw,
-			normal,
-			medium,
-			lighten($tertiary, 5%),
-			center,
-			95%,
-			0.1rem
-		);
+		@include font(5cqw, normal, medium, $tertiary, center, 95%, 0.1rem);
 
 		@media (max-width: 75rem) {
 			font-size: 6cqw;

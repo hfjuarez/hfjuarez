@@ -1,7 +1,8 @@
 .height {
 	margin: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
+	min-height: 100vh;
 	background-color: $primary;
 	@include flex(column, center, center);
 	section {
@@ -21,19 +22,24 @@
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	@media only screen and (max-width: 50rem) {
+		font-size: 20cqw;
+		line-height: normal;
+	}
 }
 
 .cardContainers {
 	gap: 1rem;
 	width: 100%;
 	@include flex(row, center, center);
-	backdrop-filter: blur(0.125rem);
-	-webkit-backdrop-filter: blur(0.125rem);
+	flex-wrap: wrap;
 	.cardWrapper {
+		backdrop-filter: blur(0.125rem);
+		-webkit-backdrop-filter: blur(0.125rem);
 		@include flex(column, center, center);
-		gap: 1rem;
-		max-width: 33%;
-		min-width: 33%;
+		gap: 1.25rem;
+		width: 24rem;
+		margin-top: 4rem;
 	}
 	.card {
 		position: relative;
@@ -115,17 +121,27 @@
 				padding-inline-start: 20px;
 			}
 			li {
-				@include font();
+				@include font($color: white);
 			}
 		}
-		.frontendExpertise {
-			padding: 1rem;
+		.transpiledCode {
+			padding-inline: 1rem;
 			h3,
-			p,
-			li {
+			p {
 				color: $white;
+			}
+			h3 {
 				text-align: center;
 			}
+		}
+	}
+	@media only screen and (max-width: 30rem) {
+		@include flex(column, center, center);
+		.cardWrapper {
+			max-width: 100%;
+			min-width: 100%;
+			width: 100%;
+			margin-bottom: 2rem;
 		}
 	}
 }

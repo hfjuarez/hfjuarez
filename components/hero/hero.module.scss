@@ -16,8 +16,9 @@
 	@include flex(column, center, center);
 
 	.centeredContainer {
-		background-color: $base-color;
-		border-radius: 0.125rem;
+		background-color: $base-green;
+		border: 0.0625rem solid $base-red;
+		border-radius: 0.75rem;
 		max-height: 37.5rem;
 		max-width: 67.5rem;
 		height: 100%;
@@ -25,6 +26,44 @@
 		position: relative;
 		z-index: 2;
 		flex: 1;
+		position: relative;
+		padding: 1.75rem 0rem 0rem;
+		border-radius: 0.75rem;
+		width: 100%;
+		height: 30rem;
+		background-color: rgba($primary, 0.975);
+		border: 0.0625rem solid lighten($primary, 15%);
+		backdrop-filter: blur(0.5rem);
+		-webkit-backdrop-filter: blur(0.5rem);
+		.topBar {
+			position: absolute;
+			border-top-left-radius: 0.67rem;
+			border-top-right-radius: 0.67rem;
+			top: 0;
+			left: 0;
+			height: 1.75rem;
+			width: 100%;
+			@include flex(row, flex-start, center);
+			gap: 0.5rem;
+			.macosClose,
+			.macosMinimize,
+			.macosMaximize {
+				width: 0.75rem;
+				height: 0.75rem;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+			.macosClose {
+				margin-left: 0.5rem;
+				background-color: #fe5f57;
+			}
+			.macosMinimize {
+				background-color: #febc2e;
+			}
+			.macosMaximize {
+				background-color: #28c840;
+			}
+		}
 		@include flex(column, center, center);
 
 		@media only screen and (max-width: 80rem) {
@@ -42,7 +81,7 @@
 	top: 0;
 	text-transform: uppercase;
 	width: 100%;
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 	@include flex(row, center, flex-start);
 
 	h6 {
@@ -56,6 +95,7 @@
 	}
 
 	.link {
+		margin-top: -0.5rem;
 		margin-right: 1.2rem;
 	}
 
@@ -181,12 +221,14 @@
 	@include flex();
 	width: 100%;
 	p {
-		@include font(22cqw, 18.5cqw, regular, $stretch: 95%, $spacing: -1rem);
-		font-family: 'Poppins', sans-serif;
-		@supports (-webkit-text-stroke: 0.125rem $secondary) {
-			-webkit-text-stroke: 0.125rem $secondary;
-			-webkit-text-fill-color: transparent;
-		}
+		@include font(
+			22cqw,
+			18.5cqw,
+			medium,
+			mix($tertiary, $secondary, 50%),
+			$stretch: 100%,
+			$spacing: -1rem
+		);
 	}
 	.left,
 	.right {
@@ -211,8 +253,8 @@
 		left: 0;
 
 		> div {
-			animation: scrollTextUp 20s infinite linear;
-			-webkit-animation: scrollTextUp 20s infinite linear;
+			animation: scrollTextUp 17s infinite linear;
+			-webkit-animation: scrollTextUp 17s infinite linear;
 		}
 
 		@-webkit-keyframes scrollTextUp {
@@ -242,8 +284,8 @@
 		}
 
 		> div {
-			animation: scrollTextDown 20s infinite linear;
-			-webkit-animation: scrollTextDown 20s infinite linear;
+			animation: scrollTextDown 17s infinite linear;
+			-webkit-animation: scrollTextDown 17s infinite linear;
 		}
 
 		@-webkit-keyframes scrollTextDown {

@@ -74,12 +74,11 @@
 	}
 	&.fill {
 		background-color: transparent;
-		border-color: $base-color;
-		color: $base-color;
+		border-color: $white;
+		color: $primary;
 		&:hover {
-			background-color: darken($base-color, 5%);
-			border-color: darken($base-color, 5%);
-			color: $white;
+			background-color: darken($white, 5%);
+			border-color: darken($white, 5%);
 		}
 	}
 }

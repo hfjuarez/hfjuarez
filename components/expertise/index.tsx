@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Components
 import Heading from '@/components/common/layout/heading';
+import Text from '@/components/common/layout/text';
 import Container from '@/components/common/layout/container';
 
 // Styles
@@ -18,9 +19,17 @@ import Button from '../common/button';
 const Expertise = () => {
 	const [showFrontendCodeCompiled, setShowFrontendCodeCompiled] =
 		useState(false);
+	const [showBackendResponse, setShowBackendResponse] = useState(false);
+	const [showOtherExpertise, setShowOtherExpertise] = useState(false);
 
 	const handleFrontendPreview = () => {
 		setShowFrontendCodeCompiled(!showFrontendCodeCompiled);
+	};
+	const handleBackendPreview = () => {
+		setShowBackendResponse(!showBackendResponse);
+	};
+	const handleOtherExpertise = () => {
+		setShowOtherExpertise(!showOtherExpertise);
 	};
 
 	const frontendExpertiseCode = `import React from 'react';
@@ -29,11 +38,11 @@ import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
 
 const FrontendExpertise = () => {
-	const startDate = new Date('2021-03-01');
+	const startDate = new Date('2021-01');
 	const currentDate = new Date();
 	const diffInMonths =
 		(currentDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 30);
-	const years = Math.floor(diffInMonths / 12);
+	const years = Math.round(diffInMonths / 12);
 
 	return (
 		<div>
@@ -68,7 +77,7 @@ app.get('/list-of-backend-expertise', (req, res) => {
 	const backendExpertise = {
 		title: 'Backend',
 		paragraph: \`Proficiency in backend development. \`,
-		list: ['node', 'java', 'ruby', 'express']
+		list: ['Node.js', 'Java', 'Ruby', 'Express']
 	};
 	res.json(backendExpertise);
 });
@@ -77,7 +86,9 @@ app.listen(port, () => {
 	console.log(\`Server listening at http://localhost:\${port}\`);
 });
 `;
-	const otherExpertiseCode = `# Others Expertise
+	const otherExpertiseCode = `### Others
+
+In addition, I also have experience in the following:
 
 - Git
 - Docker
@@ -91,33 +102,59 @@ app.listen(port, () => {
 `;
 
 	const titleRef = useRef<HTMLHeadingElement>(null);
-	const cardContainersRef = useRef(null);
+	const card1Ref = useRef(null);
+	const card2Ref = useRef(null);
+	const card3Ref = useRef(null);
 	const expertiseRef = useRef(null);
 
 	useEffect(() => {
 		const title = titleRef.current;
-		const cardContainers = cardContainersRef.current;
+		const card1 = card1Ref.current;
+		const card2 = card2Ref.current;
+		const card3 = card3Ref.current;
 		const expertise = expertiseRef.current;
 
 		gsap.to(title, {
 			delay: 0,
-			duration: 1.5,
-			ease: 'power1.inOut',
+			duration: 0.75,
+			ease: 'none',
 			fontStretch: '90%',
 			scale: 1.05,
 			scrollTrigger: {
-				start: 'top 50%',
+				start: 'top 60%',
 				trigger: expertise,
 			},
 		});
-		gsap.to(cardContainers, {
+		gsap.to(card1, {
 			delay: 0,
-			duration: 1.5,
+			duration: 0.5,
 			ease: 'power1.inOut',
-			marginTop: '-1.75rem',
+			marginTop: '-2rem',
 			opacity: 1,
 			scrollTrigger: {
-				start: 'top 50%',
+				start: 'top 60%',
+				trigger: expertise,
+			},
+		});
+		gsap.to(card2, {
+			delay: 0,
+			duration: 0.75,
+			ease: 'power1.inOut',
+			marginTop: '-2rem',
+			opacity: 1,
+			scrollTrigger: {
+				start: 'top 60%',
+				trigger: expertise,
+			},
+		});
+		gsap.to(card3, {
+			delay: 0,
+			duration: 1.25,
+			ease: 'power1.inOut',
+			marginTop: '-2rem',
+			opacity: 1,
+			scrollTrigger: {
+				start: 'top 60%',
 				trigger: expertise,
 			},
 		});
@@ -129,8 +166,8 @@ app.listen(port, () => {
 				<Heading as="h2" className={styles.sectionTitle} ref={titleRef}>
 					My Expertise
 				</Heading>
-				<div className={styles.cardContainers} ref={cardContainersRef}>
-					<div className={styles.cardWrapper}>
+				<div className={styles.cardContainers}>
+					<div className={styles.cardWrapper} ref={card1Ref}>
 						<div className={styles.card}>
 							<div className={styles.topBar}>
 								<div className={styles.macosClose} />
@@ -139,7 +176,7 @@ app.listen(port, () => {
 							</div>
 							<div className={styles.content}>
 								{showFrontendCodeCompiled ? (
-									<div className={styles.frontendExpertise}>
+									<div className={styles.transpiledCode}>
 										<FrontendExpertise />
 									</div>
 								) : (
@@ -160,7 +197,7 @@ app.listen(port, () => {
 						</Button>
 					</div>
 
-					<div className={styles.cardWrapper}>
+					<div className={styles.cardWrapper} ref={card2Ref}>
 						<div className={styles.card}>
 							<div className={styles.topBar}>
 								<div className={styles.macosClose} />
@@ -169,18 +206,39 @@ app.listen(port, () => {
 							</div>
 
 							<div className={styles.content}>
-								<SyntaxHighlighter
-									language="javascript"
-									showLineNumbers
-									style={gruvboxDark}
-								>
-									{backendExpertiseCode}
-								</SyntaxHighlighter>
+								{showBackendResponse ? (
+									<SyntaxHighlighter
+										language="json"
+										showLineNumbers
+										style={gruvboxDark}
+									>
+										{`{
+	"title": "Backend",
+	"paragraph": "Proficiency in backend development.",
+	"list": [
+		"Node.js",
+		"Java",
+		"Ruby",
+		"Express"
+	]
+}`}
+									</SyntaxHighlighter>
+								) : (
+									<SyntaxHighlighter
+										language="javascript"
+										showLineNumbers
+										style={gruvboxDark}
+									>
+										{backendExpertiseCode}
+									</SyntaxHighlighter>
+								)}
 							</div>
 						</div>
-						<Button onClick={handleFrontendPreview}>View Response</Button>
+						<Button onClick={handleBackendPreview}>
+							{showBackendResponse ? 'View Code' : 'View Response'}
+						</Button>
 					</div>
-					<div className={styles.cardWrapper}>
+					<div className={styles.cardWrapper} ref={card3Ref}>
 						<div className={styles.card}>
 							<div className={styles.topBar}>
 								<div className={styles.macosClose} />
@@ -188,16 +246,36 @@ app.listen(port, () => {
 								<div className={styles.macosMaximize} />
 							</div>
 							<div className={styles.content}>
-								<SyntaxHighlighter
-									language="markdown"
-									showLineNumbers
-									style={gruvboxDark}
-								>
-									{otherExpertiseCode}
-								</SyntaxHighlighter>
+								{showOtherExpertise ? (
+									<div className={styles.transpiledCode}>
+										<Heading as="h3">Others</Heading>
+										<Text>
+											In addition, I also have experience in the following:
+										</Text>
+										<ul>
+											<li>Git</li>
+											<li>Docker</li>
+											<li>AWS</li>
+											<li>SQL</li>
+											<li>MongoDB</li>
+											<li>REST API</li>
+											<li>Unit Testing</li>
+											<li>Integration Testing</li>
+											<li>End-to-End Testing</li>
+										</ul>
+									</div>
+								) : (
+									<SyntaxHighlighter
+										language="markdown"
+										showLineNumbers
+										style={gruvboxDark}
+									>
+										{otherExpertiseCode}
+									</SyntaxHighlighter>
+								)}
 							</div>
 						</div>
-						<Button onClick={handleFrontendPreview}>Preview Markdown</Button>
+						<Button onClick={handleOtherExpertise}>Preview Markdown</Button>
 					</div>
 				</div>
 			</Container>
