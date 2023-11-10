@@ -1,4 +1,4 @@
-import React, { ReactNode, HTMLAttributes } from 'react';
+import React, { ReactNode, HTMLAttributes, forwardRef } from 'react';
 import classNames from 'classnames';
 // Styles
 import headingStyle from './heading.module.scss';
@@ -11,25 +11,33 @@ type HeadingProps = HTMLAttributes<HTMLElement> & {
 	colorScheme?: UIColors;
 	className?: string;
 	children: ReactNode;
+	ref: React.RefObject<HTMLHeadingElement>; // Add a ref prop
 };
 
-const Heading = ({
-	as: Component,
-	colorScheme = UIColors.PRIMARY,
-	className,
-	children,
-	...props
-}: HeadingProps) => {
-	const headingClasses = classNames(
-		headingStyle[Component],
-		colorsStyles[colorScheme],
-		className,
-	);
-	return (
-		<Component className={headingClasses} {...props}>
-			{children}
-		</Component>
-	);
-};
+const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
+	(
+		{
+			as: Component,
+			colorScheme = UIColors.PRIMARY,
+			className,
+			children,
+			...props
+		},
+		ref,
+	) => {
+		const headingClasses = classNames(
+			headingStyle[Component],
+			colorsStyles[colorScheme],
+			className,
+		);
+		return (
+			<Component className={headingClasses} {...props} ref={ref}>
+				{children}
+			</Component>
+		);
+	},
+);
+
+Heading.displayName = 'Heading';
 
 export default Heading;

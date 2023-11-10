@@ -1,10 +1,10 @@
-// import React, { useEffect, useRef } from 'react';
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+
 // Components
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
@@ -18,45 +18,33 @@ import { UIColors } from 'utils/ui';
 import styles from './hero.module.scss';
 
 const Hero = () => {
-	const centeredContainerRef = useRef<HTMLInputElement>(null);
-	// useEffect(() => {
-	// 	const centeredContainer = centeredContainerRef.current;
-	// 	gsap.to(centeredContainer, {
-	// 		delay: 0,
-	// 		duration: 0.5,
-	// 		ease: 'power4.inOut',
-	// 		scale: 0.9,
-	// 		scrollTrigger: {
-	// 			start: 'top top',
-	// 			trigger: centeredContainer,
-	// 		},
-	// 	});
-	// }, []);
 	return (
 		<div className={styles.background}>
 			<div className={styles.wrapper}>
-				<header className={styles.centeredContainer} ref={centeredContainerRef}>
+				<header className={styles.centeredContainer}>
+					<div className={styles.topBar}>
+						<div className={styles.macosClose} />
+						<div className={styles.macosMinimize} />
+						<div className={styles.macosMaximize} />
+					</div>
 					<div className={styles.top}>
 						<Heading as="h6">
 							Looking for
 							<br />
 							your next developer?
 						</Heading>
-						<Heading as="h6" className={styles.centered}>
-							Full Stack Developer
-						</Heading>
 						<Link href="mailto:hello@hernanfabrica.com" className={styles.link}>
 							Get in touch!
 						</Link>
 					</div>
 					<div className={styles.titleWrapper}>
-						<Heading as="h1">
-							<span>I am</span>
-							<br />
-							Hernán
-						</Heading>
+						<Text className={styles.iam}>I am</Text>
+						<Heading as="h1">Hernán</Heading>
 					</div>
 					<div className={styles.bottom}>
+						<Heading as="h2" className={styles.centered}>
+							Full Stack Engineer
+						</Heading>
 						<div className={styles.pills}>
 							<Pill colorScheme={UIColors.WHITE}>NodeJS</Pill>
 							<Pill colorScheme={UIColors.WHITE}>VueJS</Pill>

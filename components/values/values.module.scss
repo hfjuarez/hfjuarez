@@ -1,4 +1,10 @@
-@import 'mixin';
+.height {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: $primary;
+	@include flex(column, center, center);
+}
 
 .introduction {
 	-webkit-user-select: none;
@@ -11,7 +17,7 @@
 	position: relative;
 	border-radius: 0.5rem;
 	p {
-		@include font(10rem, 12rem, semi, $secondary, left, 85%, -0.0625rem);
+		@include font(10rem, 12rem, semi, $tertiary, left, 85%, -0.0625rem);
 	}
 	.backgroundText {
 		position: absolute;
@@ -26,14 +32,26 @@
 			transition: opacity 0.35s ease-in-out;
 			word-break: keep-all;
 			max-width: 100%;
-
-			@include font(15cqw, normal, extra, $secondary, center, 85%, -0.0625rem);
+			@include font(15cqw, normal, extra, transparent, center, 85%, -0.0625rem);
 			@supports (-webkit-text-stroke: 0.1875rem $secondary) {
 				-webkit-text-stroke: 0.1875rem $secondary;
 				-webkit-text-fill-color: transparent;
 			}
 		}
+		.bgTextCommitted {
+			@supports (-webkit-text-stroke: 0.1875rem rgba($base-red, 0.5)) {
+				-webkit-text-stroke: 0.1875rem rgba($base-red, 0.5);
+			}
+		}
+		.bgTextInnovative {
+			@supports (-webkit-text-stroke: 0.1875rem rgba($base-yellow, 0.5)) {
+				-webkit-text-stroke: 0.1875rem rgba($base-yellow, 0.5);
+			}
+		}
 		.bgTextResultsDrive {
+			@supports (-webkit-text-stroke: 0.1875rem rgba($base-green, 0.5)) {
+				-webkit-text-stroke: 0.1875rem rgba($base-green, 0.5);
+			}
 			font-size: 13.5cqw;
 		}
 	}
@@ -52,7 +70,7 @@
 			width: 100%;
 			text-align: right;
 			&:nth-child(3) {
-				color: $base-color;
+				color: $base-red;
 			}
 		}
 	}
@@ -72,7 +90,7 @@
 			text-align: left;
 			margin-right: auto;
 			&:nth-child(3) {
-				color: $base-color;
+				color: $base-yellow;
 			}
 		}
 	}
@@ -92,7 +110,7 @@
 			text-wrap: nowrap;
 			word-break: keep-all;
 			&:nth-child(3) {
-				color: $base-color;
+				color: $base-green;
 			}
 		}
 	}
@@ -122,12 +140,4 @@
 	@media only screen and (max-width: 40rem) {
 		width: 100vw;
 	}
-}
-
-.height {
-	margin: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: $white;
-	@include flex(column, center, center);
 }

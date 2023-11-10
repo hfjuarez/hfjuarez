@@ -1,10 +1,12 @@
 .pill-basic {
-	border-radius: 99rem;
-	padding: 0.3rem 0.6rem;
+	padding: 0.15rem 0rem;
 	margin: 0;
 	width: fit-content;
-	border: 0.0625rem solid $primary;
-	@include font(0.8rem, normal);
+	@include font(0.9rem, normal);
+	&::before {
+		content: '//  ';
+		@include font(1rem, normal, $color: $white);
+	}
 }
 
 .outline {

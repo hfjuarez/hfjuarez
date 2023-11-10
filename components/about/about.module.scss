@@ -1,5 +1,5 @@
 .height {
-	background-color: $tertiary;
+	background-color: $primary;
 	height: 100%;
 	min-height: 100vh;
 	width: 100vw;
@@ -7,24 +7,29 @@
 }
 
 .centeredWrapper {
-	border-radius: 0.5rem;
 	flex: none;
 	height: fit-content;
 	justify-content: flex-start;
+	padding-block: 3rem;
 	z-index: 1;
+
 	.title {
 		span {
-			color: $base-color;
+			color: $base-yellow;
 		}
-		@include font(4.5cqw, normal, medium, $primary, center, 95%, 0.1rem);
+
+		@include font(5cqw, normal, medium, $tertiary, center, 95%, 0.1rem);
+
 		@media (max-width: 75rem) {
-			@include font(6cqw, normal, medium, $primary, center, 95%, 0.1rem);
+			font-size: 6cqw;
 		}
+
 		@media (max-width: 45rem) {
-			@include font(8cqw, normal, medium, $primary, center, 95%, 0.1rem);
+			font-size: 8cqw;
 		}
+
 		@media (max-width: 30rem) {
-			@include font(10cqw, normal, medium, $primary, center, 95%, 0.1rem);
+			font-size: 10cqw;
 			padding-block: 0;
 		}
 	}
