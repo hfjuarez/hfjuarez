@@ -29,8 +29,6 @@
 		position: relative;
 		padding: 1.75rem 0rem 0rem;
 		border-radius: 0.75rem;
-		width: 100%;
-		height: 30rem;
 		background-color: rgba($primary, 0.975);
 		border: 0.0625rem solid lighten($primary, 15%);
 		backdrop-filter: blur(0.5rem);
@@ -140,31 +138,26 @@
 	}
 
 	@media only screen and (max-width: 70rem) {
-		height: 23.75vw;
-
 		h1 {
 			font-size: 15vw;
 			line-height: 13vw;
-
-			span {
-				font-size: 10vw;
-				line-height: 8vw;
-			}
+		}
+		.iam {
+			font-size: 10vw;
+			line-height: 8vw;
 		}
 	}
 
 	@media only screen and (max-width: 40rem) {
 		padding-inline: 0.5rem;
-		height: 32vw;
 
 		h1 {
 			font-size: 20vw;
 			line-height: 18vw;
-
-			span {
-				font-size: 14vw;
-				line-height: 13vw;
-			}
+		}
+		.iam {
+			font-size: 16vw;
+			line-height: 13vw;
 		}
 	}
 }
@@ -227,7 +220,7 @@
 			medium,
 			mix($tertiary, $secondary, 50%),
 			$stretch: 100%,
-			$spacing: -1rem
+			$spacing: 0rem
 		);
 	}
 	.left,
@@ -314,8 +307,10 @@
 		.left {
 			width: 100%;
 			p {
-				font-size: 50cqw;
+				font-size: 40cqw;
 				line-height: 40cqw;
+				text-align: center;
+				margin-left: -2cqw;
 			}
 		}
 	}

@@ -20,7 +20,7 @@ const Expertise = () => {
 	const [showFrontendCodeCompiled, setShowFrontendCodeCompiled] =
 		useState(false);
 	const [showBackendResponse, setShowBackendResponse] = useState(false);
-	const [showOtherExpertise, setShowOtherExpertise] = useState(false);
+	const [showMarkdownPreview, setShowMarkdownPreview] = useState(false);
 
 	const handleFrontendPreview = () => {
 		setShowFrontendCodeCompiled(!showFrontendCodeCompiled);
@@ -29,7 +29,7 @@ const Expertise = () => {
 		setShowBackendResponse(!showBackendResponse);
 	};
 	const handleOtherExpertise = () => {
-		setShowOtherExpertise(!showOtherExpertise);
+		setShowMarkdownPreview(!showMarkdownPreview);
 	};
 
 	const frontendExpertiseCode = `import React from 'react';
@@ -246,7 +246,7 @@ In addition, I also have experience in the following:
 								<div className={styles.macosMaximize} />
 							</div>
 							<div className={styles.content}>
-								{showOtherExpertise ? (
+								{showMarkdownPreview ? (
 									<div className={styles.transpiledCode}>
 										<Heading as="h3">Others</Heading>
 										<Text>
@@ -275,7 +275,9 @@ In addition, I also have experience in the following:
 								)}
 							</div>
 						</div>
-						<Button onClick={handleOtherExpertise}>Preview Markdown</Button>
+						<Button onClick={handleOtherExpertise}>
+							{showMarkdownPreview ? 'Raw Markdown' : 'Preview Markdown'}
+						</Button>
 					</div>
 				</div>
 			</Container>
