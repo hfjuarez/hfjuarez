@@ -93,8 +93,8 @@
 	}
 
 	.link {
-		margin-top: -0.5rem;
-		margin-right: 1.2rem;
+		margin-top: -0.75rem;
+		margin-right: 1.25rem;
 	}
 
 	@media only screen and (max-width: 40rem) {
@@ -176,7 +176,7 @@
 		@include flex(row, center, center);
 		height: fit-content;
 		flex-wrap: wrap;
-		gap: 0.5rem;
+		gap: 0.75rem;
 
 		@media only screen and (max-width: 40rem) {
 			padding-inline: 2rem;
@@ -185,7 +185,6 @@
 
 	.pills {
 		margin-top: 0.5rem;
-		gap: 0.75rem;
 	}
 
 	.links {
@@ -203,7 +202,7 @@
 	text-transform: uppercase;
 	border-color: rgba($white, 0.5);
 	@include font(0.9rem, normal, light, $white, left, 85%, 0.0625rem);
-
+	width: 7rem;
 	&:hover {
 		border-color: $white;
 		background-color: rgba($white, 0.1);
