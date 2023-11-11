@@ -26,6 +26,9 @@
 		font-size: 20cqw;
 		line-height: normal;
 	}
+	@media only screen and (max-width: 30rem) {
+		margin-bottom: 4rem;
+	}
 }
 
 .cardContainers {
@@ -39,7 +42,7 @@
 		@include flex(column, center, center);
 		gap: 1.25rem;
 		width: 24rem;
-		margin-top: 4rem;
+		margin-block: 4rem;
 	}
 	.card {
 		position: relative;
@@ -141,7 +144,7 @@
 			max-width: 100%;
 			min-width: 100%;
 			width: 100%;
-			margin-bottom: 2rem;
+			margin-bottom: 3.5rem;
 		}
 	}
 }
