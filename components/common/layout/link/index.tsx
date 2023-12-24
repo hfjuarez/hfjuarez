@@ -22,7 +22,7 @@ interface LinkProps extends NextLinkProps {
 const Link = ({
 	type = UIColors.PRIMARY,
 	activeClassName = 'active',
-	colorScheme = UIColors.PRIMARY,
+	colorScheme = UIColors.WHITE,
 	className,
 	children,
 	...props

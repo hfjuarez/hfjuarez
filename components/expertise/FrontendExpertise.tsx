@@ -2,6 +2,7 @@ import React from 'react';
 
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
+import { UIColors } from 'utils/ui';
 
 const FrontendExpertise = () => {
 	const startDate = new Date('2021-01');
@@ -12,7 +13,9 @@ const FrontendExpertise = () => {
 
 	return (
 		<div>
-			<Heading as="h3">Frontend</Heading>
+			<Heading as="h3" colorScheme={UIColors.RED}>
+				Frontend
+			</Heading>
 			<Text>
 				Over {years} years of development experience in Vue.js, React, NextJS
 				and Nuxt frameworks.
