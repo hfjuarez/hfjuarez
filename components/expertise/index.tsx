@@ -15,21 +15,21 @@ import Container from '@/components/common/layout/container';
 import styles from './expertise.module.scss';
 import FrontendExpertise from './FrontendExpertise';
 import Button from '../common/button';
+import { UIColors } from 'utils/ui';
 
 const Expertise = () => {
-	const [showFrontendCodeCompiled, setShowFrontendCodeCompiled] =
-		useState(false);
-	const [showBackendResponse, setShowBackendResponse] = useState(false);
-	const [showMarkdownPreview, setShowMarkdownPreview] = useState(false);
+	const [showFrontend, setShowFrontend] = useState(true);
+	const [showBackend, setShowBackend] = useState(true);
+	const [showOthers, setShowOthers] = useState(true);
 
 	const handleFrontendPreview = () => {
-		setShowFrontendCodeCompiled(!showFrontendCodeCompiled);
+		setShowFrontend(!showFrontend);
 	};
 	const handleBackendPreview = () => {
-		setShowBackendResponse(!showBackendResponse);
+		setShowBackend(!showBackend);
 	};
 	const handleOtherExpertise = () => {
-		setShowMarkdownPreview(!showMarkdownPreview);
+		setShowOthers(!showOthers);
 	};
 
 	const frontendExpertiseCode = `import React from 'react';
@@ -46,7 +46,9 @@ const FrontendExpertise = () => {
 
 	return (
 		<div>
-			<Heading as="h3">Frontend</Heading>
+			<Heading as="h3" colorScheme={UIColors.RED}>
+				Frontend
+			</Heading>
 			<Text>
 				Over {years} years of development experience in HTML,
 				CSS, JS, Vue.js, React, NextJS and Nuxt frameworks.
@@ -175,7 +177,7 @@ In addition, I also have experience in the following:
 								<div className={styles.macosMaximize} />
 							</div>
 							<div className={styles.content}>
-								{showFrontendCodeCompiled ? (
+								{showFrontend ? (
 									<div className={styles.transpiledCode}>
 										<FrontendExpertise />
 									</div>
@@ -191,9 +193,7 @@ In addition, I also have experience in the following:
 							</div>
 						</div>
 						<Button onClick={handleFrontendPreview}>
-							{showFrontendCodeCompiled
-								? 'View Source Code'
-								: 'View Compiled Code'}
+							{showFrontend ? 'View Source Code' : 'View Preview'}
 						</Button>
 					</div>
 
@@ -206,23 +206,20 @@ In addition, I also have experience in the following:
 							</div>
 
 							<div className={styles.content}>
-								{showBackendResponse ? (
-									<SyntaxHighlighter
-										language="json"
-										showLineNumbers
-										style={gruvboxDark}
-									>
-										{`{
-	"title": "Backend",
-	"paragraph": "Proficiency in backend development.",
-	"list": [
-		"Node.js",
-		"Java",
-		"Ruby",
-		"Express"
-	]
-}`}
-									</SyntaxHighlighter>
+								{showBackend ? (
+									<div className={styles.transpiledCode}>
+										<Heading as="h3" colorScheme={UIColors.YELLOW}>
+											Backend
+										</Heading>
+										<Text>Proficiency in backend development.</Text>
+										<ul>
+											<li>NodeJS</li>
+											<li>Ruby on Rails</li>
+											<li>Java</li>
+											<li>SQL</li>
+											<li>Express</li>
+										</ul>
+									</div>
 								) : (
 									<SyntaxHighlighter
 										language="javascript"
@@ -235,7 +232,7 @@ In addition, I also have experience in the following:
 							</div>
 						</div>
 						<Button onClick={handleBackendPreview}>
-							{showBackendResponse ? 'View Code' : 'View Response'}
+							{showBackend ? 'View Source Code' : 'View Preview'}
 						</Button>
 					</div>
 					<div className={styles.cardWrapper} ref={card3Ref}>
@@ -246,9 +243,11 @@ In addition, I also have experience in the following:
 								<div className={styles.macosMaximize} />
 							</div>
 							<div className={styles.content}>
-								{showMarkdownPreview ? (
+								{showOthers ? (
 									<div className={styles.transpiledCode}>
-										<Heading as="h3">Others</Heading>
+										<Heading as="h3" colorScheme={UIColors.GREEN}>
+											Others
+										</Heading>
 										<Text>
 											In addition, I also have experience in the following:
 										</Text>
@@ -276,7 +275,7 @@ In addition, I also have experience in the following:
 							</div>
 						</div>
 						<Button onClick={handleOtherExpertise}>
-							{showMarkdownPreview ? 'Raw Markdown' : 'Preview Markdown'}
+							{showOthers ? 'View Source Code' : 'View Preview'}
 						</Button>
 					</div>
 				</div>

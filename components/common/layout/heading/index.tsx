@@ -18,7 +18,7 @@ const Heading = forwardRef<HTMLHeadingElement, HeadingProps>(
 	(
 		{
 			as: Component,
-			colorScheme = UIColors.PRIMARY,
+			colorScheme = UIColors.WHITE,
 			className,
 			children,
 			...props

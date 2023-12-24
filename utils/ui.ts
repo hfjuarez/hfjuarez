@@ -3,4 +3,7 @@ export enum UIColors {
 	SECONDARY = 'secondary',
 	BASE = 'base',
 	WHITE = 'white',
+	RED = 'red',
+	YELLOW = 'yellow',
+	GREEN = 'green',
 }
