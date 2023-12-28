@@ -1,12 +1,14 @@
 .footer {
 	width: 100%;
-	background-color: lighten($primary, 2%);
-	padding-block: 3rem;
+	padding-block: 3rem 7rem;
 	@include flex(column, center, center);
 }
 .content {
 	padding-top: 2rem;
 	width: 100%;
+	border-bottom: 0.0625rem solid rgba($secondary, 0.5);
+	padding-bottom: 3rem;
+	margin-bottom: 3rem;
 	@include flex(column, center, center);
 	p {
 		@include font(0.8rem, normal, regular, $secondary, left, 85%);

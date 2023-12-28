@@ -1,11 +1,3 @@
-.height {
-	margin: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: $primary;
-	@include flex(column, center, center);
-}
-
 .introduction {
 	-webkit-user-select: none;
 	-ms-user-select: none;

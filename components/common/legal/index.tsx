@@ -1,9 +1,10 @@
 import React from 'react';
-// Components
+
 import Text from '@/components/common/layout/text';
 import Link from '@/components/common/layout/link';
-// Styles
+
 import styles from './legal.module.scss';
+import { UIColors } from 'utils/ui';
 
 const Legal = () => {
 	return (
@@ -11,7 +12,11 @@ const Legal = () => {
 			<Text>Font: Mona Sans</Text>
 			<Text>
 				Copyright © 2023, GitHub&nbsp;
-				<Link href="https://github.com/github/mona-sans" target="_blank">
+				<Link
+					href="https://github.com/github/mona-sans"
+					target="_blank"
+					colorScheme={UIColors.PRIMARY}
+				>
 					https://github.com/github/mona-sans
 				</Link>
 				.
@@ -22,7 +27,11 @@ const Legal = () => {
 				under the SIL Open Font License, Version 1.1. You are free to use,
 				study, modify, and redistribute the font in accordance with the terms of
 				this license. For more information about the license, please visit&nbsp;
-				<Link href="http://scripts.sil.org/OFL" target="_blank">
+				<Link
+					href="http://scripts.sil.org/OFL"
+					target="_blank"
+					colorScheme={UIColors.PRIMARY}
+				>
 					http://scripts.sil.org/OFL
 				</Link>
 				.

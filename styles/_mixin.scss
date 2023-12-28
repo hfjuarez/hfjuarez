@@ -1,18 +1,8 @@
-@mixin box-shadow(
-	$offset-x: 0,
-	$offset-y: 0.0625rem,
-	$blur-radius: 0.125rem,
-	$spread-radius: 0.0625rem,
-	$color: $secondary
-) {
-	box-shadow: $offset-x $offset-y $blur-radius $spread-radius $color;
-}
-
 @mixin font(
 	$size: 1rem,
 	$height: normal,
 	$weight: regular,
-	$color: $primary,
+	$color: $white,
 	$align: left,
 	$stretch: 100%,
 	$spacing: 0.0625rem
@@ -60,7 +50,7 @@
 	} @else if ($weight == 'black') {
 		font-weight: 900;
 	} @else {
-		font-weight: 400;
+		font-weight: $weight;
 	}
 
 	@if ($color == '_') {

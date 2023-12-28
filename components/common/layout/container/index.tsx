@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
-import containerStyle from './container.module.scss';
 import classNames from 'classnames';
+
+import containerStyle from './container.module.scss';
 
 type ContainerProps = {
 	as: 'article' | 'div' | 'main' | 'section';

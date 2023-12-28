@@ -1,28 +1,22 @@
 import React from 'react';
-import { gsap } from 'gsap';
-import { Flip } from 'gsap/dist/Flip';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-gsap.registerPlugin(Flip, ScrollTrigger);
-
-// Components
 import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
+import HeightWrapper from '@/components/common/layout/height';
 
-// Styles
 import styles from './about.module.scss';
 
 const About = () => {
 	return (
-		<div className={styles.height}>
+		<HeightWrapper>
 			<Container as="section" className={styles.centeredWrapper}>
 				<Heading as="h2" className={styles.title}>
-					Passionate Full Stack Developer about delivering
+					Passionate Full Stack Engineer focused on delivering
 					<span> innovative</span> solutions that <span>drive success</span> and
 					have a <span>significant impact</span> on projects.
 				</Heading>
 			</Container>
-		</div>
+		</HeightWrapper>
 	);
 };
 

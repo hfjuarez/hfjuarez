@@ -19,7 +19,6 @@
 }
 
 .main {
-	background-color: $tertiary;
 	overflow-x: hidden;
 	z-index: 2;
 	@include flex(column, $alignItems: center);
