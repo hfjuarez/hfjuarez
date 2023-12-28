@@ -1,10 +1,11 @@
 @import '@/components/common/button/button.module.scss';
 
 .background {
-	background-color: $primary;
+	background-color: darken($primary, 1%);
 	height: 100vh;
 	width: 100%;
 	@include flex(column, flex-start, flex-start);
+	border-bottom: 0.0625rem solid lighten($primary, 7.5%);
 }
 
 .wrapper {
@@ -16,14 +17,10 @@
 	@include flex(column, center, center);
 
 	.centeredContainer {
-		background-color: $base-green;
-		border: 0.0625rem solid $base-red;
-		border-radius: 0.75rem;
 		max-height: 37.5rem;
 		max-width: 67.5rem;
 		height: 100%;
 		width: 100%;
-		position: relative;
 		z-index: 2;
 		flex: 1;
 		position: relative;
@@ -33,41 +30,10 @@
 		border: 0.0625rem solid lighten($primary, 15%);
 		backdrop-filter: blur(0.5rem);
 		-webkit-backdrop-filter: blur(0.5rem);
-		.topBar {
-			position: absolute;
-			border-top-left-radius: 0.67rem;
-			border-top-right-radius: 0.67rem;
-			top: 0;
-			left: 0;
-			height: 1.75rem;
-			width: 100%;
-			@include flex(row, flex-start, center);
-			gap: 0.5rem;
-			.macosClose,
-			.macosMinimize,
-			.macosMaximize {
-				width: 0.75rem;
-				height: 0.75rem;
-				border-radius: 50%;
-				cursor: pointer;
-			}
-			.macosClose {
-				margin-left: 0.5rem;
-				background-color: #fe5f57;
-			}
-			.macosMinimize {
-				background-color: #febc2e;
-			}
-			.macosMaximize {
-				background-color: #28c840;
-			}
-		}
 		@include flex(column, center, center);
-
 		@media only screen and (max-width: 80rem) {
 			max-width: 90vw;
 		}
-
 		@media only screen and (max-width: 40rem) {
 			max-height: 90vh;
 		}
@@ -216,8 +182,8 @@
 		@include font(
 			22cqw,
 			18.5cqw,
-			medium,
-			mix($tertiary, $secondary, 50%),
+			650,
+			$tertiary,
 			$stretch: 100%,
 			$spacing: 0rem
 		);
@@ -230,7 +196,7 @@
 		top: 0;
 		transition: transform 1s ease;
 		white-space: nowrap;
-		overflow-y: hidden;
+		overflow: hidden;
 		@include flex(column, center, center);
 		p {
 			margin: 0;
@@ -245,8 +211,38 @@
 		left: 0;
 
 		> div {
-			animation: scrollTextUp 17s infinite linear;
-			-webkit-animation: scrollTextUp 17s infinite linear;
+			animation: scrollTextDown 7s infinite linear;
+			-webkit-animation: scrollTextDown 7s infinite linear;
+		}
+
+		@-webkit-keyframes scrollTextDown {
+			from {
+				transform: translateY(0%);
+			}
+
+			to {
+				transform: translateY(25%);
+			}
+		}
+		@keyframes scrollTextDown {
+			from {
+				transform: translateY(0%);
+			}
+
+			to {
+				transform: translateY(25%);
+			}
+		}
+	}
+	.right {
+		right: 0;
+		p {
+			text-align: right;
+		}
+
+		> div {
+			animation: scrollTextUp 7s infinite linear;
+			-webkit-animation: scrollTextUp 7s infinite linear;
 		}
 
 		@-webkit-keyframes scrollTextUp {
@@ -266,36 +262,6 @@
 
 			to {
 				transform: translateY(-25%);
-			}
-		}
-	}
-	.right {
-		right: 0;
-		p {
-			text-align: right;
-		}
-
-		> div {
-			animation: scrollTextDown 17s infinite linear;
-			-webkit-animation: scrollTextDown 17s infinite linear;
-		}
-
-		@-webkit-keyframes scrollTextDown {
-			from {
-				transform: translateY(0%);
-			}
-
-			to {
-				transform: translateY(25%);
-			}
-		}
-		@keyframes scrollTextDown {
-			from {
-				transform: translateY(0%);
-			}
-
-			to {
-				transform: translateY(25%);
 			}
 		}
 	}

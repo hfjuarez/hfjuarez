@@ -5,12 +5,11 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(Flip, ScrollTrigger);
 
-// Components
 import Container from '@/components/common/layout/container';
+import HeightWrapper from '@/components/common/layout/height';
 import Text from '@/components/common/layout/text';
 
-// Styles
-import styles from './values.module.scss';
+import valuesStyles from './values.module.scss';
 
 const Values = () => {
 	const committedTextRef = useRef<HTMLInputElement>(null);
@@ -23,9 +22,9 @@ const Values = () => {
 		if (!committedElement || !innovativeElement || !resultsDrivenElement)
 			return;
 
-		committedElement.classList.add(styles.afterAnimation);
+		committedElement.classList.add(valuesStyles.afterAnimation);
 		const flipstate1 = Flip.getState([committedElement]);
-		committedElement.classList.remove(styles.afterAnimation);
+		committedElement.classList.remove(valuesStyles.afterAnimation);
 		Flip.to(flipstate1, {
 			absolute: false,
 			absoluteOnLeave: false,
@@ -41,9 +40,9 @@ const Values = () => {
 			stagger: 0,
 		});
 
-		innovativeElement.classList.add(styles.afterAnimation);
+		innovativeElement.classList.add(valuesStyles.afterAnimation);
 		const flipstate2 = Flip.getState([innovativeElement]);
-		innovativeElement.classList.remove(styles.afterAnimation);
+		innovativeElement.classList.remove(valuesStyles.afterAnimation);
 		Flip.to(flipstate2, {
 			absolute: false,
 			absoluteOnLeave: false,
@@ -59,9 +58,9 @@ const Values = () => {
 			stagger: 0,
 		});
 
-		resultsDrivenElement.classList.add(styles.afterAnimation);
+		resultsDrivenElement.classList.add(valuesStyles.afterAnimation);
 		const flipstate3 = Flip.getState([resultsDrivenElement]);
-		resultsDrivenElement.classList.remove(styles.afterAnimation);
+		resultsDrivenElement.classList.remove(valuesStyles.afterAnimation);
 		Flip.to(flipstate3, {
 			absolute: false,
 			absoluteOnLeave: false,
@@ -79,24 +78,27 @@ const Values = () => {
 	}, []);
 	return (
 		<>
-			<div className={styles.height} id="introduction">
+			<HeightWrapper id="values">
 				<Container as="section">
-					<div className={styles.introduction}>
-						<div className={styles.committed} ref={committedTextRef}>
+					<div className={valuesStyles.introduction}>
+						<div className={valuesStyles.committed} ref={committedTextRef}>
 							<Text>Committed</Text>
 							<Text>Committed</Text>
 							<Text>Committed</Text>
 							<Text>Committed</Text>
 							<Text>Committed</Text>
 						</div>
-						<div className={styles.innovative} ref={innovativeTextRef}>
+						<div className={valuesStyles.innovative} ref={innovativeTextRef}>
 							<Text>Innovative</Text>
 							<Text>Innovative</Text>
 							<Text>Innovative</Text>
 							<Text>Innovative</Text>
 							<Text>Innovative</Text>
 						</div>
-						<div className={styles.resultsDriven} ref={resultsDrivenTextRef}>
+						<div
+							className={valuesStyles.resultsDriven}
+							ref={resultsDrivenTextRef}
+						>
 							<Text>Results-Driven</Text>
 							<Text>Results-Driven</Text>
 							<Text>Results-Driven</Text>
@@ -104,18 +106,20 @@ const Values = () => {
 							<Text>Results-Driven</Text>
 							<Text>Results-Driven</Text>
 						</div>
-						<div className={styles.backgroundText}>
-							<Text className={styles.bgTextCommitted}>Committed</Text>
+						<div className={valuesStyles.backgroundText}>
+							<Text className={valuesStyles.bgTextCommitted}>Committed</Text>
 						</div>
-						<div className={styles.backgroundText}>
-							<Text className={styles.bgTextInnovative}>Innovative</Text>
+						<div className={valuesStyles.backgroundText}>
+							<Text className={valuesStyles.bgTextInnovative}>Innovative</Text>
 						</div>
-						<div className={styles.backgroundText}>
-							<Text className={styles.bgTextResultsDrive}>Results-Drive</Text>
+						<div className={valuesStyles.backgroundText}>
+							<Text className={valuesStyles.bgTextResultsDrive}>
+								Results-Drive
+							</Text>
 						</div>
 					</div>
 				</Container>
-			</div>
+			</HeightWrapper>
 		</>
 	);
 };

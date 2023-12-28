@@ -6,15 +6,16 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Components
+import Button from '@/components/common/button';
 import Heading from '@/components/common/layout/heading';
+import HeightWrapper from '@/components/common/layout/height';
 import Text from '@/components/common/layout/text';
 import Container from '@/components/common/layout/container';
-
-// Styles
-import styles from './expertise.module.scss';
 import FrontendExpertise from './FrontendExpertise';
-import Button from '../common/button';
+import MacosActions from '@/components/common/macos-actions';
+
+import styles from './expertise.module.scss';
+
 import { UIColors } from 'utils/ui';
 
 const Expertise = () => {
@@ -79,7 +80,7 @@ app.get('/list-of-backend-expertise', (req, res) => {
 	const backendExpertise = {
 		title: 'Backend',
 		paragraph: \`Proficiency in backend development. \`,
-		list: ['Node.js', 'Java', 'Ruby', 'Express']
+		list: ['NodeJS', 'Ruby on Rails', 'Java', 'Express', 'SQL', 'MongoDB']
 	};
 	res.json(backendExpertise);
 });
@@ -95,8 +96,6 @@ In addition, I also have experience in the following:
 - Git
 - Docker
 - AWS
-- SQL
-- MongoDB
 - REST API
 - Unit Testing
 - Integration Testing
@@ -163,7 +162,7 @@ In addition, I also have experience in the following:
 	}, []);
 
 	return (
-		<div className={styles.height} ref={expertiseRef}>
+		<HeightWrapper ref={expertiseRef}>
 			<Container as="section">
 				<Heading as="h2" className={styles.sectionTitle} ref={titleRef}>
 					My Expertise
@@ -171,11 +170,7 @@ In addition, I also have experience in the following:
 				<div className={styles.cardContainers}>
 					<div className={styles.cardWrapper} ref={card1Ref}>
 						<div className={styles.card}>
-							<div className={styles.topBar}>
-								<div className={styles.macosClose} />
-								<div className={styles.macosMinimize} />
-								<div className={styles.macosMaximize} />
-							</div>
+							<MacosActions />
 							<div className={styles.content}>
 								{showFrontend ? (
 									<div className={styles.transpiledCode}>
@@ -199,12 +194,7 @@ In addition, I also have experience in the following:
 
 					<div className={styles.cardWrapper} ref={card2Ref}>
 						<div className={styles.card}>
-							<div className={styles.topBar}>
-								<div className={styles.macosClose} />
-								<div className={styles.macosMinimize} />
-								<div className={styles.macosMaximize} />
-							</div>
-
+							<MacosActions />
 							<div className={styles.content}>
 								{showBackend ? (
 									<div className={styles.transpiledCode}>
@@ -216,8 +206,9 @@ In addition, I also have experience in the following:
 											<li>NodeJS</li>
 											<li>Ruby on Rails</li>
 											<li>Java</li>
-											<li>SQL</li>
 											<li>Express</li>
+											<li>SQL</li>
+											<li>MongoDB</li>
 										</ul>
 									</div>
 								) : (
@@ -237,11 +228,7 @@ In addition, I also have experience in the following:
 					</div>
 					<div className={styles.cardWrapper} ref={card3Ref}>
 						<div className={styles.card}>
-							<div className={styles.topBar}>
-								<div className={styles.macosClose} />
-								<div className={styles.macosMinimize} />
-								<div className={styles.macosMaximize} />
-							</div>
+							<MacosActions />
 							<div className={styles.content}>
 								{showOthers ? (
 									<div className={styles.transpiledCode}>
@@ -255,8 +242,6 @@ In addition, I also have experience in the following:
 											<li>Git</li>
 											<li>Docker</li>
 											<li>AWS</li>
-											<li>SQL</li>
-											<li>MongoDB</li>
 											<li>REST API</li>
 											<li>Unit Testing</li>
 											<li>Integration Testing</li>
@@ -280,7 +265,7 @@ In addition, I also have experience in the following:
 					</div>
 				</div>
 			</Container>
-		</div>
+		</HeightWrapper>
 	);
 };
 
