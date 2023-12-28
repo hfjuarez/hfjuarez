@@ -49,7 +49,7 @@ export default function Layout({ children }: LayoutProps) {
 				<meta
 					name="description"
 					content="
-					Full Stack Developer
+					Full Stack Engineer
 				"
 				/>
 				<meta name="author" content="Hernán Fabrica / @hfjuarez" />
