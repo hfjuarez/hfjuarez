@@ -2,25 +2,26 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 	padding-block: 6rem;
-	@media (max-width: 45rem) {
+	@media (max-width: 55rem) {
 		padding-block: 0;
 		flex: none;
 	}
 	.title {
-		font-size: 8rem;
-		line-height: 8rem;
-		max-width: 60rem;
+		font-size: 7rem;
+		line-height: 7rem;
+		max-width: 55rem;
 		margin-bottom: 4rem;
 
 		@media (max-width: 75rem) {
-			font-size: 6.25cqw;
+			font-size: 10cqw;
 			line-height: normal;
+			max-width: 45rem;
 		}
 
-		@media (max-width: 45rem) {
+		@media (max-width: 55rem) {
 			font-size: 12cqw;
 			line-height: normal;
-			margin-bottom: 2rem;
+			margin-bottom: 3rem;
 		}
 
 		@media (max-width: 30rem) {
@@ -35,10 +36,10 @@
 		border: 0;
 		border-radius: 0.0625rem;
 		height: 0.125rem;
-		margin-block: 2.5rem;
+		margin-block: 2rem;
 		opacity: 0.5;
 		width: 100%;
-		@media (max-width: 45rem) {
+		@media (max-width: 55rem) {
 			margin-block: 2rem;
 		}
 	}
@@ -46,18 +47,18 @@
 	.contactInfoContainer {
 		width: 100%;
 		@include flex(row);
-		@media (max-width: 45rem) {
+		@media (max-width: 55rem) {
 			flex-direction: column;
 		}
 
 		.label,
 		.linksContainer > a {
-			@include font(3.25rem, normal, 600, $white, left, 90%, 0.125rem);
+			@include font(3rem, normal, 600, $white, left, 90%, 0.125rem);
 			@media (max-width: 75rem) {
-				font-size: 4cqw;
+				font-size: 3.75cqw;
 			}
 
-			@media (max-width: 45rem) {
+			@media (max-width: 55rem) {
 				font-size: 5cqw;
 			}
 

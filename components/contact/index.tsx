@@ -38,13 +38,13 @@ const Contact = () => {
 							className={headingStyle.h3}
 							href="https://www.linkedin.com/in/hfjuarez/"
 						>
-							Linkedin
+							LinkedIn
 						</Link>
 						<Link
 							className={headingStyle.h3}
 							href="https://github.com/hfjuarez"
 						>
-							Github
+							GitHub
 						</Link>
 					</div>
 				</div>
