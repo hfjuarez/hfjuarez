@@ -17,17 +17,17 @@
 	@include flex(column, center, center);
 
 	.centeredContainer {
-		max-height: 37.5rem;
-		max-width: 67.5rem;
+		max-height: 40rem;
+		max-width: 64rem;
 		height: 100%;
 		width: 100%;
 		z-index: 2;
 		flex: 1;
 		position: relative;
 		padding: 1.75rem 0rem 0rem;
+		background-color: rgba($black, 0.95);
 		border-radius: 0.75rem;
-		background-color: rgba($primary, 0.975);
-		border: 0.0625rem solid lighten($primary, 15%);
+		border: 0.125rem solid $secondary;
 		backdrop-filter: blur(0.5rem);
 		-webkit-backdrop-filter: blur(0.5rem);
 		@include flex(column, center, center);
@@ -51,16 +51,14 @@
 	h6 {
 		color: $white;
 		font-weight: 300;
-
-		&:first-of-type {
-			margin-left: 1.5rem;
-			margin-right: auto;
-		}
+		margin-top: 0.125rem;
+		margin-left: 1rem;
+		margin-right: auto;
 	}
 
 	.link {
-		margin-top: -0.75rem;
-		margin-right: 1.25rem;
+		margin-top: 0.125rem;
+		margin-right: 1rem;
 	}
 
 	@media only screen and (max-width: 40rem) {
@@ -89,18 +87,11 @@
 	@include flex(column, center, center);
 
 	.iam {
-		@include font(
-			7.5rem,
-			5.5rem,
-			light,
-			$white,
-			$stretch: 95%,
-			$spacing: -0.125rem
-		);
+		@include font(7.5rem, 5.5rem, regular, $white, $stretch: 95%, $spacing: 0);
 	}
 
 	h1 {
-		@include font(9rem, 8rem, extra, $white, center, 100%, 0);
+		@include font(9rem, 8rem, extra, $white, center, 95%, 0.2rem);
 	}
 
 	@media only screen and (max-width: 70rem) {
@@ -133,8 +124,7 @@
 
 	h2 {
 		margin-top: 1rem;
-		text-transform: uppercase;
-		@include font(1.5rem, normal, regular, $white, center, 95%, 0.125rem);
+		@include font(1.5rem, normal, medium, $white, center, 95%, 0.125rem);
 	}
 
 	.pills,
@@ -166,9 +156,9 @@
 	text-decoration: none;
 	margin-left: auto;
 	text-transform: uppercase;
-	border-color: rgba($white, 0.5);
-	@include font(0.9rem, normal, light, $white, left, 85%, 0.0625rem);
-	width: 7rem;
+	border-color: $white;
+	@include font(0.9rem, normal, regular, $white, left, 85%, 0.0625rem);
+	min-width: 7rem;
 	&:hover {
 		border-color: $white;
 		background-color: rgba($white, 0.1);
@@ -179,14 +169,7 @@
 	@include flex();
 	width: 100%;
 	p {
-		@include font(
-			22cqw,
-			18.5cqw,
-			650,
-			$tertiary,
-			$stretch: 100%,
-			$spacing: 0rem
-		);
+		@include font(22cqw, 18.5cqw, 600, $white, $stretch: 100%, $spacing: 0rem);
 	}
 	.left,
 	.right {

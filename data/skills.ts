@@ -1,5 +1,3 @@
-import { UIColors } from 'utils/ui';
-
 enum SkillType {
 	BACKEND = 'backend',
 	FRONTEND = 'frontend',
@@ -7,68 +5,68 @@ enum SkillType {
 }
 
 export type Skill = {
-	colorScheme: UIColors;
 	name: string;
+	primary: boolean;
 	type: SkillType;
 };
 
 const backendSkills: Skill[] = [
-	{ colorScheme: UIColors.PRIMARY, name: 'NodeJS', type: SkillType.BACKEND },
+	{ name: 'NodeJS', primary: false, type: SkillType.BACKEND },
 	{
-		colorScheme: UIColors.PRIMARY,
 		name: 'Ruby on Rails',
+		primary: false,
 		type: SkillType.BACKEND,
 	},
-	{ colorScheme: UIColors.PRIMARY, name: 'Java', type: SkillType.BACKEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'MySQL', type: SkillType.BACKEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'Mongo', type: SkillType.BACKEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'API', type: SkillType.BACKEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'Express', type: SkillType.BACKEND },
+	{ name: 'Java', primary: false, type: SkillType.BACKEND },
+	{ name: 'MySQL', primary: false, type: SkillType.BACKEND },
+	{ name: 'Mongo', primary: false, type: SkillType.BACKEND },
+	{ name: 'API', primary: false, type: SkillType.BACKEND },
+	{ name: 'Express', primary: false, type: SkillType.BACKEND },
 	{
-		colorScheme: UIColors.PRIMARY,
 		name: 'Typescript',
+		primary: false,
 		type: SkillType.BACKEND,
 	},
-	{ colorScheme: UIColors.PRIMARY, name: 'Mongoose', type: SkillType.BACKEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'REST', type: SkillType.BACKEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'Sequelize', type: SkillType.BACKEND },
+	{ name: 'Mongoose', primary: false, type: SkillType.BACKEND },
+	{ name: 'REST', primary: false, type: SkillType.BACKEND },
+	{ name: 'Sequelize', primary: false, type: SkillType.BACKEND },
 ];
 const frontendSkills: Skill[] = [
-	{ colorScheme: UIColors.PRIMARY, name: 'VueJS', type: SkillType.FRONTEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'React', type: SkillType.FRONTEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'Next', type: SkillType.FRONTEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'Nuxt', type: SkillType.FRONTEND },
+	{ name: 'VueJS', primary: false, type: SkillType.FRONTEND },
+	{ name: 'React', primary: false, type: SkillType.FRONTEND },
+	{ name: 'Next', primary: false, type: SkillType.FRONTEND },
+	{ name: 'Nuxt', primary: false, type: SkillType.FRONTEND },
 	{
-		colorScheme: UIColors.PRIMARY,
 		name: 'React Native',
+		primary: false,
 		type: SkillType.FRONTEND,
 	},
 	{
-		colorScheme: UIColors.PRIMARY,
 		name: 'Javascript',
+		primary: false,
 		type: SkillType.FRONTEND,
 	},
-	{ colorScheme: UIColors.PRIMARY, name: 'Web App', type: SkillType.FRONTEND },
+	{ name: 'Web App', primary: false, type: SkillType.FRONTEND },
 ];
 const othersSkills: Skill[] = [
-	{ colorScheme: UIColors.PRIMARY, name: 'Docker', type: SkillType.BACKEND },
-	{ colorScheme: UIColors.PRIMARY, name: 'Tests', type: SkillType.BACKEND },
+	{ name: 'Docker', primary: false, type: SkillType.BACKEND },
+	{ name: 'Tests', primary: false, type: SkillType.BACKEND },
 
-	{ colorScheme: UIColors.PRIMARY, name: 'Git', type: SkillType.OTHER },
-	{ colorScheme: UIColors.PRIMARY, name: 'E2E Tests', type: SkillType.BACKEND },
+	{ name: 'Git', primary: false, type: SkillType.OTHER },
+	{ name: 'E2E Tests', primary: false, type: SkillType.BACKEND },
 	{
-		colorScheme: UIColors.PRIMARY,
 		name: 'Integration Tests',
+		primary: false,
 		type: SkillType.BACKEND,
 	},
 	{
-		colorScheme: UIColors.PRIMARY,
 		name: 'Unit Tests',
+		primary: false,
 		type: SkillType.BACKEND,
 	},
 	{
-		colorScheme: UIColors.PRIMARY,
 		name: 'Adaptability',
+		primary: false,
 		type: SkillType.OTHER,
 	},
 ];

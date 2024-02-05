@@ -12,7 +12,7 @@ import HeightWrapper from '@/components/common/layout/height';
 import Text from '@/components/common/layout/text';
 import Container from '@/components/common/layout/container';
 import FrontendExpertise from './FrontendExpertise';
-import MacosActions from '@/components/common/macos-actions';
+import MacosActions from '@/components/common/macosActions';
 
 import styles from './expertise.module.scss';
 
@@ -119,8 +119,10 @@ In addition, I also have experience in the following:
 			delay: 0,
 			duration: 0.75,
 			ease: 'none',
-			fontStretch: '90%',
-			scale: 1.05,
+			fontSize: '7.5rem',
+			fontStretch: '95%',
+			fontWeight: 700,
+			lineHeight: '7.5rem',
 			scrollTrigger: {
 				start: 'top 60%',
 				trigger: expertise,
@@ -130,7 +132,7 @@ In addition, I also have experience in the following:
 			delay: 0,
 			duration: 0.5,
 			ease: 'power1.inOut',
-			marginTop: '-2rem',
+			marginTop: '2rem',
 			opacity: 1,
 			scrollTrigger: {
 				start: 'top 60%',
@@ -141,7 +143,7 @@ In addition, I also have experience in the following:
 			delay: 0,
 			duration: 0.75,
 			ease: 'power1.inOut',
-			marginTop: '-2rem',
+			marginTop: '2rem',
 			opacity: 1,
 			scrollTrigger: {
 				start: 'top 60%',
@@ -152,7 +154,7 @@ In addition, I also have experience in the following:
 			delay: 0,
 			duration: 1.25,
 			ease: 'power1.inOut',
-			marginTop: '-2rem',
+			marginTop: '2rem',
 			opacity: 1,
 			scrollTrigger: {
 				start: 'top 60%',
@@ -162,9 +164,13 @@ In addition, I also have experience in the following:
 	}, []);
 
 	return (
-		<HeightWrapper ref={expertiseRef}>
+		<HeightWrapper
+			ref={expertiseRef}
+			id="expertise"
+			style={{ backgroundColor: '#000', paddingTop: '6rem' }}
+		>
 			<Container as="section">
-				<Heading as="h2" className={styles.sectionTitle} ref={titleRef}>
+				<Heading as="h2" className={styles.title} ref={titleRef}>
 					My Expertise
 				</Heading>
 				<div className={styles.cardContainers}>

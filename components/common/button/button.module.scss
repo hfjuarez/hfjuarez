@@ -1,16 +1,16 @@
 .button-basic {
 	border-radius: 2.5rem;
-	border: 0.0625rem solid rgba(white, 0.5);
+	border: 0.125rem solid $secondary;
 	cursor: pointer;
 	overflow: hidden;
-	padding: 0.8rem 1.6rem;
+	padding: 0.7rem 1.4rem;
 	position: relative;
 	transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
 		color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 	white-space: nowrap;
 	width: fit-content;
 	background-color: transparent;
-	@include font(1rem, normal, regular, $white, left, 85%, 0.0625rem);
+	@include font(1rem, normal, regular, $white, left, 90%, 0.0625rem);
 	@include flex(row, center, center);
 	&.btn-marquee {
 		max-width: 10rem;

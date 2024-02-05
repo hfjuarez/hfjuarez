@@ -7,9 +7,9 @@
 	margin: 0;
 	width: 100%;
 	position: relative;
-	border-radius: 0.5rem;
+	border-radius: 0.75rem;
 	p {
-		@include font(10rem, 12rem, semi, $tertiary, left, 85%, -0.0625rem);
+		@include font(10rem, 12rem, semi, $white, left, 87.5%, 0);
 	}
 	.backgroundText {
 		position: absolute;
@@ -24,7 +24,7 @@
 			transition: opacity 0.35s ease-in-out;
 			word-break: keep-all;
 			max-width: 100%;
-			@include font(15cqw, normal, extra, transparent, center, 85%, -0.0625rem);
+			@include font(15cqw, normal, extra, transparent, center, 85%, 0);
 			@supports (-webkit-text-stroke: 0.1875rem $secondary) {
 				-webkit-text-stroke: 0.1875rem $secondary;
 				-webkit-text-fill-color: transparent;

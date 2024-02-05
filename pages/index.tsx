@@ -1,13 +1,13 @@
 import React from 'react';
 
-import About from '@/components/about';
-import Contact from '@/components/contact';
 import Container from '@/components/common/layout/container';
-import Expertise from '@/components/expertise';
-import Footer from '@/components/common/layout/footer';
 import Hero from '@/components/hero';
 import Values from '@/components/values';
-// import Work from '@/components/work';
+import Expertise from '@/components/expertise';
+import Summary from '@/components/summary';
+import Work from '@/components/work';
+import Contact from '@/components/contact';
+import Footer from '@/components/common/layout/footer';
 
 export default function Home() {
 	return (
@@ -16,8 +16,10 @@ export default function Home() {
 			<Container as="main">
 				<Values />
 				<Expertise />
-				<About />
-				{/* <Work /> */}
+				<Work />
+				<Summary />
+				{/* <Portfolio/> */}
+				{/* <Education/> */}
 				<Contact />
 				<Footer />
 			</Container>

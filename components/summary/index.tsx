@@ -4,20 +4,20 @@ import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
 import HeightWrapper from '@/components/common/layout/height';
 
-import styles from './about.module.scss';
+import summaryStyles from './summary.module.scss';
 
-const About = () => {
+const Summary = () => {
 	return (
-		<HeightWrapper>
-			<Container as="section" className={styles.centeredWrapper}>
-				<Heading as="h2" className={styles.title}>
+		<HeightWrapper id="summary">
+			<Container as="section" className={summaryStyles.centeredWrapper}>
+				<Heading as="h2" className={summaryStyles.title}>
 					Passionate Full Stack Engineer focused on delivering
 					<span> innovative</span> solutions that <span>drive success</span> and
-					have a <span>significant impact</span> on projects.
+					create <span>real significant impact.</span>
 				</Heading>
 			</Container>
 		</HeightWrapper>
 	);
 };
 
-export default About;
+export default Summary;

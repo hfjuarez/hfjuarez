@@ -1,6 +1,6 @@
 import React from 'react';
 
-import macosActionsStyles from './macos-actions.module.scss';
+import macosActionsStyles from './macosActions.module.scss';
 
 const MacosActions = () => {
 	return (

@@ -53,7 +53,7 @@
 
 		.label,
 		.linksContainer > a {
-			@include font(3rem, normal, 600, $white, left, 90%, 0.125rem);
+			@include font(3rem, normal, regular, $white, left, 90%, 0.125rem);
 			@media (max-width: 75rem) {
 				font-size: 3.75cqw;
 			}
@@ -68,7 +68,7 @@
 			}
 		}
 		.label {
-			font-weight: 600;
+			// font-weight: regular;
 			width: 30%;
 			@media (max-width: 45rem) {
 				margin-bottom: 0.5rem;
@@ -79,7 +79,6 @@
 			width: 70%;
 			@include flex(column);
 			a {
-				font-weight: 400;
 				border-bottom: 0.125rem solid $white;
 				text-decoration: none;
 				width: fit-content;

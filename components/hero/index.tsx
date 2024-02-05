@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 import Heading from '@/components/common/layout/heading';
-import MacosActions from '@/components/common/macos-actions';
+import MacosActions from '@/components/common/macosActions';
 import Link from '@/components/common/layout/link';
 import Pill from '@/components/common/pill';
 import Text from '@/components/common/layout/text';
@@ -17,7 +17,7 @@ import heroStyles from './hero.module.scss';
 
 const Hero = () => {
 	return (
-		<div className={heroStyles.background}>
+		<div className={heroStyles.background} id="hero">
 			<div className={heroStyles.wrapper}>
 				<header className={heroStyles.centeredContainer}>
 					<MacosActions />
@@ -39,9 +39,7 @@ const Hero = () => {
 						<Heading as="h1">Hernán</Heading>
 					</div>
 					<div className={heroStyles.bottom}>
-						<Heading as="h2" className={heroStyles.centered}>
-							Full Stack Engineer
-						</Heading>
+						<Heading as="h2">Full Stack Engineer</Heading>
 						<div className={heroStyles.pills}>
 							<Pill colorScheme={UIColors.WHITE}>NodeJS</Pill>
 							<Pill colorScheme={UIColors.WHITE}>VueJS</Pill>
