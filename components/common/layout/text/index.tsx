@@ -14,7 +14,7 @@ type TextProps = HTMLAttributes<HTMLElement> & {
 
 const Text = ({
 	as: Component = 'p',
-	colorScheme = UIColors.PRIMARY,
+	colorScheme = UIColors.WHITE,
 	className,
 	children,
 	...props

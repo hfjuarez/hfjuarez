@@ -8,10 +8,10 @@ import styles from './footer.module.scss';
 
 const Footer = () => {
 	return (
-		<footer className={styles.footer}>
+		<footer className={styles.footer} id="contact">
 			<Container as="div">
 				<div className={styles.content}>
-					<Text>Copyright © 2023 Hernan Fabrica. All rights reserved.</Text>
+					<Text>Copyright © 2024 Hernan Fabrica. All rights reserved.</Text>
 				</div>
 				<Legal />
 			</Container>

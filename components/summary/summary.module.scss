@@ -1,0 +1,12 @@
+.centeredWrapper {
+	flex: none;
+	height: fit-content;
+	justify-content: flex-start;
+	z-index: 1;
+	.title {
+		text-align: center;
+		font-weight: 400;
+		letter-spacing: 0.0625rem;
+		font-stretch: 100%;
+	}
+}

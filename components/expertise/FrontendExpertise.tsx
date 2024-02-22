@@ -12,27 +12,27 @@ const FrontendExpertise = () => {
 	const years = Math.round(diffInMonths / 12);
 
 	return (
-		<div>
+		<>
 			<Heading as="h3" colorScheme={UIColors.RED}>
 				Frontend
 			</Heading>
 			<Text>
-				Over {years} years of development experience in Vue.js, React, NextJS
-				and Nuxt frameworks.
+				With {years}+ years of frontend development experience, I specialize in
+				creating dynamic, user-centric interfaces.
 			</Text>
 			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JS</li>
 				<li>React</li>
 				<li>Next.js</li>
-				<li>Redux</li>
-				<li>React Native</li>
 				<li>Vue.js</li>
 				<li>Nuxt.js</li>
+				<li>JS</li>
+				<li>CSS</li>
+				<li>HTML - Semantic and Accessibility</li>
+				<li>Redux</li>
+				<li>React Native</li>
 				<li>Webpack</li>
 			</ul>
-		</div>
+		</>
 	);
 };
 

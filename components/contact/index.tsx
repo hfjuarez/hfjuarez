@@ -10,8 +10,8 @@ import headingStyle from '@/components/common/layout/heading/heading.module.scss
 
 const Contact = () => {
 	return (
-		<HeightWrapper id="contact">
-			<Container as="section" className={contactStyles.container}>
+		<HeightWrapper as="section" id="contact">
+			<Container as="div" className={contactStyles.container}>
 				<Heading as="h2" className={contactStyles.title}>
 					Let’s get to know each other.
 				</Heading>

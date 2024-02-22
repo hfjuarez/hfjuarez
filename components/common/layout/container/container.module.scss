@@ -1,6 +1,6 @@
 .basic-container {
 	flex: 1;
-	max-width: 75em;
+	max-width: 64rem;
 	position: relative;
 	width: 100%;
 	@include flex(column, center, center);

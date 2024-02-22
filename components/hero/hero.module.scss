@@ -1,192 +1,122 @@
 @import '@/components/common/button/button.module.scss';
 
-.background {
-	background-color: darken($primary, 1%);
-	height: 100vh;
+.container {
+	backdrop-filter: blur(0.5rem);
+	background-color: rgba($black, 0.95);
+	flex: 1;
+	height: 100%;
+	position: relative;
 	width: 100%;
-	@include flex(column, flex-start, flex-start);
-	border-bottom: 0.0625rem solid lighten($primary, 7.5%);
-}
-
-.wrapper {
-	position: absolute;
-	height: 100vh;
-	width: 100%;
-	z-index: 1;
-	user-select: none;
+	-webkit-backdrop-filter: blur(0.5rem);
+	z-index: 2;
 	@include flex(column, center, center);
-
-	.centeredContainer {
-		max-height: 37.5rem;
-		max-width: 67.5rem;
-		height: 100%;
-		width: 100%;
-		z-index: 2;
-		flex: 1;
-		position: relative;
-		padding: 1.75rem 0rem 0rem;
-		border-radius: 0.75rem;
-		background-color: rgba($primary, 0.975);
-		border: 0.0625rem solid lighten($primary, 15%);
-		backdrop-filter: blur(0.5rem);
-		-webkit-backdrop-filter: blur(0.5rem);
-		@include flex(column, center, center);
-		@media only screen and (max-width: 80rem) {
-			max-width: 90vw;
-		}
-		@media only screen and (max-width: 40rem) {
-			max-height: 90vh;
-		}
-	}
 }
 
 .top {
 	position: absolute;
 	top: 0;
 	text-transform: uppercase;
-	width: 100%;
+	width: calc(100% - 4rem);
 	margin-top: 2rem;
+	margin-inline: 2rem;
 	@include flex(row, center, flex-start);
 
 	h6 {
-		color: $white;
-		font-weight: 300;
-
-		&:first-of-type {
-			margin-left: 1.5rem;
-			margin-right: auto;
-		}
-	}
-
-	.link {
-		margin-top: -0.75rem;
-		margin-right: 1.25rem;
-	}
-
-	@media only screen and (max-width: 40rem) {
-		flex-direction: column;
-
-		h6 {
-			&:first-of-type {
-				margin-left: 1.5rem;
-				margin-right: 0;
-				margin-bottom: 0.5rem;
-			}
-		}
-
-		.link {
-			position: absolute;
-			top: 0;
-			right: 0;
-		}
+		@include font(1rem, normal, light, $white, left, 85%, 0.09375rem);
 	}
 }
 
-.titleWrapper {
+.centered {
 	margin-top: -1rem;
-	padding-inline: 0.5rem;
 	overflow-y: hidden;
 	@include flex(column, center, center);
 
 	.iam {
-		@include font(
-			7.5rem,
-			5.5rem,
-			light,
-			$white,
-			$stretch: 95%,
-			$spacing: -0.125rem
-		);
+		@include font(7.5rem, normal, regular, $white, $stretch: 100%, $spacing: 0);
 	}
 
 	h1 {
-		@include font(9rem, 8rem, extra, $white, center, 100%, 0);
+		margin-top: -2rem;
+	}
+
+	h2 {
+		@include font(1.5rem, normal, medium, $white, center, 100%, 0.125rem);
+		margin-bottom: 0;
 	}
 
 	@media only screen and (max-width: 70rem) {
 		h1 {
-			font-size: 15vw;
-			line-height: 13vw;
+			margin-top: -1rem;
+
+			font-size: 14vw;
+			line-height: 15vw;
 		}
 		.iam {
 			font-size: 10vw;
-			line-height: 8vw;
+			line-height: 10vw;
 		}
 	}
 
 	@media only screen and (max-width: 40rem) {
-		padding-inline: 0.5rem;
-
 		h1 {
+			margin-top: -1rem;
 			font-size: 20vw;
-			line-height: 18vw;
+			line-height: 20vw;
 		}
 		.iam {
 			font-size: 16vw;
-			line-height: 13vw;
+			line-height: 18vw;
 		}
 	}
 }
 
-.bottom {
-	@include flex(column, flex-start, center);
+.pills {
+	@include flex(row, center, center);
+	height: fit-content;
+	flex-wrap: wrap;
+	gap: 0;
+	margin-top: 0.5rem;
 
-	h2 {
-		margin-top: 1rem;
-		text-transform: uppercase;
-		@include font(1.5rem, normal, regular, $white, center, 95%, 0.125rem);
+	@media only screen and (max-width: 40rem) {
+		padding-inline: 2rem;
 	}
+}
 
-	.pills,
-	.links {
-		@include flex(row, center, center);
-		height: fit-content;
-		flex-wrap: wrap;
-		gap: 0.75rem;
+.links {
+	bottom: 2rem;
+	flex-wrap: wrap;
+	gap: 1rem;
+	height: fit-content;
+	position: absolute;
+	@include flex(row, center, center);
 
-		@media only screen and (max-width: 40rem) {
-			padding-inline: 2rem;
-		}
-	}
-
-	.pills {
-		margin-top: 0.5rem;
-	}
-
-	.links {
-		margin-top: 0.5rem;
-		position: absolute;
-		bottom: 1.5rem;
+	@media only screen and (max-width: 40rem) {
+		padding-inline: 2rem;
 	}
 }
 
 .link {
-	@extend .button-basic;
+	border: 0.09375rem solid $secondary;
+	border-color: $white;
+	gap: 0.25rem;
+	margin-left: auto;
+	min-width: 7rem;
 	padding: 0.4rem 0.8rem;
 	text-decoration: none;
-	margin-left: auto;
 	text-transform: uppercase;
-	border-color: rgba($white, 0.5);
-	@include font(0.9rem, normal, light, $white, left, 85%, 0.0625rem);
-	width: 7rem;
+	@extend .button-basic;
+	@include font(0.9rem, normal, regular, $white, left, 85%, 0.125rem);
 	&:hover {
 		border-color: $white;
 		background-color: rgba($white, 0.1);
 	}
 }
 
-.bgTextContainer {
+.animation {
 	@include flex();
 	width: 100%;
 	p {
-		@include font(
-			22cqw,
-			18.5cqw,
-			650,
-			$tertiary,
-			$stretch: 100%,
-			$spacing: 0rem
-		);
+		@include font(22cqw, 18.5cqw, 600, $white, $stretch: 100%, $spacing: 0rem);
 	}
 	.left,
 	.right {

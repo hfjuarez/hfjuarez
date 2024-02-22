@@ -1,0 +1,18 @@
+body {
+	margin: 0;
+	background-color: #101010;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+* {
+	box-sizing: border-box;
+	/*  &::-webkit-scrollbar {
+		 	display: none;
+		 }
+	-ms-overflow-style: none;
+		 scrollbar-width: none; 
+		 */
+}

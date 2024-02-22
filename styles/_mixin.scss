@@ -5,9 +5,14 @@
 	$color: $white,
 	$align: left,
 	$stretch: 100%,
-	$spacing: 0.0625rem
+	$spacing: 0.0625rem,
+	$font: '_'
 ) {
-	font-family: 'Mona Sans', sans-serif;
+	@if ($font == 'Playfair') {
+		font-family: 'Playfair Display', serif;
+	} @else {
+		font-family: 'Mona Sans', sans-serif;
+	}
 
 	@if ($size == '_') {
 		font-size: 1rem;

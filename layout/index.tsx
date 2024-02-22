@@ -5,7 +5,6 @@ import Head from 'next/head';
 // import Navbar from '@/components/common/navbar';
 
 // Styles
-import documentStyle from '@/styles/document.module.scss';
 import styles from './layout.module.scss';
 // Data
 import skills from 'data/skills';
@@ -38,7 +37,6 @@ const initSmoothScrolling = () => {
 export default function Layout({ children }: LayoutProps) {
 	useEffect(() => {
 		initSmoothScrolling();
-		document.body.className = documentStyle.body;
 	});
 	return (
 		<>
