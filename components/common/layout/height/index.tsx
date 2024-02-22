@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import heightStyle from './height.module.scss';
 
 type HeightProps = HTMLAttributes<HTMLElement> & {
+	as: 'article' | 'div' | 'main' | 'section';
 	children: ReactNode;
 	className?: string;
 	id?: string;
@@ -11,12 +12,12 @@ type HeightProps = HTMLAttributes<HTMLElement> & {
 };
 
 const HeightWrapper = forwardRef<HTMLDivElement, HeightProps>(
-	({ children, className, ...props }, ref) => {
+	({ as: Component, children, className, ...props }, ref) => {
 		const combinedClassNames = classNames(heightStyle.wrapper, className);
 		return (
-			<div className={combinedClassNames} {...props} ref={ref}>
+			<Component className={combinedClassNames} {...props} ref={ref}>
 				{children}
-			</div>
+			</Component>
 		);
 	},
 );

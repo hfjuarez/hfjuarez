@@ -2,13 +2,9 @@
 	padding: 0.15rem 0rem;
 	margin: 0;
 	width: fit-content;
-	@include font(0.9rem, normal);
+	@include font(1rem, normal, medium);
 	&::before {
-		content: '-  ';
-		@include font(1rem, normal, $color: $white);
-	}
-	&::after {
-		content: '  -';
+		content: '- ';
 		@include font(1rem, normal, $color: $white);
 	}
 }

@@ -1,26 +1,30 @@
 .title {
 	position: relative;
-	margin: 0;
 	width: 100%;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 	@include font(
-		6.5rem,
-		6.5rem,
+		7rem,
+		normal,
 		semi,
 		$white,
 		center,
 		$stretch: 90%,
-		$spacing: 0.2rem
+		$spacing: 0.125rem
 	);
-	@media only screen and (max-width: 50rem) {
-		font-size: 20cqw;
-		line-height: normal;
+	margin-top: -3rem;
+	@media (max-width: 75rem) {
+		font-size: 10cqw !important;
 	}
-	@media only screen and (max-width: 30rem) {
-		margin-bottom: 4rem;
+	@media (max-width: 55rem) {
+		margin-bottom: 3rem;
+		font-size: 12cqw !important;
+	}
+	@media (max-width: 35rem) {
+		padding-block: 0;
+		font-size: 16cqw !important;
 	}
 }
 
@@ -29,20 +33,21 @@
 	width: 100%;
 	@include flex(row, center, center);
 	flex-wrap: wrap;
+	margin-bottom: 10rem;
 	.cardWrapper {
 		backdrop-filter: blur(0.125rem);
 		-webkit-backdrop-filter: blur(0.125rem);
 		@include flex(column, center, center);
 		gap: 1.25rem;
 		width: 20.5rem;
-		margin-block: 10rem;
+		margin-bottom: 2rem;
 	}
 	.card {
 		position: relative;
 		padding: 1.75rem 0rem 0rem;
 		width: 100%;
-		max-width: 20.5rem;
-		height: 27.5rem;
+		max-width: 22rem;
+		height: 29rem;
 		background-color: rgba($black, 0.75);
 		border-radius: 0.75rem;
 		border: 0.125rem solid $secondary;
@@ -100,17 +105,36 @@
 			}
 			h3 {
 				text-align: center;
-				letter-spacing: 0.1875rem;
 			}
 		}
 	}
-	@media only screen and (max-width: 30rem) {
+	@media only screen and (max-width: 55rem) {
+		.cardWrapper {
+			max-width: 100%;
+			min-width: 100%;
+			width: 100%;
+		}
+		.card {
+			.transpiledCode {
+				h3 {
+					font-size: 7cqw;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 35rem) {
 		@include flex(column, center, center);
 		.cardWrapper {
 			max-width: 100%;
 			min-width: 100%;
 			width: 100%;
-			margin-bottom: 3.5rem;
+		}
+		.card {
+			.transpiledCode {
+				h3 {
+					font-size: 9cqw;
+				}
+			}
 		}
 	}
 }

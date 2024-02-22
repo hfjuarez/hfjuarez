@@ -1,53 +1,68 @@
 .container {
 	align-items: flex-start;
+	h2 {
+		text-align: left;
+	}
 }
 
-.columns {
-	gap: 1rem;
-	width: 100%;
+.grid {
+	display: grid;
+	gap: 1.5rem;
+	grid-template-rows: repeat(3, auto);
 	position: relative;
-	@include flex(row, space-between, flex-start);
+	width: 100%;
 }
 
 .card {
-	position: sticky;
-	top: 10vh;
-	padding: 1.75rem 0rem 0rem;
+	position: relative;
+	background-color: $black;
+	padding: 2rem 3rem 2.5rem;
 	width: 100%;
-	height: 100%;
-	background-color: #06aeef;
-	padding: 3rem;
-	border: 0.0625rem solid lighten($primary, 1%);
-	border-radius: 0.75rem;
-	max-height: 90vh;
-	height: 90vh;
-	&:last-child {
-		background-color: #e6841f;
+	h4 {
+		margin-top: 0.25rem;
 	}
-}
-
-.title {
-	width: auto;
-	max-width: 55rem;
-	margin-bottom: 2rem;
-	padding-right: 4rem;
-	@include font(9rem, normal, extra, left);
-
-	@media (max-width: 75rem) {
-		font-size: 10cqw;
-		line-height: normal;
-		max-width: 45rem;
+	p:first-of-type {
+		margin-top: 1.125rem;
 	}
-
-	@media (max-width: 55rem) {
-		font-size: 12cqw;
-		line-height: normal;
-		margin-bottom: 3rem;
+	p {
+		opacity: 0.8;
+		margin-bottom: 0.75rem;
 	}
+	.pills {
+		height: fit-content;
+		flex-wrap: wrap;
+		gap: 0.75rem 0.5rem;
+		padding: 0;
+		margin: 2rem 0 0 0;
+		position: relative;
 
-	@media (max-width: 30rem) {
-		font-size: 14cqw;
-		line-height: normal;
-		padding-block: 0;
+		max-width: 100%;
+		@include flex(row, flex-start, flex-start);
+		li,
+		button {
+			background-color: rgba($secondary, 0.2);
+			backdrop-filter: blur(0.5rem);
+			border: none;
+			border-radius: 1rem;
+			max-height: 2rem;
+			padding: 0.25rem 0.875rem;
+			@include font(0.875rem, normal, regular);
+			@include flex(row, center, center);
+		}
+		.red {
+			border: 2px solid;
+			border-color: $base-red;
+			background-color: rgba(mix($secondary, $base-red, 0.5), 0.2);
+		}
+		.yellow {
+			border: 2px solid;
+			border-color: $base-yellow;
+			background-color: rgba(mix($secondary, $base-yellow, 0.5), 0.2);
+		}
+		.green {
+			border: 2px solid;
+			border-color: $base-green;
+			background-color: rgba(mix($secondary, $base-green, 0.5), 0.2);
+		}
 	}
 }

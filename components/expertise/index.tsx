@@ -51,19 +51,19 @@ const FrontendExpertise = () => {
 				Frontend
 			</Heading>
 			<Text>
-				Over {years} years of development experience in HTML,
-				CSS, JS, Vue.js, React, NextJS and Nuxt frameworks.
+				With {years}+ years of frontend development experience, I specialize in
+				creating dynamic, user-centric interfaces.
 			</Text>
 			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JS</li>
 				<li>React</li>
 				<li>Next.js</li>
-				<li>Redux</li>
-				<li>React Native</li>
 				<li>Vue.js</li>
 				<li>Nuxt.js</li>
+				<li>JS</li>
+				<li>CSS</li>
+				<li>HTML - Semantic and Accessibility</li>
+				<li>Redux</li>
+				<li>React Native</li>
 				<li>Webpack</li>
 			</ul>
 		</div>
@@ -79,8 +79,8 @@ const port = 3000;
 app.get('/list-of-backend-expertise', (req, res) => {
 	const backendExpertise = {
 		title: 'Backend',
-		paragraph: \`Proficiency in backend development. \`,
-		list: ['NodeJS', 'Ruby on Rails', 'Java', 'Express', 'SQL', 'MongoDB']
+		paragraph: \`Proficient in backend development, I specialize in building robust, scalable server-side solutions.\`,
+		list: ['NodeJS', 'Ruby on Rails', 'Java', 'Express', 'SQL', 'Sequelize', 'MongoDB', 'Mongoose', 'AWS - EC2 - RDS' ]
 	};
 	res.json(backendExpertise);
 });
@@ -91,7 +91,7 @@ app.listen(port, () => {
 `;
 	const otherExpertiseCode = `### Others
 
-In addition, I also have experience in the following:
+I offer a diverse skill set that enriches my capacity to provide holistic solutions.
 
 - Git
 - Docker
@@ -100,6 +100,10 @@ In addition, I also have experience in the following:
 - Unit Testing
 - Integration Testing
 - End-to-End Testing
+- Fast Learning
+- Detail-Oriented
+- Proactive
+- Problem-Solving
 `;
 
 	const titleRef = useRef<HTMLHeadingElement>(null);
@@ -121,10 +125,10 @@ In addition, I also have experience in the following:
 			ease: 'none',
 			fontSize: '7.5rem',
 			fontStretch: '95%',
-			fontWeight: 700,
-			lineHeight: '7.5rem',
+			fontWeight: 600,
+			marginTop: 0,
 			scrollTrigger: {
-				start: 'top 60%',
+				start: 'top 70%',
 				trigger: expertise,
 			},
 		});
@@ -132,10 +136,10 @@ In addition, I also have experience in the following:
 			delay: 0,
 			duration: 0.5,
 			ease: 'power1.inOut',
-			marginTop: '2rem',
+			marginTop: 0,
 			opacity: 1,
 			scrollTrigger: {
-				start: 'top 60%',
+				start: 'top 70%',
 				trigger: expertise,
 			},
 		});
@@ -143,10 +147,10 @@ In addition, I also have experience in the following:
 			delay: 0,
 			duration: 0.75,
 			ease: 'power1.inOut',
-			marginTop: '2rem',
+			marginTop: 0,
 			opacity: 1,
 			scrollTrigger: {
-				start: 'top 60%',
+				start: 'top 70%',
 				trigger: expertise,
 			},
 		});
@@ -154,10 +158,10 @@ In addition, I also have experience in the following:
 			delay: 0,
 			duration: 1.25,
 			ease: 'power1.inOut',
-			marginTop: '2rem',
+			marginTop: 0,
 			opacity: 1,
 			scrollTrigger: {
-				start: 'top 60%',
+				start: 'top 70%',
 				trigger: expertise,
 			},
 		});
@@ -165,11 +169,12 @@ In addition, I also have experience in the following:
 
 	return (
 		<HeightWrapper
+			as="section"
 			ref={expertiseRef}
 			id="expertise"
 			style={{ backgroundColor: '#000', paddingTop: '6rem' }}
 		>
-			<Container as="section">
+			<Container as="div">
 				<Heading as="h2" className={styles.title} ref={titleRef}>
 					My Expertise
 				</Heading>
@@ -207,14 +212,20 @@ In addition, I also have experience in the following:
 										<Heading as="h3" colorScheme={UIColors.YELLOW}>
 											Backend
 										</Heading>
-										<Text>Proficiency in backend development.</Text>
+										<Text>
+											Proficient in backend development, I specialize in
+											building robust, scalable server-side solutions.
+										</Text>
 										<ul>
 											<li>NodeJS</li>
 											<li>Ruby on Rails</li>
 											<li>Java</li>
 											<li>Express</li>
 											<li>SQL</li>
+											<li>Sequelize</li>
 											<li>MongoDB</li>
+											<li>Mongoose</li>
+											<li>AWS - EC2 - RDS</li>
 										</ul>
 									</div>
 								) : (
@@ -242,7 +253,8 @@ In addition, I also have experience in the following:
 											Others
 										</Heading>
 										<Text>
-											In addition, I also have experience in the following:
+											I offer a diverse skill set that enriches my capacity to
+											provide holistic solutions.
 										</Text>
 										<ul>
 											<li>Git</li>
@@ -252,6 +264,10 @@ In addition, I also have experience in the following:
 											<li>Unit Testing</li>
 											<li>Integration Testing</li>
 											<li>End-to-End Testing</li>
+											<li> Fast Learning</li>
+											<li>Detail-Oriented</li>
+											<li>Proactive</li>
+											<li>Problem-Solving</li>
 										</ul>
 									</div>
 								) : (

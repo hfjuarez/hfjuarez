@@ -24,7 +24,7 @@
 			transition: opacity 0.35s ease-in-out;
 			word-break: keep-all;
 			max-width: 100%;
-			@include font(15cqw, normal, extra, transparent, center, 85%, 0);
+			@include font(11cqw, normal, extra, transparent, center, 85%, 0);
 			@supports (-webkit-text-stroke: 0.1875rem $secondary) {
 				-webkit-text-stroke: 0.1875rem $secondary;
 				-webkit-text-fill-color: transparent;
@@ -44,7 +44,6 @@
 			@supports (-webkit-text-stroke: 0.1875rem rgba($base-green, 0.5)) {
 				-webkit-text-stroke: 0.1875rem rgba($base-green, 0.5);
 			}
-			font-size: 13.5cqw;
 		}
 	}
 	.committed {

@@ -16,9 +16,9 @@ const MacosActions = () => {
 					<path
 						d="M3.75 3.75L8.25 8.25M8.25 3.75L3.75 8.25"
 						stroke="#921D16"
-						stroke-width="1.5"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="1.5"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					/>
 				</svg>
 			</div>
@@ -33,9 +33,9 @@ const MacosActions = () => {
 					<path
 						d="M2.75 6H9.25"
 						stroke="#8F591D"
-						stroke-width="1.5"
-						stroke-linecap="round"
-						stroke-linejoin="round"
+						strokeWidth="1.5"
+						strokeLinecap="round"
+						strokeLinejoin="round"
 					/>
 				</svg>
 			</div>

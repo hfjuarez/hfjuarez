@@ -78,8 +78,12 @@ const Values = () => {
 	}, []);
 	return (
 		<>
-			<HeightWrapper id="values">
-				<Container as="section">
+			<HeightWrapper
+				as="section"
+				id="values"
+				style={{ backgroundColor: '#000' }}
+			>
+				<Container as="div">
 					<div className={valuesStyles.introduction}>
 						<div className={valuesStyles.committed} ref={committedTextRef}>
 							<Text>Committed</Text>
@@ -114,7 +118,7 @@ const Values = () => {
 						</div>
 						<div className={valuesStyles.backgroundText}>
 							<Text className={valuesStyles.bgTextResultsDrive}>
-								Results-Drive
+								Results-Driven
 							</Text>
 						</div>
 					</div>

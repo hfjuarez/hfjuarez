@@ -11,7 +11,7 @@ const Legal = () => {
 		<div className={styles.wrapper}>
 			<Text>Font: Mona Sans</Text>
 			<Text>
-				Copyright © 2023, GitHub&nbsp;
+				Copyright © 2024, GitHub&nbsp;
 				<Link
 					href="https://github.com/github/mona-sans"
 					target="_blank"

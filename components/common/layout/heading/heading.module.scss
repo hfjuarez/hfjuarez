@@ -1,7 +1,7 @@
 .heading-basic {
 	color: $primary;
 	margin: 0px;
-	@include font(5.5rem, normal, bold, $stretch: 90%);
+	@include font(9rem, normal, extra, $white, left, 100%, 0);
 }
 
 .h1,
@@ -14,16 +14,41 @@
 }
 
 .h2 {
-	font-size: 4.25rem;
+	margin-bottom: 2.375rem;
+	@include font(7.5rem, normal, semi, $stretch: 95%, $spacing: 0.125rem);
+	@media (max-width: 75rem) {
+		font-size: 10cqw;
+	}
+	@media (max-width: 55rem) {
+		margin-bottom: 3rem;
+		font-size: 12cqw;
+	}
+	@media (max-width: 35rem) {
+		padding-block: 0;
+		font-size: 16cqw;
+	}
 }
 
 .h3 {
-	@include font(3.25rem, normal, bold, $stretch: 85%, $spacing: 0.125rem);
+	margin-block: 0.5rem;
+	@include font(3.25rem, normal, semi, $stretch: 100%, $spacing: 0.125rem);
+	@media (max-width: 75rem) {
+		font-size: 5cqw;
+	}
+	@media (max-width: 55rem) {
+		font-size: 6cqw;
+	}
+	@media (max-width: 35rem) {
+		font-size: 7.5cqw;
+	}
 }
 
 .h4 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: 500;
+	font-stretch: 100%;
+	margin-block: 0.5rem;
+	letter-spacing: 0.0625rem;
 }
 
 .h5 {
