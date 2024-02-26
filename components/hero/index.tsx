@@ -33,9 +33,11 @@ const Hero = () => {
 					</Link>
 				</div>
 				<div className={heroStyles.centered}>
-					<Text className={heroStyles.iam}>I am</Text>
-					<Heading as="h1">Hernán</Heading>
-					<Heading as="h2">Full Stack Engineer</Heading>
+					<hgroup>
+						<Text className={heroStyles.iam}>I am</Text>
+						<Heading as="h1">Hernán</Heading>
+						<Heading as="h2">Full Stack Engineer</Heading>
+					</hgroup>
 					<div className={heroStyles.pills}>
 						<Pill colorScheme={UIColors.WHITE}>NodeJS&nbsp;</Pill>
 						<Pill colorScheme={UIColors.WHITE}>VueJS&nbsp;</Pill>

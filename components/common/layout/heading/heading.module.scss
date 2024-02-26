@@ -14,7 +14,7 @@
 }
 
 .h2 {
-	margin-bottom: 2.375rem;
+	margin-bottom: 2.5rem;
 	@include font(7.5rem, normal, semi, $stretch: 95%, $spacing: 0.125rem);
 	@media (max-width: 75rem) {
 		font-size: 10cqw;
@@ -31,7 +31,8 @@
 
 .h3 {
 	margin-block: 0.5rem;
-	@include font(3.25rem, normal, semi, $stretch: 100%, $spacing: 0.125rem);
+	@include font(3.5rem, normal, semi, $white, left, 100%, 0.125rem);
+
 	@media (max-width: 75rem) {
 		font-size: 5cqw;
 	}
@@ -52,8 +53,9 @@
 }
 
 .h5 {
-	font-size: 1.1rem;
+	font-size: 1.125rem;
 	font-weight: 400;
+	letter-spacing: 0.0625rem;
 }
 
 .h6 {

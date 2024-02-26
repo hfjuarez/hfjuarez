@@ -1,39 +1,90 @@
-.container {
-	align-items: flex-start;
-	h2 {
-		text-align: left;
-	}
-}
-
-.grid {
-	display: grid;
-	gap: 1.5rem;
-	grid-template-rows: repeat(3, auto);
-	position: relative;
-	width: 100%;
-}
-
-.card {
-	position: relative;
+.work {
 	background-color: $black;
-	padding: 2rem 3rem 2.5rem;
+	padding: 2rem;
+	border-radius: 1.75rem;
+	max-width: 64rem;
 	width: 100%;
-	h4 {
-		margin-top: 0.25rem;
+	display: grid;
+	grid-template-areas:
+		'title title'
+		'description skills';
+	gap: 1.5rem;
+
+	hr {
+		background-color: $secondary;
+		border: 0;
+		border-radius: 0.0625rem;
+		height: 0.125rem;
+		margin-block: 1rem 0;
+		opacity: 0.5;
+		width: 100%;
 	}
-	p:first-of-type {
-		margin-top: 1.125rem;
+
+	&.hasImage {
+		grid-template-areas:
+			'title title'
+			'image image'
+			'description skills';
+		hr {
+			margin-block: 1rem;
+		}
 	}
+}
+
+.image,
+.description,
+.skills {
+	position: relative;
+	padding: 0 1rem 2rem;
+	width: 100%;
+	min-height: 27rem;
+}
+
+.description,
+.skills {
+	@include flex(column, flex-start, flex-start);
+}
+
+.title {
+	grid-area: title;
+	div {
+		@include flex(row, space-between, center);
+		h4,
+		h5 {
+			text-align: right;
+		}
+	}
+}
+
+.image {
+	padding: 0;
+	grid-area: image;
+	width: 100%;
+	min-height: auto;
+	height: auto;
+}
+
+.description {
+	gap: 1rem;
+	grid-area: description;
+
 	p {
-		opacity: 0.8;
-		margin-bottom: 0.75rem;
+		font-size: 1.125rem;
+	}
+}
+
+.skills {
+	gap: 0.75rem;
+	grid-area: skills;
+	h5 {
+		font-weight: 500;
 	}
 	.pills {
 		height: fit-content;
 		flex-wrap: wrap;
 		gap: 0.75rem 0.5rem;
+		margin-block: 0 0.5rem;
 		padding: 0;
-		margin: 2rem 0 0 0;
 		position: relative;
 
 		max-width: 100%;
@@ -52,17 +103,61 @@
 		.red {
 			border: 2px solid;
 			border-color: $base-red;
-			background-color: rgba(mix($secondary, $base-red, 0.5), 0.2);
+			background-color: rgba(mix($secondary, $base-red, 40%), 0.2);
 		}
 		.yellow {
 			border: 2px solid;
 			border-color: $base-yellow;
-			background-color: rgba(mix($secondary, $base-yellow, 0.5), 0.2);
+			background-color: rgba(mix($secondary, $base-yellow, 40%), 0.2);
 		}
 		.green {
 			border: 2px solid;
 			border-color: $base-green;
-			background-color: rgba(mix($secondary, $base-green, 0.5), 0.2);
+			background-color: rgba(mix($secondary, $base-green, 40%), 0.2);
 		}
+	}
+}
+
+.visuallyHidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0 0 99.9% 99.9%);
+	overflow: hidden;
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	border: 0;
+}
+
+@media (max-width: 50rem) {
+	.work {
+		grid-template-areas:
+			'title'
+			'description'
+			'skills';
+		max-height: 45rem;
+		overflow-y: scroll;
+		&.hasImage {
+			grid-template-areas:
+				'title'
+				'image'
+				'description'
+				'skills';
+		}
+	}
+	.title {
+		div {
+			@include flex(column, flex-start, flex-start);
+			h4,
+			h5 {
+				text-align: left;
+			}
+		}
+	}
+	.description,
+	.skills {
+		min-height: auto;
+		height: fit-content;
+		padding: 1rem 0;
 	}
 }

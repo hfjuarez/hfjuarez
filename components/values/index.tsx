@@ -77,54 +77,43 @@ const Values = () => {
 		});
 	}, []);
 	return (
-		<>
-			<HeightWrapper
-				as="section"
-				id="values"
-				style={{ backgroundColor: '#000' }}
-			>
-				<Container as="div">
-					<div className={valuesStyles.introduction}>
-						<div className={valuesStyles.committed} ref={committedTextRef}>
-							<Text>Committed</Text>
-							<Text>Committed</Text>
-							<Text>Committed</Text>
-							<Text>Committed</Text>
-							<Text>Committed</Text>
-						</div>
-						<div className={valuesStyles.innovative} ref={innovativeTextRef}>
-							<Text>Innovative</Text>
-							<Text>Innovative</Text>
-							<Text>Innovative</Text>
-							<Text>Innovative</Text>
-							<Text>Innovative</Text>
-						</div>
-						<div
-							className={valuesStyles.resultsDriven}
-							ref={resultsDrivenTextRef}
-						>
-							<Text>Results-Driven</Text>
-							<Text>Results-Driven</Text>
-							<Text>Results-Driven</Text>
-							<Text>Results-Driven</Text>
-							<Text>Results-Driven</Text>
-							<Text>Results-Driven</Text>
-						</div>
-						<div className={valuesStyles.backgroundText}>
-							<Text className={valuesStyles.bgTextCommitted}>Committed</Text>
-						</div>
-						<div className={valuesStyles.backgroundText}>
-							<Text className={valuesStyles.bgTextInnovative}>Innovative</Text>
-						</div>
-						<div className={valuesStyles.backgroundText}>
-							<Text className={valuesStyles.bgTextResultsDrive}>
-								Results-Driven
-							</Text>
-						</div>
-					</div>
-				</Container>
-			</HeightWrapper>
-		</>
+		<HeightWrapper as="section" id="values" className={valuesStyles.bgColor}>
+			<Container as="div" className={valuesStyles.values}>
+				<div className={valuesStyles.committed} ref={committedTextRef}>
+					<Text>Committed</Text>
+					<Text>Committed</Text>
+					<Text>Committed</Text>
+					<Text>Committed</Text>
+					<Text>Committed</Text>
+				</div>
+				<div className={valuesStyles.innovative} ref={innovativeTextRef}>
+					<Text>Innovative</Text>
+					<Text>Innovative</Text>
+					<Text>Innovative</Text>
+					<Text>Innovative</Text>
+					<Text>Innovative</Text>
+				</div>
+				<div className={valuesStyles.resultsDriven} ref={resultsDrivenTextRef}>
+					<Text>Results-Driven</Text>
+					<Text>Results-Driven</Text>
+					<Text>Results-Driven</Text>
+					<Text>Results-Driven</Text>
+					<Text>Results-Driven</Text>
+					<Text>Results-Driven</Text>
+				</div>
+				<div className={valuesStyles.backgroundText}>
+					<Text className={valuesStyles.bgTextCommitted}>Committed</Text>
+				</div>
+				<div className={valuesStyles.backgroundText}>
+					<Text className={valuesStyles.bgTextInnovative}>Innovative</Text>
+				</div>
+				<div className={valuesStyles.backgroundText}>
+					<Text className={valuesStyles.bgTextResultsDrive}>
+						Results-Driven
+					</Text>
+				</div>
+			</Container>
+		</HeightWrapper>
 	);
 };
 
