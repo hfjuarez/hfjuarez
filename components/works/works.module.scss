@@ -1,6 +1,6 @@
 .customHeightWrapper {
 	padding-block: 8rem 12rem;
-	background-color: $white;
+	background-color: $primary;
 	@media (max-width: 50rem) {
 		padding-block: 6rem;
 	}
@@ -11,7 +11,7 @@
 	h2 {
 		text-align: left;
 		margin-bottom: 3rem;
-		color: $black;
+		color: $white;
 		@media (max-width: 50rem) {
 			margin-bottom: 1rem;
 		}
@@ -25,7 +25,7 @@
 
 	.back,
 	.next {
-		background-color: rgba($secondary, 0.4);
+		background-color: rgba($tertiary, 0.5);
 		backdrop-filter: blur(0.625rem);
 		border: none;
 		border-radius: 1.75rem;
@@ -35,7 +35,7 @@
 		width: 2.5rem;
 		@include flex(row, center, center);
 		&:hover {
-			background-color: rgba($secondary, 0.25);
+			background-color: rgba($tertiary, 0.9);
 		}
 	}
 	.back {
@@ -81,7 +81,7 @@
 	width: 100%;
 	@include flex(row, center, center);
 	button {
-		background-color: rgba($secondary, 0.3);
+		background-color: rgba($tertiary, 0.3);
 		backdrop-filter: blur(0.625rem);
 		border: none;
 		height: 0.75rem;
@@ -91,17 +91,17 @@
 	}
 	&.position1 {
 		button:first-of-type {
-			background-color: $primary;
+			background-color: rgba($tertiary, 0.9);
 		}
 	}
 	&.position2 {
 		button:nth-of-type(2) {
-			background-color: $primary;
+			background-color: rgba($tertiary, 0.9);
 		}
 	}
 	&.position3 {
 		button:last-of-type {
-			background-color: $primary;
+			background-color: rgba($tertiary, 0.9);
 		}
 	}
 }
