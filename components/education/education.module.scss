@@ -1,0 +1,18 @@
+.customHeightWrapper {
+	background-color: $white;
+	padding-block: 7rem 10rem;
+	.container {
+		align-items: flex-start;
+	}
+	h2 {
+		color: $black !important;
+	}
+	.card {
+		border-radius: 1.75rem;
+		padding: 2.5rem;
+		background-color: $black;
+		p {
+			margin-block: 0.5rem;
+		}
+	}
+}

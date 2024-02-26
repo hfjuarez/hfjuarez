@@ -1,13 +1,17 @@
-.introduction {
+.bgColor {
+	background-color: $black;
+}
+.values {
 	-webkit-user-select: none;
 	-ms-user-select: none;
-	user-select: none;
+	display: block;
 	height: 40rem;
-	overflow: hidden;
+	max-height: 40rem;
 	margin: 0;
-	width: 100%;
+	overflow: hidden;
 	position: relative;
-	border-radius: 0.75rem;
+	user-select: none;
+	width: 100%;
 	p {
 		@include font(10rem, 12rem, semi, $white, left, 87.5%, 0);
 	}

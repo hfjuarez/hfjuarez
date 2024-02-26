@@ -3,11 +3,14 @@
 	justify-content: flex-start;
 	padding-block: 6rem;
 	@media (max-width: 55rem) {
-		padding-block: 0;
+		padding-block: 6rem 3rem;
 		flex: none;
 	}
 	.title {
 		margin-bottom: 4rem;
+		@media (max-width: 55rem) {
+			margin-bottom: 2rem;
+		}
 	}
 
 	hr {
@@ -18,9 +21,6 @@
 		margin-block: 2rem;
 		opacity: 0.5;
 		width: 100%;
-		@media (max-width: 55rem) {
-			margin-block: 2rem;
-		}
 	}
 
 	.contactInfoContainer {

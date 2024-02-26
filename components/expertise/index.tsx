@@ -18,6 +18,7 @@ import styles from './expertise.module.scss';
 
 import { UIColors } from 'utils/ui';
 
+// TODO: Integrate data/contents/skills.ts
 const Expertise = () => {
 	const [showFrontend, setShowFrontend] = useState(true);
 	const [showBackend, setShowBackend] = useState(true);
@@ -113,11 +114,12 @@ I offer a diverse skill set that enriches my capacity to provide holistic soluti
 	const expertiseRef = useRef(null);
 
 	useEffect(() => {
-		const title = titleRef.current;
-		const card1 = card1Ref.current;
-		const card2 = card2Ref.current;
-		const card3 = card3Ref.current;
-		const expertise = expertiseRef.current;
+		const title = titleRef?.current;
+		const card1 = card1Ref?.current;
+		const card2 = card2Ref?.current;
+		const card3 = card3Ref?.current;
+		const expertise = expertiseRef?.current;
+		if (!title || !card1 || !card2 || !card3 || !expertise) return;
 
 		gsap.to(title, {
 			delay: 0,
@@ -135,7 +137,7 @@ I offer a diverse skill set that enriches my capacity to provide holistic soluti
 		gsap.to(card1, {
 			delay: 0,
 			duration: 0.5,
-			ease: 'power1.inOut',
+			ease: 'none',
 			marginTop: 0,
 			opacity: 1,
 			scrollTrigger: {
@@ -144,9 +146,9 @@ I offer a diverse skill set that enriches my capacity to provide holistic soluti
 			},
 		});
 		gsap.to(card2, {
-			delay: 0,
+			delay: 0.2,
 			duration: 0.75,
-			ease: 'power1.inOut',
+			ease: 'none',
 			marginTop: 0,
 			opacity: 1,
 			scrollTrigger: {
@@ -155,9 +157,9 @@ I offer a diverse skill set that enriches my capacity to provide holistic soluti
 			},
 		});
 		gsap.to(card3, {
-			delay: 0,
-			duration: 1.25,
-			ease: 'power1.inOut',
+			delay: 0.4,
+			duration: 1,
+			ease: 'none',
 			marginTop: 0,
 			opacity: 1,
 			scrollTrigger: {

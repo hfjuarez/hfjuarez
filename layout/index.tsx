@@ -7,7 +7,7 @@ import Head from 'next/head';
 // Styles
 import styles from './layout.module.scss';
 // Data
-import skills from 'data/skills';
+import skills from '@/data/contents/skills';
 
 type LayoutProps = {
 	children: ReactNode;
@@ -57,12 +57,12 @@ export default function Layout({ children }: LayoutProps) {
 				/>
 				<meta
 					name="theme-colorScheme"
-					content="#161617"
+					content="#101010"
 					media="(prefers-color-scheme: light)"
 				/>
 				<meta
 					name="theme-color"
-					content="#161617"
+					content="#101010"
 					media="(prefers-color-scheme: dark)"
 				/>
 				<link rel="icon" href="/favicon.ico" />

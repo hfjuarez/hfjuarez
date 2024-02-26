@@ -1,12 +1,22 @@
-.centeredWrapper {
-	flex: none;
-	height: fit-content;
-	justify-content: flex-start;
-	z-index: 1;
-	.title {
-		text-align: center;
-		font-weight: 400;
-		letter-spacing: 0.0625rem;
-		font-stretch: 100%;
+.customHeightWrapper {
+	background-color: $black;
+	padding-block: 6rem;
+	.container {
+		flex: none;
+		height: fit-content;
+		justify-content: flex-start;
+		z-index: 1;
+
+		.summary {
+			text-align: center;
+			font-weight: 500;
+			letter-spacing: 0.0625rem;
+			font-stretch: 100%;
+			// Styles for animation
+			color: $white;
+			&.afterAnimation {
+				margin-top: 0;
+			}
+		}
 	}
 }
