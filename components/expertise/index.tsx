@@ -127,7 +127,7 @@ I offer a diverse skill set that enriches my capacity to provide holistic soluti
 			ease: 'none',
 			fontSize: '7.5rem',
 			fontStretch: '95%',
-			fontWeight: 600,
+			fontWeight: 800,
 			marginTop: 0,
 			scrollTrigger: {
 				start: 'top 70%',

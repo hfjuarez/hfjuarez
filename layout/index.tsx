@@ -56,7 +56,7 @@ export default function Layout({ children }: LayoutProps) {
 					content={skills.map((skill) => skill.name).join(',')}
 				/>
 				<meta
-					name="theme-colorScheme"
+					name="theme-color"
 					content="#101010"
 					media="(prefers-color-scheme: light)"
 				/>

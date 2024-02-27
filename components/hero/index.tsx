@@ -33,24 +33,29 @@ const Hero = () => {
 					</Link>
 				</div>
 				<div className={heroStyles.centered}>
-					<hgroup>
-						<Text className={heroStyles.iam}>I am</Text>
-						<Heading as="h1">Hernán</Heading>
+					<div>
+						{/* <Text className={heroStyles.iam}>I am</Text> */}
+						<Heading as="h1">
+							{/* <span>I am</span> */}
+							I&apos;m
+							<br />
+							Hernán
+						</Heading>
 						<Heading as="h2">Full Stack Engineer</Heading>
-					</hgroup>
+					</div>
 					<div className={heroStyles.pills}>
-						<Pill colorScheme={UIColors.WHITE}>NodeJS&nbsp;</Pill>
-						<Pill colorScheme={UIColors.WHITE}>VueJS&nbsp;</Pill>
-						<Pill colorScheme={UIColors.WHITE}>ReactJS&nbsp;</Pill>
-						<Pill colorScheme={UIColors.WHITE}>Ruby on Rails&nbsp;</Pill>
-						<Pill colorScheme={UIColors.WHITE}>Java&nbsp;</Pill>
+						<Pill colorScheme={UIColors.WHITE}>NodeJS</Pill>
+						<Pill colorScheme={UIColors.WHITE}>VueJS</Pill>
+						<Pill colorScheme={UIColors.WHITE}>ReactJS</Pill>
+						<Pill colorScheme={UIColors.WHITE}>Ruby on Rails</Pill>
+						<Pill colorScheme={UIColors.WHITE}>Java</Pill>
 					</div>
 				</div>
 				<div className={heroStyles.links}>
 					<Link href="https://github.com/hfjuarez" className={heroStyles.link}>
 						<Image
-							width={13.6}
-							height={13.6}
+							width={13}
+							height={13}
 							src="/images/github-mark-white.svg"
 							alt="Github Mark White"
 						/>
@@ -61,8 +66,8 @@ const Hero = () => {
 						className={heroStyles.link}
 					>
 						<Image
-							height={13.6}
-							width={13.6}
+							height={13}
+							width={13}
 							src="/images/linkedin-icon-white.svg"
 							alt="Linkedin Icon White"
 						/>
