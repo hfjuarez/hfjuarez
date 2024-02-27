@@ -77,7 +77,7 @@ const Values = () => {
 		});
 	}, []);
 	return (
-		<HeightWrapper as="section" id="values" className={valuesStyles.bgColor}>
+		<HeightWrapper as="div" id="values" className={valuesStyles.bgColor}>
 			<Container as="div" className={valuesStyles.values}>
 				<div className={valuesStyles.committed} ref={committedTextRef}>
 					<Text>Committed</Text>

@@ -34,10 +34,10 @@ const Works = () => {
 			<Container as="div" className={worksStyles.container}>
 				<Heading as="h2">My Work</Heading>
 				<div className={worksStyles.carrouselContainer}>
-					<section className={carrouselClasses}>
+					<div className={carrouselClasses}>
 						{works?.length &&
 							works.map((work, idx) => <Work work={work} key={'work' + idx} />)}
-					</section>
+					</div>
 					{position !== 1 && (
 						<button
 							onClick={() => handleClick(position - 1)}
