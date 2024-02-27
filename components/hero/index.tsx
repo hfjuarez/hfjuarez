@@ -34,14 +34,12 @@ const Hero = () => {
 				</div>
 				<div className={heroStyles.centered}>
 					<div>
-						{/* <Text className={heroStyles.iam}>I am</Text> */}
 						<Heading as="h1">
-							{/* <span>I am</span> */}
 							I&apos;m
 							<br />
 							Hernán
 						</Heading>
-						<Heading as="h2">Full Stack Engineer</Heading>
+						<Heading as="h2">Full Stack Engineer & Technical Leader</Heading>
 					</div>
 					<div className={heroStyles.pills}>
 						<Pill colorScheme={UIColors.WHITE}>NodeJS</Pill>

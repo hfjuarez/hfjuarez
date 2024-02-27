@@ -174,7 +174,7 @@ I offer a diverse skill set that enriches my capacity to provide holistic soluti
 			as="section"
 			ref={expertiseRef}
 			id="expertise"
-			style={{ backgroundColor: '#000', paddingTop: '6rem' }}
+			style={{ backgroundColor: '#060606', paddingTop: '6rem' }}
 		>
 			<Container as="div">
 				<Heading as="h2" className={styles.title} ref={titleRef}>
