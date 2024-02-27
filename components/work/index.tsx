@@ -81,10 +81,10 @@ const Work = ({ work }: WorkProps) => {
 			<header className={workStyles.title}>
 				<div>
 					<Heading as="h3">{work?.header?.title}</Heading>
-					<hgroup>
+					<div>
 						<Heading as="h4">{work?.header?.position}</Heading>
 						<Heading as="h5">{work?.header?.companyAndDuration}</Heading>
-					</hgroup>
+					</div>
 				</div>
 				<hr />
 			</header>

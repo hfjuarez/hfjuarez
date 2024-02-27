@@ -44,8 +44,8 @@ const Works = () => {
 							className={worksStyles.back}
 						>
 							<Image
-								width={12.5}
-								height={21.25}
+								width={13}
+								height={22}
 								src="/images/arrow.svg"
 								alt="Arrow"
 							/>
@@ -57,8 +57,8 @@ const Works = () => {
 							className={worksStyles.next}
 						>
 							<Image
-								width={12.5}
-								height={21.25}
+								width={13}
+								height={22}
 								src="/images/arrow.svg"
 								alt="Arrow"
 							/>

@@ -1,12 +1,13 @@
 .container {
 	align-items: flex-start;
 	justify-content: flex-start;
-	padding-block: 6rem;
+	padding-block: 10rem;
 	@media (max-width: 55rem) {
 		padding-block: 6rem 3rem;
 		flex: none;
 	}
 	.title {
+		text-align: left;
 		margin-bottom: 4rem;
 		@media (max-width: 55rem) {
 			margin-bottom: 2rem;
