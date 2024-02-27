@@ -17,7 +17,7 @@ const Footer = () => {
 						<br />
 						Portfolio
 					</Heading>
-					<Heading as="h2">Designed & Developed by Hernan Fabrica</Heading>
+					<Heading as="h2">Designed & Developed by Hernán Fabrica</Heading>
 					<Heading as="h3">Made it with:</Heading>
 					<Text className={styles.dependencies}>
 						NextJS 13 - React 18 - TypeScript - SASS
@@ -27,7 +27,7 @@ const Footer = () => {
 						React syntax highlighter - gsap - classnames
 					</Text>
 					<Text className={styles.copyright}>
-						Copyright © 2024 Hernan Fabrica. All rights reserved.
+						Copyright © 2024 Hernán Fabrica. All rights reserved.
 					</Text>
 				</div>
 				<Legal />
