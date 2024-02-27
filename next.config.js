@@ -19,10 +19,6 @@ const nextConfigGithub = {
 };
 
 const nextConfig = {
-	i18n: {
-		defaultLocale: 'en',
-		locales: ['en'],
-	},
 	images: {
 		unoptimized: true,
 	},
