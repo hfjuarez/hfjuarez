@@ -1,16 +1,19 @@
 .customHeightWrapper {
-	background-color: darken($tertiary, 15%);
+	background-color: $dark;
 	padding-block: 7rem 10rem;
 	.container {
 		align-items: flex-start;
 	}
 	h2 {
-		color: $dark !important;
+		// color: $dark !important;
 		align-self: flex-start;
 	}
+	.cardsContainer {
+		display: grid;
+	}
 	.card {
-		border-radius: 1.25rem;
-		// padding: 2.5rem;
+		background-color: $secondary;
+		padding: 2.5rem;
 
 		* {
 			color: $dark;

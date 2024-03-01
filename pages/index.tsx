@@ -8,7 +8,7 @@ import Summary from '@/components/summary';
 import Works from '@/components/works';
 import Contact from '@/components/contact';
 import Footer from '@/components/common/layout/footer';
-// import Education from '@/components/education';
+import Education from '@/components/education';
 
 export default function Home() {
 	return (
@@ -19,7 +19,7 @@ export default function Home() {
 				<Summary />
 				<Expertise />
 				<Works />
-				{/* <Education /> */}
+				<Education />
 				<Contact />
 			</Container>
 			<Footer />

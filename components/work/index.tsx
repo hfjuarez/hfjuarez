@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
 
-import workStyles from './work.module.scss';
+import styles from './work.module.scss';
 
 import WorkType from '@/data/models/work';
 import classNames from 'classnames';
@@ -15,13 +15,13 @@ type WorkProps = {
 
 const Work = ({ work }: WorkProps) => {
 	const workClasses = classNames(
-		workStyles.work,
-		work?.header?.image && workStyles.hasImage,
+		styles.work,
+		work?.header?.image && styles.hasImage,
 	);
 
 	const description = work?.description?.paragraphs?.length && (
-		<section className={workStyles.description}>
-			<Heading as="h4" className={workStyles.visuallyHidden}>
+		<section className={styles.description}>
+			<Heading as="h4" className={styles.visuallyHidden}>
 				Description
 			</Heading>
 			{work?.description?.paragraphs.map((text, index) => (
@@ -34,16 +34,16 @@ const Work = ({ work }: WorkProps) => {
 	const skills = (work?.skills?.frontend?.length ||
 		work?.skills?.backend?.length ||
 		work?.skills?.others?.length) && (
-		<section className={workStyles.skills}>
-			<Heading as="h4" className={workStyles.visuallyHidden}>
+		<section className={styles.skills}>
+			<Heading as="h4" className={styles.visuallyHidden}>
 				Skills
 			</Heading>
 			{!!work?.skills?.frontend?.length && (
 				<>
 					<Heading as="h5">Frontend</Heading>
-					<ul className={workStyles.pills}>
+					<ul className={styles.pills}>
 						{work?.skills?.frontend.map((skill) => (
-							<li className={workStyles.red} key={skill.key}>
+							<li className={styles.red} key={skill.key}>
 								{skill.name}
 							</li>
 						))}
@@ -53,9 +53,9 @@ const Work = ({ work }: WorkProps) => {
 			{!!work?.skills?.backend?.length && (
 				<>
 					<Heading as="h5">Backend</Heading>
-					<ul className={workStyles.pills}>
+					<ul className={styles.pills}>
 						{work?.skills?.backend.map((skill) => (
-							<li className={workStyles.yellow} key={skill.key}>
+							<li className={styles.yellow} key={skill.key}>
 								{skill.name}
 							</li>
 						))}
@@ -65,9 +65,9 @@ const Work = ({ work }: WorkProps) => {
 			{!!work?.skills?.others?.length && (
 				<>
 					<Heading as="h5">Other</Heading>
-					<ul className={workStyles.pills}>
+					<ul className={styles.pills}>
 						{work?.skills?.others.map((skill) => (
-							<li className={workStyles.green} key={skill.key}>
+							<li className={styles.green} key={skill.key}>
 								{skill.name}
 							</li>
 						))}
@@ -78,10 +78,10 @@ const Work = ({ work }: WorkProps) => {
 	);
 	return (
 		<article className={workClasses}>
-			<header className={workStyles.title}>
-				<div>
+			<header>
+				<div className={styles.titleContainer}>
 					<Heading as="h3">{work?.header?.title}</Heading>
-					<div>
+					<div className={styles.subtitleContainer}>
 						<Heading as="h4">{work?.header?.position}</Heading>
 						<Heading as="h5">{work?.header?.companyAndDuration}</Heading>
 					</div>
@@ -90,7 +90,7 @@ const Work = ({ work }: WorkProps) => {
 			</header>
 			{work?.header?.image && (
 				<Image
-					className={workStyles.image}
+					className={styles.image}
 					width={work.header.image.width}
 					height={work.header.image.height}
 					src={work.header.image.url}

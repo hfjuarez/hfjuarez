@@ -2,7 +2,6 @@ import React, { useEffect, ReactNode } from 'react';
 import Lenis from '@studio-freight/lenis';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
-// import Navbar from '@/components/common/navbar';
 
 // Styles
 import styles from './layout.module.scss';

@@ -5,21 +5,21 @@ import Heading from '@/components/common/layout/heading';
 import HeightWrapper from '@/components/common/layout/height';
 import Link from '../common/layout/link';
 
-import contactStyles from './contact.module.scss';
+import styles from './contact.module.scss';
 import headingStyle from '@/components/common/layout/heading/heading.module.scss';
 
 const Contact = () => {
 	return (
-		<HeightWrapper as="section" id="contact">
-			<Container as="div" className={contactStyles.container}>
-				<Heading as="h2" className={contactStyles.title}>
+		<HeightWrapper as="section" id="contact" className={styles.heightWrapper}>
+			<Container as="div" className={styles.container}>
+				<Heading as="h2" className={styles.title}>
 					Let’s get to know each other.
 				</Heading>
-				<div className={contactStyles.contactInfoContainer}>
-					<Heading as="h3" className={contactStyles.label}>
+				<div className={styles.contactInfoContainer}>
+					<Heading as="h3" className={styles.label}>
 						Contact
 					</Heading>
-					<div className={contactStyles.linksContainer}>
+					<div className={styles.linksContainer}>
 						<Link
 							className={headingStyle.h3}
 							href="mailto:hello@hernanfabrica.com"
@@ -29,11 +29,11 @@ const Contact = () => {
 					</div>
 				</div>
 				<hr />
-				<div className={contactStyles.contactInfoContainer}>
-					<Heading as="h3" className={contactStyles.label}>
+				<div className={styles.contactInfoContainer}>
+					<Heading as="h3" className={styles.label}>
 						Social
 					</Heading>
-					<div className={contactStyles.linksContainer}>
+					<div className={styles.linksContainer}>
 						<Link
 							className={headingStyle.h3}
 							href="https://www.linkedin.com/in/hfjuarez/"

@@ -1,3 +1,6 @@
+.heightWrapper {
+	background-color: $dark;
+}
 .container {
 	align-items: flex-start;
 	justify-content: flex-start;
@@ -23,7 +26,6 @@
 		opacity: 0.5;
 		width: 100%;
 	}
-
 	.contactInfoContainer {
 		width: 100%;
 		@include flex(row);
