@@ -17,7 +17,7 @@ const works: Work[] = [
 		},
 		skills: {
 			backend: findAllByKeys('node', 'sql', 'sequelize', 'adr'),
-			frontend: findAllByKeys('vue', 'nuxt', 'strapi'),
+			frontend: findAllByKeys('vue', 'nuxt'),
 			others: findAllByKeys(
 				'problem-solving',
 				'project-management',

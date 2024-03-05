@@ -46,8 +46,8 @@
 		opacity: 1;
 	}
 	&.secondary {
-		border-color: rgba($secondary, 0.3);
-		background-color: rgba($secondary, 0.2);
+		border-color: rgba($theme-secondary-color, 0.3);
+		background-color: rgba($theme-secondary-color, 0.2);
 	}
 
 	.navbarContent {

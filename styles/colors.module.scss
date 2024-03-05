@@ -2,7 +2,7 @@
 	color: $primary;
 }
 .secondary {
-	color: $secondary;
+	color: $theme-secondary-color;
 }
 .tertiary {
 	color: $tertiary;
@@ -18,7 +18,7 @@
 }
 
 .bg-secondary {
-	background-color: $secondary;
+	background-color: $theme-secondary-color;
 }
 .white {
 	color: $white;

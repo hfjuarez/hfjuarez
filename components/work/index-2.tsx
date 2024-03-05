@@ -1,23 +1,29 @@
 import React from 'react';
-import Image from 'next/image';
+import classNames from 'classnames';
 
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
+import Button from '@/components/common/button';
 
-import styles from './work.module.scss';
+import styles from './work-2.module.scss';
 
 import WorkType from '@/data/models/work';
-import classNames from 'classnames';
 
 type WorkProps = {
 	work: WorkType;
 };
 
 const Work = ({ work }: WorkProps) => {
-	const workClasses = classNames(
-		styles.work,
-		work?.header?.image && styles.hasImage,
-	);
+	const [activeTab, setActiveTab] = React.useState<string | null>(null);
+	const carousel = classNames(styles.descriptionAndSkillsContainer, activeTab);
+	const handleActiveTab = (tab: number) => {
+		if (tab === 0) {
+			setActiveTab(null);
+		}
+		if (tab === 1) {
+			setActiveTab(styles.position2);
+		}
+	};
 
 	const description = work?.description?.paragraphs?.length && (
 		<section className={styles.description}>
@@ -77,28 +83,23 @@ const Work = ({ work }: WorkProps) => {
 		</section>
 	);
 	return (
-		<article className={workClasses}>
+		<article className={styles.work}>
 			<header>
-				<div className={styles.titleContainer}>
-					<Heading as="h3">{work?.header?.title}</Heading>
-					<hr />
-					<div className={styles.subtitleContainer}>
-						<Heading as="h4">{work?.header?.position}</Heading>
-						<Heading as="h5">{work?.header?.companyAndDuration}</Heading>
-					</div>
-				</div>
+				<Heading as="h3">{work?.header?.title}</Heading>
+				<hr />
+				<Heading as="h4">{work?.header?.position}</Heading>
+				<Heading as="h5">{work?.header?.companyAndDuration}</Heading>
 			</header>
-			{work?.header?.image && (
-				<Image
-					className={styles.image}
-					width={work.header.image.width}
-					height={work.header.image.height}
-					src={work.header.image.url}
-					alt={work.header.image.alt}
-				/>
-			)}
-			{description}
-			{skills}
+			<div className={carousel}>
+				<div className={styles.descriptionAndSkillsCarousel}>
+					{description}
+					{skills}
+				</div>
+				<div className={styles.carouselControls}>
+					<Button onClick={() => handleActiveTab(0)}>Description</Button>
+					<Button onClick={() => handleActiveTab(1)}>Skills</Button>
+				</div>
+			</div>
 		</article>
 	);
 };

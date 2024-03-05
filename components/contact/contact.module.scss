@@ -1,12 +1,20 @@
-.container {
-	align-items: flex-start;
-	justify-content: flex-start;
+.heightWrapper {
+	background-color: $black;
 	padding-block: 6rem;
+	@media only screen and (min-height: 91rem) {
+		padding-block: 0;
+	}
+}
+.container {
 	@media (max-width: 55rem) {
-		padding-block: 6rem 3rem;
 		flex: none;
 	}
+	@media only screen and (min-height: 91rem) {
+		align-items: center;
+		justify-content: center;
+	}
 	.title {
+		color: $theme-primary;
 		text-align: left;
 		margin-bottom: 4rem;
 		@media (max-width: 55rem) {
@@ -23,7 +31,6 @@
 		opacity: 0.5;
 		width: 100%;
 	}
-
 	.contactInfoContainer {
 		width: 100%;
 		@include flex(row);

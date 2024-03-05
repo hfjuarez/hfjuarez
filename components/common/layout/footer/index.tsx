@@ -12,20 +12,20 @@ const Footer = () => {
 		<footer className={styles.footer} id="footer">
 			<Container as="div">
 				<div className={styles.content}>
-					<Heading as="h1">
-						My
-						<br />
-						Portfolio
+					<Heading as="h2">
+						Designed & Developed by <br />
+						<span>
+							Hernán
+							<br />
+							Fabrica
+						</span>
 					</Heading>
-					<Heading as="h2">Designed & Developed by Hernán Fabrica</Heading>
-					<Heading as="h3">Made it with:</Heading>
+					<Heading as="h3">Made with:</Heading>
 					<Text className={styles.dependencies}>
 						NextJS 13 - React 18 - TypeScript - SASS
 					</Text>
 					<Heading as="h3">External dependencies:</Heading>
-					<Text className={styles.dependencies}>
-						React syntax highlighter - gsap - classnames
-					</Text>
+					<Text className={styles.dependencies}>gsap - classnames</Text>
 					<Text className={styles.copyright}>
 						Copyright © 2024 Hernán Fabrica. All rights reserved.
 					</Text>

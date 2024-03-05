@@ -1,6 +1,6 @@
 .heading-basic {
 	margin: 0;
-	@include font(10rem, normal, extra, $white, left, 100%, 0);
+	@include font(9rem, normal, bold, $black, left, 100%, 0);
 }
 
 .h1,
@@ -13,34 +13,21 @@
 }
 
 .h1 {
-	line-height: 10rem;
-	span {
-		@include font(9rem, 8.5rem, light, $white, center, 100%, -0.125rem);
-	}
+	line-height: 9rem;
 	@media only screen and (max-width: 70rem) {
-		margin-top: -1rem;
 		font-size: 14vw;
 		line-height: 15vw;
-		span {
-			font-size: 10vw;
-			line-height: 10vw;
-		}
 	}
 
 	@media only screen and (max-width: 40rem) {
-		margin-top: -1rem;
 		font-size: 20vw;
 		line-height: 20vw;
-		span {
-			font-size: 16vw;
-			line-height: 18vw;
-		}
 	}
 }
 
 .h2 {
 	margin-bottom: 2.5rem;
-	@include font(7.5rem, normal, extra, $white, center, 95%, 0);
+	@include font(7.5rem, normal, semi, $black, center, 100%, 0.0625rem);
 
 	@media (max-width: 75rem) {
 		font-size: 10cqw;
@@ -57,7 +44,7 @@
 
 .h3 {
 	margin-block: 0.5rem;
-	@include font(3.5rem, normal, semi, $white, left, 100%, 0.125rem);
+	@include font(3rem, normal, semi, $black, left, 100%, 0.125rem);
 
 	@media (max-width: 75rem) {
 		font-size: 5cqw;
@@ -66,7 +53,7 @@
 		font-size: 6cqw;
 	}
 	@media (max-width: 35rem) {
-		font-size: 7.5cqw;
+		font-size: 2rem;
 	}
 }
 

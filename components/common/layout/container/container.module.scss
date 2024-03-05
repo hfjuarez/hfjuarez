@@ -4,12 +4,8 @@
 	position: relative;
 	width: 100%;
 	@include flex(column, center, center);
-	@media only screen and (min-width: 120rem) {
-		max-width: 90rem;
-	}
-	@media only screen and (max-width: 80rem) {
-		width: 90vw;
-		max-width: 90vw;
+	@media (max-width: 75rem) {
+		padding-inline: 1.5rem;
 	}
 }
 
