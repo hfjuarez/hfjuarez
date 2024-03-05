@@ -3,7 +3,7 @@ import React from 'react';
 import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
 import HeightWrapper from '@/components/common/layout/height';
-import Work from '@/components/work/index-2';
+import Work from '@/components/work';
 
 import styles from './works.module.scss';
 
