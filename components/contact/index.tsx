@@ -13,7 +13,7 @@ const Contact = () => {
 		<HeightWrapper as="section" id="contact" className={styles.heightWrapper}>
 			<Container as="div" className={styles.container}>
 				<Heading as="h2" className={styles.title}>
-					Let’s get to know each other.
+					Let’s work together
 				</Heading>
 				<div className={styles.contactInfoContainer}>
 					<Heading as="h3" className={styles.label}>

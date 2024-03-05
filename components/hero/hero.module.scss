@@ -2,14 +2,17 @@
 
 .container {
 	backdrop-filter: blur(0.5rem);
-	background-color: rgba($dark, 0.5);
+	background-color: $theme-primary-transparent;
 	flex: 1;
 	height: 100%;
+	min-height: 100vh;
 	position: relative;
 	width: 100%;
 	-webkit-backdrop-filter: blur(0.5rem);
 	z-index: 2;
 	@include flex(column, center, center);
+	overflow: hidden;
+	position: fixed;
 }
 
 .top {
@@ -20,20 +23,21 @@
 	margin-top: 2rem;
 	margin-inline: 2rem;
 	@include flex(row, center, flex-start);
-	h6 {
-		@include font(1rem, normal, light, $white, left, 85%, 0.125rem);
+	p {
+		@include font(1rem, normal, regular, $theme-color, left, 85%, 0.125rem);
 	}
 }
 
 .centered {
-	margin-top: -1rem;
 	overflow-y: hidden;
 	@include flex(column, center, center);
 	div {
-		@media only screen and (max-width: 64rem) {
+		@media only screen and (max-width: 70rem) {
 			h1 {
 				width: fit-content;
 				margin-inline: auto;
+				max-width: 90vw;
+				text-align: center;
 			}
 		}
 		h2 {
@@ -41,7 +45,7 @@
 			margin-block: 1rem 0;
 			text-transform: uppercase;
 			font-size: 1.25rem;
-			letter-spacing: 0.375rem;
+			letter-spacing: 0.25rem;
 		}
 	}
 }
@@ -50,10 +54,26 @@
 	@include flex(row, center, center);
 	height: fit-content;
 	flex-wrap: wrap;
-	gap: 1.25rem;
+	gap: 1rem;
+	list-style: none;
 	margin-top: 1rem;
+	padding: 0;
 	@media only screen and (max-width: 40rem) {
 		padding-inline: 2rem;
+	}
+	li {
+		border-radius: 1.25rem;
+		color: $theme-secondary-color;
+		text-transform: uppercase;
+		@include font(
+			1rem,
+			normal,
+			semi,
+			$theme-secondary-color,
+			left,
+			85%,
+			0.125rem
+		);
 	}
 }
 
@@ -71,28 +91,55 @@
 }
 
 .link {
-	border: 0.09375rem solid $secondary;
-	border-color: $white;
-	gap: 0.25rem;
+	border: 0.09375rem solid $theme-secondary-color;
+	gap: 0.1875rem;
 	margin-left: auto;
-	min-width: 7rem;
+	min-width: 7.5rem;
 	padding: 0.4rem 0.8rem;
 	text-decoration: none;
 	text-transform: uppercase;
 	@extend .button-basic;
-	@include font(0.9rem, normal, regular, $white, left, 85%, 0.125rem);
+	@include font(
+		0.9rem,
+		normal,
+		regular,
+		$theme-secondary-color,
+		left,
+		85%,
+		0.125rem
+	);
+	svg {
+		path {
+			fill: $theme-secondary-color;
+		}
+	}
 	&:hover {
-		border-color: $white;
-		background-color: rgba($white, 0.1);
+		color: $theme-primary;
+		border-color: $theme-color;
+		background-color: $theme-color;
+
+		svg {
+			path {
+				fill: $theme-primary;
+			}
+		}
 	}
 }
 
 .animation {
-	opacity: 0.2;
+	position: fixed;
 	width: 100%;
+	height: 100vh;
 	@include flex();
 	p {
-		@include font(22cqw, 18.5cqw, 600, $white, $stretch: 100%, $spacing: 0rem);
+		@include font(
+			22cqw,
+			18.5cqw,
+			600,
+			$theme-secondary-color,
+			$stretch: 100%,
+			$spacing: 0rem
+		);
 	}
 	.left,
 	.right {

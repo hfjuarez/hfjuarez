@@ -1,5 +1,5 @@
 .bgColor {
-	background-color: $dark;
+	background-color: $black;
 }
 .values {
 	-webkit-user-select: none;
@@ -29,8 +29,8 @@
 			word-break: keep-all;
 			max-width: 100%;
 			@include font(11cqw, normal, extra, transparent, center, 85%, 0);
-			@supports (-webkit-text-stroke: 0.1875rem $secondary) {
-				-webkit-text-stroke: 0.1875rem $secondary;
+			@supports (-webkit-text-stroke: 0.1875rem $theme-secondary-color) {
+				-webkit-text-stroke: 0.1875rem $theme-secondary-color;
 				-webkit-text-fill-color: transparent;
 			}
 		}

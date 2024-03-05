@@ -1,14 +1,13 @@
 .work {
-	background-color: $dark;
+	background-color: $theme-primary;
 	padding: 2rem;
-	border-radius: 0.125rem;
+	border-radius: 0.75rem;
 	max-width: 64rem;
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto 1fr;
 	gap: 1.5rem;
-	// border: 0.09375rem solid rgba($secondary, 0.125);
 
 	header {
 		grid-area: 1 / 1 / 2 / 3;
@@ -16,7 +15,7 @@
 	}
 
 	hr {
-		background-color: $secondary;
+		background-color: $theme-secondary-color;
 		border: 0;
 		border-radius: 0.0625rem;
 		height: 0.125rem;
@@ -95,7 +94,7 @@
 		@include flex(row, flex-start, flex-start);
 		li,
 		button {
-			background-color: rgba($secondary, 0.2);
+			background-color: rgba($theme-secondary-color, 0.2);
 			backdrop-filter: blur(0.5rem);
 			border: none;
 			border-radius: 1rem;
@@ -107,17 +106,17 @@
 		.red {
 			border: 2px solid;
 			border-color: $base-red;
-			background-color: rgba(mix($secondary, $base-red, 40%), 0.2);
+			background-color: rgba($base-red, 0.2);
 		}
 		.yellow {
 			border: 2px solid;
 			border-color: $base-yellow;
-			background-color: rgba(mix($secondary, $base-yellow, 40%), 0.2);
+			background-color: rgba($base-yellow, 0.2);
 		}
 		.green {
 			border: 2px solid;
 			border-color: $base-green;
-			background-color: rgba(mix($secondary, $base-green, 40%), 0.2);
+			background-color: rgba($base-green, 0.2);
 		}
 	}
 }

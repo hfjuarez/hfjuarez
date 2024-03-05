@@ -1,15 +1,20 @@
 .heightWrapper {
-	background-color: $dark;
+	background-color: $black;
+	padding-block: 6rem;
+	@media only screen and (min-height: 91rem) {
+		padding-block: 0;
+	}
 }
 .container {
-	align-items: flex-start;
-	justify-content: flex-start;
-	padding-block: 6rem;
 	@media (max-width: 55rem) {
-		padding-block: 6rem 3rem;
 		flex: none;
 	}
+	@media only screen and (min-height: 91rem) {
+		align-items: center;
+		justify-content: center;
+	}
 	.title {
+		color: $theme-primary;
 		text-align: left;
 		margin-bottom: 4rem;
 		@media (max-width: 55rem) {

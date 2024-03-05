@@ -1,8 +1,8 @@
 .customHeightWrapper {
-	padding-block: 6rem;
-	background-color: $primary;
+	padding-block: 8rem;
+	background-color: $theme-tertiary;
 	@media (max-width: 50rem) {
-		padding-block: 6rem;
+		padding-block: 6rems;
 	}
 }
 
@@ -11,100 +11,16 @@
 	h2 {
 		text-align: left;
 		margin-bottom: 4rem;
-		color: $white;
+		color: $theme-color;
 		@media (max-width: 50rem) {
 			margin-bottom: 1rem;
 		}
 	}
 }
 
-.carrouselContainer {
+.workList {
 	max-width: 64rem;
-	position: relative;
-	width: 100%;
-
-	.back,
-	.next {
-		background-color: rgba($white, 0.7);
-		backdrop-filter: blur(0.625rem);
-		border: none;
-		border-radius: 1.75rem;
-		cursor: pointer;
-		height: 2.5rem;
-		top: 50%;
-		width: 2.5rem;
-		@include flex(row, center, center);
-		&:hover {
-			background-color: rgba($white, 0.9);
-		}
-		@media (max-width: 70rem) {
-			display: none;
-		}
-	}
-	.back {
-		position: absolute;
-		left: -4vw;
-		transform: translateY(-50%);
-		img {
-			rotate: 180deg;
-			margin-right: 0.125rem;
-		}
-	}
-	.next {
-		position: absolute;
-		right: -4vw;
-		transform: translateY(-50%);
-		img {
-			margin-left: 0.125rem;
-		}
-	}
-}
-
-.carrousel {
-	display: grid;
-	grid-auto-flow: column;
-	grid-auto-columns: 100%;
-	max-width: 64rem;
-	gap: 8rem;
-	transition: transform 0.75s ease;
-	&.position1 {
-		transform: translateX(0);
-	}
-	&.position2 {
-		transform: translateX(calc(-100% - 8rem));
-	}
-	&.position3 {
-		transform: translateX(calc(-200% - 16rem));
-	}
-}
-
-.carrouselControls {
-	margin-top: 2.5rem;
-	gap: 0.625rem;
-	width: 100%;
-	@include flex(row, center, center);
-	button {
-		background-color: rgba($tertiary, 0.3);
-		backdrop-filter: blur(0.625rem);
-		border: none;
-		height: 0.75rem;
-		width: 3rem;
-		border-radius: 0.5rem;
-		cursor: pointer;
-	}
-	&.position1 {
-		button:first-of-type {
-			background-color: $white;
-		}
-	}
-	&.position2 {
-		button:nth-of-type(2) {
-			background-color: $white;
-		}
-	}
-	&.position3 {
-		button:last-of-type {
-			background-color: $white;
-		}
-	}
+	gap: 6rem;
+	margin-top: 2rem;
+	@include flex(column, flex-start, flex-start);
 }

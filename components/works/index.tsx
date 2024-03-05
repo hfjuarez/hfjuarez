@@ -1,75 +1,26 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import classNames from 'classnames';
+import React from 'react';
 
 import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
 import HeightWrapper from '@/components/common/layout/height';
-import Work from '@/components/work';
+import Work from '@/components/work/index-2';
 
-import worksStyles from './works.module.scss';
+import styles from './works.module.scss';
 
 import works from '@/data/contents/works';
 
 const Works = () => {
-	const [position, setPosition] = useState<number>(1);
-	const [positionClasses, setPositionClasses] = useState<string | null>(
-		worksStyles[`position${position}`],
-	);
-	const carrouselClasses = classNames(worksStyles.carrousel, positionClasses);
-	const carrouselControlsClasses = classNames(
-		worksStyles.carrouselControls,
-		positionClasses,
-	);
-	const handleClick = (newPosition: number) => {
-		setPosition(newPosition);
-		setPositionClasses(worksStyles[`position${newPosition}`]);
-	};
 	return (
 		<HeightWrapper
 			as="section"
 			id="work"
-			className={worksStyles.customHeightWrapper}
+			className={styles.customHeightWrapper}
 		>
-			<Container as="div" className={worksStyles.container}>
-				<Heading as="h2">My Work</Heading>
-				<div className={worksStyles.carrouselContainer}>
-					<div className={carrouselClasses}>
-						{works?.length &&
-							works.map((work, idx) => <Work work={work} key={'work' + idx} />)}
-					</div>
-					{position !== 1 && (
-						<button
-							onClick={() => handleClick(position - 1)}
-							className={worksStyles.back}
-						>
-							<Image
-								width={13}
-								height={22}
-								src="/images/arrow.svg"
-								alt="Arrow"
-							/>
-						</button>
-					)}
-					{position !== 3 && (
-						<button
-							onClick={() => handleClick(position + 1)}
-							className={worksStyles.next}
-						>
-							<Image
-								width={13}
-								height={22}
-								src="/images/arrow.svg"
-								alt="Arrow"
-							/>
-						</button>
-					)}
-				</div>
-
-				<div className={carrouselControlsClasses}>
-					<button onClick={() => handleClick(1)}></button>
-					<button onClick={() => handleClick(2)}></button>
-					<button onClick={() => handleClick(3)}></button>
+			<Container as="div" className={styles.container}>
+				<Heading as="h2">Selected Work</Heading>
+				<div className={styles.workList}>
+					{works?.length &&
+						works.map((work, idx) => <Work work={work} key={'work' + idx} />)}
 				</div>
 			</Container>
 		</HeightWrapper>
