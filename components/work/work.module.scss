@@ -159,7 +159,7 @@
 
 @media (max-width: 50rem) {
 	.work {
-		gap: 1rem 0;
+		gap: 1.5rem 0;
 		grid-template-columns: 100%;
 		grid-template-rows: auto auto;
 		&:nth-of-type(even) {
