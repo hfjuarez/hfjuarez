@@ -5,7 +5,7 @@
 	background-color: $theme-primary-transparent;
 	flex: 1;
 	height: 100%;
-	min-height: 100vh;
+	min-height: 100svh;
 	position: relative;
 	width: 100%;
 	-webkit-backdrop-filter: blur(0.5rem);
@@ -16,7 +16,7 @@
 }
 
 .top {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	text-transform: uppercase;
 	width: calc(100% - 4rem);
