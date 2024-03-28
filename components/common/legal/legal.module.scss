@@ -8,12 +8,19 @@
 	}
 	p,
 	a {
-		@include font(0.8rem, normal, regular, $theme-secondary-color, left, 85%);
+		@include font(
+			0.8rem,
+			normal,
+			regular,
+			$theme-text-color-secondary,
+			left,
+			85%
+		);
 	}
 	a {
 		text-decoration: underline;
 		&:hover {
-			color: lighten($theme-secondary-color, 20%) !important;
+			color: lighten($theme-text-color-secondary, 20%) !important;
 		}
 	}
 }

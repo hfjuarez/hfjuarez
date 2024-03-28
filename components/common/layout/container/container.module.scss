@@ -1,12 +1,9 @@
 .basic-container {
 	flex: 1;
-	max-width: 64rem;
+	max-width: 72rem;
 	position: relative;
 	width: 100%;
 	@include flex(column, center, center);
-	@media (max-width: 75rem) {
-		padding-inline: 1.5rem;
-	}
 }
 
 .div,

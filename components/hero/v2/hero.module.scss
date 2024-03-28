@@ -1,0 +1,115 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	canvas {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		mask-image: linear-gradient(70deg, $black 0%, transparent 70%);
+		z-index: -1;
+	}
+}
+.container {
+	align-items: flex-start;
+	padding-top: 6rem;
+	justify-content: flex-start;
+	position: relative;
+	z-index: 1;
+	background: radial-gradient(circle, $base-mix 0%, transparent 60%);
+	&::before {
+		z-index: -1;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: radial-gradient(circle, $base-mix 0%, transparent 50%);
+		animation: orbit 10s linear infinite;
+		background-position: -4rem;
+		@keyframes orbit {
+			0% {
+				transform: rotate(0deg);
+			}
+			50% {
+				transform: rotate(180deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	}
+
+	h1 {
+		// Optical alignment
+		margin-left: -0.55rem;
+		font-family: 'Playfair Display', serif;
+	}
+}
+
+.question {
+	display: none;
+	text-transform: uppercase;
+	@include font(
+		1.125rem,
+		normal,
+		regular,
+		$theme-text-color,
+		left,
+		90%,
+		0.125rem
+	);
+}
+
+.customH2 {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.375rem;
+	letter-spacing: 0.25rem;
+	margin-bottom: 1.75rem;
+}
+
+.principalSkillList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 0.875rem;
+	@include flex(column, flex-start, flex-start);
+	li {
+		text-transform: uppercase;
+		@include font(
+			1.125rem,
+			normal,
+			semi,
+			$theme-text-color-secondary,
+			left,
+			100%
+		);
+	}
+}
+
+.footer {
+	position: absolute;
+	bottom: 5rem;
+	width: 100%;
+	@include flex(row, space-between, center);
+	.description {
+		text-transform: uppercase;
+		max-width: 27rem;
+		@include font(
+			1.125rem,
+			normal,
+			regular,
+			$theme-text-color-secondary,
+			left,
+			100%
+		);
+		span {
+			color: $theme-text-color;
+			font-weight: 800;
+		}
+	}
+}

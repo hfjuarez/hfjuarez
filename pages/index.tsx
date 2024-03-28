@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Container from '@/components/common/layout/container';
-import Hero from '@/components/hero';
+import Hero from '@/components/hero/v2';
 // import Values from '@/components/values';
 import Expertise from '@/components/expertise';
-import Summary from '@/components/summary';
+// import Summary from '@/components/summary';
 import Works from '@/components/works';
 import Contact from '@/components/contact';
 import Footer from '@/components/common/layout/footer';
@@ -15,7 +15,7 @@ export default function Home() {
 		<>
 			<Hero />
 			<Container as="main">
-				<Summary />
+				{/* <Summary /> */}
 				{/* <Values /> */}
 				<Expertise />
 				<Works />

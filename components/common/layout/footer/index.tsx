@@ -25,7 +25,7 @@ const Footer = () => {
 						NextJS 13 - React 18 - TypeScript - SASS
 					</Text>
 					<Heading as="h3">External dependencies:</Heading>
-					<Text className={styles.dependencies}>gsap - classnames</Text>
+					<Text className={styles.dependencies}>GSAP - Classnames</Text>
 					<Text className={styles.copyright}>
 						Copyright © 2024 Hernán Fabrica. All rights reserved.
 					</Text>

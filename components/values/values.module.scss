@@ -29,8 +29,8 @@
 			word-break: keep-all;
 			max-width: 100%;
 			@include font(11cqw, normal, extra, transparent, center, 85%, 0);
-			@supports (-webkit-text-stroke: 0.1875rem $theme-secondary-color) {
-				-webkit-text-stroke: 0.1875rem $theme-secondary-color;
+			@supports (-webkit-text-stroke: 0.1875rem $theme-text-color-secondary) {
+				-webkit-text-stroke: 0.1875rem $theme-text-color-secondary;
 				-webkit-text-fill-color: transparent;
 			}
 		}
@@ -40,13 +40,13 @@
 			}
 		}
 		.bgTextInnovative {
-			@supports (-webkit-text-stroke: 0.1875rem rgba($base-yellow, 0.5)) {
-				-webkit-text-stroke: 0.1875rem rgba($base-yellow, 0.5);
+			@supports (-webkit-text-stroke: 0.1875rem rgba($base-mix, 0.5)) {
+				-webkit-text-stroke: 0.1875rem rgba($base-mix, 0.5);
 			}
 		}
 		.bgTextResultsDrive {
-			@supports (-webkit-text-stroke: 0.1875rem rgba($base-green, 0.5)) {
-				-webkit-text-stroke: 0.1875rem rgba($base-green, 0.5);
+			@supports (-webkit-text-stroke: 0.1875rem rgba($base-mix, 0.5)) {
+				-webkit-text-stroke: 0.1875rem rgba($base-mix, 0.5);
 			}
 		}
 	}
@@ -85,7 +85,7 @@
 			text-align: left;
 			margin-right: auto;
 			&:nth-child(3) {
-				color: $base-yellow;
+				color: $base-mix;
 			}
 		}
 	}
@@ -105,7 +105,7 @@
 			text-wrap: nowrap;
 			word-break: keep-all;
 			&:nth-child(3) {
-				color: $base-green;
+				color: $base-mix;
 			}
 		}
 	}

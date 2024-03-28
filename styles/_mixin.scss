@@ -59,7 +59,7 @@
 	}
 
 	@if ($color == '_') {
-		color: $primary;
+		color: $theme-text-color;
 	} @else {
 		color: $color;
 	}

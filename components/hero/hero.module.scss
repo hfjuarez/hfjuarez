@@ -2,7 +2,6 @@
 
 .container {
 	backdrop-filter: blur(0.5rem);
-	background-color: $theme-primary-transparent;
 	flex: 1;
 	height: 100%;
 	min-height: 100svh;
@@ -13,6 +12,7 @@
 	@include flex(column, center, center);
 	overflow: hidden;
 	position: fixed;
+	background: radial-gradient(circle, $theme-base 5%, $theme-primary 50%);
 }
 
 .top {
@@ -24,7 +24,15 @@
 	margin-inline: 2rem;
 	@include flex(row, center, flex-start);
 	p {
-		@include font(1rem, normal, regular, $theme-color, left, 85%, 0.125rem);
+		@include font(
+			1rem,
+			normal,
+			regular,
+			$theme-text-color,
+			left,
+			85%,
+			0.125rem
+		);
 	}
 }
 
@@ -44,7 +52,7 @@
 			font-weight: 700;
 			margin-block: 1rem 0;
 			text-transform: uppercase;
-			font-size: 1.25rem;
+			font-size: 1.35rem;
 			letter-spacing: 0.25rem;
 		}
 	}
@@ -63,13 +71,13 @@
 	}
 	li {
 		border-radius: 1.25rem;
-		color: $theme-secondary-color;
+		color: $theme-text-color-secondary;
 		text-transform: uppercase;
 		@include font(
-			1rem,
+			1.125rem,
 			normal,
 			semi,
-			$theme-secondary-color,
+			$theme-text-color-secondary,
 			left,
 			85%,
 			0.125rem
@@ -91,7 +99,7 @@
 }
 
 .link {
-	border: 0.09375rem solid $theme-secondary-color;
+	border: 0.09375rem solid $theme-text-color;
 	gap: 0.1875rem;
 	margin-left: auto;
 	min-width: 7.5rem;
@@ -103,20 +111,19 @@
 		0.9rem,
 		normal,
 		regular,
-		$theme-secondary-color,
+		$theme-text-color,
 		left,
 		85%,
 		0.125rem
 	);
 	svg {
 		path {
-			fill: $theme-secondary-color;
+			fill: $theme-text-color;
 		}
 	}
 	&:hover {
 		color: $theme-primary;
-		border-color: $theme-color;
-		background-color: $theme-color;
+		background-color: $theme-text-color;
 
 		svg {
 			path {
@@ -136,7 +143,7 @@
 			22cqw,
 			18.5cqw,
 			600,
-			$theme-secondary-color,
+			$theme-primary,
 			$stretch: 100%,
 			$spacing: 0rem
 		);

@@ -7,6 +7,7 @@ gsap.registerPlugin(Flip, ScrollTrigger);
 
 import Container from '@/components/common/layout/container';
 import Heading from '@/components/common/layout/heading';
+import Text from '@/components/common/layout/text';
 import HeightWrapper from '@/components/common/layout/height';
 
 import summaryStyles from './summary.module.scss';
@@ -20,6 +21,7 @@ const Summary = () => {
 		const heightWrapperElement = heightWrapperRef.current;
 
 		if (!summaryElement || !heightWrapperElement) return;
+
 		gsap.to(summaryElement, {
 			keyframes: {
 				'0%': { marginTop: '10rem', opacity: 0.4, scale: 0.7 },
@@ -29,6 +31,22 @@ const Summary = () => {
 				end: 'top top',
 				scrub: true,
 				start: `-=${innerHeight}`,
+				trigger: heightWrapperElement,
+			},
+		});
+		gsap.to(heightWrapperElement, {
+			keyframes: {
+				'0%': {
+					background: 'radial-gradient(circle, #ffbe98 0%, white 0%)',
+				},
+				'100%': {
+					background: 'radial-gradient(circle, #ffbe98 7.5%, white 50%)',
+				},
+			},
+			scrollTrigger: {
+				end: 'top top',
+				scrub: true,
+				start: `-=${innerHeight * 0.75}`,
 				trigger: heightWrapperElement,
 			},
 		});
@@ -42,11 +60,9 @@ const Summary = () => {
 		>
 			<Container as="div" className={summaryStyles.container}>
 				<Heading as="h3" className={summaryStyles.summary} ref={summaryTextRef}>
-					Dynamic Full Stack Engineer with a proven history of driving impactful
-					projects, such as pioneering the innovative LAND Sale system at The
-					Sandbox Game. Proficient in JavaScript, Node, Java, Vue, and React,
-					with a focus on delivering results and innovative solutions. Ready to
-					contribute expertise to your team&apos;s success.
+					I&apos;m a committed Full Stack Engineer with a proven history of
+					driving impactful projects, creating innovative solutions, and
+					delivering powerful results.
 				</Heading>
 			</Container>
 		</HeightWrapper>

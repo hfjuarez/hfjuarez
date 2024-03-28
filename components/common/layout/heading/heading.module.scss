@@ -1,6 +1,6 @@
 .heading-basic {
 	margin: 0;
-	@include font(9rem, normal, bold, $black, left, 100%, 0);
+	@include font(8rem, normal, bold, $black, left, 100%, 0, 'Playfair');
 }
 
 .h1,
@@ -13,7 +13,7 @@
 }
 
 .h1 {
-	line-height: 9rem;
+	line-height: normal;
 	@media only screen and (max-width: 70rem) {
 		font-size: 14vw;
 		line-height: 15vw;

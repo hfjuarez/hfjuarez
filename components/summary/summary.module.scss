@@ -1,17 +1,20 @@
 .customHeightWrapper {
-	background-color: $theme-primary;
-	padding-block: 6rem;
 	position: relative;
+	background-color: $white;
+	padding-block: 6rem;
+	background: radial-gradient(circle, $theme-base 5%, $white 50%);
 	.container {
 		flex: none;
 		height: fit-content;
 		justify-content: flex-start;
 		z-index: 1;
 		.summary {
-			text-align: left;
-			font-weight: 500;
-			letter-spacing: 0.0625rem;
-			font-stretch: 100%;
+			@include font(4.5rem, normal, 400, $black, left, 100%, 0.0625rem);
+			span {
+				font-weight: 600;
+				display: inline-block;
+				transform: skew(-2.5deg);
+			}
 		}
 	}
 }

@@ -113,62 +113,56 @@ const Expertise = () => {
 					Expertise
 				</Heading>
 				<div className={styles.cardContainers}>
-					<div className={styles.cardWrapper} ref={card1Ref}>
-						<div className={styles.card}>
-							<MacosActions />
-							<div className={styles.content}>
-								<Heading as="h3">Frontend</Heading>
-								<Text>
-									With {years}+ years of frontend development experience, I
-									specialize in creating dynamic, user-centric interfaces.
-								</Text>
-								<ul>
-									{frontendSkills
-										.filter((skill) => skill.primary)
-										.map((skill, index) => (
-											<li key={index}>{skill.name}</li>
-										))}
-								</ul>
-							</div>
+					<div className={styles.card} ref={card1Ref}>
+						<MacosActions />
+						<div className={styles.content}>
+							<Heading as="h3">Frontend</Heading>
+							<Text>
+								With {years}+ years of frontend development experience, I
+								specialize in creating dynamic, user-centric interfaces.
+							</Text>
+							<ul>
+								{frontendSkills
+									.filter((skill) => skill.primary)
+									.map((skill, index) => (
+										<li key={index}>{skill.name}</li>
+									))}
+							</ul>
 						</div>
 					</div>
 
-					<div className={styles.cardWrapper} ref={card2Ref}>
-						<div className={styles.card}>
-							<MacosActions />
-							<div className={styles.content}>
-								<Heading as="h3">Backend</Heading>
-								<Text>
-									Proficient in backend development, I specialize in building
-									robust, scalable server-side solutions.
-								</Text>
-								<ul>
-									{backendSkills
-										.filter((skill) => skill.primary)
-										.map((skill, index) => (
-											<li key={index}>{skill.name}</li>
-										))}
-								</ul>
-							</div>
+					<div className={styles.card} ref={card2Ref}>
+						<MacosActions />
+						<div className={styles.content}>
+							<Heading as="h3">Backend</Heading>
+							<Text>
+								Proficient in backend development, I specialize in building
+								robust, scalable server-side solutions.
+							</Text>
+							<ul>
+								{backendSkills
+									.filter((skill) => skill.primary)
+									.map((skill, index) => (
+										<li key={index}>{skill.name}</li>
+									))}
+							</ul>
 						</div>
 					</div>
-					<div className={styles.cardWrapper} ref={card3Ref}>
-						<div className={styles.card}>
-							<MacosActions />
-							<div className={styles.content}>
-								<Heading as="h3">Others</Heading>
-								<Text>
-									I offer a diverse skill set that enriches my capacity to
-									provide holistic solutions.
-								</Text>
-								<ul>
-									{othersSkills
-										.filter((skill) => skill.primary)
-										.map((skill, index) => (
-											<li key={index}>{skill.name}</li>
-										))}
-								</ul>
-							</div>
+					<div className={styles.card} ref={card3Ref}>
+						<MacosActions />
+						<div className={styles.content}>
+							<Heading as="h3">Others</Heading>
+							<Text>
+								I offer a diverse skill set that enriches my capacity to provide
+								holistic solutions.
+							</Text>
+							<ul>
+								{othersSkills
+									.filter((skill) => skill.primary)
+									.map((skill, index) => (
+										<li key={index}>{skill.name}</li>
+									))}
+							</ul>
 						</div>
 					</div>
 				</div>
