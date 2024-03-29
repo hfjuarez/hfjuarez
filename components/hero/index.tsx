@@ -1,104 +1,101 @@
-import React, { useRef, useEffect } from 'react';
-
-import { gsap } from 'gsap';
-import { Flip } from 'gsap/dist/Flip';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-
-gsap.registerPlugin(Flip, ScrollTrigger);
+import React, { useEffect, useRef } from 'react';
 
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
-import Link from '@/components/common/layout/link';
+import Container from '@/components/common/layout/container';
 
-import heroStyles from './hero.module.scss';
 import heightWrapperStyle from '@/components/common/layout/height/height.module.scss';
-import Container from '../common/layout/container';
+import styles from './hero.module.scss';
+import Image from 'next/image';
 
 const Hero = () => {
-	const titleRef = useRef<HTMLHeadingElement>(null);
-	const containerRef = useRef<HTMLDivElement>(null);
+	const canvasRef = useRef<HTMLCanvasElement>(null);
+
 	useEffect(() => {
-		const title = titleRef.current;
-		const container = containerRef.current;
-		if (!title || !container) return;
-		gsap.to(title, {
-			keyframes: {
-				'0%': {},
-				'100%': {
-					transform: 'scale(0.8)',
-				},
-			},
-			scrollTrigger: {
-				end: 'top top-=100%',
-				scrub: true,
-				start: 'top top',
-				trigger: container,
-			},
-		});
+		const canvas = canvasRef.current;
+
+		if (!canvas) return;
+
+		const ctx = canvas.getContext('2d');
+		if (!ctx) return;
+
+		const squareSize = 6;
+		const transparentColor = 'rgba(0, 0, 0, 0)';
+		const gridColor = '#1a1a1a20';
+
+		const getFillStyle = (x: number, y: number) =>
+			(x / squareSize + y / squareSize) % 2 === 0
+				? transparentColor
+				: gridColor;
+
+		const drawGrid = () => {
+			for (let x = 0; x < canvas.width; x += squareSize) {
+				for (let y = 0; y < canvas.height; y += squareSize) {
+					ctx.fillStyle = getFillStyle(x, y);
+					// create circle instead of square
+					// ctx.beginPath();
+					// ctx.arc(x, y, squareSize / 2, 0, Math.PI * 2);
+					// ctx.fill();
+
+					ctx.fillRect(x, y, squareSize, squareSize);
+				}
+			}
+		};
+		const resizeCanvas = () => {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			drawGrid();
+		};
+
+		window.addEventListener('resize', resizeCanvas);
+
+		resizeCanvas(); // Initial call to draw the grid
+
+		return () => {
+			window.removeEventListener('resize', resizeCanvas);
+		};
 	}, []);
+
 	return (
 		<header
 			id="hero"
-			className={heightWrapperStyle.wrapper}
-			style={{ position: 'sticky', top: 0 }}
-			aria-label="Hello, I'm Hernán"
+			className={[heightWrapperStyle.wrapper, styles.header].join(' ')}
+			aria-label="Hernán Fabrica"
 		>
-			<div className={heroStyles.container} ref={containerRef}>
-				<div className={heroStyles.top}>
-					<Text>
-						Looking for
-						<br />
-						your next developer?
+			<Container as="div" className={styles.container}>
+				<Text className={styles.question}>
+					Looking for
+					<br />
+					your next developer?
+				</Text>
+				<Heading as="h1">Hernán Fabrica</Heading>
+				<Heading as="h2" className={styles.customH2}>
+					Full Stack Engineer & Technical Leader
+				</Heading>
+				<ul className={styles.principalSkillList}>
+					<li>NodeJS</li>
+					<li>VueJS</li>
+					<li>ReactJS</li>
+					<li>Ruby On Rails</li>
+					<li>Java</li>
+				</ul>
+				<div className={styles.footer}>
+					<Image
+						src="/images/scroll-arrow.svg"
+						alt="Scroll Arrow"
+						width={70}
+						height={90}
+					/>
+					<Text className={styles.description}>
+						I&apos;m a committed Full Stack Engineer with a proven history of
+						driving <span>impactful projects</span>, creating{' '}
+						<span>innovative solutions</span>, and delivering{' '}
+						<span>powerful results</span>.
 					</Text>
-					<Link
-						href="mailto:hello@hernanfabrica.com"
-						className={heroStyles.link}
-					>
-						Let’s work!
-					</Link>
 				</div>
-				<Container as="div" className={heroStyles.centered} ref={titleRef}>
-					<div>
-						<Heading as="h1">Hernán Fabrica</Heading>
-						<Heading as="h2">Full Stack Engineer & Technical Leader</Heading>
-					</div>
-					<ul className={heroStyles.pills}>
-						<li>NodeJS</li>
-						<li>VueJS</li>
-						<li>ReactJS</li>
-						<li>Ruby on Rails</li>
-						<li>Java</li>
-					</ul>
-				</Container>
-			</div>
-			<div className={heroStyles.animation}>
-				<div className={heroStyles.left}>
-					<div>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-					</div>
-				</div>
-				<div className={heroStyles.right}>
-					<div>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-						<Text>Hello</Text>
-					</div>
-				</div>
-			</div>
+			</Container>
+			<canvas ref={canvasRef}></canvas>
 		</header>
 	);
 };
-
 export default Hero;
