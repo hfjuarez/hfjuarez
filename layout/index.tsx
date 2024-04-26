@@ -1,6 +1,6 @@
-import React, { useEffect, ReactNode } from 'react';
-import Lenis from '@studio-freight/lenis';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import React, { ReactNode } from 'react';
+// import Lenis from '@studio-freight/lenis';
+// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Head from 'next/head';
 
 // Styles
@@ -12,56 +12,44 @@ type LayoutProps = {
 	children: ReactNode;
 };
 
-let lenis: Lenis;
-// Function to initialize Lenis for smooth scrolling
-const initSmoothScrolling = () => {
-	// Instantiate the Lenis object with specified properties
-	lenis = new Lenis({
-		lerp: 0.1, // Lower values create a smoother scroll effect
-		smoothWheel: true, // Enables smooth scrolling for mouse wheel events
-	});
-
-	// Update ScrollTrigger each time the user scrolls
-	lenis.on('scroll', () => ScrollTrigger.update());
-
-	// Define a function to run at each animation frame
-	const scrollFn = (time: number) => {
-		lenis.raf(time); // Run Lenis' requestAnimationFrame method
-		requestAnimationFrame(scrollFn); // Recursively call scrollFn on each frame
-	};
-	// Start the animation frame loop
-	requestAnimationFrame(scrollFn);
-};
-
 export default function Layout({ children }: LayoutProps) {
-	useEffect(() => {
-		initSmoothScrolling();
-	});
+	// count years from march 2021 to now, round down
+	const yearsOfExperience = Math.floor(
+		(new Date().getTime() - new Date('2021-03-01').getTime()) /
+			(1000 * 60 * 60 * 24 * 365),
+	);
+	const parsedSkills: string[] = skills.map((skill) => skill.name);
+	const keywords = [
+		...parsedSkills,
+		'portfolio',
+		'full stack engineer',
+		'developer',
+		'technical lead',
+	].join(',');
 	return (
 		<>
 			<Head>
-				<title>Hernán Fabrica</title>
-				{/* TODO: description */}
-
+				<meta charSet="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Hernán Fabrica - Full Stack Engineer - Digital Portfolio</title>
 				<meta
 					name="description"
-					content="
-					Full Stack Engineer
-				"
+					content={`Full Stack Engineer & Technical Lead with ${yearsOfExperience}+ years of experience crafting beautifully and highly functional code, creating modern sites, and architecting robust systems that make our clients happier :)`}
 				/>
 				<meta name="author" content="Hernán Fabrica / @hfjuarez" />
-				<meta
-					name="keywords"
-					content={skills.map((skill) => skill.name).join(',')}
-				/>
+				<meta name="keywords" content={keywords} />
+
+				{/* Open Graph / Facebook  */}
+				{/* Twitter Card */}
+
 				<meta
 					name="theme-color"
-					content="#101010"
+					content="#fffbee"
 					media="(prefers-color-scheme: light)"
 				/>
 				<meta
 					name="theme-color"
-					content="#101010"
+					content="#fffbee"
 					media="(prefers-color-scheme: dark)"
 				/>
 				<link rel="icon" href="/favicon.ico" />
@@ -70,9 +58,14 @@ export default function Layout({ children }: LayoutProps) {
 					href="/fonts/mona-sans-1.0.1/Mona-Sans.woff2"
 					as="font"
 					type="font/woff2"
-				></link>
+				/>
+				<link
+					rel="preload"
+					href="/fonts/playfair_display/PlayfairDisplay-VariableFont_wght.ttf"
+					as="font"
+					type="font/tff"
+				/>
 			</Head>
-			{/* <Navbar /> */}
 			<>
 				<div className={styles.main}>{children}</div>
 			</>

@@ -1,20 +1,12 @@
 .navbar {
 	position: fixed;
-	left: 50%;
-	bottom: 1rem;
-	transform: translateX(-50%);
+	top: 50%;
+	right: 4rem;
+	transform: translateY(-50%);
 	flex: 1;
 	z-index: 99;
 	width: fit-content;
-	border: 0.0625rem solid rgba($white, 0.25);
-	border-radius: 1rem;
-	-webkit-backdrop-filter: blur(1rem);
-	backdrop-filter: blur(1rem);
-	background-color: rgba($white, 0.25);
-	transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-	opacity: 0;
 	@include flex(row, space-between, center);
-	display: none;
 	&.hideNavbar {
 		@keyframes slideOutToBottom {
 			0% {
@@ -26,7 +18,7 @@
 				display: none;
 			}
 		}
-		animation: slideOutToBottom 0.5s ease-in-out;
+		animation: slideOutToBottom 0.25s ease-in-out;
 		opacity: 0;
 	}
 
@@ -41,27 +33,40 @@
 				display: flex;
 			}
 		}
-		animation: slideInFromBottom 0.5s ease-in-out;
+		animation: slideInFromBottom 0.25s ease-in-out;
 		display: flex;
 		opacity: 1;
-	}
-	&.secondary {
-		border-color: rgba($theme-text-color-secondary, 0.3);
-		background-color: rgba($theme-text-color-secondary, 0.2);
 	}
 
 	.navbarContent {
 		position: relative;
-		height: 100%;
-		padding: 1rem;
-		gap: 2rem;
-		width: 100%;
-		@include flex(row, flex-end, center);
-		@media only screen and (max-width: 70rem) {
-			padding-inline: 2rem;
+		padding: 0;
+		margin: 0;
+		gap: 0.65rem;
+		@include flex(column, flex-start, flex-start);
+		a {
+			text-decoration: none;
+			&:hover {
+				color: $base-mix;
+				text-decoration: underline;
+			}
 		}
-		button {
-			border-radius: 0.5rem;
+		li {
+			@include font(
+				1rem,
+				normal,
+				medium,
+				$theme-text-color,
+				left,
+				100%,
+				0.125rem
+			);
+			&::marker {
+				color: $base-mix;
+			}
+			&.diff {
+				color: $white;
+			}
 		}
 	}
 }

@@ -12,7 +12,6 @@ interface LinkProps extends NextLinkProps {
 	href: string;
 	type?: UIColors | 'text';
 	activeClassName?: string;
-
 	children: ReactNode;
 	className?: string;
 	target?: string;
@@ -22,7 +21,6 @@ interface LinkProps extends NextLinkProps {
 const Link = ({
 	type = UIColors.PRIMARY,
 	activeClassName = 'active',
-
 	className,
 	children,
 	...props

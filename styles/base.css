@@ -1,6 +1,9 @@
+html {
+	scroll-behavior: smooth;
+}
 body {
 	margin: 0;
-	background-color: #fffdf9;
+	background-color: #fffbee;
 	/* scrollbar-width: none;
 	-ms-overflow-style: none; */
 }

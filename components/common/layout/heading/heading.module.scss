@@ -1,6 +1,15 @@
 .heading-basic {
 	margin: 0;
-	@include font(8rem, normal, bold, $black, left, 100%, 0, 'Playfair');
+	@include font(
+		7rem,
+		normal,
+		bold,
+		$theme-text-color,
+		left,
+		100%,
+		0,
+		'Playfair'
+	);
 }
 
 .h1,
@@ -14,46 +23,49 @@
 
 .h1 {
 	line-height: normal;
-	@media only screen and (max-width: 70rem) {
-		font-size: 14vw;
-		line-height: 15vw;
+	@media only screen and (max-width: $container-max-width) {
+		font-size: 5rem;
 	}
 
-	@media only screen and (max-width: 40rem) {
-		font-size: 20vw;
-		line-height: 20vw;
+	@media only screen and (max-width: $half-container-max-width) {
+		font-size: 4rem;
 	}
 }
 
 .h2 {
 	margin-bottom: 2.5rem;
 	@include font(
-		7.5rem,
+		6rem,
 		normal,
 		semi,
-		$black,
+		$theme-text-color,
 		center,
 		100%,
 		0.0625rem,
 		'Playfair'
 	);
 
-	@media (max-width: 75rem) {
-		font-size: 10cqw;
-	}
-	@media (max-width: 55rem) {
-		margin-bottom: 3rem;
-		font-size: 12cqw;
+	@media only screen and (max-width: $container-max-width) {
+		font-size: 4rem;
 	}
 	@media (max-width: 35rem) {
 		padding-block: 0;
-		font-size: 16cqw;
+		font-size: 2rem;
 	}
 }
 
 .h3 {
 	margin-block: 0.5rem;
-	@include font(3rem, normal, semi, $black, left, 100%, 0.125rem, 'Playfair');
+	@include font(
+		2.5rem,
+		normal,
+		semi,
+		$theme-text-color,
+		left,
+		100%,
+		0.125rem,
+		'Playfair'
+	);
 
 	@media (max-width: 75rem) {
 		font-size: 5cqw;
@@ -67,7 +79,7 @@
 }
 
 .h4 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: 500;
 	font-stretch: 100%;
 	margin-block: 0.5rem;
@@ -75,7 +87,7 @@
 }
 
 .h5 {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	font-weight: 400;
 	letter-spacing: 0.0625rem;
 }

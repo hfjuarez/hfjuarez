@@ -1,23 +1,53 @@
-.expertiseSection {
+@import '@/components/common/layout/heading/heading.module.scss';
+
+.wrapper {
 	background-color: $black;
+	.listContainer {
+		padding-block: 8rem;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: flex-start;
+		gap: 4rem;
+	}
 	h2,
 	h3 {
 		text-align: left;
 		color: $white;
+		margin-bottom: 0.5em;
+	}
+	h3 {
+		@extend .h3;
+		letter-spacing: 0.25rem;
+		&::before {
+			margin-right: 0.25rem;
+			content: '[';
+		}
+		&::after {
+			margin-left: 0.25rem;
+			content: ']';
+		}
+	}
+	hr {
+		border: 0.0625rem solid $theme-primary;
+		width: 100%;
+		margin-bottom: 2rem;
 	}
 }
-
 .list {
-	width: 100%;
+	display: block;
 	ul {
-		list-style: none;
+		// list-style: none;
 		padding: 0;
-		margin: 0;
+		margin: 0 0 0 1.25rem;
 		gap: 1rem;
 		li {
-			text-transform: uppercase;
-			@include font($color: $theme-primary);
+			text-transform: capitalize;
 			margin-bottom: 1rem;
+			padding-left: 0.5rem;
+			@include font($color: $theme-primary, $spacing: 0.125rem);
+			&::marker {
+				color: $base-mix;
+			}
 		}
 	}
 }

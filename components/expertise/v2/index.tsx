@@ -9,8 +9,10 @@ import HeightWrapper from '@/components/common/layout/height';
 import Heading from '@/components/common/layout/heading';
 
 import {
+	backendSkills,
 	// backendSkills,
 	frontendSkills,
+	othersSkills,
 	// othersSkills,
 } from '@/data/contents/skills';
 
@@ -23,19 +25,40 @@ const Expertise = () => {
 		<HeightWrapper
 			as="section"
 			ref={expertiseRef}
-			id="expertise"
-			className={styles.expertiseSection}
+			id="about"
+			className={styles.wrapper}
 		>
-			<Container as="div">
+			<Container as="div" className={styles.listContainer}>
 				<div className={`${styles.list} ${styles.frontend}`}>
-					<Heading as="h2" className={styles.expertiseTitle}>
-						Expertise
-					</Heading>
 					<Heading as="h3" className={styles.expertiseTitle}>
-						[Frontend]
+						Frontend
 					</Heading>
 					<ul>
 						{frontendSkills
+							.filter((skill) => skill.primary)
+							.map((skill, index) => (
+								<li key={index}>{skill.name}</li>
+							))}
+					</ul>
+				</div>
+				<div className={`${styles.list} ${styles.frontend}`}>
+					<Heading as="h3" className={styles.expertiseTitle}>
+						Backend
+					</Heading>
+					<ul>
+						{backendSkills
+							.filter((skill) => skill.primary)
+							.map((skill, index) => (
+								<li key={index}>{skill.name}</li>
+							))}
+					</ul>
+				</div>
+				<div className={`${styles.list} ${styles.frontend}`}>
+					<Heading as="h3" className={styles.expertiseTitle}>
+						Others
+					</Heading>
+					<ul>
+						{othersSkills
 							.filter((skill) => skill.primary)
 							.map((skill, index) => (
 								<li key={index}>{skill.name}</li>

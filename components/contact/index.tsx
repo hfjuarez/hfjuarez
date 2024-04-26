@@ -13,7 +13,7 @@ const Contact = () => {
 		<HeightWrapper as="section" id="contact" className={styles.heightWrapper}>
 			<Container as="div" className={styles.container}>
 				<Heading as="h2" className={styles.title}>
-					Let’s work together
+					Let’s work <span>together</span>
 				</Heading>
 				<div className={styles.contactInfoContainer}>
 					<Heading as="h3" className={styles.label}>
@@ -37,12 +37,16 @@ const Contact = () => {
 						<Link
 							className={headingStyle.h3}
 							href="https://www.linkedin.com/in/hfjuarez/"
+							rel="noopener noreferrer"
+							target="_blank"
 						>
 							LinkedIn
 						</Link>
 						<Link
 							className={headingStyle.h3}
 							href="https://github.com/hfjuarez"
+							rel="noopener noreferrer"
+							target="_blank"
 						>
 							GitHub
 						</Link>

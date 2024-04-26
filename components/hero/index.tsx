@@ -1,4 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import Heading from '@/components/common/layout/heading';
 import Text from '@/components/common/layout/text';
@@ -6,44 +11,57 @@ import Container from '@/components/common/layout/container';
 
 import heightWrapperStyle from '@/components/common/layout/height/height.module.scss';
 import styles from './hero.module.scss';
-import Image from 'next/image';
 
 const Hero = () => {
-	const canvasRef = useRef<HTMLCanvasElement>(null);
+	const gridCanvasRef = useRef<HTMLCanvasElement>(null);
+	const containerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		const canvas = canvasRef.current;
+		const container = containerRef.current;
+		if (!container) return;
+		gsap.to(container, {
+			keyframes: {
+				'0%': {},
+				'100%': {
+					transform: 'scale(0.9)',
+				},
+			},
+			scrollTrigger: {
+				end: 'top top-=100%',
+				scrub: true,
+				start: 'top top',
+				trigger: container,
+			},
+		});
+		// create a interval to change the active element by 1 second
 
-		if (!canvas) return;
+		const gridCanvas = gridCanvasRef.current;
 
-		const ctx = canvas.getContext('2d');
-		if (!ctx) return;
+		if (!gridCanvas) return;
 
-		const squareSize = 6;
-		const transparentColor = 'rgba(0, 0, 0, 0)';
-		const gridColor = '#1a1a1a20';
-
-		const getFillStyle = (x: number, y: number) =>
-			(x / squareSize + y / squareSize) % 2 === 0
-				? transparentColor
-				: gridColor;
+		const gridCtx = gridCanvas.getContext('2d');
+		if (!gridCtx) return;
 
 		const drawGrid = () => {
-			for (let x = 0; x < canvas.width; x += squareSize) {
-				for (let y = 0; y < canvas.height; y += squareSize) {
-					ctx.fillStyle = getFillStyle(x, y);
-					// create circle instead of square
-					// ctx.beginPath();
-					// ctx.arc(x, y, squareSize / 2, 0, Math.PI * 2);
-					// ctx.fill();
+			const squareSize = 6;
+			const transparentColor = 'rgba(0, 0, 0, 0)';
+			const gridColor = '#45454510';
+			const getFillStyle = (x: number, y: number) =>
+				(x / squareSize + y / squareSize) % 2 === 0
+					? transparentColor
+					: gridColor;
 
-					ctx.fillRect(x, y, squareSize, squareSize);
+			for (let x = 0; x < gridCanvas.width; x += squareSize) {
+				for (let y = 0; y < gridCanvas.height; y += squareSize) {
+					gridCtx.fillStyle = getFillStyle(x, y);
+					gridCtx.fillRect(x, y, squareSize, squareSize);
 				}
 			}
 		};
+
 		const resizeCanvas = () => {
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
+			gridCanvas.width = window.innerWidth;
+			gridCanvas.height = window.innerHeight;
 			drawGrid();
 		};
 
@@ -54,7 +72,7 @@ const Hero = () => {
 		return () => {
 			window.removeEventListener('resize', resizeCanvas);
 		};
-	}, []);
+	});
 
 	return (
 		<header
@@ -62,39 +80,53 @@ const Hero = () => {
 			className={[heightWrapperStyle.wrapper, styles.header].join(' ')}
 			aria-label="Hernán Fabrica"
 		>
-			<Container as="div" className={styles.container}>
-				<Text className={styles.question}>
-					Looking for
-					<br />
-					your next developer?
-				</Text>
+			<Container as="div" className={styles.container} ref={containerRef}>
 				<Heading as="h1">Hernán Fabrica</Heading>
 				<Heading as="h2" className={styles.customH2}>
 					Full Stack Engineer & Technical Leader
 				</Heading>
-				<ul className={styles.principalSkillList}>
-					<li>NodeJS</li>
-					<li>VueJS</li>
-					<li>ReactJS</li>
-					<li>Ruby On Rails</li>
-					<li>Java</li>
-				</ul>
+				<div className={styles.description}>
+					<Text className={styles.label}>[Hi]</Text>
+					<Text>
+						Welcome to my website. You can call me Herni. <br />
+						Please take a look at my digital portfolio and have a wonderful time
+						exploring.
+					</Text>
+					<Text className={styles.label}>[Who I am]</Text>
+					<Text>
+						23 years old. Uruguayan 🇺🇾. Technologist Degree in Computer Science.
+						Backend Enthusiast. Energetic. Innovative. Creative. Committed.
+						Result-driven. Good Friend. Passionate about technology. Always
+						learning.
+					</Text>
+					<Text className={styles.label}>[What I Offer]</Text>
+					<Text>
+						Crafting beautifully and highly functional code, creating modern
+						sites, and architecting robust systems that make our clients
+						happier. Consistently delivering projects that drive powerful
+						impact. An exceptional team player, always looking to collaborate,
+						improve and learn together.
+					</Text>
+				</div>
 				<div className={styles.footer}>
 					<Image
 						src="/images/scroll-arrow.svg"
 						alt="Scroll Arrow"
-						width={70}
-						height={90}
+						width={60}
+						height={80}
 					/>
-					<Text className={styles.description}>
-						I&apos;m a committed Full Stack Engineer with a proven history of
-						driving <span>impactful projects</span>, creating{' '}
-						<span>innovative solutions</span>, and delivering{' '}
-						<span>powerful results</span>.
-					</Text>
+					<Text className={styles.quote}>Make the difference together.</Text>
+
+					{/* <ul className={styles.principalSkillList}>
+						<li>NodeJS</li>
+						<li>VueJS</li>
+						<li>ReactJS</li>
+						<li>Ruby On Rails</li>
+						<li>Java</li>
+					</ul> */}
 				</div>
 			</Container>
-			<canvas ref={canvasRef}></canvas>
+			<canvas ref={gridCanvasRef} className={styles.gridCanvas} />
 		</header>
 	);
 };

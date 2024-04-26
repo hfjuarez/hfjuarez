@@ -1,60 +1,83 @@
 import React, { useState, useEffect } from 'react';
-import classNames from 'classnames';
 import { gsap } from 'gsap';
+import classNames from 'classnames';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 // Components
 import Link from '@/components/common/layout/link';
-import Button from '@/components/common/button';
 
 // Styles
 import navbarStyles from './navbar.module.scss';
 // Utils
 
 const Navbar = () => {
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [navbarColor, setNavbarColor] = useState<string | null>(null);
-
+	// create a useEffect that detect if #contact is visible
+	// if it is visible, change the color of the navbar to white
+	// else, change the color of the navbar to black
+	const [isWhiteText, setIsWhiteText] = useState(false);
+	const [isHidden, setIsHidden] = useState(false);
+	const isWhite = classNames({
+		[navbarStyles.diff]: isWhiteText,
+	});
 	const navbarClasses = classNames(
 		navbarStyles.navbar,
-		navbarColor,
-		isScrolled ? navbarStyles.showNavbar : navbarStyles.hideNavbar,
+		isHidden ? navbarStyles.hideNavbar : navbarStyles.showNavbar,
 	);
-	const contact = () => {
-		window.location.href = 'mailto:hello@hernanfabrica.com';
-	};
 
 	useEffect(() => {
+		const about = document.getElementById('about');
+		const contact = document.getElementById('contact');
+		const footer = document.getElementById('footer');
+		if (!contact || !about || !footer) return;
+		const aboutOffset = about.offsetTop;
+		const aboutHeight = about.offsetHeight;
+		const contactOffset = contact.offsetTop;
+		const contactHeight = contact.offsetHeight;
+		const footerOffset = footer.offsetTop;
+		const footerHeight = footer.offsetHeight;
+
 		const handleScroll = () => {
-			const scrollTop = window.scrollY || document.documentElement.scrollTop;
-			setIsScrolled(scrollTop > 200);
-			const scrollPositionInVh = (window.scrollY / window.innerHeight) * 100;
-			if (scrollPositionInVh >= 1) {
-				setNavbarColor(navbarStyles.secondary);
+			if (
+				(window.scrollY >= contactOffset - contactHeight / 2 &&
+					window.scrollY <= contactOffset + contactHeight / 2) ||
+				(window.scrollY >= aboutOffset - aboutHeight / 2 &&
+					window.scrollY <= aboutOffset + aboutHeight / 2)
+			) {
+				setIsWhiteText(true);
 			} else {
-				setNavbarColor(null);
+				setIsWhiteText(false);
+			}
+			if (window.scrollY >= footerOffset - footerHeight / 2) {
+				setIsHidden(true);
+			} else {
+				setIsHidden(false);
 			}
 		};
+
 		window.addEventListener('scroll', handleScroll);
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 	return (
 		<nav className={navbarClasses}>
-			<div className={navbarStyles.navbarContent}>
+			<ol className={navbarStyles.navbarContent}>
 				<Link href="#about" type="text">
-					About
+					<li className={isWhite}>About</li>
 				</Link>
-				<Link href="#works" type="text">
-					Work
+				<Link href="#experience" type="text">
+					<li className={isWhite}>Experience</li>
 				</Link>
-				<Button onClick={contact} id="navbar-principal-cta">
-					LET&apos;S TALK
-				</Button>
-			</div>
+				<Link href="#projects" type="text">
+					<li className={isWhite}>Projects</li>
+				</Link>
+				<Link href="#contact" type="text">
+					<li className={isWhite}>Contact</li>
+				</Link>
+			</ol>
 		</nav>
 	);
 };

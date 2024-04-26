@@ -1,18 +1,23 @@
 import Skill from '@/data/models/skill';
 
+// TODO: Refactor by lang, framework,(frontend or backend) tools, soft skills - https://github.com/hfjuarez/hfjuarez/issues/43
+
 const frontendSkills: Skill[] = [
 	{ key: 'react', name: 'React', primary: true },
 	{ key: 'next', name: 'Next.js', primary: true },
 	{ key: 'vue', name: 'Vue.js', primary: true },
-	{ key: 'nuxt', name: 'Nuxt.js', primary: false },
+	{ key: 'nuxt', name: 'Nuxt.js', primary: true },
 	{ key: 'html', name: 'HTML - Accessibility and Semantic', primary: true },
 	{ key: 'js', name: 'JavaScript', primary: true },
+	{ key: 'ts', name: 'TypeScript', primary: true },
 	{ key: 'react-native', name: 'React Native', primary: true },
 	{ key: 'strapi', name: 'Strapi', primary: false },
-	{ key: 'webapp', name: 'Web App', primary: false },
+	{ key: 'webdev', name: 'Web Development', primary: false },
+	{ key: 'fe', name: 'Frontend Developer', primary: false },
 	{ key: 'ionic', name: 'Ionic', primary: false },
 	{ key: 'angular', name: 'Angular', primary: false },
 ].sort((a, b) => a.name.localeCompare(b.name));
+
 const backendSkills: Skill[] = [
 	{ key: 'node', name: 'NodeJS', primary: true },
 	{
@@ -26,7 +31,9 @@ const backendSkills: Skill[] = [
 	{ key: 'mongo', name: 'Mongo', primary: true },
 	{ key: 'mongoose', name: 'Mongoose', primary: true },
 	{ key: 'api', name: 'API', primary: false },
-	{ key: 'express', name: 'Express', primary: true },
+	{ key: 'express', name: 'Express.js', primary: true },
+	{ key: 'nest', name: 'Nest.js', primary: true },
+	{ key: 'be', name: 'Backend Developer', primary: false },
 	{
 		key: 'ts',
 		name: 'Typescript',
@@ -35,6 +42,7 @@ const backendSkills: Skill[] = [
 	{ key: 'rest', name: 'REST', primary: false },
 	{ key: 'adr', name: 'Architectural Decision', primary: true },
 ].sort((a, b) => a.name.localeCompare(b.name));
+
 const othersSkills: Skill[] = [
 	{ key: 'docker', name: 'Docker', primary: true },
 	{ key: 'aws', name: 'AWS', primary: true },
