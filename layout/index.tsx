@@ -21,6 +21,7 @@ export default function Layout({ children }: LayoutProps) {
 	const parsedSkills: string[] = skills.map((skill) => skill.name);
 	const keywords = [
 		...parsedSkills,
+		'resume',
 		'portfolio',
 		'full stack engineer',
 		'developer',
@@ -31,7 +32,7 @@ export default function Layout({ children }: LayoutProps) {
 			<Head>
 				<meta charSet="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>Hernán Fabrica - Full Stack Engineer - Digital Portfolio</title>
+				<title>Hernán Fabrica - Full Stack Engineer - Portfolio</title>
 				<meta
 					name="description"
 					content={`Full Stack Engineer & Technical Lead with ${yearsOfExperience}+ years of experience crafting beautifully and highly functional code, creating modern sites, and architecting robust systems that make our clients happier :)`}
