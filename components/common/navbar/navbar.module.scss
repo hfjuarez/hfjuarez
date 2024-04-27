@@ -1,7 +1,7 @@
 .navbar {
 	position: fixed;
 	top: 50%;
-	right: 4rem;
+	right: 3.5rem;
 	transform: translateY(-50%);
 	flex: 1;
 	z-index: 99;
@@ -18,10 +18,9 @@
 				display: none;
 			}
 		}
-		animation: slideOutToBottom 0.25s ease-in-out;
+		animation: slideOutToBottom $animation-speed ease-in-out;
 		opacity: 0;
 	}
-
 	&.showNavbar {
 		@keyframes slideInFromBottom {
 			0% {
@@ -33,25 +32,20 @@
 				display: flex;
 			}
 		}
-		animation: slideInFromBottom 0.25s ease-in-out;
+		animation: slideInFromBottom $animation-speed ease-in-out;
 		display: flex;
 		opacity: 1;
 	}
-
 	.navbarContent {
-		position: relative;
-		padding: 0;
+		display: grid;
 		margin: 0;
 		gap: 0.65rem;
-		@include flex(column, flex-start, flex-start);
+		grid-template-rows: repeat(4, 1fr);
+		padding: 0;
+		position: relative;
 		a {
+			text-wrap: nowrap;
 			text-decoration: none;
-			&:hover {
-				color: $base-mix;
-				text-decoration: underline;
-			}
-		}
-		li {
 			@include font(
 				1rem,
 				normal,
@@ -61,11 +55,73 @@
 				100%,
 				0.125rem
 			);
-			&::marker {
+			transition: color $animation-speed ease-in-out;
+			.number {
 				color: $base-mix;
 			}
-			&.diff {
+			&:hover {
+				.linkText {
+					text-decoration: underline;
+				}
+				.number {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&.dark {
+		.navbarContent {
+			a {
 				color: $white;
+			}
+		}
+	}
+	@media (max-width: $container-max-width) {
+		right: 2rem;
+	}
+
+	@media (max-width: $three-quarter-container-max-width) {
+		bottom: 0;
+		top: unset;
+		transform: translateY(0%);
+		right: unset;
+		left: 0;
+		border-top: 0.0625rem solid $theme-text-color;
+		overflow-x: auto;
+		width: 100vw;
+		background-color: $theme-primary;
+		transition: background-color $animation-speed ease-in-out,
+			border-top-color $animation-speed ease-in-out;
+		// hide scrollbar
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+		&::-webkit-scrollbar {
+			display: none; /* Chrome, Safari, Opera*/
+		}
+		.navbarContent {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: none;
+			gap: 0;
+			width: 100%;
+			a {
+				min-height: 100%;
+				border-right: 0.0625rem solid $theme-text-color;
+				transition: border-right $animation-speed ease-in-out,
+					color $animation-speed ease-in-out;
+				padding: 0.8125rem 1.5rem;
+				&:last-of-type {
+					border-right: none;
+				}
+			}
+		}
+		&.dark {
+			background-color: $black;
+			border-top-color: $theme-primary;
+			.navbarContent {
+				a {
+					border-right-color: $theme-primary;
+					color: $white;
+				}
 			}
 		}
 	}

@@ -76,42 +76,16 @@
 	}
 }
 
-.principalSkillList {
-	padding: 0;
-	margin: 0;
-	gap: 0.65rem;
-	@include flex(column, flex-start, flex-start);
-	li {
-		text-transform: uppercase;
-		@include font(
-			1rem,
-			normal,
-			medium,
-			$theme-text-color,
-			left,
-			100%,
-			0.125rem
-		);
-		&::marker {
-			color: $base-red;
-		}
-		&.active {
-			color: $base-red;
-			font-weight: 600;
-			letter-spacing: 0.1875rem;
-		}
-	}
-}
-
 .footer {
 	@extend .hero-grid;
-	position: absolute;
-	bottom: 5rem;
+	margin-block: auto 6rem;
+
 	@media (max-width: $half-container-max-width) {
-		position: relative;
 		margin-block: 1.5rem 2rem;
-		bottom: 0;
 		align-self: center;
+	}
+	@media (max-width: $half-container-max-width) {
+		margin-block: auto calc(2rem + $navbar-height);
 	}
 	.quote,
 	span {

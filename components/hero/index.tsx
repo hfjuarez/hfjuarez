@@ -116,14 +116,6 @@ const Hero = () => {
 						height={80}
 					/>
 					<Text className={styles.quote}>Make the difference together.</Text>
-
-					{/* <ul className={styles.principalSkillList}>
-						<li>NodeJS</li>
-						<li>VueJS</li>
-						<li>ReactJS</li>
-						<li>Ruby On Rails</li>
-						<li>Java</li>
-					</ul> */}
 				</div>
 			</Container>
 			<canvas ref={gridCanvasRef} className={styles.gridCanvas} />

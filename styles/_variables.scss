@@ -1,3 +1,7 @@
-$navbar-height: 3.5rem;
+$animation-speed: 0.2s;
+$navbar-height: 3rem;
+
 $container-max-width: 72rem;
+$three-quarter-container-max-width: calc($container-max-width / 4 * 3);
 $half-container-max-width: calc($container-max-width / 2);
+$quarter-container-max-width: calc($container-max-width / 4);

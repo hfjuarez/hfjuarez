@@ -58,13 +58,13 @@ export default function Layout({ children }: LayoutProps) {
 					rel="preload"
 					href="/fonts/mona-sans-1.0.1/Mona-Sans.woff2"
 					as="font"
-					type="font/woff2"
+					crossOrigin="anonymous"
 				/>
 				<link
 					rel="preload"
 					href="/fonts/playfair_display/PlayfairDisplay-VariableFont_wght.ttf"
 					as="font"
-					type="font/tff"
+					crossOrigin="anonymous"
 				/>
 			</Head>
 			<>
