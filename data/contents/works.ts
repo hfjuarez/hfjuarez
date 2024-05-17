@@ -1,11 +1,11 @@
-import Work from '@/data/models/work';
+import Work from '@/data/models/Work';
 import { findAllByKeys } from '@/data/contents/skills';
 // TODO: Generate static .json with skills and works
 const works: Work[] = [
 	{
 		description: {
 			paragraphs: [
-				'As a Full Stack Engineer I was a key part of the development of this critical system from conception to execution. As the technical lead, I spearheaded the development of incredible new features.',
+				'As a Full Stack Developer I was a key part of the development of this critical system from conception to execution. As the technical lead, I spearheaded the development of incredible new features.',
 				'We designed and implemented a robust and secure platform for users to purchase virtual lands, enabling them to create immersive gaming experiences within the metaverse.',
 				'The LAND Sale project was a groundbreaking initiative aimed at revolutionizing land sales within our gaming platform.',
 			],

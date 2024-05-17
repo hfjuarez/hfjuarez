@@ -1,6 +1,7 @@
-$base: #fe8559;
+$base: #ff7f51;
 $base-mix: #fd6d47;
 $base-red: #fb4934;
+$base-blue: #47d7fd;
 
 // Theme
 $black: #000;
@@ -13,4 +14,4 @@ $theme-tertiary: #ece7da;
 
 // Theme text colors
 $theme-text-color: #1a1a1a;
-$theme-text-color-secondary: #333333;
+$theme-text-color-secondary: lighten($theme-text-color, 10%);

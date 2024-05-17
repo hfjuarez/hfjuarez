@@ -20,7 +20,7 @@
 	a {
 		text-decoration: underline;
 		&:hover {
-			color: lighten($theme-text-color-secondary, 20%) !important;
+			color: $theme-text-color !important;
 		}
 	}
 }

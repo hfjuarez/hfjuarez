@@ -15,21 +15,21 @@
 	}
 
 	hr {
-		background-color: $theme-text-color-secondary;
+		background-color: $theme-text-color;
 		border: 0;
 		border-radius: 0.0625rem;
 		height: 0.125rem;
 		margin-block: 0.5rem;
-		opacity: 0.5;
+		opacity: 0.75;
 		width: 100%;
 	}
 }
 
 .descriptionAndSkillsContainer {
 	width: 100%;
-	background-color: $theme-secondary;
-	padding: 2.5rem 2.5rem 2rem;
-	border-radius: 1.75rem;
+	background-color: rgba($white, 0.5);
+	padding: 2rem 2rem 1.5rem;
+	border-radius: 1rem;
 	overflow-x: auto;
 	// hide scrollbar
 	-ms-overflow-style: none; /* IE and Edge */
@@ -56,14 +56,15 @@
 			width: 100%;
 			max-width: 7.25rem;
 			@include font(0.875rem, normal, medium, $theme-text-color);
-			background-color: $theme-primary;
+			background-color: transparent;
+			border: 0.0625rem solid $theme-text-color;
 
 			&:nth-of-type(1) {
 				background-color: $theme-text-color;
 				color: $white;
 			}
 			&:nth-of-type(2):hover {
-				background-color: darken($theme-secondary, 15%);
+				background-color: darken($theme-secondary, 5%);
 			}
 		}
 	}
@@ -74,10 +75,10 @@
 		.carouselControls {
 			button:nth-of-type(1) {
 				color: $theme-text-color;
-				background-color: $theme-primary;
+				background-color: transparent;
 
 				&:hover {
-					background-color: darken($theme-secondary, 15%);
+					background-color: darken($theme-secondary, 5%);
 				}
 			}
 			button:nth-of-type(2) {
@@ -119,7 +120,6 @@
 		@include flex(row, flex-start, flex-start);
 		li,
 		button {
-			background-color: rgba($theme-text-color-secondary, 0.2);
 			backdrop-filter: blur(0.5rem);
 			border: none;
 			border-radius: 1rem;
@@ -127,21 +127,8 @@
 			padding: 0.25rem 0.875rem;
 			@include font(0.875rem, normal, regular);
 			@include flex(row, center, center);
-		}
-		.red {
-			border: 2px solid;
-			border-color: $base-red;
-			background-color: mix($base-red, $white, 25%);
-		}
-		.yellow {
-			border: 2px solid;
-			border-color: $base-mix;
-			background-color: mix($base-mix, $white, 25%);
-		}
-		.green {
-			border: 2px solid;
-			border-color: $base-mix;
-			background-color: mix($base-mix, $white, 25%);
+			border: 0.0625rem solid $base;
+			background-color: mix($base, $white, 12.5%);
 		}
 	}
 }

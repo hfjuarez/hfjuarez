@@ -9,19 +9,19 @@ gsap.registerPlugin(ScrollTrigger);
 // Components
 import Link from '@/components/common/layout/link';
 // Styles
-import navbarStyles from './navbar.module.scss';
+import styles from './navbar.module.scss';
 
 const Navbar = () => {
 	const halfContainerMaxWidth = 864;
 	const [isDarkNavbar, setIsDarkNavbar] = useState(false);
 	const [isHidden, setIsHidden] = useState(false);
 	const linkClasses = classNames({
-		[navbarStyles.linkText]: true,
+		[styles.linkText]: true,
 	});
 	const navbarClasses = classNames(
-		navbarStyles.navbar,
-		isDarkNavbar ? navbarStyles.dark : null,
-		isHidden ? navbarStyles.hideNavbar : navbarStyles.showNavbar,
+		styles.navbar,
+		isDarkNavbar ? styles.dark : null,
+		isHidden ? styles.hideNavbar : styles.showNavbar,
 	);
 
 	useEffect(() => {
@@ -29,13 +29,14 @@ const Navbar = () => {
 		const contact = document.getElementById('contact');
 		const footer = document.getElementById('footer');
 		if (!contact || !about || !footer) return;
-		const aboutOffset = about.offsetTop;
-		const aboutHeight = about.offsetHeight;
-		const contactOffset = contact.offsetTop;
-		const contactHeight = contact.offsetHeight;
-		const footerOffset = footer.offsetTop;
 
 		const handleScroll = () => {
+			const aboutOffset = about.offsetTop;
+			const aboutHeight = about.offsetHeight;
+			const contactOffset = contact.offsetTop;
+			const contactHeight = contact.offsetHeight;
+			const footerOffset = footer.offsetTop;
+
 			const isMobile = window.innerWidth < halfContainerMaxWidth;
 			const mobileDarkNavbarCondition =
 				(window.scrollY > contactOffset - contactHeight &&
@@ -43,10 +44,11 @@ const Navbar = () => {
 				(window.scrollY > aboutOffset - aboutHeight &&
 					window.scrollY < aboutOffset);
 			const desktopDarkNavbarCondition =
-				(window.scrollY > contactOffset - contactHeight / 2 &&
-					window.scrollY < contactOffset + contactHeight / 2) ||
-				(window.scrollY > aboutOffset - aboutHeight / 2 &&
-					window.scrollY < aboutOffset + aboutHeight / 2);
+				(window.scrollY > contactOffset - window.innerHeight / 2 &&
+					window.scrollY <
+						contactOffset + contactHeight - window.innerHeight / 2) ||
+				(window.scrollY > aboutOffset - window.innerHeight / 2 &&
+					window.scrollY < aboutOffset + aboutHeight - window.innerHeight / 2);
 			const darkNavbarCondition = isMobile
 				? mobileDarkNavbarCondition
 				: desktopDarkNavbarCondition;
@@ -82,21 +84,21 @@ const Navbar = () => {
 	}, []);
 	return (
 		<nav className={navbarClasses}>
-			<div className={navbarStyles.navbarContent}>
+			<div className={styles.navbarContent}>
 				<Link href="#about" type="text">
-					<span className={navbarStyles.number}>1. </span>
+					<span className={styles.number}>1. </span>
 					<span className={linkClasses}>About</span>
 				</Link>
 				<Link href="#experience" type="text">
-					<span className={navbarStyles.number}>2. </span>
+					<span className={styles.number}>2. </span>
 					<span className={linkClasses}>Experience</span>
 				</Link>
 				<Link href="#projects" type="text">
-					<span className={navbarStyles.number}>3. </span>
+					<span className={styles.number}>3. </span>
 					<span className={linkClasses}>Projects</span>
 				</Link>
 				<Link href="#contact" type="text">
-					<span className={navbarStyles.number}>4. </span>
+					<span className={styles.number}>4. </span>
 					<span className={linkClasses}>Contact</span>
 				</Link>
 			</div>

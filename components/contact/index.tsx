@@ -8,7 +8,10 @@ import Link from '../common/layout/link';
 import styles from './contact.module.scss';
 import headingStyle from '@/components/common/layout/heading/heading.module.scss';
 
+import me from '@/data/contents/me';
+
 const Contact = () => {
+	const contact = me.contact;
 	return (
 		<HeightWrapper as="section" id="contact" className={styles.heightWrapper}>
 			<Container as="div" className={styles.container}>
@@ -20,11 +23,8 @@ const Contact = () => {
 						Contact
 					</Heading>
 					<div className={styles.linksContainer}>
-						<Link
-							className={headingStyle.h3}
-							href="mailto:hello@hernanfabrica.com"
-						>
-							hello@hernanfabrica.com
+						<Link className={headingStyle.h3} href={`mailto:${contact.email}`}>
+							{contact.email}
 						</Link>
 					</div>
 				</div>
@@ -36,7 +36,7 @@ const Contact = () => {
 					<div className={styles.linksContainer}>
 						<Link
 							className={headingStyle.h3}
-							href="https://www.linkedin.com/in/hfjuarez/"
+							href={contact.linkedin}
 							rel="noopener noreferrer"
 							target="_blank"
 						>
@@ -44,7 +44,7 @@ const Contact = () => {
 						</Link>
 						<Link
 							className={headingStyle.h3}
-							href="https://github.com/hfjuarez"
+							href={contact.github}
 							rel="noopener noreferrer"
 							target="_blank"
 						>

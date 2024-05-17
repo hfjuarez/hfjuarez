@@ -1,6 +1,6 @@
 {
 	"name": "hfjuarez",
-	"version": "2.0.0-alpha.2",
+	"version": "2.0.0-alpha.4",
 	"description": "Personal website of Hernán Fabrica",
 	"private": true,
 	"scripts": {
@@ -10,7 +10,6 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@studio-freight/lenis": "^1.0.23",
 		"@types/node": "18.11.9",
 		"@types/react": "18.0.25",
 		"@types/react-dom": "18.0.9",

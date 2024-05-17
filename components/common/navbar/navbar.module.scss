@@ -20,6 +20,7 @@
 		}
 		animation: slideOutToBottom $animation-speed ease-in-out;
 		opacity: 0;
+		display: none;
 	}
 	&.showNavbar {
 		@keyframes slideInFromBottom {
@@ -57,14 +58,11 @@
 			);
 			transition: color $animation-speed ease-in-out;
 			.number {
-				color: $base-mix;
+				color: $base-red;
 			}
 			&:hover {
 				.linkText {
 					text-decoration: underline;
-				}
-				.number {
-					text-decoration: none;
 				}
 			}
 		}
@@ -73,6 +71,9 @@
 		.navbarContent {
 			a {
 				color: $white;
+				.number {
+					color: $base-mix;
+				}
 			}
 		}
 	}

@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '@/components/common/navbar';
 import Container from '@/components/common/layout/container';
 import Hero from '@/components/hero';
-import Expertise from '@/components/expertise';
+import About from '@/components/about';
 import Works from '@/components/works';
 import Contact from '@/components/contact';
 import Footer from '@/components/common/layout/footer';
@@ -14,7 +14,7 @@ export default function Home() {
 			<Navbar />
 			<Hero />
 			<Container as="main">
-				<Expertise />
+				<About />
 				<Works />
 				<Contact />
 			</Container>

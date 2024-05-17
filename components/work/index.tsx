@@ -7,7 +7,7 @@ import Button from '@/components/common/button';
 
 import styles from './work.module.scss';
 
-import WorkType from '@/data/models/work';
+import WorkType from '@/data/models/Work';
 
 type WorkProps = {
 	work: WorkType;

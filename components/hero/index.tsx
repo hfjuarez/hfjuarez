@@ -12,6 +12,8 @@ import Container from '@/components/common/layout/container';
 import heightWrapperStyle from '@/components/common/layout/height/height.module.scss';
 import styles from './hero.module.scss';
 
+import me from '@/data/contents/me';
+
 const Hero = () => {
 	const gridCanvasRef = useRef<HTMLCanvasElement>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
@@ -81,37 +83,37 @@ const Hero = () => {
 			aria-label="Hernán Fabrica"
 		>
 			<Container as="div" className={styles.container} ref={containerRef}>
-				<Heading as="h1">Hernán Fabrica</Heading>
+				<Heading as="h1">{me.personal.name}</Heading>
 				<Heading as="h2" className={styles.customH2}>
-					Full Stack Engineer & Technical Leader
+					{me.professional.currentPosition}
 				</Heading>
 				<div className={styles.description}>
 					<Text className={styles.label}>[Hi]</Text>
 					<Text>
 						Welcome to my website. You can call me Herni. <br />
-						Please take a look at my digital portfolio and have a wonderful time
+						Please take a look at my portfolio and have a wonderful time
 						exploring.
 					</Text>
 					<Text className={styles.label}>[Who I am]</Text>
 					<Text>
-						23 years old. Uruguayan 🇺🇾. Technologist Degree in Computer Science.
+						{me.personal.age} years old. Uruguayan 🇺🇾. {me.education.degree}.
 						Backend Enthusiast. Energetic. Innovative. Creative. Committed.
 						Result-driven. Good Friend. Passionate about technology. Always
 						learning.
 					</Text>
 					<Text className={styles.label}>[What I Offer]</Text>
 					<Text>
-						Crafting beautifully and highly functional code, creating modern
-						sites, and architecting robust systems that make our clients
-						happier. Consistently delivering projects that drive powerful
-						impact. An exceptional team player, always looking to collaborate,
-						improve and learn together.
+						Crafting clean and highly functional code, architecting robust
+						systems, creating modern websites, and consistently delivering
+						projects that drive powerful impact and exceed clients&apos;
+						expectations. An exceptional team player, always looking to
+						collaborate, improve and learn together.
 					</Text>
 				</div>
 				<div className={styles.footer}>
 					<Image
-						src="/images/scroll-arrow.svg"
-						alt="Scroll Arrow"
+						src="/images/icons/scroll-arrow.svg"
+						alt="Scroll Down Arrow"
 						width={60}
 						height={80}
 					/>

@@ -6,6 +6,7 @@
 	background-color: $base;
 	@include flex(column, center, center);
 	z-index: 1;
+	background-image: url('/images/backgrounds/light-noise.png');
 }
 .content {
 	width: 100%;

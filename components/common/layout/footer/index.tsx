@@ -27,7 +27,7 @@ const Footer = () => {
 					<Heading as="h3">External dependencies:</Heading>
 					<Text className={styles.dependencies}>GSAP - Classnames</Text>
 					<Text className={styles.copyright}>
-						Copyright © 2024 Hernán Fabrica. All rights reserved.
+						Copyright © 2022 - 2024 Hernán Fabrica. All rights reserved.
 					</Text>
 				</div>
 				<Legal />
