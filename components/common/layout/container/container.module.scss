@@ -4,9 +4,11 @@
 	position: relative;
 	width: 100%;
 	@include flex(column, center, center);
+	padding: $spacing-xxl calc($spacing-xxl + $spacing-xl) $spacing-xxl 0;
 	// when the screen is smaller than 72rem
 	@media (max-width: calc($container-max-width + 7rem)) {
-		padding: 0 3.5rem;
+		padding: $spacing-xl calc($spacing-xxl + $spacing-xl) $spacing-xl
+			$spacing-xl;
 	}
 	@media (max-width: $half-container-max-width) {
 		padding: 0 2.5rem;
@@ -20,6 +22,7 @@
 
 .main {
 	overflow-x: hidden;
+	padding: 0;
 	z-index: 2;
 	@include flex(column, $alignItems: center);
 }

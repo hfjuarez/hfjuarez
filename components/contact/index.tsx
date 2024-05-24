@@ -16,8 +16,10 @@ const Contact = () => {
 		<HeightWrapper as="section" id="contact" className={styles.heightWrapper}>
 			<Container as="div" className={styles.container}>
 				<Heading as="h2" className={styles.title}>
-					Let’s work <span>together</span>
+					<span>Let’s make</span> something <br />
+					amazing <span>together!</span>
 				</Heading>
+
 				<div className={styles.contactInfoContainer}>
 					<Heading as="h3" className={styles.label}>
 						Contact

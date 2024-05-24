@@ -1,9 +1,9 @@
 .heading-basic {
 	margin: 0;
 	@include font(
-		7rem,
+		$h1-font-size,
 		normal,
-		bold,
+		extra,
 		$theme-text-color,
 		left,
 		100%,
@@ -34,30 +34,31 @@
 
 .h2 {
 	margin-bottom: 2.5rem;
+	text-transform: capitalize;
 	@include font(
-		6rem,
+		$h2-font-size,
 		normal,
-		semi,
+		bold,
 		$theme-text-color,
 		center,
 		100%,
-		0.0625rem,
+		0.125rem,
 		'Playfair'
 	);
 
 	@media only screen and (max-width: $container-max-width) {
-		font-size: 4rem;
+		font-size: $h2-font-size * 0.75;
 	}
-	@media (max-width: 35rem) {
+	@media only screen and (max-width: $half-container-max-width) {
 		padding-block: 0;
-		font-size: 2rem;
+		font-size: $h2-font-size * 0.65;
 	}
 }
 
 .h3 {
 	margin-block: 0.5rem;
 	@include font(
-		2.5rem,
+		$h3-font-size,
 		normal,
 		semi,
 		$theme-text-color,
@@ -68,18 +69,18 @@
 	);
 
 	@media (max-width: 75rem) {
-		font-size: 5cqw;
+		font-size: $h3-font-size * 0.75;
 	}
 	@media (max-width: 55rem) {
-		font-size: 6cqw;
+		font-size: $h3-font-size * 0.5;
 	}
 	@media (max-width: 35rem) {
-		font-size: 2rem;
+		font-size: $h3-font-size * 0.25;
 	}
 }
 
 .h4 {
-	font-size: 2rem;
+	font-size: $h4-font-size;
 	font-weight: 500;
 	font-stretch: 100%;
 	margin-block: 0.5rem;
@@ -87,12 +88,12 @@
 }
 
 .h5 {
-	font-size: 1.25rem;
+	font-size: $h5-font-size;
 	font-weight: 400;
 	letter-spacing: 0.0625rem;
 }
 
 .h6 {
-	font-size: 1rem;
+	font-size: $h6-font-size;
 	font-weight: 400;
 }

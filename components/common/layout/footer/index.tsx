@@ -10,7 +10,7 @@ import styles from './footer.module.scss';
 const Footer = () => {
 	return (
 		<footer className={styles.footer} id="footer">
-			<Container as="div">
+			<Container as="div" className={styles.container}>
 				<div className={styles.content}>
 					<Heading as="h2">
 						Designed & Developed by <br />
