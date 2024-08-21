@@ -17,7 +17,7 @@ const me = {
 		name: 'Hernán Fabrica',
 	},
 	professional: {
-		currentPosition: 'Full Stack Developer & Technical Lead',
+		currentPosition: 'Software Engineer',
 		yearsOfExperience: Math.floor(
 			(new Date().getTime() - new Date('2021-03-01').getTime()) /
 				(1000 * 60 * 60 * 24 * 365),

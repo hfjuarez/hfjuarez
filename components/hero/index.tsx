@@ -90,7 +90,7 @@ const Hero = () => {
 				<div className={styles.description}>
 					<Text className={styles.label}>[Hi]</Text>
 					<Text>
-						Welcome to my website. You can call me Herni. <br />
+						Welcome to my website. You can call me Hernie. <br />
 						Please take a look at my portfolio and have a wonderful time
 						exploring.
 					</Text>

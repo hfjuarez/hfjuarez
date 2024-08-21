@@ -1,0 +1,186 @@
+// $theme-dark-1: #000;
+// $theme-light-1: #fff;
+$theme-dark-2: #0d0d0e;
+$theme-light-2: #faf6ef;
+$theme-dark-3: #1a1a1a;
+$theme-light-3: #f0ece5;
+$theme-color: #fd4729;
+
+.columns {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.basic {
+	min-width: 50vw;
+	min-height: 100vh;
+	padding: 2.5rem;
+
+	p {
+		font-size: 1.25rem;
+	}
+}
+
+.dark1 {
+	background-color: $theme-dark-2;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-light-2;
+		text-align: left;
+	}
+}
+
+.light1 {
+	background-color: $theme-light-2;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-dark-2;
+		text-align: left;
+	}
+}
+
+.dark2 {
+	background-color: $theme-dark-3;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-light-3;
+		text-align: left;
+	}
+}
+
+.light2 {
+	background-color: $theme-light-3;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-dark-3;
+		text-align: left;
+	}
+}
+
+.colorDark1 {
+	background-color: $theme-dark-2;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-color;
+		text-align: left;
+	}
+}
+
+.colorLight1 {
+	background-color: $theme-light-2;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-color;
+		text-align: left;
+	}
+}
+
+.colorDark2 {
+	background-color: $theme-dark-3;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-color;
+		text-align: left;
+	}
+}
+
+.colorLight2 {
+	background-color: $theme-light-3;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-color;
+		text-align: left;
+	}
+}
+
+.dark1Color {
+	background-color: $theme-color;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-dark-2;
+		text-align: left;
+	}
+}
+
+.light1Color {
+	background-color: $theme-color;
+	@extend .basic;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		color: $theme-light-2;
+		text-align: left;
+	}
+}
+
+.invertedFonts {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Mona Sans';
+	}
+	p {
+		font-family: 'Playfair Display';
+	}
+}

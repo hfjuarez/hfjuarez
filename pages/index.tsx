@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from '@/components/common/navbar';
+// import Navbar from '@/components/common/navbar';
 import Container from '@/components/common/layout/container';
 import Hero from '@/components/hero';
 import About from '@/components/about';
@@ -11,7 +11,7 @@ import Footer from '@/components/common/layout/footer';
 export default function Home() {
 	return (
 		<>
-			<Navbar />
+			{/* <Navbar /> */}
 			<Hero />
 			<Container as="main">
 				<About />

@@ -22,18 +22,16 @@
 }
 
 .h1 {
-	line-height: normal;
-	@media only screen and (max-width: $container-max-width) {
-		font-size: 5rem;
-	}
+	// @media only screen and (max-width: $container-max-width) {
+	// 	font-size: 5rem;
+	// }
 
-	@media only screen and (max-width: $half-container-max-width) {
-		font-size: 4rem;
-	}
+	// @media only screen and (max-width: $half-container-max-width) {
+	// 	font-size: 4rem;
+	// }
 }
 
 .h2 {
-	margin-bottom: 2.5rem;
 	text-transform: capitalize;
 	@include font(
 		$h2-font-size,
@@ -46,17 +44,16 @@
 		'Playfair'
 	);
 
-	@media only screen and (max-width: $container-max-width) {
-		font-size: $h2-font-size * 0.75;
-	}
-	@media only screen and (max-width: $half-container-max-width) {
-		padding-block: 0;
-		font-size: $h2-font-size * 0.65;
-	}
+	// @media only screen and (max-width: $container-max-width) {
+	// 	font-size: $h2-font-size * 0.75;
+	// }
+	// @media only screen and (max-width: $half-container-max-width) {
+	// 	padding-block: 0;
+	// 	font-size: $h2-font-size * 0.65;
+	// }
 }
 
 .h3 {
-	margin-block: 0.5rem;
 	@include font(
 		$h3-font-size,
 		normal,
@@ -68,22 +65,21 @@
 		'Playfair'
 	);
 
-	@media (max-width: 75rem) {
-		font-size: $h3-font-size * 0.75;
-	}
-	@media (max-width: 55rem) {
-		font-size: $h3-font-size * 0.5;
-	}
-	@media (max-width: 35rem) {
-		font-size: $h3-font-size * 0.25;
-	}
+	// @media (max-width: 75rem) {
+	// 	font-size: $h3-font-size * 0.75;
+	// }
+	// @media (max-width: 55rem) {
+	// 	font-size: $h3-font-size * 0.5;
+	// }
+	// @media (max-width: 35rem) {
+	// 	font-size: $h3-font-size * 0.25;
+	// }
 }
 
 .h4 {
 	font-size: $h4-font-size;
 	font-weight: 500;
 	font-stretch: 100%;
-	margin-block: 0.5rem;
 	letter-spacing: 0.0625rem;
 }
 
