@@ -1,34 +1,19 @@
 {
 	"name": "hfjuarez",
-	"version": "0.7.2",
-	"private": true,
+	"version": "2.0.0",
+	"description": "Personal website of Hernán Fabrica",
+	"type": "module",
 	"scripts": {
-		"build": "next build",
-		"export": "next export",
-		"start": "next dev",
-		"lint": "next lint"
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
 	},
 	"dependencies": {
-		"@studio-freight/lenis": "^1.0.23",
-		"@types/node": "18.11.9",
-		"@types/react": "18.0.25",
-		"@types/react-dom": "18.0.9",
-		"classnames": "^2.3.2",
-		"eslint-config-next": "13.0.5",
-		"gsap": "^3.12.2",
-		"next": "^13.5.6",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"astro": "^4.14.4"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.62.0",
-		"eslint": "^8.47.0",
-		"eslint-config-standard-with-typescript": "^37.0.0",
-		"eslint-plugin-import": "^2.28.0",
-		"eslint-plugin-n": "^16.0.1",
-		"eslint-plugin-promise": "^6.1.1",
-		"eslint-plugin-react": "^7.33.1",
-		"sass": "^1.71.0",
-		"typescript": "^5.1.6"
+		"sass": "^1.77.8"
 	}
 }
