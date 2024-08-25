@@ -1,0 +1,82 @@
+{
+	"frontendSkills": [
+		{
+			"id": "fe-vue",
+			"text": "Vue.js"
+		},
+		{
+			"id": "fe-react",
+			"text": "React"
+		},
+		{
+			"id": "fe-nuxt",
+			"text": "Nuxt.js"
+		},
+		{
+			"id": "fe-next",
+			"text": "Next.js"
+		},
+		{
+			"id": "fe-react-native",
+			"text": "React Native"
+		},
+		{
+			"id": "fe-html-sa",
+			"text": "Semantic & Accessibility"
+		}
+	],
+
+	"backendSkills": [
+		{
+			"id": "be-node",
+			"text": "Node.js"
+		},
+		{
+			"id": "be-ror",
+			"text": "Ruby on Rails"
+		},
+		{
+			"id": "be-java",
+			"text": "Java"
+		},
+
+		{
+			"id": "be-sql",
+			"text": "SQL"
+		},
+		{
+			"id": "be-mongo",
+			"text": "Mongo"
+		},
+		{
+			"id": "be-express",
+			"text": "Express.js"
+		},
+		{
+			"id": "be-nest",
+			"text": "Nest.js"
+		}
+	],
+	"toolsAndOthersSkills": [
+		{
+			"id": "to-aws",
+			"text": "AWS"
+		},
+		{
+			"id": "to-docker",
+			"text": "Docker"
+		},
+		{
+			"id": "to-tests",
+			"text": "Unit Tests"
+		},
+		{
+			"id": "to-integration",
+			"text": "Integration Tests"
+		},
+		{
+			"id": "to-e2e",
+			"text": "E2E Tests"
+		}
+	]
+}

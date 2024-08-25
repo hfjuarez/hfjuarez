@@ -10,7 +10,7 @@ export default {
 	},
 	personal: {
 		age: Math.abs(
-			new Date(Date.now() - new Date('2000-06-04').getTime()).getUTCFullYear() -
+			new Date(Date.now() - new Date('2000-06').getTime()).getUTCFullYear() -
 				1970,
 		),
 		image: '/images/me.jpeg',
@@ -19,7 +19,7 @@ export default {
 	},
 	professional: {
 		currentPosition: 'Software Engineer',
-		company: 'SoFi/Technisys',
+		company: 'SoFi/Galileo',
 		yearsOfExperience: Math.floor(
 			(new Date().getTime() - new Date('2021-03-01').getTime()) /
 				(1000 * 60 * 60 * 24 * 365),

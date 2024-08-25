@@ -1,0 +1,89 @@
+---
+import me from '@/contents/me';
+---
+
+<footer id="contact">
+	<h2 class="section-title invert-color">Let's Talk!</h2>
+	<a
+		class="invert-color"
+		href=`mailto:${me.contact.email}`
+		aria-label="Send me an email"
+		target="_blank"
+		rel="noopener noreferrer">hello@hernanfabrica.com</a
+	>
+	<a
+		class="invert-color"
+		href=`${me.contact.linkedin}`
+		aria-label="Visit my LinkedIn profile"
+		target="_blank"
+		rel="noopener noreferrer">LinkedIn</a
+	>
+	<a
+		class="invert-color"
+		href=`${me.contact.github}`
+		aria-label="Visit my GitHub profile"
+		target="_blank"
+		rel="noopener noreferrer">GitHub</a
+	>
+	<div class="legal">
+		<p>Designed & Developed by Hernán Fabrica</p>
+		<p>Copyright © 2022 - 2024 Hernán Fabrica. All rights reserved</p>
+	</div>
+</footer>
+<style lang="scss">
+	@import '@/styles/colors.scss';
+	@import '@/styles/fonts.scss';
+	@import '@/styles/spaces.scss';
+	#contact {
+		position: relative;
+		margin: 0;
+		height: 100%;
+		min-height: 100svh;
+		width: 100vw;
+		padding: $space-4;
+		background-color: $strongForegroundColor;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: $space-1;
+		h2 {
+			text-align: center;
+		}
+		a {
+			@extend .eb-garamond;
+			font-size: 2rem;
+		}
+		.legal {
+			position: absolute;
+			bottom: $space-2;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			p {
+				@extend .eb-garamond;
+				text-align: center;
+				color: $backgroundColor;
+			}
+			p:nth-of-type(2) {
+				opacity: 0.5;
+			}
+		}
+
+		@media screen and (min-width: $screen-desktop-xl) {
+			a {
+				font-size: 3rem;
+			}
+		}
+		@media screen and (max-width: $screen-tablet) {
+		}
+		@media screen and (max-width: $screen-mobile) {
+			padding: $space-4 $space-2;
+			a {
+				font-size: 1.5rem;
+			}
+		}
+	}
+</style>

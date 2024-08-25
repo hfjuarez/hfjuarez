@@ -12,6 +12,26 @@ import me from '@/contents/me';
 			>
 		</h2>
 	</div>
+	<div class="hero-description">
+		<p class="p-label">[Hi]</p>
+		<p class="mb-custom">
+			Welcome to my website. You can call me Hernie. Please take a look and have
+			a wonderful time exploring.
+		</p>
+		<p class="p-label">[Who I Am]</p>
+		<p class="mb-custom">
+			{me.personal.age} years old. Uruguayan 🇺🇾. {me.education.degree}. Backend
+			Enthusiast. Energetic. Innovative. Creative. Committed. Result-driven.
+			Good Friend. Passionate about technology. Always learning.
+		</p>
+		<p class="p-label">[What I Offer]</p>
+		<p>
+			Crafting clean and highly functional code, architecting robust systems,
+			creating modern websites, and consistently delivering projects that drive
+			powerful impact. An exceptional team player, always looking to
+			collaborate, improve and learn together.
+		</p>
+	</div>
 	<div class="hero-links">
 		<p class="is-uppercase">
 			[EMAIL]: <a
@@ -34,26 +54,7 @@ import me from '@/contents/me';
 				rel="noopener noreferrer">GitHub</a
 			>
 		</p>
-	</div>
-	<div class="hero-description">
-		<p class="p-label">[Hi]</p>
-		<p class="mb-custom">
-			Welcome to my website. You can call me Hernie. Please take a look at my
-			portfolio and have a wonderful time exploring.
-		</p>
-		<p class="p-label">[Who I Am]</p>
-		<p class="mb-custom">
-			{me.personal.age} years old. Uruguayan 🇺🇾. {me.education.degree}. Backend
-			Enthusiast. Energetic. Innovative. Creative. Committed. Result-driven.
-			Good Friend. Passionate about technology. Always learning.
-		</p>
-		<p class="p-label">[What I Offer]</p>
-		<p>
-			Crafting clean and highly functional code, architecting robust systems,
-			creating modern websites, and consistently delivering projects that drive
-			powerful impact. An exceptional team player, always looking to
-			collaborate, improve and learn together.
-		</p>
+		<p class="is-uppercase">[Scroll to Explore]</p>
 	</div>
 </header>
 
@@ -66,12 +67,22 @@ import me from '@/contents/me';
 		height: 100%;
 		min-height: 100svh;
 		width: 100vw;
-		padding: $space-4;
+		padding: 4.5rem $space-4 $space-3;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		grid-column-gap: 0px;
 		grid-row-gap: 0px;
+		.hero-greeting,
+		.hero-links,
+		.hero-description {
+			width: 100%;
+			max-width: $max-container-width / 2;
+		}
+		.hero-greeting,
+		.hero-links {
+			justify-self: end;
+		}
 		.hero-greeting {
 			grid-area: 1 / 1 / 2 / 2;
 			h2 {
@@ -79,9 +90,6 @@ import me from '@/contents/me';
 				font-size: 1rem;
 				margin-top: 0.75rem;
 				font-weight: 500;
-			}
-			.underline {
-				border-bottom: 0.125rem solid $blue;
 			}
 		}
 		.hero-links {
@@ -94,28 +102,55 @@ import me from '@/contents/me';
 		}
 		.hero-description {
 			grid-area: 1 / 2 / 3 / 3;
-			align-content: end;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-end;
+			p {
+				width: 100%;
+				max-width: 35rem;
+			}
 			.mb-custom {
 				margin-bottom: 1.375rem;
+			}
+		}
+		@media screen and (min-width: $screen-desktop-xl) {
+			padding: $space-5;
+			.hero-greeting {
+				h2 {
+					font-size: 1.125rem;
+				}
+			}
+			.hero-description {
+				p {
+					max-width: 50rem;
+				}
 			}
 		}
 		@media screen and (max-width: $screen-tablet) {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto;
 			grid-column-gap: 0px;
-			grid-row-gap: 3rem;
+			grid-row-gap: $space-3;
 			.hero-greeting {
 				grid-area: 1 / 1 / 2 / 2;
 			}
 			.hero-description {
 				grid-area: 2 / 1 / 3 / 2;
+				justify-content: flex-start;
+				align-items: flex-start;
 			}
 			.hero-links {
 				grid-area: 3 / 1 / 4 / 2;
 			}
 		}
 		@media screen and (max-width: $screen-mobile) {
-			padding: $space-3 $space-2;
+			padding: $space-5 $space-2 $space-4;
+			.hero-greeting {
+				h2 {
+					margin-top: 0.5rem;
+				}
+			}
 		}
 	}
 </style>

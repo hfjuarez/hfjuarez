@@ -1,0 +1,140 @@
+---
+import {
+	frontendSkills,
+	backendSkills,
+	toolsAndOthersSkills,
+} from '@/contents/skills.json';
+import List from '@/components/commons/List.astro';
+import about from '@/contents/about.json';
+---
+
+<section id="about">
+	<div class="about-title">
+		<h2 class="section-title invert-color">{about.title}</h2>
+	</div>
+	<div class="about-information">
+		{about.paragraphs.map((paragrpah) => <p>{paragrpah}</p>)}
+		<div class="skill-list-container">
+			<List title="Frontend" items={frontendSkills} dark open name="skills" />
+			<List title="Backend" items={backendSkills} dark name="skills" />
+			<List
+				title="Tools & Others"
+				items={toolsAndOthersSkills}
+				dark
+				name="skills"
+			/>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	@import '@/styles/colors.scss';
+	@import '@/styles/spaces.scss';
+	#about {
+		margin: 0;
+		height: 100%;
+		min-height: 100svh;
+		width: 100vw;
+		padding: $space-4;
+		background-color: $strongForegroundColor;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: $space-1/2;
+		grid-row-gap: 0;
+		.about-title,
+		.about-information {
+			width: 100%;
+			max-width: $max-container-width;
+		}
+		.about-title {
+			width: 100%;
+			max-height: calc(100svh - $space-4 - $space-4);
+			max-width: $max-container-width;
+			align-content: center;
+			h2 {
+				max-width: 34rem;
+			}
+		}
+		.about-information {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-top: $space-5;
+
+			p {
+				color: $backgroundColor;
+				margin-bottom: $space-1;
+			}
+			.skill-list-container {
+				align-self: center;
+				width: fit-content;
+				margin-top: $space-3;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: 1fr;
+				gap: $space-2;
+				:global(.skill-list) {
+					justify-self: center;
+				}
+			}
+		}
+		@media screen and (min-width: $screen-desktop-xl) {
+			padding: $space-6 $space-5;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto 1fr;
+			grid-row-gap: $space-4;
+
+			.about-title,
+			.about-information {
+				justify-self: center;
+				align-content: start;
+			}
+			.about-title {
+				h2 {
+					max-width: $max-container-width - 10rem;
+				}
+			}
+			.about-information {
+				justify-content: flex-start;
+				padding-top: $space-1;
+				.skill-list-container {
+					margin-top: $space-4;
+				}
+			}
+		}
+		@media screen and (max-width: $screen-tablet) {
+			grid-template-rows: auto 1fr;
+			grid-template-columns: 1fr;
+			grid-row-gap: $space-3;
+			padding: $space-4;
+
+			.about-title {
+				max-height: unset;
+			}
+			.about-information {
+				padding-top: 0;
+			}
+		}
+		@media screen and (max-width: $screen-mobile) {
+			grid-row-gap: $space-2;
+			padding: $space-4 $space-2;
+			.about-title {
+				h2 {
+					max-width: 20rem;
+				}
+			}
+			.about-information {
+				.skill-list-container {
+					grid-template-columns: 1fr;
+					grid-template-rows: repeat(3, auto);
+					align-self: start;
+					margin-top: $space-1;
+
+					:global(.skill-list) {
+						justify-self: start;
+					}
+				}
+			}
+		}
+	}
+</style>

@@ -1,0 +1,94 @@
+---
+interface ListItem {
+	id: string;
+	text: string;
+}
+
+interface Props {
+	title: string;
+	name: string;
+	items: ListItem[];
+	dark: boolean;
+	open?: boolean;
+}
+
+const { title, items, dark, name, open = false } = Astro.props;
+---
+
+<div>
+	<div class:list={['skill-list', 'skill-list-desktop', { dark: dark }]}>
+		<h3>
+			[{title}]
+		</h3>
+		<ul>
+			{items.map((item) => <li id={item.id}>{item.text}</li>)}
+		</ul>
+	</div>
+	<details
+		class:list={['skill-list', 'skill-list-mobile', { dark: dark }]}
+		open={open}
+		name={name}
+	>
+		<summary>
+			<h3>
+				[{title}]
+			</h3>
+		</summary>
+		<ul>
+			{items.map((item) => <li id={item.id}>{item.text}</li>)}
+		</ul>
+	</details>
+</div>
+
+<style lang="scss">
+	@import '@/styles/colors.scss';
+	@import '@/styles/fonts.scss';
+	@import '@/styles/spaces.scss';
+	.skill-list {
+		width: fit-content;
+		summary {
+			list-style: none;
+			cursor: pointer;
+			position: relative;
+			width: fit-content;
+			&::after {
+				position: absolute;
+				top: 50%;
+				right: -1rem;
+				transform: translateY(-50%);
+				content: '+';
+				font-weight: bold;
+				color: $blue;
+				font-size: 1.215rem;
+				line-height: 1rem;
+			}
+		}
+		&[open] summary::after {
+			content: 'x';
+		}
+		h3 {
+			@extend .jetbrains;
+			color: $blue;
+			text-transform: uppercase;
+		}
+		li:not(:last-child) {
+			margin-bottom: $space-1/2;
+		}
+		&.dark {
+			li {
+				color: $backgroundColor;
+			}
+		}
+	}
+	.skill-list-mobile {
+		display: none;
+	}
+	@media screen and (max-width: $screen-mobile) {
+		.skill-list-desktop {
+			display: none;
+		}
+		.skill-list-mobile {
+			display: block;
+		}
+	}
+</style>

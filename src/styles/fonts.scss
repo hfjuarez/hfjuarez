@@ -5,13 +5,13 @@
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-	color: $foregroundColor;
 }
 
 .eb-garamond {
 	@extend .base-font;
 	font-family: 'EB Garamond', serif;
 }
+
 .jetbrains {
 	@extend .base-font;
 	font-family: 'JetBrains Mono', monospace;
