@@ -1,0 +1,24 @@
+---
+import type { HTMLTag } from 'astro/types';
+
+interface Props {
+	as?: HTMLTag;
+}
+
+const { as: Element = 'section', ...props } = Astro.props;
+---
+
+<Element class="slide" {...props}><slot /></Element>
+
+<style>
+	.slide {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		min-height: 100vh;
+		max-width: 900px;
+	}
+</style>

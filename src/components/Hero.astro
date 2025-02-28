@@ -1,156 +1,74 @@
 ---
 import me from '@/contents/me';
+import Slide from './commons/Slide.astro';
 ---
 
-<header id="hero">
-	<div class="hero-greeting">
-		<p class="is-uppercase"><span class="underline">Hi there,</span> I'm</p>
-		<h1>{me.personal.name}<br />{me.personal.lastName}</h1>
-		<h2 class="is-uppercase">
-			{me.professional.currentPosition} at <span class="underline"
-				>{me.professional.company}</span
-			>
-		</h2>
+<Slide as="header" id="slide-for-hero" class="flex flex-col row items-center max-w-5xl pt-20 px-8 lg:px-0">
+	<div class="grid sm:grid-cols-1 md:grid-cols-2 gap-16">
+		<img src="/me.jpeg" class="aspect-3/4 rounded-[2rem] hidden md:block" alt="Hero image" />
+		<div class="pt-6">
+			<p class="text-2xl font-semibold pb-1"><span class="underline">Hi there,</span> I'm</p>
+			<h1 class="font-semibold leading-none tracking-tight text-balance">Hernie</h1>
+			<h2 class="text-2xl font-semibold py-2">
+				{me.professional.currentPosition} at <span class="underline"
+					>{me.professional.company}</span
+				>
+			</h2>
+			<p class="py-2">
+				Welcome to my website. Please take a look and have a wonderful time
+				exploring.
+			</p>
+			<p class="py-2">
+				{me.personal.age} years old. Uruguayan 🇺🇾. {me.education.degree}. Energetic. Innovative. Creative. Committed. Result-driven.
+				Good Friend. Passionate about technology. Always learning.
+			</p>
+			<p class="py-2">
+				Crafting clean and highly functional code, architecting robust systems,
+				creating modern websites, and consistently delivering projects that drive
+				powerful impact. An exceptional team player, always looking to
+				collaborate, improve and learn together.
+			</p>
+			<p class="pt-4">
+				<span class="uppercase">[EMAIL]:</span> <a
+					href=`mailto:${me.contact.email}`
+					aria-label="Send me an email"
+					target="_blank"
+					rel="noopener noreferrer">hello@hernanfabrica.com</a
+				>
+			</p>
+			<p>
+				<span class="uppercase">[SOCIAL]:</span> <a
+					href=`${me.contact.linkedin}`
+					aria-label="Visit my LinkedIn profile"
+					target="_blank"
+					rel="noopener noreferrer">LinkedIn</a
+				> | <a
+					href=`${me.contact.github}`
+					aria-label="Visit my GitHub profile"
+					target="_blank"
+					rel="noopener noreferrer">GitHub</a
+				>
+			</p>
+		</div>
 	</div>
-	<div class="hero-description">
-		<p class="p-label">[Hi]</p>
-		<p class="mb-custom">
-			Welcome to my website. You can call me Hernie. Please take a look and have
-			a wonderful time exploring.
-		</p>
-		<p class="p-label">[Who I Am]</p>
-		<p class="mb-custom">
-			{me.personal.age} years old. Uruguayan 🇺🇾. {me.education.degree}. Backend
-			Enthusiast. Energetic. Innovative. Creative. Committed. Result-driven.
-			Good Friend. Passionate about technology. Always learning.
-		</p>
-		<p class="p-label">[What I Offer]</p>
-		<p>
-			Crafting clean and highly functional code, architecting robust systems,
-			creating modern websites, and consistently delivering projects that drive
-			powerful impact. An exceptional team player, always looking to
-			collaborate, improve and learn together.
-		</p>
+	<div class="grid grid-cols-3 my-16 w-fit bg-gray-100 rounded-full">
+		<button
+			class="rounded-full bg-gray-100 py-4 px-8 sm:py-6 sm:px-12 border border-transparent text-center text-sm text-bleck/10 transition-all focus:bg-gray-200 active:bg-slate-300 hover:bg-gray-200 disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+			type="button"
+		>
+			About
+		</button>
+		<button
+			class="rounded-full bg-gray-100 py-4 px-8 sm:py-6 sm:px-12 border-l border-r border-transparent text-center text-sm text-bleck/10 transition-all focus:bg-gray-200 active:bg-slate-300 hover:bg-gray-200 disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+			type="button"
+		>
+			Scroll to Explore
+		</button>
+		<button
+			class="rounded-full bg-gray-100 py-4 px-8 sm:py-6 sm:px-12 border border-transparent text-center text-sm text-bleck/10 transition-all focus:bg-gray-200 active:bg-slate-300 hover:bg-gray-200 disabled:pointer-events-none disabled:opacity-50 cursor-pointer"
+			type="button"
+		>
+			Let's talk
+		</button>
 	</div>
-	<div class="hero-links">
-		<p class="is-uppercase">
-			[EMAIL]: <a
-				href=`mailto:${me.contact.email}`
-				aria-label="Send me an email"
-				target="_blank"
-				rel="noopener noreferrer">hello@hernanfabrica.com</a
-			>
-		</p>
-		<p class="is-uppercase">
-			[SOCIAL]: <a
-				href=`${me.contact.linkedin}`
-				aria-label="Visit my LinkedIn profile"
-				target="_blank"
-				rel="noopener noreferrer">LinkedIn</a
-			> | <a
-				href=`${me.contact.github}`
-				aria-label="Visit my GitHub profile"
-				target="_blank"
-				rel="noopener noreferrer">GitHub</a
-			>
-		</p>
-		<p class="is-uppercase">[Scroll to Explore]</p>
-	</div>
-</header>
-
-<style lang="scss">
-	@import '@/styles/colors.scss';
-	@import '@/styles/fonts.scss';
-	@import '@/styles/spaces.scss';
-	#hero {
-		margin: 0;
-		height: 100%;
-		min-height: 100svh;
-		width: 100vw;
-		padding: 4.5rem $space-4 $space-3;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: 0px;
-		grid-row-gap: 0px;
-		.hero-greeting,
-		.hero-links,
-		.hero-description {
-			width: 100%;
-			max-width: $max-container-width / 2;
-		}
-		.hero-greeting,
-		.hero-links {
-			justify-self: end;
-		}
-		.hero-greeting {
-			grid-area: 1 / 1 / 2 / 2;
-			h2 {
-				@extend .jetbrains;
-				font-size: 1rem;
-				margin-top: 0.75rem;
-				font-weight: 500;
-			}
-		}
-		.hero-links {
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			gap: 0.75rem;
-			grid-area: 2 / 1 / 3 / 2;
-			align-content: end;
-		}
-		.hero-description {
-			grid-area: 1 / 2 / 3 / 3;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-end;
-			align-items: flex-end;
-			p {
-				width: 100%;
-				max-width: 35rem;
-			}
-			.mb-custom {
-				margin-bottom: 1.375rem;
-			}
-		}
-		@media screen and (min-width: $screen-desktop-xl) {
-			padding: $space-5;
-			.hero-greeting {
-				h2 {
-					font-size: 1.125rem;
-				}
-			}
-			.hero-description {
-				p {
-					max-width: 50rem;
-				}
-			}
-		}
-		@media screen and (max-width: $screen-tablet) {
-			grid-template-columns: 1fr;
-			grid-template-rows: auto;
-			grid-column-gap: 0px;
-			grid-row-gap: $space-3;
-			.hero-greeting {
-				grid-area: 1 / 1 / 2 / 2;
-			}
-			.hero-description {
-				grid-area: 2 / 1 / 3 / 2;
-				justify-content: flex-start;
-				align-items: flex-start;
-			}
-			.hero-links {
-				grid-area: 3 / 1 / 4 / 2;
-			}
-		}
-		@media screen and (max-width: $screen-mobile) {
-			padding: $space-5 $space-2 $space-4;
-			.hero-greeting {
-				h2 {
-					margin-top: 0.5rem;
-				}
-			}
-		}
-	}
-</style>
+</Slide>

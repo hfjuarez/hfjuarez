@@ -58,7 +58,7 @@ const { title, items, dark, name, open = false } = Astro.props;
 				transform: translateY(-50%);
 				content: '+';
 				font-weight: bold;
-				color: $blue;
+				color: $primary-color;
 				font-size: 1.215rem;
 				line-height: 1rem;
 			}
@@ -68,7 +68,7 @@ const { title, items, dark, name, open = false } = Astro.props;
 		}
 		h3 {
 			@extend .jetbrains;
-			color: $blue;
+			color: $primary-color;
 			text-transform: uppercase;
 		}
 		li:not(:last-child) {
@@ -76,7 +76,7 @@ const { title, items, dark, name, open = false } = Astro.props;
 		}
 		&.dark {
 			li {
-				color: $backgroundColor;
+				color: $neutral-color;
 			}
 		}
 	}
