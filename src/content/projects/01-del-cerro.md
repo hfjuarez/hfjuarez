@@ -1,23 +1,31 @@
 ---
-name: hfjuarez.com
+name: Del Cerro
 url: https://del-cerro.up.railway.app/
-stack: [Vue, Node.js, TypeScript, Tailwind]
+stack: [Vue.js, TypeScript, Node.js, PostgreSQL]
 ---
 
-## The old portfolio
+Providing end-to-end technical consulting and product development for a real estate development company, building custom systems to streamline property management and client operations.
 
-The one you're looking at right now — or rather, the one before this one. Built as a clean, minimal site to ship fast and stop overthinking design.
+## Scope of Work
 
-![Portfolio screenshot](/images/projects/del-cerro.webp)
+**Product Development & Strategy**
+→ Designed and developed custom CRM system from discovery through deployment
+→ Led complete product lifecycle: requirements gathering, system architecture, development, iteration, and maintenance
+→ Translated business needs into scalable technical solutions aligned with company growth
 
-## What it does
+**Technical Architecture & Implementation**
+→ Architected frontend application optimized for real estate workflows and client management
+→ Designed data models and system integrations for property tracking and sales operations
+→ Implemented performance optimizations for handling large client databases efficiently
 
-A single-page portfolio with a hero section, project cards, and contact links. Nothing revolutionary — the goal was to have something live while I worked on something better.
+**Client Collaboration & Strategic Guidance**
+→ Worked directly with stakeholders to understand business requirements and pain points
+→ Provided strategic technical guidance on product roadmap and feature prioritization
+→ Iterated based on user feedback and business metrics to maximize system value
 
-## Stack
+## Impact
 
-Built with **Vue 3** and **TypeScript** on the frontend, **Node.js** for a small backend layer, and **Tailwind CSS** for styling. Deployed on Railway.
-
-## What I'd do differently
-
-Exactly this — replace it with a macOS desktop simulation.
+→ Delivered custom CRM solution managing **230+ active clients** and property portfolio
+→ Streamlined property management workflows, reducing manual processes significantly
+→ Provided ongoing technical partnership bridging business needs and technical execution
+→ Enabled scalable growth through thoughtful system architecture and design decisions

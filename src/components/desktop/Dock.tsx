@@ -17,16 +17,10 @@ interface DockProps {
 	projectCount?: number;
 }
 
-const BOUNCE_DURATION_MS = 5000;
-
 export default function Dock({ apps, openWindows, onOpen, projectCount = 0 }: DockProps) {
 	const [hoveredId, setHoveredId] = useState<string | null>(null);
 	const [shouldBounce, setShouldBounce] = useState(true);
 
-	useEffect(() => {
-		const t = setTimeout(() => setShouldBounce(false), BOUNCE_DURATION_MS);
-		return () => clearTimeout(t);
-	}, []);
 
 	return (
 		<div className={styles.dockWrapper}>
@@ -77,7 +71,7 @@ export default function Dock({ apps, openWindows, onOpen, projectCount = 0 }: Do
 							) : (
 								<button
 									className={`${styles.appIcon} ${bouncing ? styles.chromeBounce : ''}`}
-									onClick={() => onOpen(app.id)}
+									onClick={() => { if (isChrome) { setShouldBounce(false) }; onOpen(app.id); } }
 									aria-label={app.name}
 								>
 									{iconContent}
