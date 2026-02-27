@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Dock.module.scss';
-import chromeIcon from '@/assets/icons/chrome.png';
-import finderIcon from '@/assets/icons/finder.png';
-import mailIcon from '@/assets/icons/mail.png';
-import vscodeIcon from '@/assets/icons/vscode.webp';
-import githubIcon from '@/assets/icons/github.webp';
-import linkedinIcon from '@/assets/icons/linkedin.webp';
+import { ICON_SRCS, PADDED_ICONS } from '@/assets/icons';
 
 interface DockApp {
 	id: string;
@@ -21,15 +16,6 @@ interface DockProps {
 	onOpen: (id: string) => void;
 	projectCount?: number;
 }
-
-const ICON_SRCS: Record<string, { src: string }> = {
-	chrome: chromeIcon,
-	finder: finderIcon,
-	mail: mailIcon,
-	vscode: vscodeIcon,
-	github: githubIcon,
-	linkedin: linkedinIcon,
-};
 
 const BOUNCE_DURATION_MS = 5000;
 
@@ -58,7 +44,7 @@ export default function Dock({ apps, openWindows, onOpen, projectCount = 0 }: Do
 								<img
 									src={iconSrc.src}
 									alt={app.name}
-									className={app.icon === 'github' || app.icon === 'linkedin' ? styles.iconPadded : undefined}
+									className={PADDED_ICONS.has(app.icon) ? styles.iconPadded : undefined}
 								/>
 							) : (
 								<div className={styles.fallbackIcon}>{app.name[0]}</div>

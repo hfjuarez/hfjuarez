@@ -42,3 +42,20 @@
 		transform: scale(0.88);
 	}
 }
+
+.iconPadded {
+	padding: 5px;
+}
+
+.fallbackIcon {
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 600;
+	border-radius: 16px;
+}

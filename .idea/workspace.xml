@@ -5,88 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d390667f-5db0-45d2-a9e4-943dec99425f" name="Changes" comment="hfjuarez">
-      <change afterPath="$PROJECT_DIR$/.astro/astro/content.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.astro/content-assets.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.astro/content-modules.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.astro/data-store.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/hfjuarez.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/_astro/Desktop.DpMyySGV.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/_astro/client.5NRMcsES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/_astro/index.95d291e9.B3Fw1h1K.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/_astro/index.DM80cQZZ.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/_astro/index.pfPdwTR7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/_astro/index.uYDHyRUA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/images/me.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/me.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/chrome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/finder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/github.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/linkedin.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/vscode.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Desktop.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Desktop.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/Dock.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/Dock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/MenuBar.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/MenuBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/TrafficLights.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/TrafficLights.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/Window.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/Window.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/AboutWindow.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/AboutWindow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ChromeWindow.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ChromeWindow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ContactWindow.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ContactWindow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/VSCodeWindow.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/VSCodeWindow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppGrid.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppGrid.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppIconSVG.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppSheet.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppSheet.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/HomeScreen.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/HomeScreen.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/MobileDock.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/MobileDock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/StatusBar.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/mobile/StatusBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/about.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/dock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/me.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/projects.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/projects/01-del-cerro.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/projects/02-project-two.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/projects/03-project-three.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/content/stack.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowManager.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/globals.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/tailwind.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.astro/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.astro/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/types.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contents/me.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/me.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/desktop/Dock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/desktop/Dock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/AppGrid.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/AppGrid.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/AppGrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/AppGrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/AppIconSVG.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/MobileDock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/MobileDock.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mobile/MobileDock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mobile/MobileDock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/about.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/dock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/me.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/projects.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/stack.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/fonts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/spaces.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/spaces.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +126,7 @@
       <workItem from="1741917402462" duration="4000" />
       <workItem from="1742675962299" duration="103000" />
       <workItem from="1742676073590" duration="221000" />
-      <workItem from="1772210020956" duration="8598000" />
+      <workItem from="1772210020956" duration="9211000" />
     </task>
     <task id="LOCAL-00001" summary="hero">
       <option name="closed" value="true" />
@@ -221,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742676288480</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="hfjuarez">
+      <option name="closed" value="true" />
+      <created>1772219271321</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772219271321</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
