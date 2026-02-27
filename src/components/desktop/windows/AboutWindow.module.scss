@@ -1,0 +1,70 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/spaces' as *;
+
+.container {
+	height: 100%;
+	overflow-y: auto;
+	padding: $space-4;
+	background: $window-bg;
+}
+
+.markdown {
+	max-width: 560px;
+	font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+	font-size: 14px;
+	line-height: 1.7;
+	color: $foreground;
+
+	h1 {
+		font-family: 'EB Garamond', Georgia, serif;
+		font-size: 2rem;
+		font-weight: 500;
+		margin-bottom: $space-3;
+		color: $foreground;
+	}
+
+	h2 {
+		font-size: 0.7rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: rgba(53, 53, 53, 0.5);
+		margin-top: $space-4;
+		margin-bottom: $space-2;
+	}
+
+	p {
+		margin-bottom: $space-2;
+		color: rgba(53, 53, 53, 0.85);
+	}
+
+	strong {
+		color: $foreground;
+		font-weight: 600;
+	}
+
+	a {
+		color: $accent;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	ul, ol {
+		padding-left: $space-3;
+		margin-bottom: $space-2;
+
+		li {
+			margin-bottom: 4px;
+			color: rgba(53, 53, 53, 0.85);
+		}
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
+		margin: $space-3 0;
+	}
+}

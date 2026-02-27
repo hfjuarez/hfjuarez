@@ -1,8 +1,16 @@
-/* Space */
-$space-1: 1rem;
-$space-2: 2rem;
-$space-3: 3rem;
-$space-4: 4rem;
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2rem;
 
-$screen-tablet: 68rem;
-$screen-mobile: 45rem;
+$dock-height: 80px;
+$menubar-height: 28px;
+$window-titlebar-height: 36px;
+$window-min-width: 320px;
+$window-min-height: 240px;
+
+$breakpoint-mobile: 768px;
+
+$border-radius-window: 12px;
+$border-radius-icon: 22%;
+$border-radius-dock: 20px;

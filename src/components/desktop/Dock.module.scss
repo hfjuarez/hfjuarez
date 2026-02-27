@@ -1,0 +1,166 @@
+@use '../../styles/colors' as *;
+@use '../../styles/spaces' as *;
+
+@keyframes dockBounce {
+	0%   { transform: translateY(0) scale(1); }
+	20%  { transform: translateY(-18px) scale(1.05); }
+	40%  { transform: translateY(0) scale(1); }
+	60%  { transform: translateY(-9px) scale(1.02); }
+	80%  { transform: translateY(0) scale(1); }
+	100% { transform: translateY(0) scale(1); }
+}
+
+@keyframes iconScale {
+	from { transform: scale(0.8); opacity: 0; }
+	to   { transform: scale(1); opacity: 1; }
+}
+
+.dockWrapper {
+	position: fixed;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 9998;
+	display: flex;
+	justify-content: center;
+}
+
+.dock {
+	display: flex;
+	align-items: flex-end;
+	gap: 4px;
+	padding: 4px 8px;
+	background: $dock-bg;
+	backdrop-filter: blur(40px) saturate(180%) brightness(1.1);
+	-webkit-backdrop-filter: blur(40px) saturate(180%) brightness(1.1);
+	border-radius: $border-radius-dock;
+	border: 0.5px solid $glass-border;
+	box-shadow:
+		0 8px 32px rgba(0, 0, 0, 0.15),
+		0 2px 8px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.appWrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -7px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: rgba(53, 53, 53, 0.6);
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.appWrapperOpen::after {
+	opacity: 1;
+}
+
+.appIcon {
+	width: 56px;
+	height: 56px;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	border-radius: $border-radius-icon;
+	overflow: visible;
+	padding: 0;
+	position: relative;
+	transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+	flex-shrink: 0;
+
+	svg, img {
+		width: 100%;
+		height: 100%;
+		border-radius: $border-radius-icon;
+		display: block;
+	}
+
+	&:hover {
+		transform: scale(1.25) translateY(-6px);
+		z-index: 1;
+	}
+
+	&:active {
+		transform: scale(0.95);
+	}
+}
+
+.chromeBounce {
+	animation: dockBounce 1.8s ease-in-out infinite;
+}
+
+.badge {
+	position: absolute;
+	top: -4px;
+	right: -4px;
+	min-width: 18px;
+	height: 18px;
+	background: $badge-red;
+	color: white;
+	border-radius: 9px;
+	font-size: 11px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 4px;
+	pointer-events: none;
+	z-index: 2;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.tooltip {
+	position: absolute;
+	bottom: calc(100% + 10px);
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(30, 30, 30, 0.85);
+	color: white;
+	font-size: 12px;
+	padding: 4px 10px;
+	border-radius: 6px;
+	white-space: nowrap;
+	pointer-events: none;
+	backdrop-filter: blur(10px);
+	border: 0.5px solid rgba(255, 255, 255, 0.15);
+	z-index: 10;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 4px solid transparent;
+		border-top-color: rgba(30, 30, 30, 0.85);
+	}
+}
+
+.iconPadded {
+	padding: 5px;
+}
+
+.fallbackIcon {
+	width: 100%;
+	height: 100%;
+	background: $accent;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 600;
+	border-radius: $border-radius-icon;
+}

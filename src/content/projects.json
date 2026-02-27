@@ -1,0 +1,26 @@
+[
+	{
+		"id": "Del Cerro - ",
+		"name": "hfjuarez.com",
+		"url": "https://del-cerro.up.railway.app/",
+		"description": "My personal portfolio — the one you're looking at right now.",
+		"stack": ["Vue", "Node", "TypeScript", "Tailwind"],
+		"screenshot": "/images/projects/del-cerro.webp"
+	},
+	{
+		"id": "project-2",
+		"name": "Project Two",
+		"url": "https://example.com",
+		"description": "Add your second project here.",
+		"stack": ["React", "Node.js", "PostgreSQL"],
+		"screenshot": "/images/projects/project-2.png"
+	},
+	{
+		"id": "project-3",
+		"name": "Project Three",
+		"url": "https://example.com",
+		"description": "Add your third project here.",
+		"stack": ["Next.js", "Prisma", "Tailwind"],
+		"screenshot": "/images/projects/project-3.png"
+	}
+]

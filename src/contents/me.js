@@ -13,7 +13,7 @@ export default {
 			new Date(Date.now() - new Date('2000-06-04').getTime()).getUTCFullYear() -
 				1970,
 		),
-		image: '/images/me.jpeg',
+		image: '/images/me.png',
 		name: 'Hernán',
 		lastName: 'Fabrica',
 	},

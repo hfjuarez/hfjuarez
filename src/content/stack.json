@@ -1,0 +1,26 @@
+{
+	"frontend": [
+		"TypeScript",
+		"React",
+		"Astro",
+		"Next.js",
+		"SCSS / CSS",
+		"Tailwind CSS"
+	],
+	"backend": [
+		"Node.js",
+		"Java / Spring Boot",
+		"PostgreSQL",
+		"Redis",
+		"REST APIs",
+		"GraphQL"
+	],
+	"tools": [
+		"Git / GitHub",
+		"Docker",
+		"AWS",
+		"Vercel",
+		"Figma",
+		"VS Code"
+	]
+}

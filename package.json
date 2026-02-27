@@ -1,6 +1,6 @@
 {
 	"name": "hfjuarez",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Personal website of Hernán Fabrica",
 	"type": "module",
 	"scripts": {
@@ -11,9 +11,18 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"astro": "^4.14.4"
+		"@astrojs/react": "^3.6.0",
+		"@tailwindcss/vite": "^4.2.1",
+		"astro": "^4.14.4",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-markdown": "^9.0.1",
+		"react-rnd": "^10.4.1",
+		"tailwindcss": "^4.2.1"
 	},
 	"devDependencies": {
+		"@types/react": "^18.3.0",
+		"@types/react-dom": "^18.3.0",
 		"sass": "^1.77.8"
 	}
 }

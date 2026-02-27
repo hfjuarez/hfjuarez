@@ -1,0 +1,41 @@
+[
+	{
+		"id": "about",
+		"name": "About",
+		"icon": "finder",
+		"type": "window"
+	},
+	{
+		"id": "chrome",
+		"name": "Chrome",
+		"icon": "chrome",
+		"type": "window"
+	},
+	{
+		"id": "vscode",
+		"name": "VS Code",
+		"icon": "vscode",
+		"type": "window"
+	},
+	{
+		"id": "contact",
+		"name": "Contact",
+		"icon": "mail",
+		"type": "link",
+		"url": "mailto:"
+	},
+	{
+		"id": "github",
+		"name": "GitHub",
+		"icon": "github",
+		"type": "link",
+		"url": "https://github.com/hfjuarez"
+	},
+	{
+		"id": "linkedin",
+		"name": "LinkedIn",
+		"icon": "linkedin",
+		"type": "link",
+		"url": "https://www.linkedin.com/in/hfjuarez"
+	}
+]

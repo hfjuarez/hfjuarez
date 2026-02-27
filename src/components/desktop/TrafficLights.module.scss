@@ -1,0 +1,53 @@
+@use '../../styles/colors' as *;
+
+.trafficLights {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.light {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	flex-shrink: 0;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		opacity: 0;
+		transition: opacity 0.15s;
+	}
+
+	&.close {
+		background: $traffic-red;
+		&::after {
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 3l4 4M7 3l-4 4' stroke='%23800000' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E") center/8px no-repeat;
+		}
+	}
+
+	&.minimize {
+		background: $traffic-yellow;
+		&::after {
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5h6' stroke='%23806000' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E") center/8px no-repeat;
+		}
+	}
+
+	&.maximize {
+		background: $traffic-green;
+		&::after {
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 7L7 3M3 3h4v4' stroke='%23006000' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/8px no-repeat;
+		}
+	}
+}
+
+// Show icons on group hover (parent must add .trafficLights:hover .light::after selector)
+.trafficLights:hover .light::after {
+	opacity: 1;
+}

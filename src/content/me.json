@@ -1,0 +1,22 @@
+{
+	"contact": {
+		"email": "hello@hernanfabrica.com",
+		"github": "https://www.github.com/hfjuarez",
+		"linkedin": "https://www.linkedin.com/in/hfjuarez/"
+	},
+	"education": {
+		"degree": "Technologist Degree in Computer Science",
+		"graduatedYear": 2021
+	},
+	"personal": {
+		"dob": "2000-06-04",
+		"image": "/images/me.png",
+		"name": "Hernán",
+		"lastName": "Fabrica"
+	},
+	"professional": {
+		"currentPosition": "Software Engineer",
+		"company": "SoFi/Technisys",
+		"startDate": "2021-03-01"
+	}
+}

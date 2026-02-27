@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d390667f-5db0-45d2-a9e4-943dec99425f" name="Changes" comment="hfjuarez">
+      <change afterPath="$PROJECT_DIR$/.astro/astro/content.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.astro/content-assets.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.astro/content-modules.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.astro/data-store.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/hfjuarez.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/_astro/Desktop.DpMyySGV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/_astro/client.5NRMcsES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/_astro/index.95d291e9.B3Fw1h1K.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/_astro/index.DM80cQZZ.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/_astro/index.pfPdwTR7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/_astro/index.uYDHyRUA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/images/me.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/me.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/chrome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/finder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/github.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/linkedin.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/mail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/vscode.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Desktop.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Desktop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/Dock.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/Dock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/MenuBar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/MenuBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/TrafficLights.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/TrafficLights.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/Window.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/Window.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/AboutWindow.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/AboutWindow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ChromeWindow.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ChromeWindow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ContactWindow.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/ContactWindow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/VSCodeWindow.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/desktop/windows/VSCodeWindow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppGrid.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppIconSVG.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppSheet.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/AppSheet.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/HomeScreen.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/HomeScreen.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/MobileDock.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/MobileDock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/StatusBar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mobile/StatusBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/about.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/dock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/me.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/projects.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/projects/01-del-cerro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/projects/02-project-two.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/projects/03-project-three.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/stack.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useWindowManager.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/globals.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.astro/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.astro/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.astro/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contents/me.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contents/me.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/spaces.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/spaces.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/Users/hernanfabrica/projects/hfjuarez" value="2tdxdPuQDxgHg0VdQZnfBC5vhYU" />
+    </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hfjuarez&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:hfjuarez/hfjuarez.git&quot;,
+    &quot;accountId&quot;: &quot;47bd1efb-3c4b-4e62-b220-7d3563793e42&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2tdxdPuQDxgHg0VdQZnfBC5vhYU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/hernanfabrica/projects/hfjuarez/public/images",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "sonarlint",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.28293.44" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d390667f-5db0-45d2-a9e4-943dec99425f" name="Changes" comment="" />
+      <created>1740695839522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740695839522</updated>
+      <workItem from="1740695840760" duration="14683000" />
+      <workItem from="1741917402462" duration="4000" />
+      <workItem from="1742675962299" duration="103000" />
+      <workItem from="1742676073590" duration="221000" />
+      <workItem from="1772210020956" duration="8598000" />
+    </task>
+    <task id="LOCAL-00001" summary="hero">
+      <option name="closed" value="true" />
+      <created>1740713801844</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740713801844</updated>
+    </task>
+    <task id="LOCAL-00002" summary="improves">
+      <option name="closed" value="true" />
+      <created>1742676025416</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742676025416</updated>
+    </task>
+    <task id="LOCAL-00003" summary="improves">
+      <option name="closed" value="true" />
+      <created>1742676288480</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1742676288480</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hero" />
+    <MESSAGE value="improves" />
+    <MESSAGE value="hfjuarez" />
+    <option name="LAST_COMMIT_MESSAGE" value="hfjuarez" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/desktop/windows/ChromeWindow.tsx</url>
+          <line>73</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

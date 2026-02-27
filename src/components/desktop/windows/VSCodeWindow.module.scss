@@ -1,0 +1,204 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/spaces' as *;
+
+.vscode {
+	display: flex;
+	height: 100%;
+	background: #1e1e1e;
+	color: #d4d4d4;
+	font-family: 'JetBrains Mono', 'Courier New', monospace;
+	font-size: 13px;
+	overflow: hidden;
+}
+
+.activityBar {
+	width: 48px;
+	background: #333333;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 8px 0;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+.activityIcon {
+	width: 36px;
+	height: 36px;
+	border: none;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.4);
+	cursor: pointer;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.15s;
+
+	&:hover {
+		color: rgba(255, 255, 255, 0.8);
+	}
+}
+
+.sidebar {
+	width: 200px;
+	background: #252526;
+	overflow-y: auto;
+	flex-shrink: 0;
+}
+
+.sidebarHeader {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	color: #bbb;
+	padding: 12px 16px 8px;
+}
+
+.sidebarSection {
+	padding: 0 0 $space-2;
+}
+
+.sidebarFolder {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 12px;
+	font-size: 13px;
+	color: #ccc;
+	cursor: default;
+}
+
+.folderIcon {
+	font-size: 10px;
+	color: #888;
+}
+
+.sidebarFile {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 4px 12px 4px 28px;
+	width: 100%;
+	border: none;
+	background: transparent;
+	color: #ccc;
+	cursor: pointer;
+	font-size: 13px;
+	font-family: inherit;
+	text-align: left;
+	transition: background 0.1s;
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.05);
+	}
+}
+
+.activeFile {
+	background: #37373d !important;
+	color: white;
+}
+
+.fileIcon {
+	font-size: 12px;
+}
+
+.editor {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.editorTabs {
+	display: flex;
+	background: #2d2d2d;
+	border-bottom: 1px solid #252526;
+	flex-shrink: 0;
+	overflow-x: auto;
+
+	&::-webkit-scrollbar { height: 0; }
+}
+
+.editorTab {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 16px;
+	border: none;
+	background: #2d2d2d;
+	color: #888;
+	cursor: pointer;
+	font-size: 13px;
+	font-family: inherit;
+	white-space: nowrap;
+	border-right: 1px solid #252526;
+	transition: color 0.15s;
+
+	&:hover {
+		color: #ccc;
+	}
+}
+
+.activeEditorTab {
+	background: #1e1e1e !important;
+	color: #fff !important;
+	border-top: 1px solid $accent;
+}
+
+.code {
+	flex: 1;
+	overflow-y: auto;
+	padding: $space-3 0;
+	background: #1e1e1e;
+}
+
+.line {
+	display: flex;
+	align-items: baseline;
+	padding: 1px 0;
+	min-height: 20px;
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.03);
+	}
+}
+
+.lineNum {
+	width: 50px;
+	text-align: right;
+	padding-right: 20px;
+	color: #5a5a5a;
+	font-size: 12px;
+	flex-shrink: 0;
+	user-select: none;
+}
+
+.indent {
+	white-space: pre;
+}
+
+.string {
+	color: #ce9178;
+}
+
+.bracket {
+	color: #ffd700;
+	padding-left: 16px;
+}
+
+.punct {
+	color: #d4d4d4;
+}
+
+.statusBar {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 0 16px;
+	height: 24px;
+	background: #007acc;
+	color: white;
+	font-size: 12px;
+	flex-shrink: 0;
+}

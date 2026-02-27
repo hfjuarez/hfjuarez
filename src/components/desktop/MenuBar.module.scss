@@ -1,0 +1,105 @@
+@use '../../styles/colors' as *;
+@use '../../styles/spaces' as *;
+
+.menubar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: $menubar-height;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 $space-2;
+	background: $menubar-bg;
+	backdrop-filter: blur(20px) saturate(180%);
+	-webkit-backdrop-filter: blur(20px) saturate(180%);
+	z-index: 9999;
+	user-select: none;
+	border-bottom: 0.5px solid rgba(0, 0, 0, 0.08);
+}
+
+.left {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.apple {
+	display: flex;
+	align-items: center;
+	padding: 2px 8px;
+	border-radius: 4px;
+	color: $foreground;
+	cursor: pointer;
+	font-size: 13px;
+	transition: background 0.15s;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.07);
+	}
+}
+
+.appName {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 2px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	color: $foreground;
+	transition: background 0.15s;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.07);
+	}
+}
+
+.menuItem {
+	font-size: 13px;
+	font-weight: 400;
+	padding: 2px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	color: $foreground;
+	transition: background 0.15s;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.07);
+	}
+}
+
+.right {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.statusIcon {
+	display: flex;
+	align-items: center;
+	color: $foreground;
+	opacity: 0.8;
+	padding: 2px 4px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.15s;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.07);
+	}
+}
+
+.clock {
+	font-size: 13px;
+	color: $foreground;
+	letter-spacing: 0.01em;
+	padding: 2px 6px;
+	border-radius: 4px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: background 0.15s;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.07);
+	}
+}

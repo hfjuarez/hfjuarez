@@ -1,0 +1,45 @@
+@use '../styles/colors' as *;
+@use '../styles/spaces' as *;
+
+.desktop {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.wallpaper {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.wallpaperImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.wallpaperOverlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.1) 0%,
+		rgba(0, 0, 0, 0) 30%,
+		rgba(0, 0, 0, 0) 70%,
+		rgba(0, 0, 0, 0.15) 100%
+	);
+}
+
+.windowsContainer {
+	position: absolute;
+	inset: $menubar-height 0 ($dock-height + 20px) 0;
+	z-index: 100;
+	pointer-events: none;
+
+	> * {
+		pointer-events: all;
+	}
+}
