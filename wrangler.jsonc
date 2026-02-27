@@ -1,0 +1,8 @@
+{
+  "name": "hfjuarez",
+  "compatibility_date": "2026-02-27",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}
